@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
       table {
-        font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 50%;
       }
@@ -14,7 +16,7 @@
       td,
       table {
         border: 1px solid #dddddd;
-        border-collapse: collapse;;
+        border-collapse: collapse;
       }
 
       th,
@@ -29,6 +31,7 @@
     </style>
   </head>
   <body>
+    <!-- A table such as the one in the image at  https://www.w3schools.com/html/html_tables.asp -->
     <table>
       <tr>
         <th>Company</th>
@@ -66,5 +69,88 @@
         <td>Italy</td>
       </tr>
     </table>
+
+    <!-- Complex list as defined in the Lesson 1 Notes -->
+
+    <ul id="Two unordered">
+      <li><p>Age at time of death</p></li>
+
+      <ol>
+        <li>
+          <p>Grunge</p>
+          <table>
+            <tr>
+              <th>Nirvana</th>
+              <th>Alice in Chains</th>
+              <th>Soundgarden</th>
+            </tr>
+            <tr>
+              <td>Kurt Cobain</td>
+              <td>Layne Staley</td>
+              <td>Chris Cornell</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>34</td>
+              <td>52</td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <p>The 60s</p>
+          <table>
+            <tr>
+              <th>The Doors</th>
+              <th>The Jimi Hendrix Experience</th>
+              <th>Rolling Stones</th>
+            </tr>
+            <tr>
+              <td>Jim Morrison</td>
+              <td>Jimi Hendrix</td>
+              <td>Brian Jones</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>27</td>
+              <td>27</td>
+            </tr>
+          </table>
+        </li>
+      </ol>
+      <li><p>Sales per band</p></li>
+
+      <ul>
+        <li>
+          Nirvana <span><strong>75 Million</strong></span>
+        </li>
+        <li>
+          Alice in chains <span> <strong>30 Million</strong></span>
+        </li>
+        <li>
+          Soundgarden <span><strong>13.5 Million</strong></span>
+        </li>
+        <li>
+          The Doors <span><strong>100 Million</strong></span>
+        </li>
+        <li>
+          The Jimi Hendrix Experience <span><strong>24 Million</strong></span>
+        </li>
+        <li>
+          Rolling Stones <span><strong>200 Million</strong> </span>
+        </li>
+      </ul>
+    </ul>
+
+    <ol id="Two unordered with nested ordered list">
+      <ul></ul>
+      <ul>
+        <ol></ol>
+      </ul>
+    </ol>
+
+    <ul id="Unordered with two nested ordered lists">
+      <ol></ol>
+      <ol></ol>
+    </ul>
   </body>
 </html>
