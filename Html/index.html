@@ -371,7 +371,7 @@
 <!-- Figcaption and Figure Tags -->
 <figure>
     <img src="https://artmontenegro.me/images/Art-Montenegro/nacionalna-klasa/nacionalna-klasa_optimized.jpg" width="300" height="auto" alt="Sample Image">
-    <figcaption>&lt;figcaption&gt; and &lt;figure&gt; Tags</figcaption>
+    <figcaption>A caption for an image.</figcaption>
 </figure>
 <p>The &lt;figure&gt; tag represents content like illustrations, diagrams, photos, code listings, etc. The &lt;figcaption&gt; tag is used to define a caption for the &lt;figure&gt; element.</p>
 
@@ -417,8 +417,8 @@
 </main>
 
 <!-- Canvas Tag -->
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-</canvas>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
 <p>The &lt;canvas&gt; tag is used to draw graphics on the fly, such as during gameplay or other interactive applications. It requires JavaScript to actually draw the graphics.</p>
 
 <!-- Datalist Tag -->
@@ -511,6 +511,21 @@
   <p>The user's score is: <bdi>12345</bdi></p>
   <p>The &lt;bdi&gt; (Bi-Directional Isolation) tag isolates a part of text that might be formatted in a different direction from other text outside it. This is useful when embedding user-generated content with unknown directionality.</p>
 
+  <script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Draw a blue rectangle
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(10, 10, 50, 50);
+
+    // Draw a red circle
+    ctx.beginPath();
+    ctx.arc(150, 50, 40, 0, 2 * Math.PI);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+</script>
 
 </body>
 </html>

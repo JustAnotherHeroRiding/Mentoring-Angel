@@ -12,6 +12,6 @@
 - Read about UTF 8 #DONE 
 - Difference between UTF 8 and 16 #DONE 
 - Html 5 new elements(footer header etc) #DONE 
-- Try them out in html to see in which group they belong(Classify them, make a list)
-- Answer all of these questions within a html document with a good structure(NO CSS)
+- Try them out in html to see in which group they belong(Classify them, make a list) #DONE 
+- Answer all of these questions within a html document with a good structure(NO CSS) #DONE 
 - [Html Exercises](https://www.w3schools.com/html/exercise.asp)
