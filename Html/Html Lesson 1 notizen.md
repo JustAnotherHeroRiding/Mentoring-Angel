@@ -8,9 +8,9 @@
 - block elements and inline - play around with it #DONE 
 - span inside a block and without #DONE 
 - Img with custom attributes #DONE 
-- Define meta keywords
-- Read about UTF 8
-- Difference between UTF 8 and 16
+- Define meta keywords #DONE 
+- Read about UTF 8 #DONE 
+- Difference between UTF 8 and 16 #DONE 
 - Html 5 new elements(footer header etc)
 - Try them out in html to see in which group they belong(Classify them, make a list)
 - Answer all of these questions within a html document with a good structure(NO CSS)

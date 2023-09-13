@@ -10,8 +10,8 @@
 <!-- Author -->
 <meta name="author" content="Kristijan Kocev">
 <!-- Refreshing on a timer -->
-<meta http-equiv="refresh" content="30">
-
+<!-- <meta http-equiv="refresh" content="30">
+ -->
 <!-- Setting the viewport to match the device the user is using. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Back to Basics &#x1F600</title>
@@ -289,6 +289,64 @@
       <area shape="rect" coords="330,0,660,350" alt="Nirvana" href="https://en.wikipedia.org/wiki/Nirvana_(band)">
     </map>
     
-    
-  </body>
+    <h2>What is UTF-8?</h2>
+    <p>Why is this always included in the head of each html file? Let us find out!</p>
+    <img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/02572bcf-76c4-420a-90ac-65a0c8c71eae/iso-8859-5-php-orange.png"
+     alt="Unicode table of codes." width="500" height="auto">
+
+     <div style="margin: 20px 0;">
+      <h3>Difference between UTF-8 and UTF-16</h3>
+      <table >
+          <tbody><tr>
+            <th style="width:20%">Character-set</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>UTF-8</td>
+            <td>A character in UTF8 can be from 1 to 4  bytes long. UTF-8 can represent any character in the Unicode standard.  UTF-8 is backwards compatible with ASCII. UTF-8 is the preferred  encoding for e-mail and web pages</td>
+          </tr>
+          <tr>
+            <td>UTF-16</td>
+            <td>16-bit Unicode Transformation Format is a variable-length  character encoding for Unicode, capable of encoding the entire Unicode  repertoire. UTF-16 is used in major operating systems and environments,  like Microsoft Windows, Java and .NET.</td>
+          </tr>
+          </tbody></table>
+      </div>
+      <strong>HTML 4 supports UTF-8. HTML 5 supports both UTF-8 and UTF-16!
+
+      </strong>
+
+      <p>The Unicode Standard covers (almost) all the characters, punctuations, and symbols in the world.
+
+        Unicode enables processing, storage, and transport of text independent of platform and language.
+        
+        The default character encoding in HTML-5 is UTF-8.
+        
+        If an HTML5 web page uses a different character set than UTF-8, it should be specified in the meta tag</p>
+
+        <h3>
+          
+          The Difference Between Unicode and UTF-8
+        </h3>
+        
+        <p>
+
+        
+  Unicode is a character set. UTF-8 is encoding.
+
+  Unicode is a list of characters with unique decimal numbers (code points). A = 65, B = 66, C = 67, ....
+
+  This list of decimal numbers represent the string "hello": 104 101 108 108 111
+
+  Encoding is how these numbers are translated into binary numbers to be stored in a computer:
+
+  UTF-8 encoding will store "hello" like this (binary): 01101000 01100101 01101100 01101100  01101111
+
+  Encoding translates numbers into binary. Character sets translates characters to numbers.
+
+</p>  
+
+<a href="https://www.youtube.com/watch?v=MijmeoH9LT4">A video from Computerphile explaining the origins of Unicode</a>
+<a href="https://www.youtube.com/watch?v=ut74oHojxqo">A bit more of an indepth look at Unicode</a>
+
+</body>
 </html>
