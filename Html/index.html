@@ -31,8 +31,9 @@
     </style>
   </head>
   <body>
+    <h1 style="text-align: center;">Back to basics with HTML</h1>
     <!-- A table such as the one in the image at  https://www.w3schools.com/html/html_tables.asp -->
-    <table>
+    <table style="margin: auto;">
       <tr>
         <th>Company</th>
         <th>Contact</th>
@@ -71,6 +72,21 @@
     </table>
 
     <!-- Complex list as defined in the Lesson 1 Notes -->
+
+    <!--     <marquee direction="right" width="250px" heigth="250px" scrollamount="10">The following is a demonstration of a complex list structure containing lists, tables and descriptions</marquee>
+ -->
+    <h2 direction="right" width="250px" heigth="250px" scrollamount="10">
+      The following is a demonstration of a complex list
+      <h2>structure containing lists, tables and descriptions</h2>
+    </h2>
+    <p>
+      The goal is to showcase information on a website that is decently well
+      placed without the use of any CSS
+    </p>
+    <span
+      >What I wish to compare are famous frontmen/singers that have died early
+      and the sales of the bands.</span
+    >
 
     <ul id="Two unordered">
       <li><p>Age at time of death</p></li>
@@ -140,26 +156,80 @@
         </li>
       </ul>
     </ul>
+    <h2>Great Beginner Riffs</h2>
+    <dl id="Two unordered with nested ordered list">
+      <dt><h3>Easy Riffs</h3></dt>
+      <dd>
+        <ol>
+          <li>
+            <dt>Smells like Teen Spirit</dt>
+            <dd>A classic grunge anthem by Nirvana.</dd>
+          </li>
+          <li>
+            <dt>Iron Man</dt>
+            <dd>One of Black Sabbath's most iconic riffs.</dd>
+          </li>
+          <li>
+            <dt>Do I wanna Know</dt>
+            <dd>A modern rock hit by Arctic Monkeys.</dd>
+          </li>
+        </ol>
+      </dd>
+      <dt><h3>Medium Riffs</h3></dt>
+      <dd>
+        <ol>
+          <li>
+            <dt>Sultans of Swing</dt>
+            <dd>Dire Straits' signature song with intricate guitar work.</dd>
+          </li>
+          <li>
+            <dt>Layla</dt>
+            <dd>Eric Clapton's timeless rock ballad.</dd>
+          </li>
+          <li>
+            <dt>Nothing else Matters</dt>
+            <dd>Metallica's melodic masterpiece.</dd>
+          </li>
+        </ol>
+      </dd>
+    </dl>
 
-    <ol id="Two unordered with nested ordered list">
-        <!-- Use dt and dt to write descriptions for the riffs -->
-        <li>
-            <p>Easy Riffs</p>
-            <ul></ul>
-        </li>
-    <li>
-        <p>Medium Riffs</p>
-
-      <ul>
-        <ol></ol>
-      </ul>
-    </li>
-    </ol>
-
-    <ul id="Unordered with two nested ordered lists">
-        <li>10 reasons to:</li>
-      <ol></ol>
-      <ol></ol>
-    </ul>
+    <dl id="Unordered with two nested ordered lists">
+      <dt><h2>Reasons to learn songs and theory:</h2></dt>
+      <dd>
+        <ol>
+          <li>
+            <dt>Improves musical ear and understanding</dt>
+            <dd>
+              Helps in recognizing and replicating melodies and harmonies.
+            </dd>
+          </li>
+          <li>
+            <dt>Enhances finger dexterity and technique</dt>
+            <dd>Allows for smoother transitions and faster playing.</dd>
+          </li>
+          <li>
+            <dt>Provides a foundation for creating your own music</dt>
+            <dd>Understanding theory aids in songwriting and composition.</dd>
+          </li>
+        </ol>
+      </dd>
+      <dd>
+        <ol>
+          <li>
+            <dt>Helps in recognizing chord progressions and patterns</dt>
+            <dd>Facilitates easier learning of new songs.</dd>
+          </li>
+          <li>
+            <dt>Boosts confidence in playing with other musicians</dt>
+            <dd>Knowledge of theory ensures better jamming sessions.</dd>
+          </li>
+          <li>
+            <dt>Expands repertoire for performances</dt>
+            <dd>More songs mean more versatility during gigs.</dd>
+          </li>
+        </ol>
+      </dd>
+    </dl>
   </body>
 </html>
