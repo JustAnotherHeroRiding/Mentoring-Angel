@@ -242,5 +242,42 @@
 
     <p> Even if I add <span style="background-color: wheat;">Multiple 
     </span> spans it will still be in the <span style="background-color: wheat;">same line created by the p tag.</span></p>
+    
+    
+    <h2>The img tag and its custom attributes</h2>
+
+    <figure>
+
+      <img src="https://techbeacon.com/sites/default/files/styles/social/public/html5-mobile-app-native-hybrid-pros-cons.jpg?itok=R3pMKIzh"
+      alt="Html Logo" width="400" height="auto" loading="lazy">
+      <figcaption>An image tag has two required attributes <p>the src of the image and the alt text if it cannot be displayed</p></figcaption>
+    </figure>
+
+    <figure>
+      <a href="https://www.google.com/">
+        <img src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw" 
+        alt="Google Logo" width="400" height="auto" loading="lazy">
+      </a>
+      <figcaption>An image can also <strong><a href="https://www.google.com/">link</a></strong> to a website if set inside an anchor tag</figcaption>
+    </figure>
+
+  
+    <h3>An image map with clickable regions for each band</h3>
+    <p>Each picture will lead you to the bands wikipedia page.</p>
+
+    <img src="https://images.radiox.co.uk/images/574521?crop=16_9&width=660&relax=1&format=webp&signature=ftEmARS2oPzEWaXgQ4Tc1bmgTmI=" alt="Grunge top 3 bands" usemap="#grungeTop3">
+    
+    <map name="grungeTop3">
+      <!-- Pearl Jam - Full left half -->
+      <area shape="rect" coords="0,0,330,700" alt="Pearl Jam" href="https://en.wikipedia.org/wiki/Pearl_Jam">
+      
+      <!-- Smashing Pumpkins - Bottom half on the right -->
+      <area shape="rect" coords="330,350,660,700" alt="Smashing Pumpkins" href="https://en.wikipedia.org/wiki/The_Smashing_Pumpkins">
+      
+      <!-- Nirvana - Upper half on the right -->
+      <area shape="rect" coords="330,0,660,350" alt="Nirvana" href="https://en.wikipedia.org/wiki/Nirvana_(band)">
+    </map>
+    
+    
   </body>
 </html>
