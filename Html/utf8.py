@@ -1,19 +1,19 @@
 def truncate(text, max_length):
     return text[:max_length]
 
-text = "こんにちは"  # Japanese characters
-print(truncate(text, 2))  # This will cut the second character in half
+jpn = "こんにちは"  # Japanese characters
+print("This is a japanese character being cut in half: " + truncate(jpn, 2))  # This will cut the second character in half
 
 
-text = "𠜎𠜱𠝹"  # Characters outside the BMP
-print(truncate(text, 2))  # This will split a surrogate pair
+outsideBMP = "𠜎𠜱𠝹"  # Characters outside the BMP
+print("Characters outside the BMP:" + truncate(outsideBMP, 2))  # This will split a surrogate pair
 
 
-text = "👩🏽‍🚀"  # Woman astronaut with a skin tone modifier
-print(truncate(text, 3))  # This will split the emoji sequence
+emojiModified = "👩🏽‍🚀"  # Woman astronaut with a skin tone modifier
+print("This is a modified emoji : " + truncate(emojiModified, 3))  # This will split the emoji sequence
 
-text = "ñ"  # "n" followed by a combining tilde
-print(truncate(text, 1))  # This will remove the tilde, resulting in just "n"
+tilde = "ñ"  # "n" followed by a combining tilde
+print("Character with a combining tilde being cut:" + truncate(tilde, 1))  # This will remove the tilde, resulting in just "n"
 
 
 import textwrap

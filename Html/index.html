@@ -348,5 +348,169 @@
 <a href="https://www.youtube.com/watch?v=MijmeoH9LT4">A video from Computerphile explaining the origins of Unicode</a>
 <a href="https://www.youtube.com/watch?v=ut74oHojxqo">A bit more of an indepth look at Unicode</a>
 
+<h2>Tags introduced in HTML5</h2>
+
+<!-- Article Tag -->
+<article>
+    <h3>&lt;article&gt; Tag</h3>
+    <p>The &lt;article&gt; tag specifies independent, self-contained content. It should make sense on its own, and it should be possible to read it independently from the rest of the web page.</p>
+</article>
+
+<!-- Aside Tag -->
+<aside>
+    <h3>&lt;aside&gt; Tag</h3>
+    <p>The &lt;aside&gt; tag is used to define some content aside from the content it is placed in. It can be used for sidebars, pull quotes, or advertising.</p>
+</aside>
+
+<!-- Details Tag -->
+<details>
+    <summary>&lt;details&gt; and &lt;summary&gt; Tags</summary>
+    <p>The &lt;details&gt; tag is used to create an interactive widget that the user can open or close. The &lt;summary&gt; tag defines a visible heading for the &lt;details&gt; element.</p>
+</details>
+
+<!-- Figcaption and Figure Tags -->
+<figure>
+    <img src="https://artmontenegro.me/images/Art-Montenegro/nacionalna-klasa/nacionalna-klasa_optimized.jpg" width="300" height="auto" alt="Sample Image">
+    <figcaption>&lt;figcaption&gt; and &lt;figure&gt; Tags</figcaption>
+</figure>
+<p>The &lt;figure&gt; tag represents content like illustrations, diagrams, photos, code listings, etc. The &lt;figcaption&gt; tag is used to define a caption for the &lt;figure&gt; element.</p>
+
+<!-- Footer Tag -->
+<footer>
+    <h3>&lt;footer&gt; Tag</h3>
+    <p>The &lt;footer&gt; tag defines a footer for a document or a section. It typically contains authorship information, copyright information, contact information, etc.</p>
+</footer>
+
+<!-- Header Tag -->
+<header>
+    <h3>&lt;header&gt; Tag</h3>
+    <p>The &lt;header&gt; tag specifies a container for introductory content or a set of navigational links. It can contain some heading elements, a logo, or any other introductory content.</p>
+</header>
+
+<!-- Nav Tag -->
+<nav>
+    <h3>&lt;nav&gt; Tag</h3>
+    <p>The &lt;nav&gt; tag defines a set of navigation links. It is intended for major block of navigation links; however, not all links in a document should be inside a &lt;nav&gt; element.</p>
+</nav>
+
+<!-- Section Tag -->
+<section>
+    <h3>&lt;section&gt; Tag</h3>
+    <p>The &lt;section&gt; tag defines a standalone section in a document. It does not introduce a new section in the outline of a document, but adds thematic grouping to the content.</p>
+</section>
+
+<!-- Time Tag -->
+<time datetime="2023-09-13">
+    <h3>&lt;time&gt; Tag</h3>
+    <p>The &lt;time&gt; tag defines a specific period in time or a duration. It can be used to encode dates and times in a machine-readable way.</p>
+</time>
+
+
+
+<!-- Mark Tag -->
+<p>The <mark>&lt;mark&gt;</mark> tag is used to highlight parts of text, such as search query words within a document.</p>
+
+<!-- Main Tag -->
+<main>
+    <h3>&lt;main&gt; Tag</h3>
+    <p>The &lt;main&gt; tag specifies the main content of a document. There should be only one &lt;main&gt; element per page, and it should be unique from content in other elements such as &lt;header&gt;, &lt;footer&gt;, and &lt;nav&gt;.</p>
+</main>
+
+<!-- Canvas Tag -->
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+<p>The &lt;canvas&gt; tag is used to draw graphics on the fly, such as during gameplay or other interactive applications. It requires JavaScript to actually draw the graphics.</p>
+
+<!-- Datalist Tag -->
+<label for="browsers">Choose a browser from the list:</label>
+<input list="browsers" name="browser" id="browsers">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+  <option value="Opera">
+  <option value="Edge">
+</datalist>
+<p>The &lt;datalist&gt; tag provides an "autocomplete" feature on &lt;input&gt; elements. Users will see a dropdown of options based on the input.</p>
+
+<!-- Output Tag -->
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="a" value="50"> +
+  <input type="number" id="b" value="25"> =
+  <output name="result" for="a b">75</output>
+</form>
+<p>The &lt;output&gt; tag represents the result of a calculation, like the one done in this simple addition form.</p>
+
+<!-- Progress Tag -->
+<progress value="70" max="100"></progress>
+<p>The &lt;progress&gt; tag represents the progress of a task. In this case, it's showing 70% completion.</p>
+
+<!-- Meter Tag -->
+<meter value="0.6">60%</meter>
+<p>The &lt;meter&gt; tag measures data within a given range. Here, it's indicating a value of 60%.</p>
+
+<!-- Video and Audio Tags -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p>The &lt;video&gt; tag is used to embed video content. Similarly, there's an &lt;audio&gt; tag for audio content.</p>
+
+<!-- Embed Tag -->
+<embed src="sample.swf" width="500" height="300">
+  <p>The &lt;embed&gt; tag is used to embed content like Flash animations, though its use has declined in favor of more modern web technologies.</p>
+  
+  <!-- Source Tag (within Video/Audio) -->
+  <video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+  <p>The &lt;source&gt; tag, when nested inside &lt;video&gt; or &lt;audio&gt; tags, allows you to provide multiple media files for compatibility with different browsers.</p>
+  
+  <!-- Track Tag (for Video/Audio captions) -->
+  <video controls>
+    <source src="movie.mp4" type="video/mp4">
+    <track src="captions_en.vtt" kind="subtitles" srclang="en" label="English">
+  </video>
+  <p>The &lt;track&gt; tag is used with &lt;video&gt; and &lt;audio&gt; to provide captions or subtitles.</p>
+  
+  <!-- Wbr Tag -->
+  <p>This is a very long word that might break your layout, so we insert a<wbr>soft<wbr>break<wbr>opportunity.</p>
+  <p>The &lt;wbr&gt; (Word Break Opportunity) tag suggests an appropriate place to break a long word when necessary to prevent overflow.</p>
+  
+  <!-- Picture Tag -->
+  <picture>
+    <source media="(min-width: 650px)" srcset="img_large.jpg">
+    <source media="(min-width: 465px)" srcset="img_medium.jpg">
+    <img src="img_small.jpg" alt="Description">
+  </picture>
+  <p>The &lt;picture&gt; tag, in conjunction with &lt;source&gt;, allows for responsive image loading, choosing the best image source based on the viewport size or screen resolution.</p>
+  
+  <!-- Dialog Tag -->
+  <dialog open>
+    This is an open dialog window.
+  </dialog>
+  <p>The &lt;dialog&gt; tag represents a dialog box or window. The `open` attribute means the dialog is active and visible.</p>
+  
+  <!-- Template Tag -->
+  <template>
+    <p>This is content inside a template.</p>
+  </template>
+  <p>The &lt;template&gt; tag holds client-side content that you can reuse and instantiate using JavaScript. The content inside a &lt;template&gt; tag is not rendered until activated by JavaScript.</p>
+  
+  <!-- Rtc Tag (for Ruby Annotations) -->
+  <ruby>
+    Base <rtc>(<rt>annotation</rt>)</rtc>
+  </ruby>
+  <p>The &lt;rtc&gt; tag is used to group ruby annotation components in a ruby annotation, which provides short runs of text alongside the base text, typically used for pronunciation or to provide a short annotation.</p>
+  
+  <!-- Bdi Tag -->
+  <p>The user's score is: <bdi>12345</bdi></p>
+  <p>The &lt;bdi&gt; (Bi-Directional Isolation) tag isolates a part of text that might be formatted in a different direction from other text outside it. This is useful when embedding user-generated content with unknown directionality.</p>
+
+
 </body>
 </html>
