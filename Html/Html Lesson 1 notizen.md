@@ -7,7 +7,7 @@
 - Create a complex list structure, at least 5 ordered lists and 5 unordered lists. 2 Paragraphs, 2 spans, 1 description lists(dt, dd) and 1 table #DONE 
 - block elements and inline - play around with it #DONE 
 - span inside a block and without #DONE 
-- Img with custom attributes
+- Img with custom attributes #DONE 
 - Define meta keywords
 - Read about UTF 8
 - Difference between UTF 8 and 16
