@@ -10,9 +10,8 @@
 <!-- Author -->
 <meta name="author" content="Kristijan Kocev">
 <!-- Refreshing on a timer -->
-<!-- <meta http-equiv="refresh" content="30">
- -->
-<!-- Setting the viewport to match the device the user is using. -->
+<!--  <meta http-equiv="refresh" content="2">
+ --><!-- Setting the viewport to match the device the user is using. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Back to Basics &#x1F600</title>
     <style>
@@ -175,7 +174,8 @@
           <li>
             <dt>Smells like Teen Spirit</dt>
             <dd>A classic grunge anthem by Nirvana.</dd>
-            <audio src="Nirvana - Smells Like Teen Spirit (Official Music Video).mp3" type="audio/mp3" controls>
+            <audio src="Nirvana - Smells Like Teen Spirit (Official Music Video).mp3" type="audio/mp3"
+             controls>
               Your browser does not support the audio tag.
           </audio>
           
@@ -303,7 +303,8 @@
     <h3>An image map with clickable regions for each band</h3>
     <p>Each picture will lead you to the bands wikipedia page.</p>
 
-    <img src="https://images.radiox.co.uk/images/574521?crop=16_9&width=660&relax=1&format=webp&signature=ftEmARS2oPzEWaXgQ4Tc1bmgTmI=" alt="Grunge top 3 bands" usemap="#grungeTop3">
+    <img 
+    src="https://images.radiox.co.uk/images/574521?crop=16_9&width=660&relax=1&format=webp&signature=ftEmARS2oPzEWaXgQ4Tc1bmgTmI=" alt="Grunge top 3 bands" usemap="#grungeTop3">
     
     <map name="grungeTop3">
       <!-- Pearl Jam - Full left half -->
@@ -320,6 +321,7 @@
     <p>Why is this always included in the head of each html file? Let us find out!</p>
     <img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/02572bcf-76c4-420a-90ac-65a0c8c71eae/iso-8859-5-php-orange.png"
      alt="Unicode table of codes." width="500" height="auto">
+     <span>Will the span go in the next line?</span>
 
      <div style="margin: 20px 0;">
       <h3>Difference between UTF-8 and UTF-16</h3>
@@ -386,7 +388,9 @@
 <!-- Aside Tag -->
 <aside>
     <h3>&lt;aside&gt; Tag</h3>
-    <p>The &lt;aside&gt; tag is used to define some content aside from the content it is placed in. It can be used for sidebars, pull quotes, or advertising.</p>
+    <p>The &lt;aside&gt; tag is used to define some 
+      content aside from the content it is placed in. 
+      It can be used for sidebars, pull quotes, or advertising.</p>
 </aside>
 
 <!-- Details Tag -->
@@ -450,8 +454,8 @@
 
 <!-- Datalist Tag -->
 <label for="browsers">Choose a browser from the list:</label>
-<input list="browsers" name="browser" id="browsers">
-<datalist id="browsers">
+<input list="browser" name="browsers" id="browsers">
+<datalist id="browser">
   <option value="Chrome">
   <option value="Firefox">
   <option value="Safari">
@@ -477,9 +481,12 @@
 <p>The &lt;meter&gt; tag measures data within a given range. Here, it's indicating a value of 60%.</p>
 
 <!-- Video and Audio Tags -->
-<iframe width="651" height="491" src="https://www.youtube.com/embed/nWK0kqjPSVI"
- title="Alice In Chains - Down in a Hole (MTV Unplugged - HD Video)" frameborder="0" 
- allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+<iframe width="651" height="491"
+ src="https://www.youtube.com/embed/nWK0kqjPSVI"
+ title="Alice In Chains - Down in a Hole (MTV Unplugged - HD Video)"
+  frameborder="0" 
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+ gyroscope; picture-in-picture; web-share"
   allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   <p>Sadly this embedded youtube video seems to require a live server.</p>

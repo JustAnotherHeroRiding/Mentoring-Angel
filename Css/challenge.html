@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        .wrapper .parent .child {
+            border: 1px solid red;
+            width: 100%;
+            margin: 3em;
+            height: 5em;
+        }
+
+        .wrapper .parent .info {
+            text-align: justify;
+            width: 50%;
+            margin: 0 auto;
+            background-color: beige;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- Challenge:    -->
+<!-- Make wrapper 100% height of your screen extending to the bottom without overflowing it    -->
+<!--  Make child 100% without overflowing from the right side, please provide why it is overflowing  -->
+<!--  increase info box to be 80% of the height of the screen without affection the other content  -->
+
+
+<div class="wrapper">
+wrapper
+    <div class="parent">
+        <div class="child">child 1</div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolorum est quasi. Consequuntur dicta
+                est excepturi facere illo ipsa labore libero magnam, modi, necessitatibus quos rem, repellat saepe!
+                Nesciunt, vitae.</p>
+        </div>
+        <div class="child">child 2</div>
+    </div>
+
+</div>
+
+</body>
+</html>
