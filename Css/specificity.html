@@ -3,14 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Specificity</title>
+    <title>CSS Specificity Practice</title>
     <style>
-        h1 {
-            text-align: center;
-        }
+      /* Guess the specificity for each selector below */
+
+      /* Now, for each selector in the <style> tag, try to guess its specificity. Remember, specificity is usually represented in the format a-b-c:
+
+      a: Number of ID selectors
+      b: Number of class selectors, attribute selectors, and pseudo-classes
+      c: Number of type selectors and pseudo-elements */
+
+      /* 1 */
+      div {
+        background-color: lightblue;
+      }
+
+      /* 2 */
+      #header {
+        background-color: lightgreen;
+      }
+
+      /* 3 */
+      .highlight {
+        font-weight: bold;
+      }
+
+      /* 4 */
+      div p {
+        color: red;
+      }
+
+      /* 5 */
+      div > p {
+        color: blue;
+      }
+
+      /* 6 */
+      body #content .highlight {
+        text-decoration: underline;
+      }
+
+      /* 7 */
+      ul + p {
+        font-style: italic;
+      }
+
+      /* 8 */
+      h2.title {
+        font-size: 24px;
+      }
+
+      /* 9 */
+      div[data-attr="value"] {
+        border: 1px solid black;
+      }
+
+      /* 10 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
     </style>
   </head>
   <body>
-    <h1>Demonstrating and practicing CSS Specificity</h1>
+    <div id="header">
+      <h2 class="title">CSS Specificity Practice</h2>
+      <p>This is a paragraph inside a div.</p>
+    </div>
+    <div id="content">
+      <p class="highlight">This is a highlighted paragraph.</p>
+    </div>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+    </ul>
+    <p>This is a paragraph after a list.</p>
   </body>
 </html>

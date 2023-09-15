@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity Practice - Advanced</title>
+    <style>
+      /* For each selector in the <style> tag, try to guess its specificity using the a-b-c format:
+
+a: Number of ID selectors
+b: Number of class selectors, attribute selectors, and pseudo-classes
+c: Number of type selectors and pseudo-elements */
+      /* Guess the specificity for each selector below */
+
+      /* 11 */
+      p:first-child {
+        color: orange;
+      }
+
+      /* 12 */
+      div:not(.excluded) {
+        background-color: pink;
+      }
+
+      /* 13 */
+      ul li:nth-child(2) {
+        font-weight: bold;
+      }
+
+      /* 14 */
+      #nav li.active a {
+        text-decoration: none;
+      }
+
+      /* 15 */
+      body > header > nav > ul > li {
+        list-style-type: square;
+      }
+
+      /* 16 */
+      div[data-type="main"]:hover {
+        border: 2px solid gray;
+      }
+
+      /* 17 */
+      h3 + p::before {
+        content: "Note: ";
+      }
+
+      /* 18 */
+      #footer .links a[rel="nofollow"]:visited {
+        color: purple;
+      }
+
+      /* 19 */
+      main article.post#post-123 > h2.title:hover {
+        font-size: 28px;
+      }
+
+      /* 20 */
+      ul#menu li:not(.disabled):first-child a {
+        font-style: italic;
+      }
+
+      /* 21 */
+      div[class^="col-"] {
+        width: 50%;
+      }
+
+      /* 22 */
+      section > div:not([data-attr]):last-child {
+        padding: 10px;
+      }
+
+      /* 23 */
+      form#login input[type="text"]:focus {
+        border-color: green;
+      }
+
+      /* 24 */
+      table tbody tr:nth-child(odd) td:first-of-type {
+        background-color: lightgray;
+      }
+
+      /* 25 */
+      div::after {
+        content: " (end)";
+      }
+
+      /* 26 */
+      p[data-info*="special"]:before {
+        content: "Special: ";
+      }
+
+      /* 27 */
+      header nav ul li:last-of-type a[href^="#"] {
+        color: teal;
+      }
+
+      /* 28 */
+      main > article.post:not(:last-child) h3 + p {
+        margin-top: 20px;
+      }
+
+      /* 29 */
+      div[data-type="sidebar"] p:nth-of-type(2)::first-line {
+        font-weight: bold;
+      }
+
+      /* 30 */
+      form input[name="username"]:valid {
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sample HTML structure for some of the challenges -->
+    <header>
+      <nav>
+        <ul id="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="post" id="post-123">
+        <h2 class="title">Post Title</h2>
+        <p>Post content here...</p>
+      </article>
+    </main>
+    <footer id="footer">
+      <div class="links">
+        <a href="#" rel="nofollow">Link 1</a>
+        <a href="#">Link 2</a>
+      </div>
+    </footer>
+  </body>
+</html>
