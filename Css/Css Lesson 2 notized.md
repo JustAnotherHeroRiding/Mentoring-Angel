@@ -1,5 +1,5 @@
 CTRL SHIFT I opens the dev tools
-### 16px default font size
+### 16px default font size which is what em and rem are by default
 
 
 - Practice specificity of selectors
@@ -9,7 +9,7 @@ CTRL SHIFT I opens the dev tools
 - html tag sets the rem size, body tag does not
 - box model two types
 
-## Complete the challenge
+## Complete the challenge #DONE 
 
 ## Master the css selectors such as >, ~, + and others
 
@@ -20,6 +20,6 @@ Learn the nth of type selectors and not to exclude certain elements
 	
 !important for css tags
 
-[Css Challenges](https://www.w3schools.com/css/exercise.asp)
-### Continue with the challenges
+[Css Challenges](https://www.w3schools.com/css/exercise.asp) #DONE 
+### Continue with the challenges #DONE 
 

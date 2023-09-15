@@ -1,57 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
     <style>
-        .wrapper {
-            border: 1px solid black;
-            width: 100%;
+        body {
+            background-color: yellow;
         }
+      .wrapper {
+        background-color: wheat;
+        border: 1px solid black;
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+        min-height: 80vh;
+        /* So that all the content fits inside the wrapper, i set the height to fit-content
+        It should never be smaller than 80vh so the min-height is 80vh */
+        height: fit-content;
+        position: relative;
+      }
 
-        .wrapper .parent .child {
-            border: 1px solid red;
-            width: 100%;
-            margin: 3em;
-            height: 5em;
-        }
+      .wrapper .parent .child {
+        border: 1px solid red;
+        width: 100%;
+        /* The left margin was pushing the child to the right and overflowing from the wrapper container */
+        /* By turning the left margin to 0 it is now a 100% of the parent */
+        margin: 3em 3em 3em 0;
+        height: 5em;
+      }
 
-        .wrapper .parent .info {
-            text-align: justify;
-            width: 50%;
-            margin: 0 auto;
-            background-color: beige;
-            padding: 0.5em;
-            margin-bottom: 0.5em;
-        }
-
+      .wrapper .parent .info {
+        text-align: justify;
+        width: 50%;
+        margin: 0 auto;
+        background-color: beige;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        /* How can it be 80vh without affected the other content? */
+        height: 80vh;
+      }
     </style>
+  </head>
+  <body>
+    <!-- Challenge:    -->
+    <!-- Make wrapper 100% height of your screen extending to the bottom without overflowing it     -->
+    <!--  Make child 100% without overflowing from the right side, please provide why it is overflowing  -->
+    <!--  increase info box to be 80% of the height of the screen without affecting the other content  -->
 
-</head>
-<body>
-<!-- Challenge:    -->
-<!-- Make wrapper 100% height of your screen extending to the bottom without overflowing it    -->
-<!--  Make child 100% without overflowing from the right side, please provide why it is overflowing  -->
-<!--  increase info box to be 80% of the height of the screen without affection the other content  -->
-
-
-<div class="wrapper">
-wrapper
-    <div class="parent">
+    <div class="wrapper">
+      wrapper
+      <div class="parent">
         <div class="child">child 1</div>
         <div class="info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolorum est quasi. Consequuntur dicta
-                est excepturi facere illo ipsa labore libero magnam, modi, necessitatibus quos rem, repellat saepe!
-                Nesciunt, vitae.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
+            dolorum est quasi. Consequuntur dicta est excepturi facere illo ipsa
+            labore libero magnam, modi, necessitatibus quos rem, repellat saepe!
+            Nesciunt, vitae.
+          </p>
         </div>
         <div class="child">child 2</div>
+      </div>
     </div>
-
-</div>
-
-</body>
+  </body>
 </html>
