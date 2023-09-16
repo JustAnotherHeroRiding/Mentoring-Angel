@@ -1,12 +1,15 @@
-CTRL SHIFT I opens the dev tools
+### CTRL SHIFT I opens the dev tools
 ### 16px default font size which is what em and rem are by default
+### html tag sets the rem size, body tag does not
+
 
 
 - Practice specificity of selectors #DONE 
-- Create a bunch of classes and complex css selectors and calculate the specificity manually
+- Create a bunch of classes and complex css selectors and calculate the specificity manually #DONE 
 - Css selectors w3 schools list - play around
+- Create exercises and try to target various elements with the css and more advanced selectors
+- Learn the nth of type selectors and not to exclude certain elements
 - rem and em exercises
-- html tag sets the rem size, body tag does not
 - box model two types
 
 ## Complete the challenge #DONE 
@@ -16,7 +19,7 @@ CTRL SHIFT I opens the dev tools
 ## Pseudo elements
 ## Border box and content box
 
-Learn the nth of type selectors and not to exclude certain elements
+
 	
 !important for css tags
 
