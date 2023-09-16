@@ -1,68 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced CSS Selectors Practice</title>
     <style>
-        /* Your CSS will go here */
+      /* Your CSS will go here */
 
-        /* Challenge 1: Target all <p> elements inside <div> but not those inside <section> */
-        
-        /* Challenge 2: Target the first child of every <ul> */
-        
-        /* Challenge 3: Target all even <li> elements */
-        
-        /* Challenge 4: Target <a> elements with an href that starts with "https" */
-        
-        /* Challenge 5: Target <p> elements that are directly after a <h2> */
-        
-        /* Challenge 6: Target the last <li> in every <ul> */
-        
-        /* Challenge 7: Target <p> elements that have a "data-info" attribute */
-        
-        /* Challenge 8: Target the third child of the <main> element */
-        
-        /* Challenge 9: Target <h2> elements that are the only child of their parent */
-        
-        /* Challenge 10: Target <a> elements that are visited */
+      /*         Challenge 1: Target all <p> elements inside <div>
+         but not those inside <section>
+ */
+
+      div p {
+        background-color: gray;
+        color: white;
+      }
+      /* Challenge 2: Target the first child of every <ul> */
+
+      /* ul:first-child {
+        background-color: bisque;
+      } 
+      This is not correct as this is targeting the list itself and checking
+      if it is a first child*/
+      /* The correct selector is checking the li elements  */
+      ul > li:first-child {
+        background-color: bisque;
+      }
+
+      /* Challenge 3: Target all even <li> elements */
+
+      li:nth-child(even) {
+        background-color: gray;
+      }
+
+      /* Challenge 4: Target <a> elements with an href that 
+            starts with "https" */
+
+      a[href^="https"] {
+        background-color: burlywood;
+      }
+      a[href^="https"]:hover {
+        color: black;
+      }
+
+      /* Challenge 5: Target <p> elements that are directly
+             after a <h2> */
+
+      h2 + p {
+        background-color: crimson;
+      }
+
+      /* Challenge 6: Target the last <li> in every <ul> */
+
+      li:last-child {
+        background-color: crimson;
+      }
+
+      /* Challenge 7: Target <p> elements that have a "data-info" 
+            attribute */
+
+      p[data-info] {
+        background-color: crimson;
+      }
+
+      /* Challenge 8: Target the third child of the <main> element */
+
+      main > :nth-child(3) {
+        background-color: crimson;
+      }
+
+      /* Challenge 9: Target <h2> elements that are the only child 
+            of their parent */
+
+      h2:only-child {
+        background-color: crimson;
+      }
+
+      /* Challenge 10: Target <a> elements that are visited */
+      a:visited {
+        color: crimson;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="http://example.com">External Link</a></li>
-                <li><a href="https://secure.com">Secure Link</a></li>
-                <li><a href="/internal">Internal Link</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="http://example.com">External Link</a></li>
+          <li><a href="https://secure.com">Secure Link</a></li>
+          <li><a href="/internal">Internal Link</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h2>Heading 1</h2>
-        <p>This is a paragraph.</p>
-        <h2>Heading 2</h2>
-        <p data-info="special">This paragraph has a data attribute.</p>
-        <h2>Heading 3</h2>
-        <section>
-            <p>This is inside a section.</p>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
-        </section>
-        <div>
-            <p>This is inside a div.</p>
-            <ul>
-                <li>Item A</li>
-                <li>Item B</li>
-                <li>Item C</li>
-            </ul>
-        </div>
+      <h2>Heading 1</h2>
+      <p>This is a paragraph.</p>
+      <h2>Heading 2</h2>
+      <p data-info="special">This paragraph has a data attribute.</p>
+      <h2>Heading 3</h2>
+      <section>
+        <p>This is inside a section.</p>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </section>
+      <div>
+        <p>This is inside a div.</p>
+        <ul>
+          <li>Item A</li>
+          <li>Item B</li>
+          <li>Item C</li>
+        </ul>
+      </div>
     </main>
+    <div>
+      <h2>Only child h2</h2>
+    </div>
+    <div>
+      <h2>Two h2 children</h2>
+      <h2>Two h2 children</h2>
+    </div>
     <footer>
-        <p>Footer content here.</p>
+      <p>Footer content here.</p>
     </footer>
-</body>
+  </body>
 </html>
