@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 1</title>
+    <style>
+
+      /* Challenge number one from https://frontendmasters.com/blog/css-specificity/ */
+      /* Let's calculate the specificity manually for each selector */
+      * {
+        font-family: `Arial`, sans-serif;
+      }
+      /* 0-0-0 As it is an unweighted selector, however it will be applied to all elements */
+
+      section {
+        margin-bottom: 24px;
+        border: 2px dotted black;
+        padding: 16px;
+      }
+
+      /* 0-0-1 
+      1 point as it is only an html tag */
+
+      button {
+        background: skyblue;
+        border: none;
+        padding: 12px;
+      }
+
+      /* 0-0-1  */
+
+      p {
+        font-family: "Tahoma";
+      }
+
+            /* 0-0-1  */
+
+
+      .content {
+        font-family: "Georgia";
+      }
+
+      /* 0-1-0 as content is a class name */
+
+      #section-1-read-more {
+        background: orange;
+      }
+
+      /* 1-0-0 since it is an Ids selector */
+    </style>
+  </head>
+  <section>
+    <h1 class="title">Section 1</h1>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit maiores...
+    </p>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit maiores...
+    </p>
+    <button id="section-1-read-more">Read more</button>
+  </section>
+
+  <section>
+    <h1 class="title">Section 2</h1>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit maiores...
+    </p>
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit maiores...
+    </p>
+    <button id="section-2-read-more">Read more</button>
+  </section>
+  <body></body>
+</html>

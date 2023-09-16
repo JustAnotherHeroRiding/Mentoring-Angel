@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 2</title>
+    <style>
+        /* Second challenge from https://frontendmasters.com/blog/css-specificity/ */
+
+      li > a {
+        color: pink;
+        text-decoration: none;
+      }
+      /* 0-0-2 Since the ">" selector does not count  */
+
+      a.link {
+        color: orange;
+      }
+
+      /* 0-1-1 Here we have both a class and a tag, targeting anchor tags with the link class */
+
+      a[visited="true"] {
+        text-decoration: underline;
+      }
+
+      /* 0-1-1 since the attribute selector adds 1 point to the middle value */
+
+      li:first-of-type a {
+        color: blue;
+      }
+
+      /* 0-1-2 The pseudo selector adds again 1 point to the middle value */
+    </style>
+    <ul>
+      <li><a class="link" href="#">Item 1</a></li>
+      <li></li>
+      <li><a class="link" href="#" visited="true">Item 2</a></li>
+      <li><a class="link" href="#">Item 3</a></li>
+    </ul>
+  </head>
+  <body>
+    <ul>
+      <li><a class="link" href="#">Item 1</a></li>
+      <li></li>
+      <li><a class="link" href="#" visited="true">Item 2</a></li>
+      <li><a class="link" href="#">Item 3</a></li>
+    </ul>
+  </body>
+</html>

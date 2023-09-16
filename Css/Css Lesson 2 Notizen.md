@@ -2,7 +2,7 @@ CTRL SHIFT I opens the dev tools
 ### 16px default font size which is what em and rem are by default
 
 
-- Practice specificity of selectors
+- Practice specificity of selectors #DONE 
 - Create a bunch of classes and complex css selectors and calculate the specificity manually
 - Css selectors w3 schools list - play around
 - rem and em exercises

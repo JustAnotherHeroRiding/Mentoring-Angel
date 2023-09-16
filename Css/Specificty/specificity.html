@@ -17,52 +17,71 @@
       div {
         background-color: lightblue;
       }
+      /* 0-0-1 One tag */
 
       /* 2 */
       #header {
         background-color: lightgreen;
       }
 
+      /* 1-0-0 One id tag */
+
       /* 3 */
       .highlight {
         font-weight: bold;
       }
+
+      /* 0-1-0 One class */
 
       /* 4 */
       div p {
         color: red;
       }
 
+       /* 0-0-2 Here we have 2 tags */
+
       /* 5 */
       div > p {
         color: blue;
       }
+
+      /* 0-0-2 Since ">" does not count */
 
       /* 6 */
       body #content .highlight {
         text-decoration: underline;
       }
 
+      /* 1-1-1 One of each */
+
       /* 7 */
       ul + p {
         font-style: italic;
       }
+
+      /* 0-0-2 since "+" does not count */
 
       /* 8 */
       h2.title {
         font-size: 24px;
       }
 
+      /* 0-1-1 Class and a tag */
+
       /* 9 */
       div[data-attr="value"] {
         border: 1px solid black;
       }
+
+      /* 0-1-1 One middle point for the attribute  */
 
       /* 10 */
       * {
         margin: 0;
         padding: 0;
       }
+
+      /* 0-0-0 since * is not a weighted selector */
     </style>
   </head>
   <body>
