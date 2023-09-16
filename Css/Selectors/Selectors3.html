@@ -1,73 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced CSS Selectors Practice - Expert Level</title>
     <style>
-        /* Your CSS will go here */
+      /* Your CSS will go here */
 
-        /* Challenge 21: Target the <p> element that's directly after the second <h3> inside a <section> */
-        
-        /* Challenge 22: Target the third <li> that's inside a <ul> which is a direct child of a <nav> */
-        
-        /* Challenge 23: Target <a> elements that have an href containing the substring "target" but not ending with ".net" */
-        
-        /* Challenge 24: Target the <span> that's the only child of its parent, but only if it's not inside a <footer> */
-        
-        /* Challenge 25: Target the <img> that's immediately preceded by a <p> with the class "special" */
-        
-        /* Challenge 26: Target the last <p> inside a <div> which doesn't have any class or id */
-        
-        /* Challenge 27: Target the first letter of a <p> that's the first child of its parent and is followed by an <img> */
-        
-        /* Challenge 28: Target the <h2> that's not directly inside a <header> or <footer> */
-        
-        /* Challenge 29: Target the <button> that's disabled and is the only child of a <form> with the action attribute set to "submit.php" */
-        
-        /* Challenge 30: Target the <h4> that's the only type of its kind inside its parent */
+      /* Challenge 21: Target the <p> element that's directly after
+             the second <h3> inside a <section> */
+      /* 
+            section h3:nth-of-type(2) + p {
+                background-color: crimson;
+            } */
+
+      /* Challenge 22: Target the third <li> that's inside a <ul> 
+            which is a direct child of a <nav> */
+
+      /* nav > ul li:nth-of-type(3) {
+                background-color: crimson;
+            } */
+
+      /* Challenge 23: Target <a> elements that have an href 
+            containing the substring "target" but not ending with
+             ".net" */
+
+      /*   a[href*="target"]:not(a[href$="net"]) {
+                background-color: crimson;
+             }
+ */
+      /* Challenge 24: Target the <span> that's the only child
+             of its parent, but only if it's not inside a <footer> */
+
+      /*  span:only-child:not(footer span) {
+            background-color: crimson;
+        }
+ */
+      /* Challenge 25: Target the <img> that's immediately 
+        preceded by a <p> with the class "special" */
+
+      /*  p.special ~ img {
+        background-color: crimson;
+      }
+ */
+      /* Challenge 26: Target the last <p> inside a <div> which 
+            doesn't have any class or id */
+
+      /*  div p:last-of-type:not(p[id]):not(p[class]) {
+                background-color: yellow;
+            } */
+
+      /* Challenge 27: Target the first letter of a <p> that's the 
+            first child of its parent and is followed by an <img> */
+
+      /* p:first-child::first-letter {
+        background-color: yellow;
+      } */
+
+      /* This does not seem to be possible */
+
+      /* Challenge 28: Target the <h2> or <h3> that's not directly inside a 
+            <header> or <footer> */
+
+      /* :is(h2, h3):not(header :is(h2, h3)):not(header :is(h2, h3)) {
+        background-color: red;
+      }
+
+      :is(h2, h3):not(header > :is(h2, h3)):not(footer > :is(h2, h3)) {
+        background-color: red;
+      } */
+
+      /* Challenge 29: Target the <button> that's disabled and 
+            is the only child of a <form> with the action attribute 
+                set to "submit.php" */
+
+      /*   form[action='submit.php'] button:disabled:only-child {
+                    background-color: yellow;
+                } */
+
+      /* Challenge 30: Target the <h4> that's the only type of its 
+            kind inside its parent */
+
+      /*  h4:only-of-type {
+                background-color: yellow;
+            } */
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h2>Site Title</h2>
-        <nav>
-            <ul>
-                <li><a href="page.html">Home</a></li>
-                <li><a href="target-page.html">Target</a></li>
-                <li><a href="another-target.net">Another Target</a></li>
-            </ul>
-        </nav>
+      <h2>Site Title</h2>
+      <nav>
+        <ul>
+          <li><a href="page.html">Home</a></li>
+          <li><a href="target-page.html">Target</a></li>
+          <li><a href="another-target.net">Another Target</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section>
-            <h3>Section Heading 1</h3>
-            <p>Some content here.</p>
-            <h3>Section Heading 2</h3>
-            <p>This paragraph is directly after the second h3 inside a section.</p>
-            <img src="image1.jpg" alt="Image 1">
-            <p class="special">A special paragraph.</p>
-            <img src="image2.jpg" alt="Image 2">
-        </section>
-        <div>
-            <p>This is a paragraph inside a div without any class or id.</p>
-            <p>Another paragraph.</p>
-        </div>
-        <article>
-            <h4>Article Heading</h4>
-            <p>The first letter of this paragraph is special.</p>
-            <img src="image3.jpg" alt="Image 3">
-        </article>
-        <form action="submit.php">
-            <button disabled>Submit</button>
-        </form>
-        <div class="container">
-            <span>Span inside a container.</span>
-        </div>
+      <section>
+        <h3>Section Heading 1</h3>
+        <p>Some content here.</p>
+        <h3>Section Heading 2</h3>
+        <p>This paragraph is directly after the second h3 inside a section.</p>
+        <img src="image1.jpg" alt="Image 1" />
+        <p class="special">A special paragraph.</p>
+        <img src="image2.jpg" alt="Image 2" />
+      </section>
+      <div>
+        <p>This is a paragraph inside a div without any class or id.</p>
+        <p>Another paragraph.</p>
+      </div>
+      <h2>h2 that is not inside the header or footer</h2>
+      <div>
+        <p>This is a paragraph inside a div without any class or id.</p>
+        <p class="class">Another paragraph.</p>
+      </div>
+      <article>
+        <h4>Article Heading</h4>
+        <p>The first letter of this paragraph is special.</p>
+        <img src="image3.jpg" alt="Image 3" />
+      </article>
+      <form action="submit.php">
+        <button disabled>Submit</button>
+      </form>
+      <div class="container">
+        <span>Span inside a container.</span>
+      </div>
     </main>
     <footer>
-        <h2>Footer Title</h2>
-        <span>Span inside a footer.</span>
+      <h2>Footer Title</h2>
+      <span>Span inside a footer.</span>
     </footer>
-</body>
+  </body>
 </html>
