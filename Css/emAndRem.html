@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rem and em playground</title>
     <style>
+        body {
+            /* This will set the size of em, also 16px by default */
+            font-size: 12px;
+        }
+
+
+
+        html {
+            /* This sets the size of rem, 16px by default */
+            font-size: 18px;
+        }
         h1 {
             text-align: center;
+            font-size: 1em;
+        }
+        div {
+            font-size: {
+                20px
+            };
+        }
+        div > h1 {
+            font-size: 1em;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
+    <div>
+        <h1>h1 inside a div</h1>
+    </div>
     <h1>Going deep on rem and em</h1>
-    
+    <h2>This is a 1rem big h2</h2>
 </body>
 </html>
