@@ -5,33 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge 3</title>
     <style>
-      input[type="text"] {
+   /*    input[type="text"] {
         border: 2px solid red;
-      }
+      } */
 
       /* 0-1-1 attribute and tag selectors*/
 
-      input {
+   /*    input + p {
         border: 4px solid purple;
-      }
+      } */
 
       /* 0-0-1 Just a tag */
 
-      input#first-name {
+   /*    input#first-name {
         border: 6px solid orange;
-      }
+      } */
 
       /* 1-0-1 Id and tag */
 
-      #first-name {
+   /*    #first-name {
         border: 8px solid black;
-      }
+      } */
 
       /* 1-0-0 Just an id */
+
+      div + p {
+        color: red;
+      }
     </style>
   </head>
   <body>
+
     <label for="first-name">First name</label>
     <input id="first-name" type="text" />
+    <div>
+      <p>Direct child</p>
+
+    </div>
+    <p>Direct child</p>
+    <p>Direct child</p>
+    <p>Direct child</p>
+    <p>Direct child</p>
+    <p>Direct child</p>
+    <p>Direct child</p>
+
   </body>
 </html>

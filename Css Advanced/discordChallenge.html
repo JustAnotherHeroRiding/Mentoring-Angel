@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        font-weight: normal;
+        padding: 3rem;
+        clear: left;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      .row {
+      }
+
+      .column {
+        display: inline-block;
+        float: left;
+        height: 20rem;
+        padding: 8px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .column:nth-of-type(odd) {
+        width: 25%;
+      }
+
+      .column:nth-of-type(even) {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <section class="row">
+      <div class="column">Column</div>
+      <div class="column">Column</div>
+      <div class="column">Column</div>
+    </section>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>

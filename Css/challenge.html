@@ -19,6 +19,9 @@
         width: 100%;
         text-align: center;
         padding: 4px;
+
+
+
         min-height: 80vh;
         /* So that all the content fits inside the wrapper, i set the height to fit-content
         It should never be smaller than 80vh so the min-height is 80vh */
@@ -28,10 +31,13 @@
 
       .wrapper .parent .child {
         border: 1px solid red;
-        width: 100%;
+
+
+        /* width: 100%; */
+        /* By */
         /* The left margin was pushing the child to the right and overflowing from the wrapper container */
         /* By turning the left margin to 0 it is now a 100% of the parent */
-        margin: 3em 3em 3em 0;
+        margin: 3em 3em 3em 3em;
         height: 5em;
       }
 
