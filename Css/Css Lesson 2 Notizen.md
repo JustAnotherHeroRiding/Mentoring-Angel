@@ -10,14 +10,14 @@
 - Create exercises and try to target various elements with the css and more advanced selectors #DONE 
 - Learn the nth of type selectors and not to exclude certain elements #DONE 
 - rem and em exercises
-- box model two types
+- box model two types #DONE 
 
 ## Complete the challenge #DONE 
 
 ## Master the css selectors such as >, ~, + and others #DONE 
 
 ## Pseudo elements #DONE 
-## Border box and content box
+## Border box and content box #DONE 
 
 
 	
@@ -27,5 +27,5 @@
 ### Continue with the challenges #DONE 
 
 
-Check out the css only chat repo
+Check out the css only chat repo #DONE 
 

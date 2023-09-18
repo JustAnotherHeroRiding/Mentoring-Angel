@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pseudo Elements</title>
     <style>
-        h1 {
-            text-align: center;
-        }
+      h1 {
+        text-align: center;
+      }
+
+      .before::before {
+        content: "Before the p tag Inline element";
+        border: 2px solid black;
+        border-radius: 50px;
+        padding: 10px 8px;
+      }
+
+      .after::after {
+        content: "After the p tag Inline element set to block";
+        border: 2px solid black;
+        border-radius: 50px;
+        padding: 10px 8px;
+        display: block;
+        width: fit-content;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Pseudo Elements and how they can be used</h1>
-    
-</body>
+
+    <p class="before">This is a before p tag</p>
+    <p class="after">This is an after p tag</p>
+  </body>
 </html>
