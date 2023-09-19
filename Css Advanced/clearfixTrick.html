@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clearfix Demo</title>
+    <style>
+      .container {
+        border: 2px solid black;
+      }
+
+      .float-left {
+        float: left;
+        width: 50%;
+        height: 100px;
+        background-color: lightblue;
+      }
+
+      .float-right {
+        float: right;
+        width: 50%;
+        height: 150px;
+        background-color: lightcoral;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Here we have a container div 
+    The two children inside are both floated divs which means they are no longer block elements and do not take up
+    an entire row.
+    As they are not block elements the parent does not recognize their height and the border is not stretched to be
+    as tall as the taller div on the right -->
+    <div class="container clearfix">
+        <!-- If we remove the pseudo element then the container div does not have a height. -->
+      <div class="float-left">I'm a floated left div</div>
+      <div class="float-right">
+        I'm a floated right div with a taller height
+      </div>
+    </div>
+    <!-- Without the ::after pseudo element this p tag will go inside the container even though it should be on
+    the next line.
+    Adding the pseudo element will stretch the container div to the bottom of the tallest floated child
+    And since the after element has a display: table; it will be a block element -->
+    <p>Content below the container</p>
+  </body>
+</html>
