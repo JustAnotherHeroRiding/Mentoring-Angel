@@ -10,5 +10,5 @@ CSS Dinner #DONE
 - positions - display them and in what way the differ between each other #DONE 
 - display flow root example #DONE 
 - selectors recap
-- Create layout from the discord image sent at 7:33 pm
+- Create layout from the discord image sent at 7:33 pm #DONE 
 
