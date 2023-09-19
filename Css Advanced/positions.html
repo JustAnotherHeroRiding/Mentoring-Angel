@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Static:
+
+    This is the default position for all elements.
+    Elements are positioned according to the normal flow of the page, without any offset.
+
+    Relative:
+        
+    An element with position: relative; is positioned relative to its normal position.
+    Using top, right, bottom, and left properties, you can move the element from where it would be in the normal flow.
+    Other content will not adjust to fit into any gap left by the element.
+
+    Absolute:
+        
+    An element with position: absolute; is positioned relative to the nearest positioned ancestor (not static). 
+    If no positioned ancestors exist, it uses the document body.
+    It's taken out of the normal flow, meaning it doesn't take up space and can overlap other elements.
+    The top, right, bottom, and left properties position the element within its containing element.
+
+    Fixed:
+        
+    An element with position: fixed; is positioned relative to the viewport.
+    It will stay in the same place even if the page is scrolled.
+    The top, right, bottom, and left properties are used to position the element.
+
+    Sticky:
+        
+    An element with position: sticky; is positioned based on the user's scroll position.
+    It toggles between relative and fixed, depending on the scroll position. It's treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positions</title>
+    <style>
+      body {
+        height: 2000px;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        margin: 20px;
+      }
+
+      .static {
+        background-color: lightblue;
+      }
+
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background-color: lightcoral;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: lightgreen;
+      }
+
+      .fixed {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: lightyellow;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 20px;
+        background-color: lightpink;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid gray;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="static">Static</div>
+
+    <div class="relative">Relative</div>
+
+    <div class="container">
+      Container
+      <div class="absolute">Absolute</div>
+    </div>
+
+    <div class="fixed">Fixed</div>
+
+    <div class="sticky">Sticky</div>
+
+    <p>Scroll down to see the sticky positioning in action.</p>
+  </body>
+</html>
