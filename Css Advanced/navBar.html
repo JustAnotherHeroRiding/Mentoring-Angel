@@ -1,79 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nav Bar </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nav Bar</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      body {
+        height: 200vh;
+        background-color: #ebe4d1;
+      }
+
+      header {
+        top: 0;
+        background-color: #fafafa;
+        position: sticky;
+        width: 100%;
+        height: 60px;
+      }
+
+      nav {
+        height: inherit;
+      }
+
+      ul {
+        width: inherit;
+        height: inherit;
+      }
+
+      li {
+        padding: 10px 3em;
+        width: 25%;
+        float: left;
+        list-style-type: none;
+        height: inherit;
+        position: relative;
+      }
+
+      /* Added media query that triggers on screens up to 600px
+      This will reset the float to none and give the items full width as there will be one item per row
+       */
+      @media (max-width: 600px) {
+        li {
+          float:none;
+          width: 100%;
+          margin: 4px 0;
+          clear: none;
+
         }
-
-        body {
-            height: 200vh;
-            background-color: #EBE4D1;
-        }
-
         header {
-            top: 0;
-            background-color: #fafafa;
-            position: sticky;
-            width: 100%;
-            height: 60px;
-        }
-
-        nav {
-            height: inherit;
+            height: fit-content;
         }
 
         ul {
-            width: inherit;
-            height: inherit;
+            padding: 4px 0;
         }
+      }
 
-        li {
-            padding: 10px 3em;
-            width: 25%;
-            float: left;
-            list-style-type: none;
-            height: inherit;
-            position: relative;
-        }
+      li:hover {
+        background-color: beige;
+        cursor: pointer;
+      }
 
-        li:hover {
-            background-color: beige;
-            cursor: pointer;
-        }
-
-        a {
-            display: inline-block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            text-decoration: none;
-            color: black;
-        }
+      a {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: black;
+      }
     </style>
-</head>
-<body>
-
-<header>
-    <nav>
+  </head>
+  <body>
+    <header>
+      <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Find More</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Find More</a></li>
         </ul>
-    </nav>
-</header>
-
-
-</body>
+      </nav>
+    </header>
+  </body>
 </html>
