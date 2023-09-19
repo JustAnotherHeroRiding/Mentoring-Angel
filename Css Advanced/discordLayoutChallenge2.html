@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 30%;
+        height: 30%;
+        background-color: #fcd24a;
+        float: left;
+        margin: 12px;
+        position: relative;
+        top: 60%;
+      }
+      body {
+        background-color: #c3ebf9;
+      }
+      header,
+      footer {
+        width: calc(
+          100% - 48px
+        ); /* Subtracting 24px left margin and 24px right margin */
+        background-color: #02bfb0;
+        height: 10vh;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        margin: 24px;
+        display: flow-root;
+      }
+      h1 {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      aside {
+        background-color: #6edb6e;
+        position: relative;
+        height: 60vh;
+        width: 30vw;
+        float: left;
+        margin-bottom: 24px;
+        margin-left: 24px;
+      }
+
+      article {
+        position: relative;
+        background-color: #fbb04c;
+        float: right;
+        height: 60vh;
+        width: 60vw;
+        margin-right: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <aside>
+      <h1>Aside</h1>
+    </aside>
+    <article>
+        <h1>Article</h1>
+      <div class="box"><h1>Image</h1></div>
+      <div class="box"><h1>Image</h1></div>
+      <div class="box"><h1>Image</h1></div>
+    </article>
+    <footer>
+      <h1>Footer</h1>
+    </footer>
+  </body>
+</html>

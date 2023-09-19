@@ -8,7 +8,7 @@ CSS Dinner #DONE
 - clear fix trick - What is it and how it works #DONE 
 - z index - Only works with absolute positioned elements #DONE 
 - positions - display them and in what way the differ between each other #DONE 
-- display flow root example
+- display flow root example #DONE 
 - selectors recap
 - Create layout from the discord image sent at 7:33 pm
 
