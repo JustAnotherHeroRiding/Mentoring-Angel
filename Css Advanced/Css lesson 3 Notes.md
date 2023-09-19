@@ -1,14 +1,14 @@
 
 
 ## Challenge
-- [https://flukeout.github.io/](https://flukeout.github.io/ "https://flukeout.github.io/")
-CSS Dinner
+- [https://flukeout.github.io/](https://flukeout.github.io/ "https://flukeout.github.io/") #DONE 
+CSS Dinner #DONE 
 
-- column on small screen sizes, look at the code in the discord chat
-- clear fix trick
-- z index
-- positions
-- display flow root
+- column on small screen sizes, look at the code in the discord chat and add a responsive layout
+- clear fix trick - What is it and how it works
+- z index - Only works with absolute positioned elements
+- positions - display them and in what way the differ between each other
+- display flow root example
 - selectors recap
-- Create layout from the discord image
+- Create layout from the discord image sent at 7:33 pm
 

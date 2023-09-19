@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Css Dinner Playground</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        .plate {
+            border: 1px black solid;
+            border-radius: 99px;
+            width: fit-content;
+            height: fit-content;
+            padding: 16px;
+        }
+
+        .orange {
+            background-color: orange;
+            border-radius: 99px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .bento {
+            background-color: black;
+            color: wheat;
+        
+        }
+        div .bento:nth-last-child(3) {
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <a class="bento">
+        bento
+        <div class="plate">
+          <div class="orange">Orange</div class="orange">
+          <div class="orange">Orange</div class="orange">
+          <div class="orange">Orange</div class="orange">
+        </div>
+      </div>
+    </div>
+    <a class="bento">Bento 2</a>
+  </body>
+</html>
