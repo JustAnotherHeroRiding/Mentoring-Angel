@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-index Demo</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+
+      .red {
+        background-color: red;
+        z-index: 1;
+        top: 25px;
+        left: 25px;
+      }
+
+      .green {
+        background-color: green;
+        left: 75px;
+        top: 35px;
+        z-index: 2;
+      }
+
+      .blue {
+        background-color: blue;
+        left: 100px;
+        top: 100px;
+        z-index: 3;
+      }
+
+      .cadetBlue {
+        background-color: cadetblue;
+        left: 125px;
+        top: 125px;
+        z-index: -1; /* Negative z-index */
+      }
+      /* As the wrapper has a z-index of 4, if there was another element with an index of 5
+        It will show above .purple even though they have the same index */
+
+      .coral {
+        background-color: coral;
+        top: 225px;
+        left: 125px;
+        z-index: 5;
+      }
+      .wrapper {
+        position: relative;
+        z-index: 4;
+        top: 200px;
+        left: 50px;
+      }
+
+      .purple {
+        background-color: purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5; /* Within the context of the wrapper */
+      }
+
+      .cyan {
+        background-color: cyan;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: 6; /* Within the context of the wrapper */
+      }
+
+      .orange {
+        background-color: orange;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 10; /* This will be on top of everything */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- How does z-index work?
+    It only works on elements that have a position value other than static (e.g., relative, absolute, fixed, or sticky).
+    Elements with a higher z-index value are displayed in front of elements with a lower z-index value.
+    If two elements overlap without a z-index specified, the element that appears later
+    in the HTML will be displayed on top. -->
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box yellow"></div>
+    <div class="box cadetBlue"></div>
+    <!-- This will be on top of everything due to its high z-index -->
+    <div class="coral box"></div>
+
+    <!-- Stacking context created by the wrapper -->
+    <div class="wrapper">
+      <div class="box purple"></div>
+      <div class="box cyan"></div>
+    </div>
+  </body>
+</html>
