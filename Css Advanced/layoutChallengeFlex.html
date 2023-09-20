@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Flexs</title>
+    <style>
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #c3ebf9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header,
+      footer {
+        width: calc(100% - 48px);
+        background-color: #02bfb0;
+        height: 10vh;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        margin: 24px;
+      }
+
+      h1 {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-grow: 1;
+        width: calc(100% - 48px);
+        margin: 24px;
+        align-items: stretch;
+        min-height: 65vh;
+      }
+
+      aside {
+        background-color: #6edb6e;
+        width: 30vw;
+        flex-shrink: 0; 
+        position: relative;
+        margin-right: 24px;
+      }
+
+      article {
+        background-color: #fbb04c;
+        flex-grow: 1; 
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap; 
+        gap: 1.5%;
+        position: relative;
+      }
+
+      .box {
+        width: 30%;
+        height: 35%;
+        background-color: #fcd24a;
+        margin-bottom: 1.5%;
+        position: relative;
+        margin-top: auto;
+      }
+
+      @media (max-width: 1100px) {
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <div class="container">
+      <aside>
+        <h1>Aside</h1>
+      </aside>
+      <article>
+        <h1>Article</h1>
+        <div class="box"><h1>Image</h1></div>
+        <div class="box"><h1>Image</h1></div>
+        <div class="box"><h1>Image</h1></div>
+      </article>
+    </div>
+
+    <footer>
+      <h1>Footer</h1>
+    </footer>
+  </body>
+</html>
