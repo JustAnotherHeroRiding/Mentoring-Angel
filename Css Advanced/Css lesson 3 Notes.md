@@ -11,5 +11,5 @@ CSS Dinner #DONE
 - display flow root example #DONE 
 - selectors recap
 - Create layout from the discord image sent at 7:33 pm #DONE 
-- Make the layout fully responsive
+- Make the layout fully responsive #DONE 
 

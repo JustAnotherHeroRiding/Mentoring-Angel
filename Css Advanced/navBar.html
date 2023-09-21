@@ -51,15 +51,16 @@
       This will reset the float to none and give the items full width as there will be one item per row
        */
       @media (max-width: 600px) {
-        li {
+        .list {
           float:none;
           width: 100%;
           margin: 4px 0;
+          padding: 1em 1em;
 
         }
         /* Header should be taller than 60px now as the four stacked elements will take up more space */
         header {
-            height: fit-content;
+            height: auto;
         }
         /* Adding padding to the ul so that the items are not touching the borders */
         ul {
@@ -87,10 +88,10 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Find More</a></li>
+          <li class="list"><a href="#">Home</a></li>
+          <li class="list"><a href="#">About us</a></li>
+          <li class="list"><a href="#">Contact</a></li>
+          <li class="list"><a href="#">Find More</a></li>
         </ul>
       </nav>
     </header>

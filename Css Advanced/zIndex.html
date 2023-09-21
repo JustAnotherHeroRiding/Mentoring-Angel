@@ -47,11 +47,11 @@
         background-color: coral;
         top: 225px;
         left: 125px;
-        z-index: 5;
+        z-index: 1;
       }
       .wrapper {
         position: relative;
-        z-index: 4;
+        z-index: 1;
         top: 200px;
         left: 50px;
       }
@@ -61,7 +61,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 5; /* Within the context of the wrapper */
+        z-index: 4; /* Within the context of the wrapper */
       }
 
       .cyan {
@@ -71,14 +71,7 @@
         left: 25px;
         z-index: 6; /* Within the context of the wrapper */
       }
-
-      .orange {
-        background-color: orange;
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        z-index: 10; /* This will be on top of everything */
-      }
+      
     </style>
   </head>
   <body>
@@ -92,6 +85,8 @@
     <div class="box blue"></div>
     <div class="box yellow"></div>
     <div class="box cadetBlue"></div>
+
+
     <!-- This will be on top of everything due to its high z-index -->
     <div class="coral box"></div>
 
