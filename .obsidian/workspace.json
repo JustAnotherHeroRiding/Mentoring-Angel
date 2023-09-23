@@ -11,11 +11,9 @@
             "id": "c21bd0eef9ecc8e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Css Flex and Friends/qr-code-component-main/README-template.md",
-                "mode": "source",
-                "source": false
+                "file": "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Css Flex and Friends/qr-code-component-main/README-template.md",
+                "file": "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Css Flex and Friends/qr-code-component-main/README-template.md",
+                "file": "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Css Flex and Friends/qr-code-component-main/README-template.md"
+                "file": "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg"
               }
             }
           }
@@ -148,15 +146,23 @@
   },
   "active": "c21bd0eef9ecc8e4",
   "lastOpenFiles": [
+    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-preview.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/style-guide.md",
+    "Css Flex and Friends/clipboard-landing-page-master/design/active-states.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo-google.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo-hp.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo-ibm.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo-microsoft.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/logo-vector-graphics.png",
+    "Css Flex and Friends/clipboard-landing-page-master/README.md",
+    "Css Flex and Friends/clipboard-landing-page-master/README-template.md",
+    "Css Flex and Friends/qr-code-component-main/README-template.md",
     "Css Flex and Friends/qr-code-component-main/style-guide.md",
     "Css Flex and Friends/qr-code-component-main/README.md",
-    "Css Flex and Friends/qr-code-component-main/images/image-qr-code.png",
-    "Css Flex and Friends/qr-code-component-main/images/favicon-32x32.png",
-    "Css Flex and Friends/qr-code-component-main/design/desktop-preview.jpg",
-    "Css Flex and Friends/qr-code-component-main/design/desktop-design.jpg",
-    "Css Flex and Friends/qr-code-component-main/design/mobile-design.jpg",
     "Css Flex and Friends/Css Lesson 4 Notes.md",
-    "Css Flex and Friends/qr-code-component-main/README-template.md",
     "Css Flex and Friends/qr-code-component-main/images",
     "Css Flex and Friends/qr-code-component-main/design",
     "Css Flex and Friends/qr-code-component-main/index.html",
