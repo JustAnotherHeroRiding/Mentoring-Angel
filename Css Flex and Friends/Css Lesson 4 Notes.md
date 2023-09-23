@@ -8,3 +8,12 @@ Align content works on a global context within the flex container, while the abo
 Javascript 
 
 
+To do for the challenge
+- The footer is overflowing
+- The computer image is too big and needs to be more on the left
+- Hover effects for social media icons
+- Margin for supercharge section images
+- Keep working on the mobile design desktop seems ok
+- 
+
+
