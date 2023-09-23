@@ -35,13 +35,7 @@
         flex-direction: column;
         align-items: center;
       }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+
       header {
         background-repeat: no-repeat;
         background-image: url("images/bg-header-desktop.png");
@@ -55,6 +49,10 @@
         margin-bottom: 20vh;
       }
 
+      .download-btn:hover {
+        opacity: 0.8;
+      }
+
       main {
         display: flex;
         flex-direction: column;
@@ -65,7 +63,7 @@
           background-image: url("images/bg-header-mobile.png") !important;
         }
 
-        .hero-download {
+        .download-btn-container {
           flex-direction: column !important;
         }
         .download-btn {
@@ -75,7 +73,8 @@
           width: 80vw !important;
         }
 
-        .computer-section {
+        .computer-section,
+        .companies {
           flex-direction: column;
         }
 
@@ -90,7 +89,7 @@
         }
 
         .features-supercharge .description,
-        .computer-section .description{
+        .computer-section .description {
           width: 30vw !important;
         }
       }
@@ -110,7 +109,7 @@
         width: 40vw;
         margin-bottom: 16px;
       }
-      .hero-download {
+      .download-btn-container {
         margin: 32px 0;
         display: flex;
         gap: 24px;
@@ -121,6 +120,7 @@
         color: white;
         border: none;
         font-size: 1em;
+        cursor: pointer;
       }
 
       .download-btn:first-of-type {
@@ -142,7 +142,7 @@
       .computer-section .description,
       .features-supercharge .description {
         margin-top: auto;
-      } 
+      }
 
       .features-supercharge .description,
       .features-computer .description {
@@ -161,6 +161,59 @@
       .computer-img {
         margin-right: auto;
       }
+
+      .companies {
+        display: flex;
+        gap: 5vw;
+        flex-shrink: 1;
+        margin: 10vh;
+      }
+
+      #footer {
+        background-color: whitesmoke;
+        height: 20vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row; /* Change to row to align content horizontally */
+        align-items: center; /* Vertically center content */
+      }
+
+      .footer-links {
+        margin-right: auto;
+        display: flex;
+        flex-direction: row; /* Display links in rows */
+        gap: 20px; /* Add spacing between links in the same column */
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text to the left in each column */
+      }
+
+      /* Style your links as needed */
+      .column span {
+        text-decoration: none;
+        color: hsl(210, 10%, 33%);
+        margin: 8px 0; /* Add spacing between links */
+        cursor: pointer;
+      }
+      .column span:hover {
+        color: greenyellow;
+      }
+
+      #footerLogo {
+        margin-right: 40px;
+        margin-left: 16px;
+      }
+
+      .social-icons {
+        display: flex;
+        margin-right: 48px;
+        gap: 4px;
+      }
     </style>
   </head>
   <body>
@@ -177,7 +230,7 @@
         Clipboard allows you to track and organize everything you copy.
         Instantly access your clipboard on all your devices.
       </p>
-      <div class="hero-download">
+      <div class="download-btn-container">
         <button class="download-btn">Download for iOS</button>
         <button class="download-btn">Download for Mac</button>
       </div>
@@ -263,23 +316,64 @@
         Available for free on the App Store. Download for Mac or iOS, sync with
         iCloud and you’re ready to start adding to your clipboard.
       </p>
-      <button class="download-btn">Download for iOS</button
-      ><button class="download-btn">Download for Mac</button>
-      <footer>
-        <span> FAQs </span>
-        <span> Contact Us </span>
-        <span> Privacy Policy </span>
-        <span>Press Kit</span><span>Install Guide</span>
+
+      <section class="companies">
+        <img
+          width="100px"
+          height="auto"
+          src="images/logo-google.png"
+          alt="Google"
+        />
+        <img width="100px" height="auto" src="images/logo-ibm.png" alt="IBM" />
+        <img
+          width="100px"
+          height="auto"
+          src="images/logo-microsoft.png"
+          alt="Microsoft"
+        />
+        <img width="100px" height="auto" src="images/logo-hp.png" alt="HP" />
+        <img
+          width="100px"
+          height="auto"
+          src="images/logo-vector-graphics.png"
+          alt="Vector Graphics"
+        />
+      </section>
+      <div class="download-btn-container">
+        <button class="download-btn">Download for iOS</button
+        ><button class="download-btn">Download for Mac</button>
+      </div>
+      <footer id="footer">
+        <img id="footerLogo" 
+        src="images/logo.svg" alt="Logo" width="80" height="auto" />
+        <div class="footer-links">
+          <div class="column">
+            <span>FAQs</span>
+            <span>Contact Us</span>
+          </div>
+          <div class="column">
+            <span>Privacy Policy</span>
+            <span>Press Kit</span>
+          </div>
+          <div class="column">
+            <span>Install Guide</span>
+          </div>
+        </div>
+        <div class="social-icons">
+          <img src="images/icon-facebook.svg" alt="">
+          <img src="images/icon-twitter.svg" alt="">
+          <img src="images/icon-instagram.svg" alt="">
+        </div>
       </footer>
     </main>
 
-    <footer>
+    <!--     <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
 </html>
