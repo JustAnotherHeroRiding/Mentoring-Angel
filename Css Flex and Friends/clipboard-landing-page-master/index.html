@@ -25,7 +25,7 @@
       * {
         margin: 0;
         padding: 0;
-        box-sizing: content-box;
+        box-sizing: border-box;
         text-align: center;
         font-family: "Bai Jamjuree", sans-serif;
       }
@@ -80,6 +80,11 @@
 
         .computer-img {
           margin: 0;
+        }
+
+        .features-supercharge {
+          flex-direction: column;
+          gap: 48px;
         }
       }
 
@@ -144,6 +149,10 @@
         margin-top: auto;
       }
 
+      .features-supercharge div .description {
+        width: 25vw;
+      }
+
       .features-supercharge .description,
       .features-computer .description {
         width: 35vw;
@@ -163,10 +172,16 @@
       }
 
       .companies {
-        display: flex;
-        gap: 5vw;
-        flex-shrink: 1;
         margin: 10vh;
+        display: flex;
+        padding: 0 10vw;
+        justify-content: space-between; /* Distribute space evenly between images */
+        width: 100vw; 
+      }
+
+      .companies img {
+        max-width: 100%; /* Make images responsive within their containers */
+        height: auto; /* Maintain aspect ratio */
       }
 
       #footer {
@@ -283,15 +298,21 @@
         class="devices-img"
         src="images/image-devices.png"
         alt="devices"
-        width="400px"
+        width="auto"
         height="auto"
       />
 
-      <h2>Supercharge your workflow</h2>
+      <h1>Supercharge your workflow</h1>
       <p class="description">We’ve got the tools to boost your productivity.</p>
 
       <div class="features-supercharge">
         <div>
+          <img
+            src="images/icon-blacklist.svg"
+            alt="Blacklist Icon"
+            width="48px"
+            height="auto"
+          />
           <h3>Create blacklists</h3>
           <p class="description">
             Ensure sensitive information never makes its way to your clipboard
@@ -299,12 +320,24 @@
           </p>
         </div>
         <div>
+          <img
+            src="images/icon-text.svg"
+            alt="Text Icon"
+            width="48px"
+            height="auto"
+          />
           <h3>Plain text snippets</h3>
           <p class="description">
             Remove unwanted formatting from copied text for a consistent look.
           </p>
         </div>
         <div>
+          <img
+            src="images/icon-preview.svg"
+            alt="preview Icon"
+            width="48px"
+            height="auto"
+          />
           <h3>Sneak preview</h3>
           <p class="description">
             Quick preview of all snippets on your Clipboard for easy access.
@@ -319,21 +352,21 @@
 
       <section class="companies">
         <img
-          width="100px"
+          width="auto"
           height="auto"
           src="images/logo-google.png"
           alt="Google"
         />
-        <img width="100px" height="auto" src="images/logo-ibm.png" alt="IBM" />
+        <img width="auto" height="auto" src="images/logo-ibm.png" alt="IBM" />
         <img
-          width="100px"
+          width="auto"
           height="auto"
           src="images/logo-microsoft.png"
           alt="Microsoft"
         />
-        <img width="100px" height="auto" src="images/logo-hp.png" alt="HP" />
+        <img width="auto" height="auto" src="images/logo-hp.png" alt="HP" />
         <img
-          width="100px"
+          width="auto"
           height="auto"
           src="images/logo-vector-graphics.png"
           alt="Vector Graphics"
@@ -344,8 +377,13 @@
         ><button class="download-btn">Download for Mac</button>
       </div>
       <footer id="footer">
-        <img id="footerLogo" 
-        src="images/logo.svg" alt="Logo" width="80" height="auto" />
+        <img
+          id="footerLogo"
+          src="images/logo.svg"
+          alt="Logo"
+          width="80"
+          height="auto"
+        />
         <div class="footer-links">
           <div class="column">
             <span>FAQs</span>
@@ -360,9 +398,9 @@
           </div>
         </div>
         <div class="social-icons">
-          <img src="images/icon-facebook.svg" alt="">
-          <img src="images/icon-twitter.svg" alt="">
-          <img src="images/icon-instagram.svg" alt="">
+          <img src="images/icon-facebook.svg" alt="" />
+          <img src="images/icon-twitter.svg" alt="" />
+          <img src="images/icon-instagram.svg" alt="" />
         </div>
       </footer>
     </main>

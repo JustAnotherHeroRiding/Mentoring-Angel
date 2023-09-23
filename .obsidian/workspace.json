@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg"
+                "file": "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg",
+                "file": "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg",
+                "file": "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg"
+                "file": "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg"
               }
             }
           }
@@ -146,20 +146,20 @@
   },
   "active": "c21bd0eef9ecc8e4",
   "lastOpenFiles": [
-    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-facebook.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/image-devices.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/image-computer.png",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-twitter.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-preview.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-instagram.svg",
+    "Css Flex and Friends/clipboard-landing-page-master/images/icon-text.svg",
     "Css Flex and Friends/clipboard-landing-page-master/design/active-states.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-design.jpg",
+    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-preview.jpg",
     "Css Flex and Friends/clipboard-landing-page-master/style-guide.md",
     "Css Flex and Friends/clipboard-landing-page-master/README-template.md",
-    "Css Flex and Friends/clipboard-landing-page-master/design/desktop-preview.jpg",
-    "Css Flex and Friends/clipboard-landing-page-master/design/mobile-design.jpg",
     "Css Flex and Friends/clipboard-landing-page-master/README.md",
-    "Css Flex and Friends/clipboard-landing-page-master/images/bg-header-desktop.png",
-    "Css Flex and Friends/clipboard-landing-page-master/images/bg-header-mobile.png",
-    "Css Flex and Friends/clipboard-landing-page-master/images/favicon-32x32.png",
-    "Css Flex and Friends/clipboard-landing-page-master/images/icon-blacklist.svg",
-    "Css Flex and Friends/clipboard-landing-page-master/images/icon-facebook.svg",
-    "Css Flex and Friends/clipboard-landing-page-master/images/icon-instagram.svg",
-    "Css Flex and Friends/clipboard-landing-page-master/images/icon-preview.svg",
     "Css Flex and Friends/qr-code-component-main/README-template.md",
     "Css Flex and Friends/qr-code-component-main/style-guide.md",
     "Css Flex and Friends/qr-code-component-main/README.md",
