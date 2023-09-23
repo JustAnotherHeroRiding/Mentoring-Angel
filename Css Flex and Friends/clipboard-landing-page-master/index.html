@@ -26,7 +26,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        text-align: center;
         font-family: "Bai Jamjuree", sans-serif;
       }
       body {
@@ -79,13 +78,25 @@
         }
 
         .computer-img {
-          margin: 0;
+          margin: 0 auto 5vh auto;
+        }
+
+        .devices-img {
+          max-width: 90vh;
+          max-height: 50vw;
         }
 
         .features-supercharge {
           flex-direction: column;
           gap: 48px;
+
         }
+
+        .companies img {
+        max-width: 30vw !important; /* Make images responsive within their containers */
+        height: auto; /* Maintain aspect ratio */
+        margin: 5vh auto;
+      }
       }
 
       @media only screen and (max-width: 1000px) {
@@ -113,6 +124,7 @@
         color: hsl(201, 11%, 66%);
         width: 40vw;
         margin-bottom: 16px;
+        text-align: center;
       }
       .download-btn-container {
         margin: 32px 0;
@@ -142,6 +154,7 @@
         justify-content: center;
         align-items: center;
         margin: 15vh 0;
+        text-align: center;
       }
 
       .computer-section .description,
@@ -162,8 +175,15 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        align-items: flex-start;
+        justify-content: flex-start; /* Align items to the start vertically */
+
       }
 
+      .computer-features .description {
+        width: 25vw;
+        text-align: start;
+      }
       .devices-img {
         margin: 10vh 0;
       }
@@ -172,7 +192,7 @@
       }
 
       .companies {
-        margin: 10vh;
+        margin: 10vh 0;
         display: flex;
         padding: 0 10vw;
         justify-content: space-between; /* Distribute space evenly between images */
@@ -193,6 +213,7 @@
         display: flex;
         flex-direction: row; /* Change to row to align content horizontally */
         align-items: center; /* Vertically center content */
+        margin-top: 10vh;
       }
 
       .footer-links {
@@ -206,6 +227,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* Align text to the left in each column */
+        margin-right: 5vw;
       }
 
       /* Style your links as needed */
@@ -220,13 +242,13 @@
       }
 
       #footerLogo {
-        margin-right: 40px;
-        margin-left: 16px;
+        margin-right: 10vw;
+        margin-left: 10vw;
       }
 
       .social-icons {
         display: flex;
-        margin-right: 48px;
+        margin-right: 10vw;
         gap: 4px;
       }
     </style>
@@ -344,12 +366,6 @@
           </p>
         </div>
       </div>
-      <h2>Clipboard for iOS and Mac OS</h2>
-      <p class="description">
-        Available for free on the App Store. Download for Mac or iOS, sync with
-        iCloud and you’re ready to start adding to your clipboard.
-      </p>
-
       <section class="companies">
         <img
           width="auto"
@@ -372,6 +388,13 @@
           alt="Vector Graphics"
         />
       </section>
+      <h2>Clipboard for iOS and Mac OS</h2>
+      <p class="description">
+        Available for free on the App Store. Download for Mac or iOS, sync with
+        iCloud and you’re ready to start adding to your clipboard.
+      </p>
+
+     
       <div class="download-btn-container">
         <button class="download-btn">Download for iOS</button
         ><button class="download-btn">Download for Mac</button>
