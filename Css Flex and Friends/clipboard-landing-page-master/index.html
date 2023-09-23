@@ -51,6 +51,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        margin-bottom: 20vh;
       }
 
       main {
@@ -69,8 +71,29 @@
         .download-btn {
           width: 80vw;
         }
+        .description {
+          width: 80vw !important;
+        }
+
+        .computer-section {
+          flex-direction: column;
+        }
+
+        .computer-img {
+          margin: 0;
+        }
       }
 
+      @media only screen and (max-width: 1000px) {
+        .description {
+          width: 60vw !important;
+        }
+
+        .features-supercharge .description,
+        .computer-section .description{
+          width: 30vw !important;
+        }
+      }
       #mainLogo {
         margin: 10% auto;
         min-width: 120px;
@@ -80,10 +103,12 @@
       h2,
       h3 {
         color: hsl(210, 10%, 33%);
+        margin-bottom: 16px;
       }
       .description {
         color: hsl(201, 11%, 66%);
-        width: 80%;
+        width: 40vw;
+        margin-bottom: 16px;
       }
       .hero-download {
         margin: 32px 0;
@@ -104,6 +129,37 @@
 
       .download-btn:last-of-type {
         background-color: hsl(233, 100%, 69%);
+      }
+
+      .computer-section,
+      .features-supercharge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15vh 0;
+      }
+
+      .computer-section .description,
+      .features-supercharge .description {
+        margin-top: auto;
+      } 
+
+      .features-supercharge .description,
+      .features-computer .description {
+        width: 35vw;
+      }
+
+      .computer-features {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .devices-img {
+        margin: 10vh 0;
+      }
+      .computer-img {
+        margin-right: auto;
       }
     </style>
   </head>
@@ -126,62 +182,96 @@
         <button class="download-btn">Download for Mac</button>
       </div>
     </header>
-    <h2>Keep track of your snippets</h2>
     <main>
+      <h2>Keep track of your snippets</h2>
       <p class="description">
         Clipboard instantly stores any item you copy in the cloud, meaning you
         can access your snippets immediately on all your devices. Our Mac and
         iOS apps will help you organize everything.
       </p>
-    </main>
-    <h3>Quick Search</h3>
-    <p>
-      Easily search your snippets by content, category, web address,
-      application, and more.
-    </p>
-    <h3>iCloud Sync</h3>
-    <p class="description">
-      Instantly saves and syncs snippets across all your devices.
-    </p>
-    <h3>Complete History</h3>
-    <p class="description">
-      Retrieve any snippets from the first moment you started using the app.
-    </p>
-    <h2>Access Clipboard anywhere</h2>
-    <p class="description">
-      Whether you’re on the go, or at your computer, you can access all your
-      Clipboard snippets in a few simple clicks.
-    </p>
-    <h2>Supercharge your workflow</h2>
-    <p class="description">We’ve got the tools to boost your productivity.</p>
-    <h3>Create blacklists</h3>
-    <p class="description">
-      Ensure sensitive information never makes its way to your clipboard by
-      excluding certain sources.
-    </p>
+      <section class="computer-section">
+        <img
+          src="images/image-computer.png"
+          alt="computer"
+          class="computer-img"
+          width="50%"
+          height="auto"
+        />
+        <div class="computer-features">
+          <div>
+            <h3>Quick Search</h3>
+            <p class="description">
+              Easily search your snippets by content, category, web address,
+              application, and more.
+            </p>
+          </div>
+          <div>
+            <h3>iCloud Sync</h3>
+            <p class="description">
+              Instantly saves and syncs snippets across all your devices.
+            </p>
+          </div>
+          <div>
+            <h3>Complete History</h3>
+            <p class="description">
+              Retrieve any snippets from the first moment you started using the
+              app.
+            </p>
+          </div>
+        </div>
+      </section>
+      <h2>Access Clipboard anywhere</h2>
+      <p class="description">
+        Whether you’re on the go, or at your computer, you can access all your
+        Clipboard snippets in a few simple clicks.
+      </p>
 
-    <h3>Plain text snippets</h3>
-    <p class="description">
-      Remove unwanted formatting from copied text for a consistent look.
-    </p>
-    <h3>Sneak preview</h3>
-    <p class="description">
-      Quick preview of all snippets on your Clipboard for easy access.
-    </p>
-    <h2>Clipboard for iOS and Mac OS</h2>
-    <p class="description">
-      Available for free on the App Store. Download for Mac or iOS, sync with
-      iCloud and you’re ready to start adding to your clipboard.
-    </p>
-    <button class="download-btn">Download for iOS</button
-    ><button class="download-btn">Download for Mac</button>
-    <footer>
-      <span> FAQs </span>
-      <span> Contact Us </span>
-      <span> Privacy Policy </span>
-      <span>Press Kit</span
-      ><span>Install Guide</span>
-    </footer>
+      <img
+        class="devices-img"
+        src="images/image-devices.png"
+        alt="devices"
+        width="400px"
+        height="auto"
+      />
+
+      <h2>Supercharge your workflow</h2>
+      <p class="description">We’ve got the tools to boost your productivity.</p>
+
+      <div class="features-supercharge">
+        <div>
+          <h3>Create blacklists</h3>
+          <p class="description">
+            Ensure sensitive information never makes its way to your clipboard
+            by excluding certain sources.
+          </p>
+        </div>
+        <div>
+          <h3>Plain text snippets</h3>
+          <p class="description">
+            Remove unwanted formatting from copied text for a consistent look.
+          </p>
+        </div>
+        <div>
+          <h3>Sneak preview</h3>
+          <p class="description">
+            Quick preview of all snippets on your Clipboard for easy access.
+          </p>
+        </div>
+      </div>
+      <h2>Clipboard for iOS and Mac OS</h2>
+      <p class="description">
+        Available for free on the App Store. Download for Mac or iOS, sync with
+        iCloud and you’re ready to start adding to your clipboard.
+      </p>
+      <button class="download-btn">Download for iOS</button
+      ><button class="download-btn">Download for Mac</button>
+      <footer>
+        <span> FAQs </span>
+        <span> Contact Us </span>
+        <span> Privacy Policy </span>
+        <span>Press Kit</span><span>Install Guide</span>
+      </footer>
+    </main>
 
     <footer>
       <p class="attribution">
