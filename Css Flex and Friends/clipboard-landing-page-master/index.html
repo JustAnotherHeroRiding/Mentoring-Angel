@@ -111,7 +111,7 @@
         }
 
         .devices-img {
-          max-width: 90vh;
+          max-width: 65vw;
           max-height: 50vw;
         }
 
@@ -121,8 +121,8 @@
         }
 
         .companies img {
-          max-width: 30vw !important; /* Make images responsive within their containers */
-          height: auto; /* Maintain aspect ratio */
+          max-width: 30vw !important;
+          height: auto; 
           margin: 5vh auto;
         }
 
@@ -133,28 +133,27 @@
           padding: 0;
           margin: 0;
           display: flex;
-          flex-direction: row; /* Change to row to align content horizontally */
-          align-items: center; /* Vertically center content */
+          flex-direction: row; 
+          align-items: center; 
           margin-top: 10vh;
         }
 
         .footer-links {
           margin-right: auto;
           display: flex;
-          flex-direction: row; /* Display links in rows */
-          gap: 20px; /* Add spacing between links in the same column */
+          flex-direction: row;
+          gap: 20px; 
         }
 
         .column {
           display: flex;
           flex-direction: column;
-          align-items: flex-start; /* Align text to the left in each column */
+          align-items: flex-start;
           margin-right: 2vw !important;
         }
 
-        /* Style your links as needed */
         .column span {
-          margin: 4px 0 !important; /* Add spacing between links */
+          margin: 4px 0 !important; 
         }
         #footerLogo {
           margin-right: 5vw !important;
@@ -209,19 +208,25 @@
       }
       .download-btn {
         border-radius: 99px;
-        padding: 16px 24px;
+        padding: 12px 36px;
         color: white;
         border: none;
         font-size: 1em;
         cursor: pointer;
+        transition: box-shadow 0.3s ease;
+
       }
 
       .download-btn:first-of-type {
         background-color: hsl(171, 66%, 44%);
+        box-shadow: 3px 3px 5px hsl(171, 66%, 34%);
+
       }
 
       .download-btn:last-of-type {
         background-color: hsl(233, 100%, 69%);
+        box-shadow: 3px 3px 5px hsl(233, 100%, 59%);
+
       }
 
       .computer-section,
@@ -259,7 +264,7 @@
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
-        justify-content: flex-start; /* Align items to the start vertically */
+        justify-content: flex-start; 
         margin-right: auto;
         text-align: start;
       }
@@ -274,7 +279,7 @@
 
       .devices-img {
         margin: 10vh 0;
-        width: 80vw;
+        width: 60vw;
       }
       .computer-img {
         width: 50vw;
@@ -292,7 +297,7 @@
       }
 
       .companies img {
-        max-width: 15vw; /* Set the maximum width to 100% */
+        max-width: 15vw;
         height: auto;
       }
 
@@ -321,7 +326,6 @@
         margin-right: 5vw;
       }
 
-      /* Style your links as needed */
       .column span {
         text-decoration: none;
         color: hsl(210, 10%, 33%);
