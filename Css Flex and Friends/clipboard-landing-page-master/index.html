@@ -20,14 +20,18 @@
 
     <title>Frontend Mentor | Clipboard landing page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      /* Global style to remove default margin and padding
+      Border box plus the font for the entire page */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: "Bai Jamjuree", sans-serif;
       }
+
+      /* Centering any elements that will not be centered by their own styles 
+      Setting width to 100% */
       body {
         font-size: 18px;
         display: flex;
@@ -35,7 +39,11 @@
         align-items: center;
         width: 100%;
       }
-
+      /* Header with a non repeating background image stretched to cover the entire element 
+      Some y axis padding to push the elements a little inside 
+      Flex column so that we can center the content and elements
+      I did not use 100vw as It was overflowing otherwise 
+      Bottom Margin to push the following content down */
       header {
         background-repeat: no-repeat;
         background-image: url("images/bg-header-desktop.png");
@@ -49,163 +57,19 @@
         margin-bottom: 20vh;
       }
 
+      /* Hover effect on buttons */
       .download-btn:hover {
         opacity: 0.8;
       }
-
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      @media only screen and (max-width: 650px) {
-        .features-supercharge .description,
-        .computer-section .description {
-          width: 70vw !important;
-
-          text-align: center !important;
-        }
-        header {
-          background-image: url("images/bg-header-mobile.png") !important;
-        }
-
-        .download-btn-container {
-          flex-direction: column !important;
-        }
-        #footer {
-          flex-direction: column !important;
-          height: fit-content !important;
-          align-items: center !important;
-          margin: 0 auto !important;
-          text-align: center;
-        }
-
-        h1,
-        h2 {
-          width: 70vw !important;
-          text-align: center;
-        }
-
-        .footer-links {
-          flex-direction: column !important;
-          display: inline-block !important;
-          margin: 16px auto;
-        }
-        .download-btn {
-          width: 80vw;
-        }
-        .description {
-          width: 80vw !important;
-        }
-        .column {
-          align-items: center !important;
-        }
-
-        .computer-section,
-        .companies {
-          flex-direction: column;
-        }
-
-        .computer-img {
-          margin: 0 auto 5vh auto;
-        }
-
-        .devices-img {
-          max-width: 65vw;
-          max-height: 50vw;
-        }
-
-        .features-supercharge {
-          flex-direction: column;
-          gap: 48px;
-        }
-
-        .companies img {
-          max-width: 30vw !important;
-          height: auto; 
-          margin: 5vh auto;
-        }
-
-        #footer {
-          background-color: whitesmoke;
-          height: 20vh;
-          width: 98.9vw;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: row; 
-          align-items: center; 
-          margin-top: 10vh;
-        }
-
-        .footer-links {
-          margin-right: auto;
-          display: flex;
-          flex-direction: row;
-          gap: 20px; 
-        }
-
-        .column {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          margin-right: 2vw !important;
-        }
-
-        .column span {
-          margin: 4px 0 !important; 
-        }
-        #footerLogo {
-          margin-right: 5vw !important;
-          margin-left: 5vw !important;
-        }
-
-        .social-icons {
-          display: flex;
-          margin-right: 5vw !important;
-          gap: 4px;
-        }
-
-        .computer-features {
-          text-align: center !important;
-          margin: 0 auto;
-        }
-      }
-
-      @media only screen and (max-width: 1000px) {
-        .description {
-          width: 60vw !important;
-        }
-
-      /*   .features-supercharge .description,
-        .computer-section .description {
-          width: 30vw !important;
-
-          text-align: center !important;
-        } */
-      }
-      #mainLogo {
-        margin: 10% auto;
-        min-width: 120px;
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: hsl(210, 10%, 33%);
-        margin-bottom: 16px;
-      }
-      .description {
-        color: hsl(201, 11%, 66%);
-        width: 40vw;
-        margin-bottom: 16px;
-        text-align: center;
-      }
+      /* The container div for the two download buttons
+      It will turn to flex column on smaller screen sizes */
       .download-btn-container {
         margin: 32px 0;
         display: flex;
         gap: 24px;
       }
+
+      /* A button with a box shadow, thin on the y axis but very wide */
       .download-btn {
         border-radius: 99px;
         padding: 12px 36px;
@@ -214,21 +78,161 @@
         font-size: 1em;
         cursor: pointer;
         transition: box-shadow 0.3s ease;
-
       }
-
+      /* Adding the color to the first and the second button */
       .download-btn:first-of-type {
         background-color: hsl(171, 66%, 44%);
         box-shadow: 3px 3px 5px hsl(171, 66%, 34%);
-
       }
 
       .download-btn:last-of-type {
         background-color: hsl(233, 100%, 69%);
         box-shadow: 3px 3px 5px hsl(233, 100%, 59%);
-
+      }
+      /* Centering all text and content in the main element */
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
+      /* Media breakpoint for mobile screen sizes
+      This will turn most flex containers in columns */
+      @media only screen and (max-width: 650px) {
+        /* As these descriptions will be displayed in a column, they should take
+        up a bigger part of the screen as they do not need to fit in a row anymore */
+        .features-supercharge .description,
+        .computer-section .description {
+          width: 70vw !important;
+
+          text-align: center !important;
+        }
+
+        .description {
+          width: 80vw !important;
+        }
+        /* Using the mobile header which is a zoomed in version of the desktop header */
+        header {
+          background-image: url("images/bg-header-mobile.png") !important;
+        }
+
+        /* Displaying the download buttons in a column */
+        .download-btn-container {
+          flex-direction: column !important;
+        }
+        .download-btn {
+          width: 80vw;
+        }
+
+        /* Displaying the footer in a columns */
+        #footer {
+          flex-direction: column !important;
+          /* Previously the height was fixed, now we need to render it depending on the content */
+          height: fit-content !important;
+          align-items: center !important;
+          margin: 0 auto !important;
+          text-align: center;
+        }
+
+        /* Centering the headings and giving them a fixed width */
+        h1,
+        h2 {
+          width: 70vw !important;
+          text-align: center;
+        }
+        /* This div is a container for the child divs which contain 2 elements each 
+        This way we display the children in a column */
+        .footer-links {
+          flex-direction: column !important;
+          display: inline-block !important;
+          margin: 16px auto;
+        }
+
+        /* Which is already a flex column but was not centered
+        Removed the right column needed to push the elements on row mode */
+        .column {
+          align-items: center !important;
+          margin-right: 0 !important;
+        }
+
+        /* Once again flex row turned into a column */
+        .computer-section,
+        .companies,
+        .features-supercharge {
+          flex-direction: column;
+        }
+        /* Centering the image on the x axis with some bottom margin */
+        .computer-img {
+          margin: 0 auto 5vh auto;
+        }
+        /* Limiting the size the devices images */
+        .devices-img {
+          max-width: 65vw;
+          max-height: 50vw;
+        }
+        /* Adding some gap between the features */
+        .features-supercharge {
+          gap: 48px;
+        }
+        /* Reducing the width of the companies image
+        as they are only logos and should not be huge */
+        .companies img {
+          max-width: 30vw !important;
+          height: auto;
+          margin: 5vh auto;
+        }
+
+        /* Removing margin again as we want them centered on phones */
+        .social-icons {
+          margin-right: 0 !important;
+          gap: 4px;
+        }
+
+        /* Centering the text as it will be a column */
+        .computer-features {
+          text-align: center !important;
+          margin: 0 auto;
+        }
+      }
+
+      /* This is an intermediate size used mostly to reduce the description width */
+      @media only screen and (max-width: 1000px) {
+        /* Reducing the width to prevent overflow and make it look nicer */
+        .description {
+          width: 60vw !important;
+        }
+        /* Here we have up to 3 descriptions per row so it needs to fit */
+        .features-supercharge .description,
+        .computer-section .description {
+          width: 30vw !important;
+
+          text-align: center !important;
+        }
+      }
+      /* Centering the logo */
+      #mainLogo {
+        margin: 10% auto;
+        min-width: 120px;
+      }
+
+      /* Coloring the headings and giving them a margin bottom
+      They will always be paired with a description tag that needs to be pushed  */
+      h1,
+      h2,
+      h3 {
+        color: hsl(210, 10%, 33%);
+        margin-bottom: 16px;
+      }
+
+      /* Description tag for gray text with a set width that we want center aligned */
+      .description {
+        color: hsl(201, 11%, 66%);
+        width: 40vw;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+      /* Here we have a flex row container that will be a column on phones
+      We want to display the elements in a row on desktop  */
       .computer-section,
       .features-supercharge {
         display: flex;
@@ -237,56 +241,68 @@
         margin: 15vh 0;
         text-align: center;
       }
-
+      /* These are the 3 divs that will have an image on top, a heading and a description */
       .features-supercharge > div {
-        display: flex; /* Change this to 'flex' */
+        display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 20px; /* Adjust the margin as needed */
+        margin-right: 20px;
       }
 
+      .supercharge-img {
+        margin-bottom: 24px;
+      }
+      /* 
+      Pushing the description to the bottom of their containers */
       .computer-section .description,
       .features-supercharge .description {
         margin-top: auto;
       }
-
+      /* 
+      Reducing the description for the this section as there are 3 descriptions in a row */
       .features-supercharge div .description {
         width: 25vw;
       }
-
-      .features-supercharge .description,
-      .features-computer .description {
+      /* Duplicate */
+      /*  .features-computer .description {
         width: 35vw;
       }
-
+ */
+      /* This is a div containing the 3 features, containing a heading and a description
+      Text should be aligned on the start */
       .computer-features {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         margin-right: auto;
         text-align: start;
       }
+      /* Adding 100vw overflowed the x axis */
       .computer-section {
         width: 98.9vw;
       }
-
+      /* Aligning text to the start as the above styles did not work */
       .computer-features .description {
         width: 25vw;
         text-align: start;
       }
 
+      /* Limiting the image size */
       .devices-img {
         margin: 10vh 0;
         width: 60vw;
       }
+
+      /* This image should be half of the screen and cover the entire div */
       .computer-img {
         width: 50vw;
         object-fit: cover;
         margin-right: auto;
       }
-
+      /* This is a div containing all the company logos
+      On desktops it is a row containing all 5 images with equal spacing betwen them  */
       .companies {
         margin: 10vh 0;
         display: flex;
@@ -295,63 +311,65 @@
         justify-content: space-between;
         flex-wrap: wrap;
       }
-
+      /* Limiting the image size */
       .companies img {
         max-width: 15vw;
         height: auto;
       }
-
+      /* The footer like the header should take up the entire screen width
+      For desktops we have a fixed height which will adjust for phones */
       #footer {
         background-color: whitesmoke;
         height: 20vh;
         width: 98.9vw;
-        padding: 0;
-        margin: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-top: 10vh;
       }
-
+      /* This contains the links and it will be consisted of children divs
+      Which will be columns with 2 elements each
+      This will achieve the same design as the challenge */
       .footer-links {
         margin-right: auto;
         display: flex;
         flex-direction: row;
         gap: 20px;
       }
-
+      /* Flex container with 2 links each */
       .column {
         display: flex;
         flex-direction: column;
         margin-right: 5vw;
       }
-
+      /* Styling the links */
       .column span {
         text-decoration: none;
         color: hsl(210, 10%, 33%);
         margin: 8px 0;
         cursor: pointer;
       }
+      /* Hover color */
       .column span:hover {
         color: hsl(171, 66%, 44%);
       }
-
+      /* Logo with the flex row setup should have some margins */
       #footerLogo {
         margin: 8px 10vw;
       }
-
+      /* Social media icons on the right side */
       .social-icons {
         display: flex;
         margin-right: 10%;
         gap: 12px;
       }
-
+      /* Increased size */
       .social-icons i {
         transition: color 0.3s ease;
         cursor: pointer;
         font-size: 1.7rem;
       }
-
+      /* Added hover colors */
       .social-icons i:hover:first-of-type {
         color: #4267b2;
       }
@@ -362,9 +380,7 @@
         color: #962fbf;
       }
 
-      .supercharge-img {
-        margin-bottom: 24px;
-      }
+    
     </style>
   </head>
   <body>
