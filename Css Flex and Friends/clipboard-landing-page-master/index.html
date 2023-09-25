@@ -197,9 +197,16 @@
       .features-supercharge {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         margin: 15vh 0;
         text-align: center;
+      }
+
+      .features-supercharge > div {
+        display: flex; /* Change this to 'flex' */
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px; /* Adjust the margin as needed */
       }
 
       .computer-section .description,
@@ -302,6 +309,30 @@
         margin-right: 10vw;
         gap: 4px;
       }
+
+      .social-icons i {
+        width: 24px;
+        height: 24px;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .social-icons i:hover:first-of-type {
+        /* Change the color on hover (e.g., to blue) */
+        color: #4267b2; /* Adjust to your desired color */
+      }
+      .social-icons i:hover:nth-of-type(2) {
+        /* Change the color on hover (e.g., to blue) */
+        color: #26a7de; /* Adjust to your desired color */
+      }
+      .social-icons i:hover:last-of-type {
+        /* Change the color on hover (e.g., to blue) */
+        color: #962fbf; /* Adjust to your desired color */
+      }
+
+      .supercharge-img {
+        margin-bottom: 24px;
+      }
     </style>
   </head>
   <body>
@@ -385,6 +416,7 @@
             alt="Blacklist Icon"
             width="48px"
             height="auto"
+            class="supercharge-img"
           />
           <h3>Create blacklists</h3>
           <p class="description">
@@ -398,6 +430,7 @@
             alt="Text Icon"
             width="48px"
             height="auto"
+            class="supercharge-img"
           />
           <h3>Plain text snippets</h3>
           <p class="description">
@@ -410,6 +443,7 @@
             alt="preview Icon"
             width="48px"
             height="auto"
+            class="supercharge-img"
           />
           <h3>Sneak preview</h3>
           <p class="description">
@@ -471,9 +505,9 @@
           </div>
         </div>
         <div class="social-icons">
-          <img src="images/icon-facebook.svg" alt="" />
-          <img src="images/icon-twitter.svg" alt="" />
-          <img src="images/icon-instagram.svg" alt="" />
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
         </div>
       </footer>
     </main>
@@ -486,5 +520,9 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer> -->
+    <script
+      src="https://kit.fontawesome.com/1fad6e07b9.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
