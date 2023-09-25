@@ -12,10 +12,10 @@ To do for the challenge
 - The footer is overflowing #DONE 
 - The computer image is too big and needs to be more on the left #DONE 
 - Hover effects for social media icons #DONE 
-- Margin bottom for supercharge section images
-- Keep working on the mobile design desktop seems ok
-- bigger gap between the monitor 3 features
-- bigger gap for social media images and smaller logo in the footer
+- Margin bottom for supercharge section images #DONE 
+- Keep working on the mobile design desktop seems ok #DONE 
+- bigger gap for social media images and smaller logo in the footer #DONE 
+- bigger gap between the monitor 3 features and center the features
 - buttons should be longer and have less y padding
 
 
