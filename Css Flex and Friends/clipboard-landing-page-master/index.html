@@ -47,13 +47,13 @@
       header {
         background-repeat: no-repeat;
         background-image: url("images/bg-header-desktop.png");
-        background-size: cover;
+        background-size: contain;
         padding: 4px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 98.9vw;
+         width: 98.9vw;
         margin-bottom: 20vh;
       }
 
@@ -161,6 +161,10 @@
         .features-supercharge {
           flex-direction: column;
         }
+
+        .features-supercharge > div {
+          margin-right: 0 !important;
+        }
         /* Centering the image on the x axis with some bottom margin */
         .computer-img {
           margin: 0 auto 5vh auto;
@@ -263,11 +267,12 @@
       .features-supercharge div .description {
         width: 25vw;
       }
+
       /* Duplicate */
       /*  .features-computer .description {
         width: 35vw;
-      }
- */
+      } */
+
       /* This is a div containing the 3 features, containing a heading and a description
       Text should be aligned on the start */
       .computer-features {
@@ -279,10 +284,12 @@
         margin-right: auto;
         text-align: start;
       }
+
       /* Adding 100vw overflowed the x axis */
       .computer-section {
         width: 98.9vw;
       }
+
       /* Aligning text to the start as the above styles did not work */
       .computer-features .description {
         width: 25vw;
@@ -301,6 +308,7 @@
         object-fit: cover;
         margin-right: auto;
       }
+
       /* This is a div containing all the company logos
       On desktops it is a row containing all 5 images with equal spacing betwen them  */
       .companies {
@@ -310,12 +318,15 @@
         gap: 5vw;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-content: center;
       }
       /* Limiting the image size */
       .companies img {
         max-width: 15vw;
         height: auto;
       }
+
+
       /* The footer like the header should take up the entire screen width
       For desktops we have a fixed height which will adjust for phones */
       #footer {
@@ -442,7 +453,7 @@
       </section>
       <h2>Access Clipboard anywhere</h2>
       <p class="description">
-        Whether you’re on the go, or at your computer, you can access all your
+        Whether you're on the go, or at your computer, you can access all your
         Clipboard snippets in a few simple clicks.
       </p>
 
@@ -455,7 +466,7 @@
       />
 
       <h1>Supercharge your workflow</h1>
-      <p class="description">We’ve got the tools to boost your productivity.</p>
+      <p class="description">We've got the tools to boost your productivity.</p>
 
       <div class="features-supercharge">
         <div>
@@ -524,7 +535,7 @@
       <h2>Clipboard for iOS and Mac OS</h2>
       <p class="description">
         Available for free on the App Store. Download for Mac or iOS, sync with
-        iCloud and you’re ready to start adding to your clipboard.
+        iCloud and you're ready to start adding to your clipboard.
       </p>
 
       <div class="download-btn-container">

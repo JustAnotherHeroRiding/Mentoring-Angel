@@ -15,7 +15,7 @@ To do for the challenge
 - Margin bottom for supercharge section images #DONE 
 - Keep working on the mobile design desktop seems ok #DONE 
 - bigger gap for social media images and smaller logo in the footer #DONE 
-- bigger gap between the monitor 3 features and center the features
-- buttons should be longer and have less y padding
+- bigger gap between the monitor 3 features and center the features #DONE 
+- buttons should be longer and have less y padding #DONE 
 
 
