@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "479ae906afaab7f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md"
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md"
               }
             }
           }
@@ -146,53 +159,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a7343be9a8d92e3",
+  "active": "479ae906afaab7f9",
   "lastOpenFiles": [
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/app.component.html",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/app.module.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/start-game/start-game.component.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/start-game/start-game.component.html",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/start-game/start-game.component.css",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/start-game",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/main-menu",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/styles.css",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/app.component.css",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/navbar/navbar.component.html",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/navbar/navbar.component.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/semver/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/convert-source-map/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@sigstore/sign/node_modules/minipass-fetch/node_modules/minipass/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/webpack/node_modules/ajv-keywords/keywords/dotjs/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/webpack/node_modules/ajv/lib/dotjs/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/tuf-js/node_modules/minipass-fetch/node_modules/minipass/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/terser-webpack-plugin/node_modules/ajv-keywords/keywords/dotjs/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/terser-webpack-plugin/node_modules/ajv/lib/dotjs/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/tar/node_modules/fs-minipass/node_modules/minipass/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/sigstore/node_modules/minipass-fetch/node_modules/minipass/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/send/node_modules/debug/node_modules/ms/readme.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/send/node_modules/debug/node_modules/ms/license.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/npm-registry-fetch/node_modules/minipass-fetch/node_modules/minipass/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/hpack.js/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@sigstore/sign/node_modules/@tootallnate/once/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@schematics/angular/node_modules/@angular-devkit/core/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@babel/traverse/node_modules/@babel/generator/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@babel/plugin-transform-computed-properties/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@babel/helpers/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@babel/helper-wrap-function/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@babel/helper-function-name/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular-devkit/schematics/node_modules/@angular-devkit/core/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular/compiler-cli/node_modules/@babel/generator/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular/compiler-cli/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/@angular/compiler-cli/node_modules/@babel/core/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@types/json-schema/package.json",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@types/http-proxy/package.json",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@types/cookie/package.json",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result/search-result.component.ts",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result/search-result.component.spec.ts",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result/search-result.component.html",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result/search-result.component.css",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-runtime/lib/get-runtime-path/index.js.map",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-runtime/lib/get-runtime-path/index.js",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-runtime/lib/get-runtime-path/browser.js.map",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/helper-define-polyfill-provider/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-unicode-escapes/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-modules-umd/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-typeof-symbol/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-template-literals/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-modules-systemjs/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-sticky-regex/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-spread/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-shorthand-properties/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-reserved-words/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-modules-commonjs/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/regenerator-transform/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/helper-simple-access/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-regenerator/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-property-literals/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-object-super/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-new-target/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/helper-builder-binary-assignment-operator-visitor/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-arrow-functions/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/unicode-property-aliases-ecmascript/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/unicode-match-property-ecmascript/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/regjsgen/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-unicode-property-regex/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-private-property-in-object/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-private-methods/README.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/retry/equation.gif",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/psl/browserstack-logo.svg",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/jasmine-core/images/jasmine_favicon.png",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/jasmine-core/images/jasmine-horizontal.svg",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/jasmine-core/images/jasmine-horizontal.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html/assets/favicon.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_cplusplus.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_copy.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_world.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_word.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_zip.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_wrench.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_world.png"
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_copy.png"
   ]
 }

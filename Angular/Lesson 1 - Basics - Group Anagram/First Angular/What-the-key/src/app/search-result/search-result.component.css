@@ -1,0 +1,11 @@
+.search-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.search-item img {
+  width: 100px;
+  height: auto;
+}
+

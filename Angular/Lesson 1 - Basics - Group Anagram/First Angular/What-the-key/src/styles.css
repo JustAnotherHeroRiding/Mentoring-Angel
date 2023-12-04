@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --black-custom: #000000;
+  --beige-custom: #f4dfc8;
+  --cream: #f4eae0;
+  --cream-light: #faf6f0;
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+

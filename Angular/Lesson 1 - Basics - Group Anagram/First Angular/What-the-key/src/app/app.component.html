@@ -1,0 +1,49 @@
+<!-- app.component.html -->
+<app-navbar></app-navbar>
+
+<div id="hero" class="container">
+  <div class="row">
+
+    <button class="btn-request" (click)="searchTracks('28cnXtME493VX9NOw9cIUh')">
+      Fetch Track
+    </button>
+    <input type="text" minlength="1" [(ngModel)]="searchTerm" />
+    <button
+    class="btn-request"
+    [disabled]="!searchTerm || searchTerm.length === 0"
+    (click)="search()"
+    >
+    Search
+  </button>
+</div>
+  <div class="row">
+    <div class="search-results-container">
+      <ng-container *ngIf="searchResults">
+        <app-search-result
+          [searchResults]="searchResults"
+          (trackSelected)="searchTracks($event)"
+        >
+          ></app-search-result
+        >
+      </ng-container>
+    </div>
+    <div class="app-result-card-container">
+      <ng-container *ngIf="trackData; else emptyCard">
+        <app-result-card
+          [trackData]="trackData.track"
+          [analysisData]="trackData.audioFeatures"
+        ></app-result-card>
+      </ng-container>
+    </div>
+    <ng-template #emptyCard>
+      <div class="card">
+        <p>No data available</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<!-- <div *ngIf="searchResults">
+  <pre>{{ searchResults | json }}</pre>
+</div>
+ -->

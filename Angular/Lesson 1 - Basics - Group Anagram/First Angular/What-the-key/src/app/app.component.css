@@ -1,0 +1,42 @@
+.btn-request {
+  padding: 1em 0.5em;
+  border: 1px black solid;
+  border-radius: 15px;
+  font-size: 1.3em;
+  background-color: var(--cream);
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+}
+
+.btn-request:hover {
+    background-color: var(--cream-light);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+  gap: 1em;
+}
+
+.row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search-results-container {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.app-result-card-container {
+  position: sticky;
+  top: 0;
+}
+
