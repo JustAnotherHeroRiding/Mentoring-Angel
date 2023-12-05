@@ -5,7 +5,8 @@
 }
 
 #navbar {
-    background-color: var(--beige-custom);
+    background-color: var(--black-custom);
+    color: var(--cream);
     padding: 1em 0.5em;
     display: flex;
     justify-content: center;

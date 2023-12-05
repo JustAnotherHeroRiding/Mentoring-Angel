@@ -3,20 +3,24 @@
 
 <div id="hero" class="container">
   <div class="row">
-
     <!-- Id is hardcoded for now, could be made to fetch a random track -->
     <button class="btn-request" (click)="getTrack('28cnXtME493VX9NOw9cIUh')">
       Fetch Track
     </button>
-    <input class="search-input" type="text" minlength="1" [(ngModel)]="searchTerm" />
+    <input
+      class="search-input"
+      (input)="search()"
+      type="text"
+      [(ngModel)]="searchTerm"
+    />
     <button
-    class="btn-request"
-    [disabled]="!searchTerm || searchTerm.length === 0"
-    (click)="search()"
+      class="btn-request"
+      [disabled]="!searchTerm.trim().length"
+      (click)="search()"
     >
-    Search
-  </button>
-</div>
+      Search
+    </button>
+  </div>
   <div class="row">
     <div class="search-results-container">
       <ng-container *ngIf="searchResults">
