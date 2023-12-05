@@ -14,8 +14,8 @@ export class AppComponent {
 
   constructor(private spotifyService: SpotifyService) {}
 
-  searchTracks(artistId: string) {
-    this.spotifyService.fetchTrack(artistId).subscribe(
+  getTrack(trackId: string) {
+    this.spotifyService.fetchTrack(trackId).subscribe(
       (data) => {
         console.log('track Data:', data);
         this.trackData = data;
@@ -29,8 +29,8 @@ export class AppComponent {
   search() {
     this.spotifyService.searchTracks(this.searchTerm).subscribe(
       (data) => {
-        console.log("Search Data: ", data)
-        this.searchResults = data.tracks
+        console.log('Search Data: ', data);
+        this.searchResults = data.tracks;
       },
       (error) => {
         console.error('There was an error!', error);

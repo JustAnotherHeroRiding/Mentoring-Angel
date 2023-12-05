@@ -4,10 +4,11 @@
 <div id="hero" class="container">
   <div class="row">
 
-    <button class="btn-request" (click)="searchTracks('28cnXtME493VX9NOw9cIUh')">
+    <!-- Id is hardcoded for now, could be made to fetch a random track -->
+    <button class="btn-request" (click)="getTrack('28cnXtME493VX9NOw9cIUh')">
       Fetch Track
     </button>
-    <input type="text" minlength="1" [(ngModel)]="searchTerm" />
+    <input class="search-input" type="text" minlength="1" [(ngModel)]="searchTerm" />
     <button
     class="btn-request"
     [disabled]="!searchTerm || searchTerm.length === 0"
@@ -21,7 +22,7 @@
       <ng-container *ngIf="searchResults">
         <app-search-result
           [searchResults]="searchResults"
-          (trackSelected)="searchTracks($event)"
+          (trackSelected)="getTrack($event)"
         >
           ></app-search-result
         >
@@ -42,8 +43,3 @@
     </ng-template>
   </div>
 </div>
-
-<!-- <div *ngIf="searchResults">
-  <pre>{{ searchResults | json }}</pre>
-</div>
- -->

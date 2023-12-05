@@ -1,5 +1,5 @@
 .btn-request {
-  padding: 1em 0.5em;
+  padding: 0.6em 0.5em;
   border: 1px black solid;
   border-radius: 15px;
   font-size: 1.3em;
@@ -27,7 +27,7 @@
   display: flex;
   gap: 1em;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .search-results-container {
@@ -38,5 +38,10 @@
 .app-result-card-container {
   position: sticky;
   top: 0;
+}
+
+.search-input {
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
 }
 

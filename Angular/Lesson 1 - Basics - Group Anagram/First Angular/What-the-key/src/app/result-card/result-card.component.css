@@ -11,9 +11,16 @@
   align-items: center;
   justify-content: center;
   margin-bottom: auto;
+  gap: 0.5em;
 }
 .card img {
   max-width: 14em;
   height: auto;
   border-radius: 4px;
+  border: var(--cream) 1px solid;
+}
+
+.card-text {
+  max-width: 10em;
+  text-align: center;
 }

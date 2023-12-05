@@ -9,3 +9,10 @@
   height: auto;
 }
 
+.card-text {
+  max-width: 20em;
+  text-align: start;
+}
+
+
+

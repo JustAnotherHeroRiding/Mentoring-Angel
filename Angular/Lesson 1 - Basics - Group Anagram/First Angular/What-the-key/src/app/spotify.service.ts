@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable, throwError, switchMap, forkJoin } from 'rxjs';
+import { Observable, throwError, switchMap, forkJoin, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 interface SpotifyTrack {
   album: {
@@ -20,9 +20,8 @@ interface SpotifyTrack {
     artists: SpotifyArtist[];
   };
   artists: SpotifyArtist[];
-  name: string,
-  uri:string
-  // ... include other properties as needed
+  name: string;
+  uri: string;
 }
 
 interface SpotifyArtist {
@@ -32,7 +31,6 @@ interface SpotifyArtist {
   name: string;
   type: string;
   uri: string;
-  // ... include other properties as needed
 }
 
 interface SpotifyImage {
@@ -51,50 +49,58 @@ export interface SpotifySearchResult {
   items: SpotifyTrack[];
 }
 
+export interface SearchResultJson extends SpotifySearchResult {
+  tracks: SpotifySearchResult;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class SpotifyService {
-  private clientId = ""; // Don't forget to delete when pushing
-  private clientSecret = ""
+  private readonly clientId = ''; // Don't forget to delete when pushing
+  private readonly clientSecret = '';
   private accessToken: string | null = null;
 
   constructor(private http: HttpClient) {}
 
+  private createHeaders(): HttpHeaders {
+    return new HttpHeaders({
+      Authorization: `Bearer ${this.accessToken}`,
+      'Content-Type': 'application/json',
+    });
+  }
+
   private getAuthToken(): Observable<string> {
+    if (this.accessToken) {
+      return of(this.accessToken); // Return the existing token if it's already fetched
+    }
+
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: 'Basic ' + btoa(`${this.clientId}:${this.clientSecret}`), // Base64 encode clientId:clientSecret
+      Authorization: 'Basic ' + btoa(`${this.clientId}:${this.clientSecret}`),
     });
     const body = 'grant_type=client_credentials';
 
     return this.http
       .post<any>('https://accounts.spotify.com/api/token', body, { headers })
       .pipe(
-        map((response) => response.access_token),
-        catchError((error) => throwError(error))
+        map((response) => {
+          this.accessToken = response.access_token;
+          return response.access_token;
+        }),
+        catchError((error) => throwError(() => error))
       );
   }
 
   fetchTrack(trackId: string): Observable<any> {
-    if (!this.accessToken) {
-      return this.getAuthToken().pipe(
-        switchMap((token) => {
-          this.accessToken = token;
-          return this.makeTrackRequest(trackId);
-        }),
-        catchError((error) => throwError(error))
-      );
-    } else {
-      return this.makeTrackRequest(trackId);
-    }
+    return this.getAuthToken().pipe(
+      switchMap(() => this.makeTrackRequest(trackId)),
+      catchError((error) => throwError(() => error))
+    );
   }
 
   private makeTrackRequest(trackId: string): Observable<any> {
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${this.accessToken}`,
-    });
-
+    const headers = this.createHeaders();
     const trackRequest = this.http.get(
       `https://api.spotify.com/v1/tracks/${trackId}`,
       { headers }
@@ -104,35 +110,28 @@ export class SpotifyService {
       { headers }
     );
 
-    return forkJoin([trackRequest, audioFeaturesRequest]).pipe(
-      map(([trackResponse, audioFeaturesResponse]) => {
-        return { track: trackResponse, audioFeatures: audioFeaturesResponse };
-      }),
-      catchError((error) => throwError(error))
+    return forkJoin({
+      track: trackRequest,
+      audioFeatures: audioFeaturesRequest,
+    });
+  }
+
+  searchTracks(searchQuery: string): Observable<SearchResultJson> {
+    return this.getAuthToken().pipe(
+      switchMap(() => this.makeSearchRequest(searchQuery)),
+      catchError((error) => throwError(() => error))
     );
   }
 
-  searchTracks(searchQuery: string): Observable<any> {
-    if (!this.accessToken) {
-      return this.getAuthToken().pipe(
-        switchMap((token) => {
-          this.accessToken = token;
-          return this.makeSearchRequest(searchQuery);
-        }),
-        catchError((error) => throwError(error))
-      );
-    } else {
-      return this.makeSearchRequest(searchQuery);
-    }
-  }
-
-  private makeSearchRequest(searchQuery: string): Observable<any> {
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${this.accessToken}`,
-    });
-    
+  private makeSearchRequest(
+    searchQuery: string
+  ): Observable<SearchResultJson> {
+    const headers = this.createHeaders();
     const params = new HttpParams().set('q', searchQuery).set('type', 'track');
-    return this.http.get<SpotifySearchResult>(`https://api.spotify.com/v1/search`, { headers, params })
-      .pipe(catchError((error) => throwError(error)));
+
+    return this.http.get<SearchResultJson>(
+      `https://api.spotify.com/v1/search`,
+      { headers, params }
+    );
   }
 }
