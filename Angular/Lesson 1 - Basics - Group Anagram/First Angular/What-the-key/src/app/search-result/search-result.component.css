@@ -2,6 +2,14 @@
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-item:hover {
+  background-color: var(--cream);
+  color: black;
+  border-radius: 10px;
 }
 
 .search-item img {
@@ -13,6 +21,3 @@
   max-width: 20em;
   text-align: start;
 }
-
-
-

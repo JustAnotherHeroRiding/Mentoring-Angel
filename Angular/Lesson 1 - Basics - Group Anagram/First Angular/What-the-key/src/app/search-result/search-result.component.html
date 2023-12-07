@@ -1,7 +1,7 @@
 <!-- search-result.component.html -->
 <ng-container *ngIf="searchResults && searchResults.tracks.items">
   <div
-    *ngFor="let item of searchResults.tracks.items| slice : 0 : 10"
+    *ngFor="let item of searchResults.tracks.items"
     class="search-item"
     (click)="selectTrack(item.uri.split(':')[2])"
   >

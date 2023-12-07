@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -161,6 +162,8 @@
   },
   "active": "479ae906afaab7f9",
   "lastOpenFiles": [
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/assets/background.png",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/assets/DALL·E 2023-12-05 17.30.16 - A minimalistic, abstract background suitable for a music-themed website, designed to contrast with a black navigation bar. The background is composed .png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/spotify-types.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
@@ -173,7 +176,6 @@
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/messages",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/hero.service.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/hero.service.spec.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/hero-detail/hero-detail.component.spec.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/helper-define-polyfill-provider/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-unicode-escapes/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@babel/plugin-transform-modules-umd/README.md",
@@ -205,7 +207,6 @@
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/istanbul-reports/lib/html/assets/favicon.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_cplusplus.png",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_copy.png"
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_cplusplus.png"
   ]
 }

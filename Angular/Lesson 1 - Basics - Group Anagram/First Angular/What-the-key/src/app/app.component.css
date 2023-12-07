@@ -10,7 +10,7 @@
 }
 
 .btn-request:hover {
-    background-color: var(--cream-light);
+  background-color: var(--cream-light);
 }
 
 .container {
@@ -20,6 +20,19 @@
   align-items: center;
   position: relative;
   padding: 1em;
+  gap: 1em;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-custom);
+  padding: 1em;
+  border: 1px solid var(--cream);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: white;
+  text-align: center;
   gap: 1em;
 }
 
@@ -33,6 +46,12 @@
 .search-results-container {
   overflow-y: auto;
   max-height: 80vh;
+  background-color: var(--black-custom);
+  color: white;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border: 1px solid var(--cream);
 }
 
 .app-result-card-container {
@@ -41,7 +60,32 @@
 }
 
 .search-input {
-  padding: 0.5em 0.5em;
-  border-radius: 5px;
+  padding: 0.5em 1em; /* Adjust padding for better text visibility */
+  border-radius: 25px; /* More rounded edges */
+  border: 2px solid #ccc; /* Subtle border */
+  outline: none; /* Removes the default focus outline */
+  font-size: 1em; /* Adjust font size as needed */
+  color: #333; /* Font color */
+  background-color: #fff; /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft box shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for interactions */
 }
 
+.search-input::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.search-input:focus {
+  border-color: var(--cream); /* Border color when focused */
+  box-shadow: 0 2px 5px var(--cream); /* Enhanced shadow when focused */
+}
+
+
+.empty-card {
+  background-color: var(--black-custom);
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 15px;
+}

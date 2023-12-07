@@ -19,7 +19,7 @@ export class AppComponent {
   constructor(private spotifyService: SpotifyService) {
     this.searchTerm$
       .pipe(
-        debounceTime(300),
+        debounceTime(600),
         distinctUntilChanged(),
         switchMap((term) => {
           if (term.length === 0) {

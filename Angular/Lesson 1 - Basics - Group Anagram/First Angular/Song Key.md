@@ -11,14 +11,30 @@
 
 
 ## Also provide some sample chord progressions
+- Let's try using the openai api to do this, after providing the song name, album, genre and other relevant song data besides the key and bpm
 
 
 ## fetch tracks and populate the card
 - Input bar to search #DONE 
-- If user is not typing for more than 300ms then the search will be triggered making a call to the spotify api #do 
-- A list of tracks will be 
-## save tracks
-## delete tracks
-## add custom description or notes to tracks
+- If user is not typing for more than 300ms then the search will be triggered making a call to the spotify api #DONE  
+- A list of tracks will be shown as search results after a debouncer function ticks down to 300ms #DONE 
+- If a Track is clicked, it should open the details for the track #DONE 
+
+## Loading spinner when searching
+- 
+## Save tracks
+- A user can save the tracks and it's information
+- When navigating to the library section, all the saved tracks will be shown
+- Here the user can search for the saved tracks
+- Or use filters to display tracks according the characteristics in the audio features object
+- A user can also add notes to each saved track
+- Special field for the tab links to ultimate guitar or any other website
+- Maybe even display a little preview of the tabs on hover
+## Delete tracks
+- Users can delete each of the saved tracks
+- This will put them in the garbage
+- Figure out how we can delete them after a certain time has passed
+- Users can also delete them permanently if they wish
+## Add custom description or notes to tracks
 
 
