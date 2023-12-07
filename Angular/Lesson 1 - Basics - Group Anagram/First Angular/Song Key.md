@@ -25,14 +25,14 @@
 
 ## Icons for Navbar and Buttons
 - Use Dall-E to generate a logo #DONE
-- Generate icons for the menu items 
+- Generate icons for the menu items #DONE 
 
 ## Route handling
 - Make the navbar menu link to the pages of my site #DONE 
 - Create separate components for each route #DONE 
-- Home component for everything we have created so far
-- Library component for saved tracks
-- Deleted component for recently deleted tracks that can be restored or deleted permanently
+- Home component for everything we have created so far #DONE 
+- Library component for saved tracks #DONE 
+- Deleted component for recently deleted tracks that can be restored or deleted permanently #DONE 
 ## Save tracks
 - A user can save the tracks and it's information
 - When navigating to the library section, all the saved tracks will be shown

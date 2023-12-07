@@ -13,16 +13,16 @@ export class ResultCardComponent implements OnInit {
   getNoteName(key: number): string {
     const notes = [
       'C',
-      'C♯/D♭',
+      'C♯',
       'D',
-      'D♯/E♭',
+      'D♯',
       'E',
       'F',
-      'F♯/G♭',
+      'F♯',
       'G',
-      'G♯/A♭',
+      'G♯',
       'A',
-      'A♯/B♭',
+      'A♯',
       'B',
     ];
     if (key >= 0 && key <= 11) {
