@@ -29,8 +29,10 @@
 
 ## Route handling
 - Make the navbar menu link to the pages of my site #DONE 
-- Create separate components for each route
+- Create separate components for each route #DONE 
 - Home component for everything we have created so far
+- Library component for saved tracks
+- Deleted component for recently deleted tracks that can be restored or deleted permanently
 ## Save tracks
 - A user can save the tracks and it's information
 - When navigating to the library section, all the saved tracks will be shown

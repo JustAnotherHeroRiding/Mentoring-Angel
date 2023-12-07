@@ -9,10 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ResultCardComponent } from './result-card/result-card.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { HomeComponent } from './home/home.component';
 import { LibraryComponent } from './library/library.component';
-import { DeletedComponent } from './deleted/deleted.component'; // Import HttpClientModule
-
+import { DeletedComponent } from './deleted/deleted.component';
+import { HomeComponent } from './home/home.component'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
@@ -21,17 +20,12 @@ import { DeletedComponent } from './deleted/deleted.component'; // Import HttpCl
     ResultCardComponent,
     SearchResultComponent,
     LoadingSpinnerComponent,
-    HomeComponent,
     LibraryComponent,
-    DeletedComponent
+    DeletedComponent,
+    HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
