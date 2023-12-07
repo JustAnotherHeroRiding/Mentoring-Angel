@@ -7,8 +7,8 @@ import { SpotifyTracksSearchResult } from './spotify-types';
   providedIn: 'root',
 })
 export class SpotifyService {
-  private readonly clientId = 'b3876fa1b14f42588cf160ee66daed57'; // Don't forget to delete when pushing
-  private readonly clientSecret = 'f6f3844475314b4092ba1075c33a00c3';
+  private readonly clientId = ''; // Don't forget to delete when pushing
+  private readonly clientSecret = '';
   private accessToken: string | null = null;
 
   constructor(private http: HttpClient) {}
@@ -73,9 +73,14 @@ export class SpotifyService {
     );
   }
 
-  private makeSearchRequest(searchQuery: string): Observable<SpotifyTracksSearchResult> {
+  private makeSearchRequest(
+    searchQuery: string
+  ): Observable<SpotifyTracksSearchResult> {
     const headers = this.createHeaders();
-    const params = new HttpParams().set('q', searchQuery).set('type', 'track');
+    const params = new HttpParams()
+      .set('q', searchQuery)
+      .set('type', 'track')
+      .set('limit', 10);
 
     return this.http.get<SpotifyTracksSearchResult>(
       `https://api.spotify.com/v1/search`,
