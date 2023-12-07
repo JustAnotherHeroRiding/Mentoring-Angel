@@ -7,7 +7,7 @@
     [src]="trackData.album.images[0].url"
     alt="{{ trackData.name }}"
   />
-  <p>Key: {{ getNoteName(analysisData.key) }}</p>
+  <p>Key: {{ getNoteDisplayName(analysisData.key) }}</p>
   <p>BPM: {{ analysisData.tempo }}</p>
   <p>Year: {{ trackData.album.release_date | date : "yyyy" }}</p>
 </div>
