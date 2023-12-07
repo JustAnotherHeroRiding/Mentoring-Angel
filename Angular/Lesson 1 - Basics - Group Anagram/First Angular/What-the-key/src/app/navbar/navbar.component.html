@@ -1,8 +1,16 @@
 <nav id="navbar">
-  <h1 id="title" class="">WhatTheKey</h1>
-  <div class="menu">
-    <span>Home</span>
-    <span>Library</span>
-    <span>Deleted</span>
+  <h1 id="title">WhatTheKey</h1>
+  <div class="menu-container">
+    <div class="hamburger" (click)="toggleMenu()" *ngIf="isSmallScreen">
+      <!-- Hamburger Icon Lines -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div [class.active]="menuActive" class="menu">
+      <span>Home</span>
+      <span>Library</span>
+      <span>Deleted</span>
+    </div>
   </div>
 </nav>
