@@ -8,7 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultCardComponent } from './result-card/result-card.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component'; // Import HttpClientModule
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { HomeComponent } from './home/home.component';
+import { LibraryComponent } from './library/library.component';
+import { DeletedComponent } from './deleted/deleted.component'; // Import HttpClientModule
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     NavbarComponent,
     ResultCardComponent,
     SearchResultComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    HomeComponent,
+    LibraryComponent,
+    DeletedComponent
   ],
   imports: [
     BrowserModule,

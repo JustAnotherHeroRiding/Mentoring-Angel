@@ -24,7 +24,13 @@
 - Implement a loading spinner while the tracks are searching #DONE 
 
 ## Icons for Navbar and Buttons
-- Use Dall-E to generate icons for the navbar and the buttons
+- Use Dall-E to generate a logo #DONE
+- Generate icons for the menu items 
+
+## Route handling
+- Make the navbar menu link to the pages of my site #DONE 
+- Create separate components for each route
+- Home component for everything we have created so far
 ## Save tracks
 - A user can save the tracks and it's information
 - When navigating to the library section, all the saved tracks will be shown
