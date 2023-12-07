@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-result-card',
@@ -8,6 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ResultCardComponent implements OnInit {
   @Input() trackData: any; // For track information
   @Input() analysisData: any; // For analysis information
+  @Output() trackSelected = new EventEmitter<string>();
+
+  selectTrack(trackId: string) {
+    this.trackSelected.emit(trackId);
+  }
 
   constructor() {}
   getNoteName(key: number): string {

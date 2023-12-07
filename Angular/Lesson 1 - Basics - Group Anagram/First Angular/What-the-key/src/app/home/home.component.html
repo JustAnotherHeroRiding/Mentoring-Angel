@@ -3,7 +3,7 @@
     <h2>Search for tracks</h2>
     <!-- Id is hardcoded for now, could be made to fetch a random track -->
     <div class="row">
-      <button class="btn-request" (click)="getTrack('28cnXtME493VX9NOw9cIUh')">
+      <button class="btn-request" (click)="getTrack('28cnXtME493VX9NOw9cIUh', GetTrackSources.SEARCH)">
         Fetch Track
       </button>
       <input
@@ -29,7 +29,8 @@
       <div class="search-results-container">
         <app-search-result
           [searchResults]="searchResults"
-          (trackSelected)="getTrack($event)"
+          (trackSelected)="getTrack($event, GetTrackSources.SEARCH)"
+          (trackSaved)="saveTrack($event)"
         >
           ></app-search-result
         >

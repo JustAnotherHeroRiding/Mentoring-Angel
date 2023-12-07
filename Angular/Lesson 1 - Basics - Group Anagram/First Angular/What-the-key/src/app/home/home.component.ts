@@ -2,18 +2,33 @@ import { Component } from '@angular/core';
 import { SpotifyService } from '../spotify.service';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, of } from 'rxjs';
-import { SpotifyTracksSearchResult } from '../spotify-types';
+import {
+  AudioFeatures,
+  SpotifyItem,
+  SpotifyTracksSearchResult,
+} from '../spotify-types';
 
+export enum GetTrackSources {
+  LIBRARY = 'library',
+  SEARCH = 'search',
+}
+
+export interface TrackData {
+  audioFeatures: AudioFeatures;
+  track: SpotifyItem;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   trackData: any;
+  savedTrack: any;
   private searchTerm$ = new Subject<string>();
   searchTerm: string = ''; // Add this line
   isLoading = false;
+  GetTrackSources = GetTrackSources;
 
   searchResults: SpotifyTracksSearchResult | null = null;
 
@@ -35,7 +50,7 @@ export class HomeComponent {
         next: (data) => {
           if (data) {
             this.searchResults = data;
-            console.log('Debounced Search Data: ', data);
+            //console.log('Debounced Search Data: ', data);
           } else {
             this.searchResults = null; // Clear results if the search term is empty
           }
@@ -48,14 +63,27 @@ export class HomeComponent {
       });
   }
 
-  getTrack(trackId: string) {
+  getTrack(
+    trackId: string,
+    origin: GetTrackSources,
+    callback?: (data: any) => void
+  ) {
     if (trackId.trim().length > 0) {
       this.isLoading = true;
       this.spotifyService.fetchTrack(trackId).subscribe({
         next: (data) => {
-          console.log('track Data:', data);
-          this.trackData = data;
+          //console.log('track Data:', data);
           this.isLoading = false;
+
+          if (origin === GetTrackSources.LIBRARY) {
+            this.savedTrack = data;
+          } else if (origin === GetTrackSources.SEARCH) {
+            this.trackData = data;
+          }
+
+          if (callback) {
+            callback(data);
+          }
         },
         error: (error) => {
           console.error('There was an error!', error);
@@ -66,9 +94,32 @@ export class HomeComponent {
   }
 
   search() {
-
     // Emit the trimmed search term into the stream
     this.searchTerm$.next(this.searchTerm.trim());
   }
 
+  saveTrack(trackId: string) {
+    this.getTrack(trackId, GetTrackSources.LIBRARY, (trackData: TrackData) => {
+      const library: TrackData[] = this.getLibrary();
+      if (!library.some((track) => track.track.id === trackData.track.id)) {
+        library.push(trackData);
+        localStorage.setItem('library', JSON.stringify(library));
+        //console.log('Track added to library:', trackData);
+      } else {
+        console.log('Track already in library');
+      }
+    });
+  }
+
+  private getLibrary(): TrackData[] {
+    const libraryData = localStorage.getItem('library');
+    try {
+      const library = JSON.parse(libraryData!);
+      //console.log('Library data:', library); // Add this line to log the library data in the console
+      return Array.isArray(library) ? library : [];
+    } catch (error) {
+      console.error('Error parsing library data:', error);
+      return [];
+    }
+  }
 }

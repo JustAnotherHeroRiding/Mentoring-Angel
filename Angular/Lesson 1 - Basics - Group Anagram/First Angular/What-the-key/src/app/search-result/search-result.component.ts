@@ -8,9 +8,15 @@ import { SpotifyTracksSearchResult } from '../spotify-types';
 export class SearchResultComponent implements OnInit {
   @Input() searchResults: SpotifyTracksSearchResult | null = null;
   @Output() trackSelected = new EventEmitter<string>();
+  @Output() trackSaved = new EventEmitter<string>(); // New EventEmitter for save action
 
   selectTrack(trackId: string) {
     this.trackSelected.emit(trackId);
+  }
+
+  saveTrack(event: MouseEvent, trackId: string) {
+    event.stopPropagation();
+    this.trackSaved.emit(trackId);
   }
 
   constructor() {}
