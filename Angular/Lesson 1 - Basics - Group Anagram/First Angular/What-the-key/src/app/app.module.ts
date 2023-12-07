@@ -11,7 +11,9 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { LibraryComponent } from './library/library.component';
 import { DeletedComponent } from './deleted/deleted.component';
-import { HomeComponent } from './home/home.component'; // Import HttpClientModule
+import { HomeComponent } from './home/home.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,17 @@ import { HomeComponent } from './home/home.component'; // Import HttpClientModul
     DeletedComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2500,
+      positionClass: 'toast-bottom-right',
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

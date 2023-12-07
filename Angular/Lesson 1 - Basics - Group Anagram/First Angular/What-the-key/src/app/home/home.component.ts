@@ -7,6 +7,7 @@ import {
   SpotifyItem,
   SpotifyTracksSearchResult,
 } from '../spotify-types';
+import { ToastrService } from 'ngx-toastr';
 
 export enum GetTrackSources {
   LIBRARY = 'library',
@@ -32,7 +33,10 @@ export class HomeComponent {
 
   searchResults: SpotifyTracksSearchResult | null = null;
 
-  constructor(private spotifyService: SpotifyService) {
+  constructor(
+    private spotifyService: SpotifyService,
+    private toastr: ToastrService
+  ) {
     this.searchTerm$
       .pipe(
         debounceTime(600),
@@ -104,8 +108,10 @@ export class HomeComponent {
       if (!library.some((track) => track.track.id === trackData.track.id)) {
         library.push(trackData);
         localStorage.setItem('library', JSON.stringify(library));
+        this.toastr.success('Track added to library'); // Display success toast
         //console.log('Track added to library:', trackData);
       } else {
+        this.toastr.info('Track already in library'); // Display info toast
         console.log('Track already in library');
       }
     });
