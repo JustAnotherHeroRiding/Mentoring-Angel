@@ -21,7 +21,10 @@
 - If a Track is clicked, it should open the details for the track #DONE 
 
 ## Loading spinner when searching
-- Implement a loading spinner while the tracks are searching
+- Implement a loading spinner while the tracks are searching #DONE 
+
+## Icons for Navbar and Buttons
+- Use Dall-E to generate icons for the navbar and the buttons
 ## Save tracks
 - A user can save the tracks and it's information
 - When navigating to the library section, all the saved tracks will be shown
