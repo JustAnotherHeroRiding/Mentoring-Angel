@@ -2,63 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError, switchMap, forkJoin, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-interface SpotifyTrack {
-  album: {
-    album_type: string;
-    total_tracks: number;
-    available_markets: string[];
-    external_urls: { spotify: string };
-    href: string;
-    id: string;
-    images: SpotifyImage[];
-    name: string;
-    release_date: string;
-    release_date_precision: string;
-    restrictions: { reason: string };
-    type: string;
-    uri: string;
-    artists: SpotifyArtist[];
-  };
-  artists: SpotifyArtist[];
-  name: string;
-  uri: string;
-}
-
-interface SpotifyArtist {
-  external_urls: { spotify: string };
-  href: string;
-  id: string;
-  name: string;
-  type: string;
-  uri: string;
-}
-
-interface SpotifyImage {
-  url: string;
-  height: number;
-  width: number;
-}
-
-export interface SpotifySearchResult {
-  href: string;
-  limit: number;
-  next: string;
-  offset: number;
-  previous: string;
-  total: number;
-  items: SpotifyTrack[];
-}
-
-export interface SearchResultJson extends SpotifySearchResult {
-  tracks: SpotifySearchResult;
-}
-
+import { SpotifyTracksSearchResult } from './spotify-types';
 @Injectable({
   providedIn: 'root',
 })
 export class SpotifyService {
-  private readonly clientId = ''; // Don't forget to delete when pushing
-  private readonly clientSecret = '';
+  private readonly clientId = 'b3876fa1b14f42588cf160ee66daed57'; // Don't forget to delete when pushing
+  private readonly clientSecret = 'f6f3844475314b4092ba1075c33a00c3';
   private accessToken: string | null = null;
 
   constructor(private http: HttpClient) {}
@@ -116,20 +66,18 @@ export class SpotifyService {
     });
   }
 
-  searchTracks(searchQuery: string): Observable<SearchResultJson> {
+  searchTracks(searchQuery: string): Observable<SpotifyTracksSearchResult> {
     return this.getAuthToken().pipe(
       switchMap(() => this.makeSearchRequest(searchQuery)),
       catchError((error) => throwError(() => error))
     );
   }
 
-  private makeSearchRequest(
-    searchQuery: string
-  ): Observable<SearchResultJson> {
+  private makeSearchRequest(searchQuery: string): Observable<SpotifyTracksSearchResult> {
     const headers = this.createHeaders();
     const params = new HttpParams().set('q', searchQuery).set('type', 'track');
 
-    return this.http.get<SearchResultJson>(
+    return this.http.get<SpotifyTracksSearchResult>(
       `https://api.spotify.com/v1/search`,
       { headers, params }
     );

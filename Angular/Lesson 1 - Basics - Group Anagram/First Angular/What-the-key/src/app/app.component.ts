@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { SpotifySearchResult, SpotifyService } from './spotify.service';
+import { SpotifyService } from './spotify.service';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, of } from 'rxjs';
-
+import { SpotifyTracksSearchResult } from './spotify-types';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +14,7 @@ export class AppComponent {
   private searchTerm$ = new Subject<string>();
   searchTerm: string = ''; // Add this line
 
-  searchResults: SpotifySearchResult | null = null;
+  searchResults: SpotifyTracksSearchResult | null = null;
 
   constructor(private spotifyService: SpotifyService) {
     this.searchTerm$
@@ -31,7 +31,7 @@ export class AppComponent {
       .subscribe({
         next: (data) => {
           if (data) {
-            this.searchResults = data.tracks;
+            this.searchResults = data;
             console.log('Debounced Search Data: ', data);
           } else {
             this.searchResults = null; // Clear results if the search term is empty
