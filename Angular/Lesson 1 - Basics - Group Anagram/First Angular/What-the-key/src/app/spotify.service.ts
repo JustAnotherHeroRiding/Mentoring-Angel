@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError, switchMap, forkJoin, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { SpotifyTracksSearchResult } from './spotify-types';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from 'env';
 @Injectable({
   providedIn: 'root',
 })
 export class SpotifyService {
-  private readonly clientId = ''; // Don't forget to delete when pushing
-  private readonly clientSecret = '';
+  private readonly clientId = SPOTIFY_CLIENT_ID; // Don't forget to delete when pushing
+  private readonly clientSecret = SPOTIFY_CLIENT_SECRET;
   private accessToken: string | null = null;
 
   constructor(private http: HttpClient) {}
