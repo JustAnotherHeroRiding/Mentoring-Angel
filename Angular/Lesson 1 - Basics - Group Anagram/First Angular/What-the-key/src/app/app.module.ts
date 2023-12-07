@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultCardComponent } from './result-card/result-card.component';
-import { SearchResultComponent } from './search-result/search-result.component'; // Import HttpClientModule
+import { SearchResultComponent } from './search-result/search-result.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component'; // Import HttpClientModule
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     AppComponent,
     NavbarComponent,
     ResultCardComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

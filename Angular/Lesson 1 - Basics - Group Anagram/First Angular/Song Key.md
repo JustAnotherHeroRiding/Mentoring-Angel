@@ -21,7 +21,7 @@
 - If a Track is clicked, it should open the details for the track #DONE 
 
 ## Loading spinner when searching
-- 
+- Implement a loading spinner while the tracks are searching
 ## Save tracks
 - A user can save the tracks and it's information
 - When navigating to the library section, all the saved tracks will be shown
