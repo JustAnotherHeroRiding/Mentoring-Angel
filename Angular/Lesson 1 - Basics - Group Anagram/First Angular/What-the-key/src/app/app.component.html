@@ -3,7 +3,6 @@
 <main>
 
   <div id="hero" class="container">
-    <loading-spinner></loading-spinner>
     <div class="user-input">
       <h2>Search for tracks</h2>
       <!-- Id is hardcoded for now, could be made to fetch a random track -->
@@ -29,6 +28,8 @@
   </div>
   </div>
   <div class="row">
+    <loading-spinner *ngIf="isLoading"></loading-spinner>
+
     <ng-container *ngIf="searchResults">
       <div class="search-results-container">
         <app-search-result
