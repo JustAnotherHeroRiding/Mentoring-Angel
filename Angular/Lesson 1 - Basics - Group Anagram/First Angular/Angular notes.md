@@ -7,7 +7,7 @@ make the main container something short but interesting
 ## Data binding
 - `{{ data }}` Everything inside the double curly braces is turned into a string
 - These are the public properties of the class inside the **component.ts** file
-- If it is not pcublic it cannot be accessed from the template
+- If it is not public it cannot be accessed from the template
 - Therefore it only makes sense to use values that can be turned to strings and not objects
 - **Uppercase pipe** - Pipes can be used to format the strings inside the curly braces, `titlecase` will capitalize the first letter, `lowercase` will turn the string into lowercase
 - **Property Binding**: Use `[property]="expression"` for one-way data binding from the component to the template.
@@ -48,7 +48,7 @@ make the main container something short but interesting
 
 ## Input and Output decorators
 - This is the way components communicate with eachother
-- when rendering a child component, we can add an @Input decorator before class properties so that the components accepts variables
+- When rendering a child component, we can add an @Input decorator before class properties so that the components accepts variables
 - We can then pass these to the component and use them when rendering the html
 - With the @Output decorator we can send data from the child component to the parent
 - Once again we pass this function when creating the element

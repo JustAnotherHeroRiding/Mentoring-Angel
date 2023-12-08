@@ -9,7 +9,7 @@
   text-align: center;
   width: 70%;
   margin: 0 auto;
-  background-color: var(--black-custom);
+  background-color: black;
   padding: 1em;
   border: 1px solid var(--cream);
   border-radius: 10px;
@@ -39,10 +39,11 @@
 }
 
 .track:hover {
-  background-color: var(--cream);
+  background-color: var(--beige-custom);
   color: black;
   border-radius: 10px;
 }
+
 .track:hover img {
   border: 2px solid black;
   scale: 1.05; /* Replace with your desired border color and width */
@@ -66,12 +67,8 @@
 @media (max-width: 800px) {
   .grid-container {
     width: 90%;
-
     grid-template-columns: repeat(2, 1fr);
   }
-}
-/* For smaller screens */
-@media (max-width: 600px) {
 }
 
 /* For very small screens */

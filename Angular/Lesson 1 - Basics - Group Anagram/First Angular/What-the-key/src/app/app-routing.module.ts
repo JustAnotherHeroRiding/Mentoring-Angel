@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'library', component: LibraryComponent },
   { path: 'deleted', component: DeletedComponent },
-  // Other routes...
 ];
 
 @NgModule({
