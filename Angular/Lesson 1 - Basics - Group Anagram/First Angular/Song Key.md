@@ -36,7 +36,7 @@
 ## Save tracks
 - A user can save the tracks and it's information #DONE 
 - Toast messages to give feedback when a message is added or has already been added #DONE 
-- When navigating to the library section, all the saved tracks will be shown
+- When navigating to the library section, all the saved tracks will be shown #DONE 
 - Here the user can search for the saved tracks
 - Or use filters to display tracks according the characteristics in the audio features object
 - A user can also add notes to each saved track
