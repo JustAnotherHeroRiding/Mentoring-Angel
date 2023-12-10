@@ -14,7 +14,7 @@ export class LibraryComponent {
 
   constructor(
     private spotifyService: SpotifyService,
-    private toastr: ToastrService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class LibraryComponent {
     } else {
       this.library = [];
     }
-    console.log(this.library);
+    //console.log(this.library);
   }
 
   getNoteDisplayName(noteValue: number): string {

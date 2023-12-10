@@ -8,6 +8,7 @@ import {
   SpotifyTracksSearchResult,
 } from '../spotify-types';
 import { ToastrService } from 'ngx-toastr';
+import { BackEndService } from '../backend.service';
 
 export enum GetTrackSources {
   LIBRARY = 'library',
@@ -35,7 +36,8 @@ export class HomeComponent {
 
   constructor(
     private spotifyService: SpotifyService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private backEndService: BackEndService
   ) {
     this.searchTerm$
       .pipe(
@@ -127,5 +129,16 @@ export class HomeComponent {
       console.error('Error parsing library data:', error);
       return [];
     }
+  }
+
+  getBackEnd(): any {
+    return this.backEndService.getData().subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.error('There was an error!', error);
+      },
+    });
   }
 }
