@@ -5,7 +5,12 @@
     type="text"
     placeholder="What are you looking for?"
   />
-  <div class="grid-container">
+  <div class="filters" id="filtersContainer">
+    <button *ngFor="let filter of filters" class="filter-btn">
+      {{ filter }}
+    </button>
+  </div>
+    <div class="grid-container">
     <div *ngFor="let trackData of displayedLibrary" class="track">
       <h2>{{ trackData.track.name }}</h2>
       <h3>{{ trackData.track.artists[0].name }}</h3>

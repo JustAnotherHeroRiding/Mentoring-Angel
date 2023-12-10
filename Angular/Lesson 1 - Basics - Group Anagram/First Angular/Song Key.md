@@ -37,8 +37,11 @@
 - A user can save the tracks and it's information #DONE 
 - Toast messages to give feedback when a message is added or has already been added #DONE 
 - When navigating to the library section, all the saved tracks will be shown #DONE 
-- Here the user can search for the saved tracks
-- Or use filters to display tracks according the characteristics in the audio features object
+- Here the user can search for the saved tracks #DONE 
+- Or use filters to display tracks according the characteristics in the audio features object #DONE 
+- Make each filter work
+[[Song Key#^filters-list]]
+## ----------Filter ends here------------
 - A user can also add notes to each saved track
 - Special field for the tab links to ultimate guitar or any other website
 - Maybe even display a little preview of the tabs on hover
@@ -48,3 +51,47 @@
 - Figure out how we can delete them after a certain time has passed
 - Users can also delete them permanently if they wish
 ## Add custom description or notes to tracks
+
+
+
+## Filters ^filters-list 
+
+##### 1. **Danceability Filter:**
+
+- Filter tracks based on their danceability score. You could create a slider or a set of predefined ranges (e.g., low, medium, high) for users to choose from.
+##### 2. **Energy Filter:**
+
+- Similar to danceability, filter tracks based on their energy level. Again, a slider or predefined ranges could be used.
+##### 3. **Mood/Valence Filter:**
+
+- Valence measures the musical positiveness conveyed by a track. You could filter tracks that are more positive/upbeat versus those that are more negative/somber.
+##### 4. **Acousticness Filter:**
+
+- Users can filter tracks based on how acoustic they are. This could be useful for finding more organic, less electronically-influenced music.
+##### 5. **Instrumentalness Filter:**
+
+- This would be great for users who are looking for instrumental tracks, perhaps for background music or study sessions.
+##### 6. **Duration Filter:**
+
+- Allow users to filter tracks based on their length. This could be handy for those who are looking for either quick listens or longer experiences.
+##### 7. **Popularity Filter:**
+
+- Users might want to filter tracks based on their popularity, which can be a proxy for how well-liked or recognized a track is.
+##### 8. **Loudness Filter:**
+
+- While not a common filter, some users might be interested in filtering tracks based on their loudness levels.
+##### 9. **Tempo Filter:**
+
+- For users who are looking for music of a certain tempo (measured in beats per minute), this filter could be quite useful.
+##### 10. **Artist/Album Filter:**
+
+- Allow filtering by artist or album. This is more straightforward but very useful, especially in a large library.
+##### 11. **Explicit Content Filter:**
+
+- Some users might want to filter out tracks with explicit content.
+##### 12. **Key Filter**
+- Filter songs by the key they were written in, going back to the main point of the website
+##### 13. **Mode**
+- Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.
+##### 14. **Decade**
+- We can get the release year and filter songs by the decade

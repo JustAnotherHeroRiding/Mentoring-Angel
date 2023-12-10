@@ -19,6 +19,37 @@
   width: 35%;
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: white;
+  padding: 1em;
+  background-color: black;
+  border: 1px solid var(--cream);
+  width: 70%;
+}
+
+.filter-btn {
+  padding: 0.6em 0.5em;
+  border: 1px black solid;
+  border-radius: 15px;
+  font-size: 1em;
+  background-color: var(--cream);
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: var(--cream-light);
+}
 
 .grid-container {
   display: grid;

@@ -3,6 +3,7 @@ import { SpotifyService } from '../spotify.service';
 import { ToastrService } from 'ngx-toastr';
 import { TrackData } from '../home/home.component';
 import { getNoteName } from '../result-card/result-card.component';
+import { FILTERS } from '../filters';
 
 @Component({
   selector: 'app-library',
@@ -12,6 +13,7 @@ import { getNoteName } from '../result-card/result-card.component';
 export class LibraryComponent {
   originalLibrary: TrackData[] = [];
   displayedLibrary: TrackData[] = [];
+  filters = FILTERS
 
   constructor(
     private spotifyService: SpotifyService,
@@ -27,6 +29,7 @@ export class LibraryComponent {
     if (tracks) {
       this.originalLibrary = JSON.parse(tracks);
       this.displayedLibrary = [...this.originalLibrary]; // Make a copy for display
+      // console.log(this.originalLibrary);
     } else {
       this.originalLibrary = [];
       this.displayedLibrary = [];
