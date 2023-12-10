@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1a7343be9a8d92e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "479ae906afaab7f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "53ef6983bb836715",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,11 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "334fbe39f4dc74fa",
+  "active": "53ef6983bb836715",
   "lastOpenFiles": [
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/app-routing.module.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/src/app/search-result/app-routing.module.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-the-key/node_modules/@esbuild/linux-mips64el",
