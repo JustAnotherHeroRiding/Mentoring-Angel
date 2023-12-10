@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.http.ResponseEntity
 
-
+// gradle -t :bootJar and gradle bootRun in two windows for reload
 
 
 @SpringBootApplication
@@ -29,6 +29,11 @@ class MyController {
 	@GetMapping("/api/hello")
 	fun hello(): ResponseEntity<Any> {
     	return ResponseEntity.ok(mapOf("message" to "Hello World!"))
+	}
+
+	@GetMapping("/api/reload")
+	fun secondEndpoint(): ResponseEntity<Any> {
+    	return ResponseEntity.ok(mapOf("message" to "Let's see if the hot reload works!"))
 	}
 
 }
