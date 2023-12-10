@@ -46,8 +46,10 @@
 - Special field for the tab links to ultimate guitar or any other website
 - Maybe even display a little preview of the tabs on hover
 ## Delete tracks
-- Users can delete each of the saved tracks
-- This will put them in the garbage
+- Add a delete button #DONE 
+- Users can delete each of the saved tracks #DONE 
+- This will put them in the garbage #DONE 
+- Show the tracks in the recycling bin on the deleted page #DONE 
 - Figure out how we can delete them after a certain time has passed
 - Users can also delete them permanently if they wish
 ## Add custom description or notes to tracks

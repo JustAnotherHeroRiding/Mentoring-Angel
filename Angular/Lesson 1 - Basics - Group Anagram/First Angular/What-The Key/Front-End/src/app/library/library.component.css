@@ -102,19 +102,29 @@
   scale: 1.05; /* Replace with your desired border color and width */
 }
 
-.spotify-link {
+.spotify-link,
+.delete-trash {
   position: absolute;
   bottom: 0.2em;
-  right: 0.3em;
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
 }
 
-.spotify-link:hover {
+.delete-trash {
+  left: 0.3em;
+}
+
+.spotify-link {
+  right: 0.3em;
+}
+
+.spotify-link:hover,
+.delete-trash:hover {
   background-color: black;
   padding: 0.3em;
   border-radius: 99px;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
