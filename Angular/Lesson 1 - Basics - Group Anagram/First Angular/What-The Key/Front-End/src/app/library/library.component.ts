@@ -10,7 +10,8 @@ import { getNoteName } from '../result-card/result-card.component';
   styleUrls: ['./library.component.css'],
 })
 export class LibraryComponent {
-  library: TrackData[] = [];
+  originalLibrary: TrackData[] = [];
+  displayedLibrary: TrackData[] = [];
 
   constructor(
     private spotifyService: SpotifyService,
@@ -24,11 +25,34 @@ export class LibraryComponent {
   fetchTracks() {
     const tracks = localStorage.getItem('library');
     if (tracks) {
-      this.library = JSON.parse(tracks);
+      this.originalLibrary = JSON.parse(tracks);
+      this.displayedLibrary = [...this.originalLibrary]; // Make a copy for display
     } else {
-      this.library = [];
+      this.originalLibrary = [];
+      this.displayedLibrary = [];
     }
-    //console.log(this.library);
+  }
+
+  filterTracks(query: string | null) {
+    if (!query) {
+      this.displayedLibrary = [...this.originalLibrary]; // Reset to original list if query is empty
+      return;
+    }
+
+    const lowerCaseQuery = query.toLowerCase();
+
+    // Filter from originalLibrary and update displayedLibrary
+    this.displayedLibrary = this.originalLibrary
+      .filter((track) =>
+        track.track.name.toLowerCase().includes(lowerCaseQuery)
+      )
+      .slice(0, 10);
+  }
+
+  searchSubmit(event: Event) {
+    const inputEvent = event as InputEvent;
+    const query = (inputEvent.target as HTMLInputElement).value;
+    this.filterTracks(query);
   }
 
   getNoteDisplayName(noteValue: number): string {

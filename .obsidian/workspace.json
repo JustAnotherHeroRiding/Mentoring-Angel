@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md"
+                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "53ef6983bb836715",
   "lastOpenFiles": [
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular notes.md",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Angular Notes 12-8.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/classes/kotlin/main/META-INF/What-The-Key.kotlin_module",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/classes/kotlin/main/com/example/WhatTheKey/WhatTheKeyApplicationKt.class",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/classes/kotlin/main/com/example/WhatTheKey/MyController.class",
@@ -158,7 +160,6 @@
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/snapshot/kotlin/compileKotlin",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/dirty-output-classes.tab_i.len",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/dirty-output-classes.tab_i",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/dirty-output-classes.tab.len",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Back-End/HELP.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/convert-source-map/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/semver/README.md",
@@ -183,7 +184,6 @@
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@babel/helper-function-name/node_modules/@babel/template/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@angular-devkit/schematics/node_modules/@angular-devkit/core/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/template/README.md",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/generator/README.md",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/What-The Key/Front-End/node_modules/istanbul-reports/lib/html/assets/favicon.png",

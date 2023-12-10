@@ -1,3 +1,25 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.search-input {
+  background-color: var(--black-custom);
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--cream);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: white;
+  text-align: center;
+  gap: 1em;
+  font-size: 1.2em;
+  width: 35%;
+}
+
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(
