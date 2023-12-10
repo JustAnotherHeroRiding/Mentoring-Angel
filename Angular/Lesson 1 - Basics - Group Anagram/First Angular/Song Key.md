@@ -50,6 +50,7 @@
 - Users can delete each of the saved tracks #DONE 
 - This will put them in the garbage #DONE 
 - Show the tracks in the recycling bin on the deleted page #DONE 
+- Restore button
 - Figure out how we can delete them after a certain time has passed
 - Users can also delete them permanently if they wish
 ## Add custom description or notes to tracks
