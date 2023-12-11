@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { TrackData } from '../home/home.component';
+import { TrackData } from '../../pages/home/home.component';
 import { getNoteName } from '../result-card/result-card.component';
 
 @Component({

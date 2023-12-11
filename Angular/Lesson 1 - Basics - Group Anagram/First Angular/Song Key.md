@@ -52,11 +52,11 @@
 - Restore button
 - Figure out how we can delete them after a certain time has passed
 - Users can also delete them permanently if they wish #DONE 
-- The logic for the library and the deleted is similar, perhaps condense to one component
+- The logic for the library and the deleted is similar, perhaps condense to one component #DONE 
 ## Add custom description or notes to tracks
-- When clicking on a track there will be a single page open
+- When clicking on a track there will be a single page open #DONE 
 - Here users can edit tracks
-- Turn the track into a component
+- Turn the track into a component #DONE 
 
 ## Back End
 - Link a supabase db to the project

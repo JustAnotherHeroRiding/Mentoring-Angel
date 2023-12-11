@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyService } from '../spotify.service';
+import { SpotifyService } from '../../spotify.service';
 import { ToastrService } from 'ngx-toastr';
 import { TrackData } from '../home/home.component';
-import { getNoteName } from '../result-card/result-card.component';
-import { FILTERS } from '../filters';
+import { getNoteName } from '../../components/result-card/result-card.component';
+import { FILTERS } from '../../filters';
 
 @Component({
   selector: 'app-library',
