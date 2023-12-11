@@ -14,6 +14,7 @@ import { DeletedComponent } from './deleted/deleted.component';
 import { HomeComponent } from './home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrackComponent } from './track/track.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LibraryComponent,
     DeletedComponent,
     HomeComponent,
+    TrackComponent,
   ],
   imports: [
     BrowserModule,
