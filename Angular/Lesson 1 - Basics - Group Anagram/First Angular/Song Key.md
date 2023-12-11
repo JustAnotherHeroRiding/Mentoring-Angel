@@ -42,7 +42,6 @@
 - Make each filter work
 [[Song Key#^filters-list]]
 ## ----------Filter ends here------------
-- A user can also add notes to each saved track
 - Special field for the tab links to ultimate guitar or any other website
 - Maybe even display a little preview of the tabs on hover
 ## Delete tracks
@@ -52,8 +51,17 @@
 - Show the tracks in the recycling bin on the deleted page #DONE 
 - Restore button
 - Figure out how we can delete them after a certain time has passed
-- Users can also delete them permanently if they wish
+- Users can also delete them permanently if they wish #DONE 
+- The logic for the library and the deleted is similar, perhaps condense to one component
 ## Add custom description or notes to tracks
+- When clicking on a track there will be a single page open
+- Here users can edit tracks
+- Turn the track into a component
+
+## Back End
+- Link a supabase db to the project
+- Switch to a database instead of using local storage
+- Use supabase auth
 
 
 

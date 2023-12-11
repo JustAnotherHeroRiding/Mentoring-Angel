@@ -63,7 +63,10 @@ export class DeletedComponent {
       );
 
       // Update local storage
-      localStorage.setItem('recyclingBin', JSON.stringify(this.originalLibrary));
+      localStorage.setItem(
+        'recyclingBin',
+        JSON.stringify(this.originalLibrary)
+      );
 
       // Display success toast
       this.toastr.success('Track has been permamently deleted');
