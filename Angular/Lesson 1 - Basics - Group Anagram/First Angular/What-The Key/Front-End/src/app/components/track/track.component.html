@@ -1,5 +1,5 @@
-<div class="track">
-    <div class="delete-trash" (click)="requestDelete()">
+<div class="track" (click)="goToTrackPage(trackData.track.id)">
+    <div class="delete-trash" (click)="requestDelete($event)">
       <svg width="2em" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="none"
@@ -24,6 +24,7 @@
     <a
       class="spotify-link"
       href="{{ trackData.track.external_urls.spotify }}"
+      (click)="$event.stopPropagation()"
     >
       <svg
         width="2em"

@@ -5,7 +5,7 @@
     minmax(250px, 1fr)
   ); /* Adjust minmax as needed */
   grid-auto-rows: 1fr; /* Makes rows take up equal space */
-  background-color: black;s
+  background-color: black;
   text-align: center;
   width: 70%;
   margin: 0 auto;

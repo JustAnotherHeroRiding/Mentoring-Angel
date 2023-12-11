@@ -57,6 +57,7 @@
 - When clicking on a track there will be a single page open #DONE 
 - Here users can edit tracks
 - Turn the track into a component #DONE 
+- Stop propagation
 
 ## Back End
 - Link a supabase db to the project
