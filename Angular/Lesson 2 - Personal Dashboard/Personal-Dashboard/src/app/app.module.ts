@@ -10,6 +10,7 @@ import { WeatherWidgetComponent } from './components/widgets/weather-widget/weat
 import { NewsFeedWidgetComponent } from './components/widgets/news-feed-widget/news-feed-widget.component';
 import { ToDoListComponent } from './components/widgets/to-do-list/to-do-list.component';
 import { WidgetComponent } from './components/widgets/widget/widget.component';
+import { StocksComponent } from './components/widgets/stocks/stocks.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WidgetComponent } from './components/widgets/widget/widget.component';
     NewsFeedWidgetComponent,
     ToDoListComponent,
     WidgetComponent,
+    StocksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

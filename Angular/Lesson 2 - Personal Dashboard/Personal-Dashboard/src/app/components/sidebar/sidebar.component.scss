@@ -1,4 +1,15 @@
 .sidebar-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 1em 0.5em;
+  height: 100%;
+}
+
+.route {
+  cursor: pointer;
+}
+.route:hover {
+    color: var(--slate-300);
 }
