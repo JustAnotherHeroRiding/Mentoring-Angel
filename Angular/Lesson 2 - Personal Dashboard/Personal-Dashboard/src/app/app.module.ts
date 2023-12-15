@@ -11,6 +11,7 @@ import { NewsFeedWidgetComponent } from './components/widgets/news-feed-widget/n
 import { ToDoListComponent } from './components/widgets/to-do-list/to-do-list.component';
 import { WidgetComponent } from './components/widgets/widget/widget.component';
 import { StocksComponent } from './components/widgets/stocks/stocks.component';
+import { StoreComponent } from './pages/store/store.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { StocksComponent } from './components/widgets/stocks/stocks.component';
     ToDoListComponent,
     WidgetComponent,
     StocksComponent,
+    StoreComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
