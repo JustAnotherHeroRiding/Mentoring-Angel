@@ -39,6 +39,8 @@
 - When navigating to the library section, all the saved tracks will be shown #DONE 
 - Here the user can search for the saved tracks #DONE 
 - Or use filters to display tracks according the characteristics in the audio features object #DONE 
+
+#### Filters
 - Make each filter work
 [[Song Key#^filters-list]]
 ## ----------Filter ends here------------
@@ -49,7 +51,7 @@
 - Users can delete each of the saved tracks #DONE 
 - This will put them in the garbage #DONE 
 - Show the tracks in the recycling bin on the deleted page #DONE 
-- Restore button
+- Restore button #DONE 
 - Figure out how we can delete them after a certain time has passed
 - Users can also delete them permanently if they wish #DONE 
 - The logic for the library and the deleted is similar, perhaps condense to one component #DONE 
@@ -57,12 +59,33 @@
 - When clicking on a track there will be a single page open #DONE 
 - Here users can edit tracks
 - Turn the track into a component #DONE 
-- Stop propagation
+- Stop propagation #DONE 
 
 ## Back End
-- Link a supabase db to the project
-- Switch to a database instead of using local storage
-- Use supabase auth
+- Link a supabase db to the project #DONE 
+- Create two tables for the library and the recycle bin #DONE 
+- Use supabase auth #DONE 
+- Create a supabase client for the back end #DONE 
+- Endpoint to fetch all users #DONE 
+### PARSE THE REQUEST FROM ANGULAR
+- Stores the track ids for users in a database instead of local storage 
+- fetch the tracks by first fetching the ids and then the tracks with a batch request to spotify
+
+## Auth
+##### How does it work? The supabase service provides a way to interface with the database and our auth. Here we have the session that will most likely give us data about our user. Let's use it in the navbar
+- Style the auth components #DONE 
+- Fetch the session correctly to use in navbar #DONE 
+- Style the log in Screen #DONE 
+- Add a email and password log in option #DONE 
+- Show an empty image if no profile pic #DONE 
+- Separate the menu-end items in the navbar #DONE 
+- Sync profile changes in the navbar #DONE 
+##### Created a service and components can subscribe to the changes
+- Allow the avatar component to accept styles #DONE 
+- Make the name mandatory #DONE 
+- Different routes for login/register #DONE 
+- Add a github and google provider #DONE 
+
 
 
 

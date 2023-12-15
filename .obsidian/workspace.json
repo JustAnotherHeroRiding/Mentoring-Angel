@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -148,6 +149,9 @@
   },
   "active": "53ef6983bb836715",
   "lastOpenFiles": [
+    "Angular/Lesson 2 - Personal Dashboard",
+    "Angular/Personal Dashboard",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Personal Dashboard",
     "What-The Key/back-end-wtk/src/post.service.ts",
     "What-The Key/Front-End/node_modules/@angular/compiler/esm2022/src/template/pipeline/ir/src/ops/update.mjs",
     "What-The Key/Front-End/node_modules/@angular/compiler/esm2022/src/template/pipeline/ir/src/ops/shared.mjs",
@@ -156,9 +160,6 @@
     "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/qux.jsx",
     "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/baz.js",
     "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/bar.tsx",
-    "What-The Key/Front-End/node_modules/jasmine-core/lib/jasmine-core/example/node_example/spec/helpers/jasmine_examples/SpecHelper.js",
-    "What-The Key/Front-End/node_modules/@schematics/angular/node_modules/@angular-devkit/core/src/workspace/json/writer.d.ts",
-    "What-The Key/Front-End/node_modules/@schematics/angular/node_modules/@angular-devkit/core/src/workspace/json/writer.js",
     "What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/convert-source-map/README.md",
     "What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/semver/README.md",
     "What-The Key/back-end-wtk/node_modules/@nestjs/schematics/dist/lib/application/files/ts/README.md",
