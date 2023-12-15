@@ -1,1 +1,241 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+  --white: #ffffff;
+  --gray: #e5e5e5;
+  --oker: #fca311;
+  --dark-blue: #14213d;
+  --black: #000000;
+}
+
+@mixin font-face($font-family, $font-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$font-path}.otf") format("opentype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// Regular styles
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Extraleicht",
+  200,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Leicht",
+  300,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Buch",
+  400,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Kraftig",
+  500,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Halbfett",
+  600,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Dreiviertelfett",
+  700,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Fett",
+  800,
+  normal
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-Extrafett",
+  900,
+  normal
+);
+
+// Italic styles
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-ExtraleichtKursiv",
+  200,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-LeichtKursiv",
+  300,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-BuchKursiv",
+  400,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-KraftigKursiv",
+  500,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-HalbfettKursiv",
+  600,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-DreiviertelfettKursiv",
+  700,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-FettKursiv",
+  800,
+  italic
+);
+@include font-face(
+  "SoehneFull",
+  "./assets/fonts/SoehneFull/Sohne-ExtrafettKursiv",
+  900,
+  italic
+);
+
+@mixin font-face($font-family, $font-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$font-path}.otf") format("opentype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Extraleicht",
+  200,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Leicht",
+  300,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Buch",
+  400,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Kraftig",
+  500,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Halbfett",
+  600,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Dreiviertelfett",
+  700,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Fett",
+  800,
+  normal
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-Extrafett",
+  900,
+  normal
+);
+
+// Italic styles
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-ExtraleichtKursiv",
+  200,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-LeichtKursiv",
+  300,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-BuchKursiv",
+  400,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-KraftigKursiv",
+  500,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-HalbfettKursiv",
+  600,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-DreiviertelfettKurs",
+  700,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-FettKursiv",
+  800,
+  italic
+);
+@include font-face(
+  "SoehneMono",
+  "./assets/Fonts/SoehneMono/SohneMono-ExtrafettKursiv",
+  900,
+  italic
+);
+
+body {
+  font-family: "SoehneFull", sans-serif;
+  font-weight: 400;
+}
