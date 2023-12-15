@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/home/dashboard/dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { WidgetComponent } from './pages/home/dashboard/widget/widget.component';
+import { WeatherWidgetComponent } from './components/widgets/weather-widget/weather-widget.component';
+import { NewsFeedWidgetComponent } from './components/widgets/news-feed-widget/news-feed-widget.component';
+import { ToDoListComponent } from './components/widgets/to-do-list/to-do-list.component';
+import { WidgetComponent } from './components/widgets/widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { WidgetComponent } from './pages/home/dashboard/widget/widget.component'
     DashboardComponent,
     SidebarComponent,
     HomeComponent,
+    WeatherWidgetComponent,
+    NewsFeedWidgetComponent,
+    ToDoListComponent,
     WidgetComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],

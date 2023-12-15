@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { WidgetComponent } from './pages/home/dashboard/widget/widget.component';
-
+import { WidgetComponent } from './components/widgets/widget/widget.component';
 const routes: Routes = [
   {
     path: '',
