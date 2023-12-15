@@ -15,24 +15,18 @@ extra space complexity? (The output array does not count as extra
  */
 
 function productExceptSelf(nums: number[]): number[] {
-  let answer: number[] = [];
-
-  for (let i = 0; i < nums.length; i++) {
-    let product = 1;
-    for (let j = 0; j < nums.length; j++) {
-      if (i !== j) {
-        product *= nums[j];
-      }
-    }
-    // Check for -0 and convert to 0
-    /*   if (Object.is(product, -0)) {
-      product = 0;
-    } */
-    answer[i] = product;
+  const result: number[] = Array(nums.length).fill(1);
+  const numsLen: number = nums.length;
+  const curr: number[] = Array(2).fill(1);
+  for (let i: number = 1; i < numsLen; i++) {
+    curr[0] *= nums[i - 1];
+    curr[1] *= nums[numsLen - i];
+    result[i] *= curr[0];
+    result[numsLen - i - 1] *= curr[1];
   }
-
-  return answer;
+  return result;
 }
+
 //Example 1:
 
 let nums = [1, 2, 3, 4];
@@ -42,6 +36,5 @@ let nums = [1, 2, 3, 4];
 
 let nums2 = [-1, 1, 0, -3, 3];
 // Output: [0,0,9,0,0]
-
 
 console.log(productExceptSelf(nums));
