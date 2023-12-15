@@ -5,7 +5,7 @@
 - Build a customizable dashboard application where users can add, remove, and interact with various widgets like a weather report, a to-do list, and a news feed. 
 
 ## Instructions: **Part 1**
-- Create a main dashboard component (DashboardComponent) that will serve as the container for the widgets. 
+- Create a main dashboard component (DashboardComponent) that will serve as the container for the widgets. #DONE 
 - Set up basic routing, if necessary, for navigation within the app. 
 - Define the dashboard as a route in your routing configuration. This will be the central hub where users can add and interact with widgets. 
 - Create individual components for each widget (e.g., WeatherWidgetComponent, TodoListComponent, NewsFeedComponent). 
