@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e16f8557704b3cb2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -65,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
+                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
+                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md"
+                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md"
               }
             }
           }
@@ -147,8 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "53ef6983bb836715",
+  "active": "334fbe39f4dc74fa",
   "lastOpenFiles": [
+    "Angular/Lesson 2 - Personal Dashboard/tempCodeRunnerFile.ts",
+    "Angular/Lesson 2 - Personal Dashboard/product-of-array-except-self.ts",
+    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
+    "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
     "Angular/Lesson 2 - Personal Dashboard",
     "Angular/Personal Dashboard",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Personal Dashboard",
@@ -158,8 +174,6 @@
     "What-The Key/Front-End/node_modules/@angular/compiler/esm2022/src/template/pipeline/ir/src/ops/host.mjs",
     "What-The Key/Front-End/node_modules/@angular/compiler/esm2022/src/template/pipeline/ir/src/ops/create.mjs",
     "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/qux.jsx",
-    "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/baz.js",
-    "What-The Key/back-end-wtk/node_modules/@nestjs/cli/test/lib/compiler/hooks/fixtures/aliased-imports/src/bar.tsx",
     "What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/convert-source-map/README.md",
     "What-The Key/Front-End/node_modules/@angular/compiler-cli/node_modules/@babel/core/node_modules/semver/README.md",
     "What-The Key/back-end-wtk/node_modules/@nestjs/schematics/dist/lib/application/files/ts/README.md",
@@ -183,8 +197,6 @@
     "What-The Key/Front-End/node_modules/@babel/plugin-transform-computed-properties/node_modules/@babel/template/README.md",
     "What-The Key/Front-End/node_modules/@babel/helpers/node_modules/@babel/template/README.md",
     "What-The Key/Front-End/node_modules/@babel/helper-wrap-function/node_modules/@babel/template/README.md",
-    "What-The Key/Front-End/node_modules/@babel/helper-function-name/node_modules/@babel/template/README.md",
-    "What-The Key/Front-End/node_modules/@angular-devkit/schematics/node_modules/@angular-devkit/core/README.md",
     "What-The Key/Front-End/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "What-The Key/Front-End/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "What-The Key/Front-End/node_modules/istanbul-reports/lib/html/assets/favicon.png",
