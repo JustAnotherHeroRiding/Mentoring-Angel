@@ -7,7 +7,7 @@ Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type. */
 
-const bracketPairs = {
+const bracketPairs: { [key: string]: string } = {
   "(": ")",
   "[": "]",
   "{": "}",
@@ -19,7 +19,7 @@ function isValid(s: string): boolean {
     let last = s[s.length - 1 - i];
     console.log(`First ${first} Last ${last}`);
 
-    if (first === last) {
+    if (bracketPairs[first] === last) {
       return true;
     }
   }
