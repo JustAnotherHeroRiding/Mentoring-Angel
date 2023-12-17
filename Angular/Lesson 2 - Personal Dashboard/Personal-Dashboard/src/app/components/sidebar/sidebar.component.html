@@ -1,9 +1,8 @@
 <div class="sidebar-container">
-  <p class="route" (click)="navigateTo('')">Home</p>
-  <p class="route" (click)="navigateTo('store')">Store</p>
-  <!-- Here we will have to loop over the installed widgets -->
-  <p class="route" (click)="navigateTo('widget/weather')">Weather</p>
-  <p class="route" (click)="navigateTo('widget/news')">News</p>
-  <p class="route" (click)="navigateTo('widget/stocks')">Stocks</p>
-  <p class="route" (click)="navigateTo('widget/todo')">Tasks</p>
+  <p class="route" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</p>
+  <p class="route" routerLink="/store" routerLinkActive="active">Store</p>
+  <p class="route" routerLink="/widget/weather" routerLinkActive="active">Weather</p>
+  <p class="route" routerLink="/widget/news" routerLinkActive="active">News</p>
+  <p class="route" routerLink="/widget/stocks" routerLinkActive="active">Stocks</p>
+  <p class="route" routerLink="/widget/todo" routerLinkActive="active">Tasks</p>
 </div>

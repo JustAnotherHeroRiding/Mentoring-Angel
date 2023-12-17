@@ -1,1 +1,13 @@
-<p>news-feed-widget works!</p>
+<div class="grid-container" *ngIf="articles" else #empty>
+    <div class="article" *ngFor="let article of articles">
+        <h3>{{ article.title}}</h3>
+        <span>{{ article.content}}</span>
+        <p>{{ article.author}}</p>
+        <p>{{ article.datePublished | date}}</p>
+    </div>
+
+</div>
+
+<ng-template empty>
+    <h3>No news for today</h3>
+</ng-template>
