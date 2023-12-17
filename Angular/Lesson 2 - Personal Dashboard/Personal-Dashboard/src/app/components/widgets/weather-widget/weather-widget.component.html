@@ -1,1 +1,13 @@
-<p>weather-widget works!</p>
+<div class="grid-container" *ngIf="weatherData" else #empty>
+  <div class="report" *ngFor="let prognosis of weatherData">
+    <h3>{{ prognosis.location }}</h3>
+    <span>Temp:{{ prognosis.temperature }}</span>
+    <p>Condition:{{ prognosis.condition }}</p>
+    <p>Wind Speed:{{ prognosis.windSpeed }}</p>
+    <p>Humidity:{{ prognosis.humidity }}</p>
+  </div>
+</div>
+
+<ng-template empty>
+  <h3>No Weather Data for today</h3>
+</ng-template>

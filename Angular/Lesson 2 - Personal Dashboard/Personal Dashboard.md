@@ -11,10 +11,10 @@
 - Define the dashboard as a route in your routing configuration. This will be the central hub where users can add and interact with widgets.  #DONE 
 - Create individual components for each widget (e.g., WeatherWidgetComponent, TodoListComponent, NewsFeedComponent).  #DONE 
 - Create services for handling data for widgets that require external data (e.g., weather data, news articles).  #DONE 
-- Implement mock services initially to provide dummy data for development. 
-- Child Routing for Widgets Implement child routes within the dashboard route for detailed views of each widget. 
-- For instance, a detailed view of a to-do list or expanded weather information. 
-- Create services to get ex. weather data 
+- Implement mock services initially to provide dummy data for development.  #DONE 
+- Child Routing for Widgets Implement child routes within the dashboard route for detailed views of each widget. #DONE  
+- For instance, a detailed view of a to-do list or expanded weather information.  #DONE 
+- Create services to get ex. weather data #DONE  
 - Bonus: Integrate with [https://api-ninjas.com/api/weather](https://api-ninjas.com/api/weather "https://api-ninjas.com/api/weather")  
 
 
