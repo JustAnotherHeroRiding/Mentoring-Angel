@@ -5,15 +5,17 @@ import { WeatherData, WeatherService } from 'src/app/services/weather.service';
   templateUrl: './weather-widget.component.html',
   styleUrls: ['./weather-widget.component.scss'],
 })
-export class WeatherWidgetComponent implements OnInit {
-  weatherData: WeatherData[] = [];
+export class WeatherWidgetComponent {
+  weatherData?: WeatherData;
+  location = ''
 
   constructor(private weatherService: WeatherService) {}
 
-  ngOnInit() {
-    this.weatherService.getWeather().subscribe({
+  getWeather(location: string) {
+    this.weatherService.getWeather(location).subscribe({
       next: (data) => (this.weatherData = data),
       error: (err) => console.error(err),
+      complete: () => console.log(this.weatherData),
     });
   }
 }

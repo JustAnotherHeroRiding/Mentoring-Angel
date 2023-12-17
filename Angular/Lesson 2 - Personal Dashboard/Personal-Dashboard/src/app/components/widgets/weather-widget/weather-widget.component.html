@@ -1,10 +1,14 @@
-<div class="grid-container" *ngIf="weatherData" else #empty>
-  <div class="report" *ngFor="let prognosis of weatherData">
-    <h3>{{ prognosis.location }}</h3>
-    <span>Temp:{{ prognosis.temperature }}</span>
-    <p>Condition:{{ prognosis.condition }}</p>
-    <p>Wind Speed:{{ prognosis.windSpeed }}</p>
-    <p>Humidity:{{ prognosis.humidity }}</p>
+<form (ngSubmit)="getWeather(location)">
+    <input type="text" [(ngModel)]="location" name="location" placeholder="Get Weather For..." />
+    <button [disabled]="location.length === 0" type="submit">Get Weather</button>
+  </form>
+  <div class="grid-container" *ngIf="weatherData" else #empty>
+  <div class="report">
+    <h3>{{ weatherData.temp }}</h3>
+    <span>Temp:{{ weatherData.temp }}</span>
+    <p>Max Temp:{{ weatherData.max_temp }}</p>
+    <p>Wind Speed:{{ weatherData.wind_speed }}</p>
+    <p>Humidity:{{ weatherData.humidity }}</p>
   </div>
 </div>
 

@@ -12,6 +12,8 @@ import { ToDoListComponent } from './components/widgets/to-do-list/to-do-list.co
 import { WidgetComponent } from './components/widgets/widget/widget.component';
 import { StocksComponent } from './components/widgets/stocks/stocks.component';
 import { StoreComponent } from './pages/store/store.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { StoreComponent } from './pages/store/store.component';
     StocksComponent,
     StoreComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
