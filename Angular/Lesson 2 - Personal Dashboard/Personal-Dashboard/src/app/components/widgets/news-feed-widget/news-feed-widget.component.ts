@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsArticle, NewsService } from 'src/app/services/news.service';
+import { NewsService } from 'src/app/services/news.service';
+import { RealNewsResponseObject, newsArticle } from 'src/app/utils/news-api-params';
+
 
 @Component({
   selector: 'app-news-feed-widget',
@@ -8,12 +10,14 @@ import { NewsArticle, NewsService } from 'src/app/services/news.service';
 })
 export class NewsFeedWidgetComponent implements OnInit {
   constructor(private newsService: NewsService) {}
-  articles: NewsArticle[] = [];
+  articles: newsArticle[] = [];
 
   ngOnInit() {
-    this.newsService.getNews().subscribe({
-      next: (articles) => (this.articles = articles),
+   /*  this.newsService.getNews().subscribe({
+      next: (articles) => (this.articles = articles.articles),
       error: (err) => console.error(err),
-    });
+      complete: () => console.log(this.articles),
+    }); */
+    this.articles = RealNewsResponseObject
   }
 }
