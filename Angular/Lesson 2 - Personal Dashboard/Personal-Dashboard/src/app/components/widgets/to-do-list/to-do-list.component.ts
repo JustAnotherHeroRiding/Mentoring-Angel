@@ -3,8 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-to-do-list',
   templateUrl: './to-do-list.component.html',
-  styleUrls: ['./to-do-list.component.scss']
+  styleUrls: ['./to-do-list.component.scss'],
 })
 export class ToDoListComponent {
+  task = '';
+  tasks?: string[];
 
+  addTask(task: string) {
+    this.tasks = [...(this.tasks ?? []), task];
+    this.task = '';
+  }
 }

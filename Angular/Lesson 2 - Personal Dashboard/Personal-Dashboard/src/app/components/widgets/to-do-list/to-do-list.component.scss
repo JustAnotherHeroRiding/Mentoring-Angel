@@ -1,0 +1,38 @@
+.flex-col,
+.flex-col-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col-form {
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.flex-col-form button {
+  padding: 0.4em 0.8em;
+  border-radius: 8px;
+  border: 1px solid black;
+  background: transparent;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.todo-input {
+  width: 40%;
+  min-width: 10em;
+  margin: 0 auto;
+  padding: 0.45em 0.7em;
+  border-radius: 6px;
+  outline: none;
+  border: solid var(--slate-400) 1px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.todo-input:focus {
+  border: solid var(--slate-900) 1px;
+
+  outline: none;
+}

@@ -1,1 +1,16 @@
-<p>to-do-list works!</p>
+<div class="flex-col">
+  <form class="flex-col-form" (ngSubmit)="addTask(task)">
+    <input
+      id="tasks"
+      class="todo-input"
+      type="text"
+      name="task"
+      placeholder="What needs doing"
+      [(ngModel)]="task"
+    />
+    <button [disabled]="task.length == 0">Add</button>
+  </form>
+  <div *ngFor="let task of tasks">
+    <span>{{ task }}</span>
+  </div>
+</div>
