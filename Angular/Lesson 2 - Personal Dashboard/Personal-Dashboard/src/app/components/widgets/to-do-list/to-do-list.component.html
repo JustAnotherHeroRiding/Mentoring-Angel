@@ -14,7 +14,7 @@
     <div class="tasks-section">
       <h1>Tasks</h1>
       <div class="flex-row" *ngFor="let task of tasks">
-        <span class="task">{{ task }}</span>
+        <span class="task">{{ task.content }}</span>
         <span class="delete" (click)="markCompleted(task.id)">
           <svg
             width="2em"
@@ -45,7 +45,7 @@
             />
           </svg>
         </span>
-        <span class="task">{{ task }}</span>
+        <span class="task completed-task">{{ task.content }}</span>
       </div>
     </div>
   </div>
