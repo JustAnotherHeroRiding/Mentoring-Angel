@@ -12,6 +12,15 @@ export class NewsFeedWidgetComponent implements OnInit {
   constructor(private newsService: NewsService) {}
   articles: newsArticle[] = [];
 
+  cleanArticleContent(content: string): string {
+    const truncateIndicator = content.lastIndexOf("[+");
+    if (truncateIndicator !== -1) {
+      return content.substring(0, truncateIndicator);
+    }
+    return content;
+  }
+  
+
   ngOnInit() {
    /*  this.newsService.getNews().subscribe({
       next: (articles) => (this.articles = articles.articles),

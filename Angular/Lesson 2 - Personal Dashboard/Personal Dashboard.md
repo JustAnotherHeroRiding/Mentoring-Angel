@@ -16,7 +16,7 @@
 - For instance, a detailed view of a to-do list or expanded weather information.  #DONE 
 - Create services to get ex. weather data #DONE  
 - Bonus: Integrate with [https://api-ninjas.com/api/weather](https://api-ninjas.com/api/weather "https://api-ninjas.com/api/weather")  #DONE  
-- Bonus: Find a news api
+- Bonus: Find a news api #DONE 
 
 
 ###### Ova e part 1 ponataka ke se dvizime kon aplikacija koja ke kreira dynamic widgets, sekoj korisnik ke mozhe da si kreira kakov saka widget dinamicno, nema da hardkodirame, dynamic routing, drag and drop ke moze da se integrira so svoj api isto taka
