@@ -5,18 +5,57 @@
   color: var(--white);
   padding: 1em 0.5em;
   height: 100%;
-  min-width: 10em;
   font-size: 1.3em;
+  gap: 1em;
 }
 
 .route {
   cursor: pointer;
-}
-.route:not(.active):hover {
-  color: var(--slate-300);
+  position: relative;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--indigo-900);
+  border-radius: 25px;
+  padding: 0.3em;
+  transition: border-radius 0.2s ease-in-out; /* Updated this line */
 }
 
-.active {
-  font-weight: 500;
-  color: var(--oker);
+.route:hover {
+  border-radius: 5px;
+}
+
+.route::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-60%); /* Start slightly higher */
+  opacity: 0; /* Start fully transparent */
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: opacity 0.3s, transform 0.3s; /* Animate opacity and position */
+  pointer-events: none; /* Prevents the tooltip from being clickable */
+}
+
+.route:hover::after {
+  opacity: 1; /* Fully visible */
+  transform: translateY(-50%); /* Move to final position */
+}
+
+.route.active svg:hover path {
+  fill: var(--orange-600) !important;
+  background-color: black;
+}
+
+.route:not(.active) svg:hover path {
+  fill: var(--slate-400) !important;
+}
+
+.route.active svg path {
+  fill: var(--orange-500) !important;
 }
