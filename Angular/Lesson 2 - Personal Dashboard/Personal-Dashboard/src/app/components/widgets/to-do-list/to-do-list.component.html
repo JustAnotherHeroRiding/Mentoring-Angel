@@ -12,5 +12,6 @@
   </form>
   <div *ngFor="let task of tasks">
     <span>{{ task }}</span>
+    <span (click)="removeTask(task)"> X</span>
   </div>
 </div>
