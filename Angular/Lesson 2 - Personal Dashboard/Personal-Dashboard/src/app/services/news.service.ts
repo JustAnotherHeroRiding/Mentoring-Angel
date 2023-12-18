@@ -2,43 +2,17 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { NEWS_API_KEY } from 'src/env';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { newsArticle } from '../utils/news-api-params';
+import { NewsArticleMock, newsArticle, mockNews } from '../utils/news-api-params';
 
-export interface NewsArticleMock {
-  id: number;
-  title: string;
-  content: string;
-  author: string;
-  datePublished: Date;
-}
+
 
 interface newsResponse {
   articles: newsArticle[];
 }
 
-const mockNews: NewsArticleMock[] = [
-  {
-    id: 1,
-    title: 'First News',
-    content: 'Content of the first news',
-    author: 'Author 1',
-    datePublished: new Date(),
-  },
-  {
-    id: 2,
-    title: 'Second News',
-    content: 'Content of the second news',
-    author: 'Author 2',
-    datePublished: new Date(),
-  },
-  {
-    id: 3,
-    title: 'Third News',
-    content: 'Content of the third news',
-    author: 'Author 3',
-    datePublished: new Date(),
-  },
-];
+
+
+/* https://newsapi.org/docs/endpoints/top-headlines API Docs */
 @Injectable({
   providedIn: 'root',
 })
