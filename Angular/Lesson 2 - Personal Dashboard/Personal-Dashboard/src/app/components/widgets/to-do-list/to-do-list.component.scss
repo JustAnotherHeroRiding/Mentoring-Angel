@@ -1,7 +1,12 @@
 .flex-col,
-.flex-col-form {
+.flex-col-form,
+.tasks-section {
   display: flex;
   flex-direction: column;
+}
+
+.flex-col {
+  gap: 1em;
 }
 
 .flex-col-form {
@@ -35,4 +40,33 @@
   border: solid var(--slate-900) 1px;
 
   outline: none;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5 em;
+}
+
+.delete {
+  color: var(--orange-800);
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 0.2em;
+  display: flex;
+}
+
+.delete:hover {
+  background-color: var(--slate-300);
+}
+
+.flex-row-main {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 4px;
 }
