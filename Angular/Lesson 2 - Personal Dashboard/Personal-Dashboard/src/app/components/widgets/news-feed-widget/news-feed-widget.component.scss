@@ -6,19 +6,19 @@
 
   grid-template-columns: 1fr;
 
-  @media (min-width: 480px) {
+  @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 860px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 860px) {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1324px) {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -31,8 +31,16 @@
   border: 1px solid black;
   border-radius: 15px;
   padding: 1em;
+  gap: 0.3em;
   min-height: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.article img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid black;
 }

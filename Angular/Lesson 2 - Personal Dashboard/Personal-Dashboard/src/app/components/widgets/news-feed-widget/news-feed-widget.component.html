@@ -1,13 +1,20 @@
 <div class="grid-container" *ngIf="articles" else #empty>
-    <div class="article" *ngFor="let article of articles">
-        <h3>{{ article.title}}</h3>
-        <span>{{ article.content}}</span>
-        <p>{{ article.author}}</p>
-        <p>{{ article.publishedAt| date}}</p>
-    </div>
-
-</div>
-
-<ng-template empty>
+    <ng-container *ngFor="let article of articles">
+      <!-- Check if the article's title is not '[Removed]' and other fields are present -->
+      <div class="article" *ngIf="article.title !== '[Removed]' && article.title && article.description && article.urlToImage">
+        <h3>{{ article.title }}</h3>
+        <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
+        <span> {{ article.source.name }}</span>
+        <span>{{ article.description }}</span>
+        <span>{{ article.content }}</span>
+        <p>{{ article.author }}</p>
+        <a href="{{ article.url }}">Source</a>
+        <p>{{ article.publishedAt | date }}</p>
+      </div>
+    </ng-container>
+  </div>
+  
+  <ng-template empty>
     <h3>No news for today</h3>
-</ng-template>
+  </ng-template>
+  
