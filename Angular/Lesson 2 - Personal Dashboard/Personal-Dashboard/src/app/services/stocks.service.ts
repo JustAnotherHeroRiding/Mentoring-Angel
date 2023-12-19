@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { POLYGON_API_KEY } from 'src/env';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { openCloseResult } from '../utils/stock-data-types';
 
 @Injectable({
   providedIn: 'root',

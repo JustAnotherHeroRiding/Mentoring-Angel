@@ -1,3 +1,25 @@
-<button (click)="getOpenClose('AAPL', getYesterday())">Get Apple</button>
-<button (click)="getOpenClose('TSLA', getYesterday())">Get Tesla</button>
-<button (click)="getAllTickers()">Get Tickers</button>
+<div class="flex-col">
+  <div class="flex-row">
+    <button class="fetch-btn" (click)="getOpenClose('AAPL', getYesterday())">
+      Get Apple
+    </button>
+    <button class="fetch-btn" (click)="getOpenClose('TSLA', getYesterday())">
+      Get Tesla
+    </button>
+    <button class="fetch-btn" (click)="getAllTickers()">Get Tickers</button>
+  </div>
+  <div *ngIf="stocksData.length !== 0">
+    <div *ngFor="let stock of stocksData">
+      <p>After Hours: {{ stock.afterHours }}</p>
+      <p>Close: {{ stock.close }}</p>
+      <p>From: {{ stock.from }}</p>
+      <p>High: {{ stock.high }}</p>
+      <p>Low: {{ stock.low }}</p>
+      <p>Open: {{ stock.open }}</p>
+      <p>Pre Market: {{ stock.preMarket }}</p>
+      <p>Status: {{ stock.status }}</p>
+      <p>Symbol: {{ stock.symbol }}</p>
+      <p>Volume: {{ stock.volume }}</p>
+    </div>
+  </div>
+</div>

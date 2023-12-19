@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StocksService } from 'src/app/services/stocks.service';
 import { getYesterdayDate } from 'src/app/utils/dates';
+import { openCloseResult } from 'src/app/utils/stock-data-types';
 
 @Component({
   selector: 'app-stocks',
@@ -8,7 +9,7 @@ import { getYesterdayDate } from 'src/app/utils/dates';
   styleUrls: ['./stocks.component.scss'],
 })
 export class StocksComponent {
-  stocksData: any;
+  stocksData: openCloseResult[] = [];
   tickers: string[] = [];
   constructor(private stocksService: StocksService) {}
 
@@ -19,7 +20,7 @@ export class StocksComponent {
   getOpenClose(stockTicker: string, date: string) {
     this.stocksService.getDailyOpenClose(stockTicker, date).subscribe({
       next: (data) => {
-        this.stocksData = data;
+        this.stocksData.push(data);
         console.log(data);
       },
       error: (err) => {
