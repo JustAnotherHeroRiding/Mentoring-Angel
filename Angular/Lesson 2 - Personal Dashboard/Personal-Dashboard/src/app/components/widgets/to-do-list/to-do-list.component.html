@@ -8,7 +8,7 @@
       placeholder="What needs doing"
       [(ngModel)]="task"
     />
-    <button [disabled]="task.length == 0">Add</button>
+    <button class="add-task" [disabled]="task.length == 0">Add</button>
   </form>
   <div cdkDropListGroup class="flex-row-main">
     <div

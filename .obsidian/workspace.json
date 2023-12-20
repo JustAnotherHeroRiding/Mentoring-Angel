@@ -161,17 +161,18 @@
   },
   "active": "e16f8557704b3cb2",
   "lastOpenFiles": [
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/package.json",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/testing/testbed.mjs.map",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/testing/testbed.mjs",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/testing/selenium-webdriver.mjs.map",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/observers/private.mjs.map",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/testing/selenium-webdriver.mjs",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/observers/private.mjs",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/tree.mjs.map",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/tree.mjs",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/text-field.mjs.map",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/fesm2022/text-field.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/collections/index.d.ts",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/collections",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toastr.service.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toastr.module.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toastr-config.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast.provider.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast.directive.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast.component.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast-ref.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast-noanimation.component.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/portal/portal.mjs",
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-gyp-build/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/README.md",
@@ -205,7 +206,6 @@
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-number/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/CHANGELOG.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/fast-glob/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-extglob/README.md"
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/fast-glob/README.md"
   ]
 }

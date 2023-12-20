@@ -4,6 +4,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { ToastrService } from 'ngx-toastr';
 export interface Task {
   id: number;
   content: string;
@@ -18,6 +19,8 @@ export class ToDoListComponent implements OnInit {
   task = '';
   tasks: Task[] = [];
   completed: Task[] = [];
+
+  constructor(private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.tasks = localStorage.getItem('tasks')
@@ -36,6 +39,7 @@ export class ToDoListComponent implements OnInit {
     this.tasks = [...this.tasks, task];
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.task = '';
+    this.toastr.success('Task added successfully!');
   }
 
   markCompleted(taskId: number) {
@@ -45,12 +49,14 @@ export class ToDoListComponent implements OnInit {
       this.completed.push(completedTask);
       localStorage.setItem('tasks', JSON.stringify(this.tasks));
       localStorage.setItem('completed', JSON.stringify(this.completed));
+      this.toastr.info('Task marked as completed!');
     }
   }
 
   removeTask(taskId: number) {
     this.completed = this.completed.filter((t) => t.id !== taskId);
     localStorage.setItem('completed', JSON.stringify(this.completed));
+    this.toastr.warning('Task removed!');
   }
 
   drop(event: CdkDragDrop<Task[]>) {

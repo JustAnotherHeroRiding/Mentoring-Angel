@@ -306,3 +306,19 @@ main {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.custom-toast-bottom-right {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: var(--slate-800);
+  color: white;
+  max-width: 20%;
+  border-radius: 8px;
+}
+
+.custom-toast-bottom-right div div {
+  padding: 0.5em 1em;
+}
+
+.custom-toast-bottom-right div 

@@ -15,6 +15,8 @@ import { StoreComponent } from './pages/store/store.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     HttpClientModule,
     FormsModule,
     DragDropModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2500,
+      positionClass: 'custom-toast-bottom-right',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
