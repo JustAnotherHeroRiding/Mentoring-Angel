@@ -24,6 +24,7 @@
 - Create the stocks widget  #DONE 
 - Toast messages on todo app #DONE 
 - Add the messages for dragging #DONE 
+- Lowering opacity when dragging elements #DONE 
 - Sounds when completing a task
 - Style the stock results
 - Save a couple of results to display without making calls
