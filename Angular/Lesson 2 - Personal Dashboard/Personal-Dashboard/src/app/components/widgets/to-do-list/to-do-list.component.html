@@ -11,9 +11,14 @@
     <button [disabled]="task.length == 0">Add</button>
   </form>
   <div class="flex-row-main">
-    <div class="tasks-section">
+    <div
+      class="tasks-section"
+      cdkDropList
+      [cdkDropListData]="tasks"
+      (cdkDropListDropped)="drop($event)"
+    >
       <h1>Tasks</h1>
-      <div class="flex-row" *ngFor="let task of tasks">
+      <div class="flex-row" *ngFor="let task of tasks" cdkDrag>
         <span class="delete" (click)="markCompleted(task.id)">
           <svg
             width="2em"
@@ -29,9 +34,14 @@
         <span class="task">{{ task.content }}</span>
       </div>
     </div>
-    <div class="completed-section">
+    <div
+      class="completed-section"
+      cdkDropList
+      [cdkDropListData]="completed"
+      (cdkDropListDropped)="drop($event)"
+    >
       <h1>Completed</h1>
-      <div class="flex-row" *ngFor="let task of completed">
+      <div class="flex-row" *ngFor="let task of completed" cdkDrag>
         <span class="delete" (click)="removeTask(task.id)">
           <svg
             width="2em"

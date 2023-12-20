@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 export interface Task {
   id: number;
   content: string;
@@ -45,6 +50,41 @@ export class ToDoListComponent implements OnInit {
 
   removeTask(taskId: number) {
     this.completed = this.completed.filter((t) => t.id !== taskId);
+    localStorage.setItem('completed', JSON.stringify(this.completed));
+  }
+
+  drop(event: CdkDragDrop<Task[]>) {
+    if (event.previousContainer === event.container) {
+      // Move the item within the same list
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      // Transfer the item from one list to another
+      const item = event.previousContainer.data[event.previousIndex];
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+
+      // Check which list the item was transferred to and update localStorage accordingly
+      if (event.container.id === 'tasksList') {
+        // Item moved to tasks list
+        this.completed = this.completed.filter((t) => t.id !== item.id);
+        localStorage.setItem('completed', JSON.stringify(this.completed));
+      } else {
+        // Item moved to completed list
+        this.tasks = this.tasks.filter((t) => t.id !== item.id);
+        localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      }
+    }
+
+    // Update localStorage for both lists
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
     localStorage.setItem('completed', JSON.stringify(this.completed));
   }
 }
