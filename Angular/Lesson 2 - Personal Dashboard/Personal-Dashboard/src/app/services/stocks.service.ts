@@ -4,6 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { openCloseResult } from '../utils/stock-data-types';
 
+/* API DOCS https://polygon.io/docs/stocks/getting-started */
+
 @Injectable({
   providedIn: 'root',
 })

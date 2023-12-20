@@ -3,6 +3,8 @@ import { Observable, of } from 'rxjs';
 import { API_NINJAS_KEY } from 'src/env';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
+/* API DOCS https://api-ninjas.com/api/weather */
+
 export interface WeatherData {
   wind_speed: number;
   wind_degrees: number;

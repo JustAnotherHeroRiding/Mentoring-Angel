@@ -19,7 +19,14 @@
 - Bonus: Find a news api #DONE 
 - Create the to do app functionality #DONE 
 - Style the To-Do Widget
-- Create the stocks widget 
+- Let's try to implement drag and drop
+- Create the stocks widget  #DONE 
+- Style the stock results
+- Save a couple of results to display without making calls
 
 
 ###### Ova e part 1 ponataka ke se dvizime kon aplikacija koja ke kreira dynamic widgets, sekoj korisnik ke mozhe da si kreira kakov saka widget dinamicno, nema da hardkodirame, dynamic routing, drag and drop ke moze da se integrira so svoj api isto taka
+
+
+New Generation Hostel Rome center Nema popust
+Hotel Paola Ima 10% 155 + 14 taxes and charges
