@@ -32,6 +32,3 @@
 
 ###### Ova e part 1 ponataka ke se dvizime kon aplikacija koja ke kreira dynamic widgets, sekoj korisnik ke mozhe da si kreira kakov saka widget dinamicno, nema da hardkodirame, dynamic routing, drag and drop ke moze da se integrira so svoj api isto taka
 
-
-New Generation Hostel Rome center Nema popust
-Hotel Paola Ima 10% 155 + 14 taxes and charges
