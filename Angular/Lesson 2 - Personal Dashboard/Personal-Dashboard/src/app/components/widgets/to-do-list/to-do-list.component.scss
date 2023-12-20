@@ -72,6 +72,24 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.tasks-section,
+.completed-section {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 1em;
+  width: 48%;
+}
+
+@media (max-width: 480px) {
+  .flex-row-main {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .tasks-section,
+  .completed-section {
+    width: 100%;
+  }
+}
 .completed-task {
   text-decoration: line-through;
 }

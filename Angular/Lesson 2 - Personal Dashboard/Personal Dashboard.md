@@ -18,11 +18,16 @@
 - Bonus: Integrate with [https://api-ninjas.com/api/weather](https://api-ninjas.com/api/weather "https://api-ninjas.com/api/weather")  #DONE  
 - Bonus: Find a news api #DONE 
 - Create the to do app functionality #DONE 
-- Style the To-Do Widget
-- Let's try to implement drag and drop
+- Style the To-Do Widget #DONE 
+- Let's try to implement drag and drop #DONE 
+- Style the drag and drop experience 
 - Create the stocks widget  #DONE 
 - Style the stock results
 - Save a couple of results to display without making calls
+
+## Drag and Drop
+- Implement drag and drop for other widgets to sort the displayed data
+- Reordering the widgets in the sidebar
 
 
 ###### Ova e part 1 ponataka ke se dvizime kon aplikacija koja ke kreira dynamic widgets, sekoj korisnik ke mozhe da si kreira kakov saka widget dinamicno, nema da hardkodirame, dynamic routing, drag and drop ke moze da se integrira so svoj api isto taka

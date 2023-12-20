@@ -19,7 +19,11 @@
       id="tasksList"
     >
       <h1>Tasks</h1>
-      <div class="flex-row" *ngFor="let task of tasks" cdkDrag>
+      <div
+        class="flex-row"
+        *ngFor="let task of tasks"
+        cdkDrag
+      >
         <span class="delete" (click)="markCompleted(task.id)">
           <svg
             width="2em"
@@ -43,7 +47,11 @@
       id="completedList"
     >
       <h1>Completed</h1>
-      <div class="flex-row" *ngFor="let task of completed" cdkDrag>
+      <div
+        class="flex-row"
+        *ngFor="let task of completed"
+        cdkDrag
+      >
         <span class="delete" (click)="removeTask(task.id)">
           <svg
             width="2em"
