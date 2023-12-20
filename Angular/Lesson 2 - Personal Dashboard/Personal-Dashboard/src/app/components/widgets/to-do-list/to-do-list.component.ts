@@ -19,6 +19,7 @@ export class ToDoListComponent implements OnInit {
   task = '';
   tasks: Task[] = [];
   completed: Task[] = [];
+  mainParent?: HTMLDivElement;
 
   constructor(private toastr: ToastrService) {}
 
@@ -29,6 +30,7 @@ export class ToDoListComponent implements OnInit {
     this.completed = localStorage.getItem('completed')
       ? JSON.parse(localStorage.getItem('completed')!)
       : [];
+    this.mainParent = document.getElementById('mainParent') as HTMLDivElement;
   }
 
   addTask(taskContent: string) {
@@ -39,7 +41,7 @@ export class ToDoListComponent implements OnInit {
     this.tasks = [...this.tasks, task];
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
     this.task = '';
-    this.toastr.success('Task added successfully!');
+    this.toastr.success('Task added!');
   }
 
   markCompleted(taskId: number) {
@@ -49,14 +51,14 @@ export class ToDoListComponent implements OnInit {
       this.completed.push(completedTask);
       localStorage.setItem('tasks', JSON.stringify(this.tasks));
       localStorage.setItem('completed', JSON.stringify(this.completed));
-      this.toastr.info('Task marked as completed!');
+      this.toastr.info('Good job!');
     }
   }
 
   removeTask(taskId: number) {
     this.completed = this.completed.filter((t) => t.id !== taskId);
     localStorage.setItem('completed', JSON.stringify(this.completed));
-    this.toastr.warning('Task removed!');
+    this.toastr.warning('Task removed');
   }
 
   drop(event: CdkDragDrop<Task[]>) {
@@ -82,15 +84,25 @@ export class ToDoListComponent implements OnInit {
         // Item moved to tasks list
         this.completed = this.completed.filter((t) => t.id !== item.id);
         localStorage.setItem('completed', JSON.stringify(this.completed));
+        this.toastr.info('Task restored');
       } else {
         // Item moved to completed list
         this.tasks = this.tasks.filter((t) => t.id !== item.id);
         localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        this.toastr.success('Good Job!');
       }
     }
 
     // Update localStorage for both lists
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
     localStorage.setItem('completed', JSON.stringify(this.completed));
+  }
+
+  onDragStart() {
+    this.mainParent?.classList.add('dragging');
+  }
+
+  onDragEnd() {
+    this.mainParent?.classList.remove('dragging');
   }
 }

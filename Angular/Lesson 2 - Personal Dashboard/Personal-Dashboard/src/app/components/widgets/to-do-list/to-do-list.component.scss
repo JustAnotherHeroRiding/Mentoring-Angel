@@ -103,16 +103,28 @@
   border: 1.5px solid var(--indigo-700);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: grab;
+}
+
+/* For the To Do widget dragging styles
+Due to css encapsulation the the body will not be targeted */
+.dragging .task-single,
+.dragging .completed-single {
+  opacity: 0.7;
+  background-color: var(--slate-200) !important;
 }
 
 /* The element being dragged */
 .cdk-drag-preview {
+  opacity: 1 !important;
   font-weight: 700;
   background-color: var(--slate-300);
 }
 
 /* The original element which will move when a suitable location is hovered on */
 .cdk-drag-placeholder {
+  opacity: 1 !important;
+  cursor: grabbing;
   background-color: var(--slate-200);
 }
 

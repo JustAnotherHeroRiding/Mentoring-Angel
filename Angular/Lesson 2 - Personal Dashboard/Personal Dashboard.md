@@ -20,8 +20,11 @@
 - Create the to do app functionality #DONE 
 - Style the To-Do Widget #DONE 
 - Let's try to implement drag and drop #DONE 
-- Style the drag and drop experience 
+- Style the drag and drop experience #DONE 
 - Create the stocks widget  #DONE 
+- Toast messages on todo app #DONE 
+- Add the messages for dragging #DONE 
+- Sounds when completing a task
 - Style the stock results
 - Save a couple of results to display without making calls
 

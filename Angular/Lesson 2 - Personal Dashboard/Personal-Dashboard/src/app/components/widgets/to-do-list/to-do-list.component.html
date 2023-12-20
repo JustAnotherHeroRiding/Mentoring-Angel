@@ -1,4 +1,4 @@
-<div class="flex-col">
+<div id="mainParent" class="flex-col">
   <form class="flex-col-form" (ngSubmit)="addTask(task)">
     <input
       id="tasks"
@@ -23,6 +23,8 @@
         class="flex-row task-single"
         *ngFor="let task of tasks"
         cdkDrag
+        (cdkDragStarted)="onDragStart()"
+        (cdkDragEnded)="onDragEnd()"
       >
         <span class="delete" (click)="markCompleted(task.id)">
           <svg
@@ -51,6 +53,8 @@
         class="flex-row completed-single"
         *ngFor="let task of completed"
         cdkDrag
+        (cdkDragStarted)="onDragStart()"
+        (cdkDragEnded)="onDragEnd()"
       >
         <span class="delete" (click)="removeTask(task.id)">
           <svg
