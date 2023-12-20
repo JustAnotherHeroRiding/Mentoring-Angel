@@ -39,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DragDropModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 2500,
+      timeOut: 30000,
       positionClass: 'custom-toast-bottom-right',
     }),
   ],
