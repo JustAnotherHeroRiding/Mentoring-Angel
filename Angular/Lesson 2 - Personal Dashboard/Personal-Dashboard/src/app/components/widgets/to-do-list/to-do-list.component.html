@@ -10,12 +10,13 @@
     />
     <button [disabled]="task.length == 0">Add</button>
   </form>
-  <div class="flex-row-main">
+  <div cdkDropListGroup class="flex-row-main">
     <div
       class="tasks-section"
       cdkDropList
       [cdkDropListData]="tasks"
       (cdkDropListDropped)="drop($event)"
+      id="tasksList"
     >
       <h1>Tasks</h1>
       <div class="flex-row" *ngFor="let task of tasks" cdkDrag>
@@ -39,6 +40,7 @@
       cdkDropList
       [cdkDropListData]="completed"
       (cdkDropListDropped)="drop($event)"
+      id="completedList"
     >
       <h1>Completed</h1>
       <div class="flex-row" *ngFor="let task of completed" cdkDrag>

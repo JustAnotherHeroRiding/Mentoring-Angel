@@ -54,7 +54,8 @@ export class ToDoListComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<Task[]>) {
-    if (event.previousContainer === event.container) {
+    console.log(event.previousContainer.id, event.container.id, event);
+    if (event.previousContainer.id === event.container.id) {
       // Move the item within the same list
       moveItemInArray(
         event.container.data,
