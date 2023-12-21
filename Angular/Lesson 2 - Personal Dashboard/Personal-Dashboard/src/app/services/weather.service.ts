@@ -37,7 +37,7 @@ export class WeatherService {
     });
   }
 
-  getWeather(location: string): Observable<any> {
+  getWeather(location: string): Observable<WeatherData> {
     const headers = this.headers;
     return this.http.get<any>(`${this.endpoint}?city=${location}`, { headers });
   }

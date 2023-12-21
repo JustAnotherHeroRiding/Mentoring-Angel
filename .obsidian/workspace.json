@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "53ef6983bb836715",
+            "id": "9e2c4d9f37fad158",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 1 - Basics - Group Anagram/First Angular/Song Key.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e16f8557704b3cb2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
+                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
+                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
+                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md"
+                "file": "Angular/Lesson 3/Lesson 3 Angular.md"
               }
             }
           }
@@ -159,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e16f8557704b3cb2",
+  "active": "9e2c4d9f37fad158",
   "lastOpenFiles": [
+    "Angular/Lesson 3",
+    "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
+    "Angular/Lesson 3/Lesson 3 Angular.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/collections/index.d.ts",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@angular/cdk/collections",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toastr.service.mjs",
@@ -171,7 +161,6 @@
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast.component.mjs",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast-ref.mjs",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/toastr/toast-noanimation.component.mjs",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/esm2022/portal/portal.mjs",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-gyp-build/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/tools/README.md",
@@ -204,8 +193,6 @@
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/webpack-subresource-integrity/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/reusify/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-number/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/CHANGELOG.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/fast-glob/README.md"
+    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/README.md"
   ]
 }

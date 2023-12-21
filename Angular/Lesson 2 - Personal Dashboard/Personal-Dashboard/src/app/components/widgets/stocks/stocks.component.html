@@ -8,18 +8,18 @@
     </button>
     <button class="fetch-btn" (click)="getAllTickers()">Get Tickers</button>
   </div>
-  <div *ngIf="stocksData.length !== 0">
-    <div *ngFor="let stock of stocksData">
-      <p>After Hours: {{ stock.afterHours }}</p>
-      <p>Close: {{ stock.close }}</p>
-      <p>From: {{ stock.from }}</p>
-      <p>High: {{ stock.high }}</p>
-      <p>Low: {{ stock.low }}</p>
-      <p>Open: {{ stock.open }}</p>
-      <p>Pre Market: {{ stock.preMarket }}</p>
-      <p>Status: {{ stock.status }}</p>
-      <p>Symbol: {{ stock.symbol }}</p>
-      <p>Volume: {{ stock.volume }}</p>
+    <div class="flex-row" *ngIf="mockData.length !== 0">
+      <div class="stock-data" *ngFor="let stock of mockData">
+        <p>After Hours: {{ stock.afterHours }}</p>
+        <p>Close: {{ stock.close }}</p>
+        <p>From: {{ stock.from }}</p>
+        <p>High: {{ stock.high }}</p>
+        <p>Low: {{ stock.low }}</p>
+        <p>Open: {{ stock.open }}</p>
+        <p>Pre Market: {{ stock.preMarket }}</p>
+        <p>Status: {{ stock.status }}</p>
+        <p>Symbol: {{ stock.symbol }}</p>
+        <p>Volume: {{ stock.volume }}</p>
+      </div>
     </div>
-  </div>
 </div>

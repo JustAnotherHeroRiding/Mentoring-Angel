@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { StocksService } from 'src/app/services/stocks.service';
 import { getYesterdayDate } from 'src/app/utils/dates';
-import { openCloseResult } from 'src/app/utils/stock-data-types';
+import { openCloseResult, stockMockData } from 'src/app/utils/stock-data-types';
 
 @Component({
   selector: 'app-stocks',
@@ -11,6 +11,7 @@ import { openCloseResult } from 'src/app/utils/stock-data-types';
 export class StocksComponent {
   stocksData: openCloseResult[] = [];
   tickers: string[] = [];
+  mockData: openCloseResult[] = [stockMockData];
   constructor(private stocksService: StocksService) {}
 
   getYesterday() {
