@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e2c4d9f37fad158",
+            "id": "987ceed18bed14c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
+                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
+                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 3/Lesson 3 Angular.md",
+                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 3/Lesson 3 Angular.md"
+                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md"
               }
             }
           }
@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9e2c4d9f37fad158",
+  "active": "334fbe39f4dc74fa",
   "lastOpenFiles": [
+    "Angular/Lesson 3/Lesson 3 Angular.md",
+    "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
+    "Angular/Lesson 4 - RxJs",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.ts",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.html",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.css",
@@ -157,10 +160,7 @@
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/services",
     "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/new.interface.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news",
-    "Angular/Lesson 3",
     "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
-    "Angular/Lesson 3/Lesson 3 Angular.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-gyp-build/README.md",
     "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/tools/README.md",

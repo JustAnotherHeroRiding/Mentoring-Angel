@@ -4,9 +4,10 @@
 - Lazy Loading so that components only render when they are needed
 - Once they are rendered they will not be rerendered, just like a normal component
 ## Task
-- Fix the error severing the connection once an api request fails
-- This means that once a request fails, the connection should remain active for new requests
+- Fix the error severing the connection once an api request fails #DONE 
+- This means that once a request fails, the connection should remain active for new requests #DONE 
 - There is most likely another RxJs operator for this task
+##### What we needed to do is create a second pipe inside the switchMap and handle the error there
 - Recreate the routing using the forChild() router and creating separate module
 
 ## Async Pipe
