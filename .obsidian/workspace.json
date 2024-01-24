@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6ff9ee043332af7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
+                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
+                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md"
+                "file": "Angular/Lesson 4 - RxJs/Real time chat.md"
               }
             }
           }
@@ -146,53 +159,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "334fbe39f4dc74fa",
+  "active": "6ff9ee043332af7c",
   "lastOpenFiles": [
-    "Angular/Lesson 3/Lesson 3 Angular.md",
-    "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
-    "Angular/Lesson 4 - RxJs",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.html",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather/weather.component.css",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/services/weather.service.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather.module.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather-routing.module.ts",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/weather",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/services",
-    "Angular/Lesson 1 - Basics - Group Anagram/First Angular/angular-tour-of-heroes/src/app/news/new.interface.ts",
-    "Angular/Lesson 2 - Personal Dashboard/Personal Dashboard.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ngx-toastr/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-gyp-build/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/tools/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/LICENSE.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/node-addon-api/CHANGELOG.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/src/assets/backgroundHighQuality.png",
-    "Angular/LESSON~2/PERSON~1/src/assets/logo.png",
-    "Angular/LESSON~2/PERSON~1/src/assets/backgroundSun.png",
-    "Angular/LESSON~2/PERSON~1/src/assets/backgroundHighQuality.png",
-    "Angular/LESSON~2/PERSON~1/src/assets/backgroundGradientMix.png",
-    "Angular/LESSON~2/PERSON~1/src/assets/backgroundCircle.png",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/src/assets/DALL·E 2023-12-17 21.01.29 - Create a seamless, high-resolution background design for a website, fully covering the entire image area with a blend of Tailwind CSS slate, orange, a.png",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/src/assets/backgroundGradientMix.png",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/src/assets/DALL·E 2023-12-17 20.57.05 - A full-coverage background design for a website, using a harmonious blend of Tailwind CSS slate and orange color schemes. The design should feature a .png",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/src/assets/backgroundCircle.png",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/ignore/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/dir-glob/readme.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-core-module/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-core-module/CHANGELOG.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@babel/plugin-transform-classes/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@babel/plugin-transform-block-scoping/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/@babel/plugin-transform-arrow-functions/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/unicode-property-aliases-ecmascript/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/unicode-canonical-property-names-ecmascript/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/core-js-compat/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/kind-of/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/kind-of/CHANGELOG.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/clone-deep/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/webpack-subresource-integrity/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/reusify/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/is-number/README.md",
-    "Angular/Lesson 2 - Personal Dashboard/Personal-Dashboard/node_modules/braces/README.md"
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/reactive_directives/form_group_name.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/reactive_directives/form_group_directive.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/reactive_directives/form_control_directive.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/reactive_directives/form_control_name.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/model/form_group.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/model/form_control.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/model/form_array.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/model/abstract_model.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/validators.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/template_driven_errors.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/esm2022/src/directives/shared.mjs",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/forms/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/animations/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/update/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/test/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/run/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/new/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/lint/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/deploy/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/config/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/completion/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/build/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/add/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/cache/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/analytics/long-description.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/ws/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/sockjs/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/serve-static/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/serve-index/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/send/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/range-parser/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/qs/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/mime/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/jasmine/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/http-errors/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/express-serve-static-core/README.md",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_world.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_word.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_zip.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_world.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_word.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_width.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_wrench.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_visualstudio.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_text_width.png",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_tux.png"
   ]
 }
