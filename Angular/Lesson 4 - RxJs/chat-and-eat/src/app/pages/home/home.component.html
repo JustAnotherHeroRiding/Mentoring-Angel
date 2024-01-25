@@ -1,0 +1,15 @@
+<div class="flex flex-col">
+  <h2>Welcome</h2>
+  <p class="description">What are you craving?</p>
+  <div class="flex gap-4">
+    <div *ngIf="isMenuLoading | async; else content">
+      <loading-spinner></loading-spinner>
+    </div>
+
+    <ng-template #content>
+      <div *ngFor="let item of menu">
+        <p>{{ item }}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
