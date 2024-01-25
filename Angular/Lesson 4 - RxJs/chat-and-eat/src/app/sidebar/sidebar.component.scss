@@ -16,7 +16,7 @@
   display: inherit;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: white;
   border-radius: 25px;
   padding: 0.3em;
   transition: border-radius 0.2s ease-in-out; /* Updated this line */
@@ -49,15 +49,18 @@
   transform: translateY(-50%); /* Move to final position */
 }
 
-.route.active svg:hover path {
-  fill: var(--orange-600) !important;
-  background-color: black;
+.route.active {
+  background-color: beige;
 }
 
-.route:not(.active) svg:hover path {
-  fill: var(--slate-400) !important;
+.route:not(.active) svg:hover path,
+.route:not(.active) svg:hover circle,
+.route:not(.active) svg:hover polyline {
+  stroke: gray !important;
 }
 
-.route.active svg path {
-  fill: var(--orange-500) !important;
+.route.active svg path,
+.route.active svg circle,
+.route.active svg polyline {
+  stroke: orange !important;
 }

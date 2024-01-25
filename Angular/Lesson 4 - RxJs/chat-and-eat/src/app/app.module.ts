@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    OrdersComponent,
+    ProfileComponent,
+    ChatComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
