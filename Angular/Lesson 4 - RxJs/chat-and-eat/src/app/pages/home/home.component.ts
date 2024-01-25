@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { MenuService } from 'src/app/Services/menu.service';
+import {
+  Categories,
+  MenuItem,
+  MenuService,
+} from 'src/app/Services/menu.service';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +12,30 @@ import { MenuService } from 'src/app/Services/menu.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  menu: string[] = [];
+  menu: MenuItem[] = [];
   cart = [];
-  isMenuLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+  _isMenuLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    true
+  );
+  categories: Categories[] = [];
 
   constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
     this.menuService.getMenuItems().subscribe((items) => {
       this.menu = items;
-      this.isMenuLoading.next(false);
+      this._isMenuLoading$.next(false);
+    });
+    this.menuService.getCategories().subscribe((categories) => {
+      this.categories = categories;
+    });
+  }
+
+  getCategory(category: Categories) {
+    this._isMenuLoading$.next(true);
+    this.menuService.getMenuItems(category).subscribe((items) => {
+      this.menu = items;
+      this._isMenuLoading$.next(false);
     });
   }
 }

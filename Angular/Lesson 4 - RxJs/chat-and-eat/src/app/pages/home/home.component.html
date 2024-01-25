@@ -1,14 +1,24 @@
-<div class="flex flex-col">
+<div class="flex flex-col flex-wrap">
   <h2>Welcome</h2>
   <p class="description">What are you craving?</p>
-  <div class="flex gap-4">
-    <div *ngIf="isMenuLoading | async; else content">
+  <div class="flex">
+    <div *ngIf="_isMenuLoading$ | async; else content">
       <loading-spinner></loading-spinner>
     </div>
 
     <ng-template #content>
-      <div *ngFor="let item of menu">
-        <p>{{ item }}</p>
+      <div class="flex flex-col">
+        <div class="flex">
+          <div class="categories" *ngFor="let category of categories">
+            <button (click)="getCategory(category)">{{ category }}</button>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="food-item" *ngFor="let item of menu">
+            <p>{{ item.name }}</p>
+            <p>{{ item.price }}$</p>
+          </div>
+        </div>
       </div>
     </ng-template>
   </div>

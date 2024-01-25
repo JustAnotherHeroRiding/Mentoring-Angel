@@ -1,0 +1,18 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.categories {
+  display: flex;
+}
+
+.food-item {
+  text-align: center;
+  border: 1px solid var(--slate-400);
+  padding: 0.5em;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 250px;
+}
