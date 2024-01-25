@@ -7,12 +7,14 @@ export interface MenuItem {
   price: number;
 }
 
-interface CartItem {
+export interface CartItem {
   item: MenuItem;
   quantity: number;
 }
 
 export type Categories = 'Pizza' | 'Pasta' | 'Asian';
+
+export type ExtendedCategories = 'All' | Categories;
 
 @Injectable({
   providedIn: 'root',
@@ -33,32 +35,34 @@ export class MenuService {
     ],
   };
 
-  private cartSubject = new BehaviorSubject<CartItem[]>([]);
-  public cart$ = this.cartSubject.asObservable();
+  private _cartSubject$ = new BehaviorSubject<CartItem[]>([]);
+  public cart$ = this._cartSubject$.asObservable();
 
   constructor() {}
 
-  getCategories(): Observable<Categories[]> {
-    return of(Object.keys(this.menu) as Categories[]);
+  getCategories(): Observable<ExtendedCategories[]> {
+    return of(Object.keys(this.menu) as ExtendedCategories[]);
   }
 
-  getMenuItems(category?: Categories): Observable<MenuItem[]> {
-    if (category) {
-      return of(this.menu[category]).pipe(
-        delay(1000),
-        tap(() => console.log(`Fetched ${category} items`))
-      );
-    } else {
+  getMenuItems(category: ExtendedCategories): Observable<MenuItem[]> {
+    if (category === 'All' || category === undefined) {
+      // Flatten the menu items into a single array if 'All' or no category is specified
       let allItems = Object.values(this.menu).flat();
       return of(allItems).pipe(
         delay(1000),
         tap(() => console.log('Fetched all items.', allItems))
       );
+    } else {
+      // Fetch items for the specified category
+      return of(this.menu[category]).pipe(
+        delay(1000),
+        tap(() => console.log(`Fetched ${category} items`))
+      );
     }
   }
 
   addToCart(item: MenuItem): void {
-    let currentCart = this.cartSubject.value;
+    let currentCart = this._cartSubject$.value;
     let foundItem = currentCart.find(
       (cartItem) => cartItem.item.name === item.name
     );
@@ -69,7 +73,7 @@ export class MenuService {
       currentCart.push({ item, quantity: 1 });
     }
 
-    this.cartSubject.next(currentCart);
+    this._cartSubject$.next(currentCart);
     console.log(`Added ${item.name} to cart`);
   }
 
