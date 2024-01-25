@@ -1,8 +1,7 @@
 .sidebar-container {
   display: flex;
   flex-direction: column;
-  background-color: gray;
-  color: var(--white);
+  background-color: var(--cool-gray);
   padding: 1em 0.5em;
   height: 100%;
   min-height: 100vh;
@@ -50,17 +49,17 @@
 }
 
 .route.active {
-  background-color: beige;
+  background-color: var(--pale-purple);
 }
 
 .route:not(.active) svg:hover path,
 .route:not(.active) svg:hover circle,
 .route:not(.active) svg:hover polyline {
-  stroke: gray !important;
+  stroke: var(--slate-500) !important;
 }
 
 .route.active svg path,
 .route.active svg circle,
 .route.active svg polyline {
-  stroke: orange !important;
+  stroke: var(--slate-700) !important;
 }
