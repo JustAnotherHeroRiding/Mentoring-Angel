@@ -5,6 +5,7 @@ import { delay, switchMap, tap } from 'rxjs/operators';
 export interface MenuItem {
   name: string;
   price: number;
+  isOrdering: boolean;
 }
 
 export interface CartItem {
@@ -22,16 +23,16 @@ export type ExtendedCategories = 'All' | Categories;
 export class MenuService {
   private menu: Record<Categories, MenuItem[]> = {
     Pizza: [
-      { name: 'Margherita', price: 10 },
-      { name: 'Pepperoni', price: 12 },
+      { name: 'Margherita', price: 10, isOrdering: false },
+      { name: 'Pepperoni', price: 12, isOrdering: false },
     ],
     Pasta: [
-      { name: 'Spaghetti Carbonara', price: 15 },
-      { name: 'Penne Arrabiata', price: 14 },
+      { name: 'Spaghetti Carbonara', price: 15, isOrdering: false },
+      { name: 'Penne Arrabiata', price: 14, isOrdering: false },
     ],
     Asian: [
-      { name: 'Rice', price: 8 },
-      { name: 'Noodles', price: 9 },
+      { name: 'Rice', price: 8, isOrdering: false },
+      { name: 'Noodles', price: 9, isOrdering: false },
     ],
   };
 

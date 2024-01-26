@@ -1,5 +1,9 @@
 ### Design Document: Food Ordering and Chat Application
 
+
+
+## SwitchMap use case- Wait for the add to cart to finish before firing off again
+
 #### Overview
 
 The application allows users to order food from a menu and engage in chat rooms while waiting for their order. It will have real-time updates for order status and chat messages.

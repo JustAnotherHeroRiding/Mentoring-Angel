@@ -19,9 +19,7 @@ export class HomeComponent implements OnInit {
   _isMenuLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
     true
   );
-  _isCartLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
-    true
-  );
+
   categories: ExtendedCategories[] = [];
 
   constructor(private menuService: MenuService) {}
@@ -38,12 +36,10 @@ export class HomeComponent implements OnInit {
 
     this.menuService.cart$
       .pipe(
-        tap((cart) => this._isCartLoading$.next(true)),
         delay(800)
       )
       .subscribe((cart) => {
         this.cart = cart;
-        this._isCartLoading$.next(false);
       });
   }
 

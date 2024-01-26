@@ -17,24 +17,21 @@
           <div class="food-item" *ngFor="let item of menu">
             <p>{{ item.name }}</p>
             <p>{{ item.price }}$</p>
-            <button (click)="addToCart(item)">Order</button>
+            <button (click)="addToCart(item)">
+              {{ item.isOrdering ? "Adding" : "Order" }}
+            </button>
           </div>
         </div>
 
         <div class="flex flex-col">
           <h3>Cart</h3>
-          <div *ngIf="_isCartLoading$ | async; else cartContainer">
-            <loading-spinner></loading-spinner>
-          </div>
-          <ng-template #cartContainer>
-            <div class="flex">
-              <div class="food-item" *ngFor="let item of cart">
-                <p>{{ item.item.name }}</p>
-                <p>{{ item.item.price }}</p>
-                <p>{{ item.quantity }}$</p>
-              </div>
+          <div class="flex">
+            <div class="food-item" *ngFor="let item of cart">
+              <p>{{ item.item.name }}</p>
+              <p>{{ item.item.price }}</p>
+              <p>Amount: {{ item.quantity }}</p>
             </div>
-          </ng-template>
+          </div>
         </div>
       </div>
     </ng-template>

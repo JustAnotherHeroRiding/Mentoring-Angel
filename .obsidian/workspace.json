@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "987ceed18bed14c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6ff9ee043332af7c",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -161,17 +148,18 @@
   },
   "active": "6ff9ee043332af7c",
   "lastOpenFiles": [
+    "Angular/RxJs - Convention.md",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/reactive/not-null.ts",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/reactive/my-first-custom-operator.ts",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/reactive",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/order/order.component.ts",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/order/order.component.html",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/order/order.component.css",
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/src/app/order",
+    "Angular/Lesson 4 - RxJs/Real time chat.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/uicomponents/loading-spinner/loading-spinner.component.spec.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/uicomponents/loading-spinner/loading-spinner.component.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/uicomponents/loading-spinner/loading-spinner.component.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/uicomponents/loading-spinner/loading-spinner.component.html",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/uicomponents/loading-spinner",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/loading-spinner/loading-spinner.component.spec.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/loading-spinner/loading-spinner.component.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/loading-spinner/loading-spinner.component.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/loading-spinner/loading-spinner.component.html",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/loading-spinner",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/lucide-angular/aliases.d.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",
@@ -199,8 +187,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/build/long-description.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/add/long-description.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/cache/long-description.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cli/src/commands/analytics/long-description.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/ws/README.md",
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_world.png",
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_word.png",
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_zip.png",
