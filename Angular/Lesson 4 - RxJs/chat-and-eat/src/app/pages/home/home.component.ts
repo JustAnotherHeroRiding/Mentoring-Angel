@@ -20,10 +20,11 @@ export class HomeComponent implements OnInit {
     true
   );
 
-  private addToCartSubject = new Subject<MenuItem>();
   private categoryChangeSubject = new Subject<ExtendedCategories>();
 
   categories: ExtendedCategories[] = [];
+
+  private itemSubjects: Map<number, Subject<MenuItem>> = new Map();
 
   constructor(private menuService: MenuService) {}
 
@@ -40,21 +41,6 @@ export class HomeComponent implements OnInit {
     this.menuService.cart$.pipe(delay(800)).subscribe((cart) => {
       this.cart = cart;
     });
-
-    this.addToCartSubject
-      .pipe(
-        switchMap((item: MenuItem) => {
-          this.setOrderingStateForItem(item.id, true);
-          return of(item).pipe(
-            delay(800),
-            tap(() => {
-              this.menuService.addToCart(item);
-              this.setOrderingStateForItem(item.id, false);
-            })
-          );
-        })
-      )
-      .subscribe();
 
     this.categoryChangeSubject
       .pipe(
@@ -73,8 +59,28 @@ export class HomeComponent implements OnInit {
     this.categoryChangeSubject.next(category);
   }
 
-  addToCart(item: MenuItem) {
-    this.addToCartSubject.next(item);
+  addToCart(item: MenuItem): void {
+    if (!this.itemSubjects.has(item.id)) {
+      const itemSubject = new Subject<MenuItem>();
+      this.itemSubjects.set(item.id, itemSubject);
+
+      itemSubject
+        .pipe(
+          switchMap((selectedItem: MenuItem) => {
+            this.setOrderingStateForItem(selectedItem.id, true);
+            return of(selectedItem).pipe(
+              delay(800),
+              tap(() => {
+                this.menuService.addToCart(selectedItem);
+                this.setOrderingStateForItem(selectedItem.id, false);
+              })
+            );
+          })
+        )
+        .subscribe();
+    }
+
+    this.itemSubjects.get(item.id)?.next(item);
   }
 
   private setOrderingStateForItem(itemId: number, orderingState: boolean) {

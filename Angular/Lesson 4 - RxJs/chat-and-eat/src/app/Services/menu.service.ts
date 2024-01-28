@@ -110,12 +110,8 @@ export class MenuService {
       (cartItem) => cartItem.item.name === item.name
     );
 
-    if (foundItem) {
-      foundItem.quantity += 1;
-    } else {
-      currentCart.push({ item, quantity: 1, status: 'Order Placed' });
-      this.startStatusUpdate(currentCart.length - 1); // Start status update for the new item
-    }
+    currentCart.push({ item, quantity: 1, status: 'Order Placed' });
+    this.startStatusUpdate(currentCart.length - 1); // Start status update for the new item
 
     this._cartSubject$.next(currentCart);
     localStorage.setItem('cart', JSON.stringify(currentCart));

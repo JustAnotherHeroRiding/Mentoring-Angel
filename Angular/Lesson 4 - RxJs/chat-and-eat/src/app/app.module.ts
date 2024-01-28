@@ -9,6 +9,8 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { LoadingSpinnerComponent } from './uicomponents/loading-spinner/loading-spinner.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { LoadingSpinnerComponent } from './uicomponents/loading-spinner/loading-
     ChatComponent,
     LoadingSpinnerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

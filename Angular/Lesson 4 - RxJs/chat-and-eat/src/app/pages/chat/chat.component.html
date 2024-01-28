@@ -1,1 +1,20 @@
-<p>chat works!</p>
+<div class="flex flex-col">
+  <h2>Chat</h2>
+  <div class="flex">
+    <div class="flex flex-col">
+      <div class="messages">
+        <div *ngFor="let message of messages">
+          <strong>{{ message.user }}:</strong> {{ message.content }}
+        </div>
+      </div>
+      <input
+        type="text"
+        [(ngModel)]="newMessageContent"
+        (keyup.enter)="sendMessage()"
+        placeholder="Type a message..."
+      />
+      <button (click)="sendMessage()">Send</button>
+      <button (click)="clearMessages()">Clear Messages</button>
+    </div>
+  </div>
+</div>
