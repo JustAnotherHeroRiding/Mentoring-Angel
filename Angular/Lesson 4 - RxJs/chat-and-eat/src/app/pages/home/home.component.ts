@@ -15,7 +15,7 @@ import {
 })
 export class HomeComponent implements OnInit {
   menu: MenuItem[] = [];
-  cart: CartItem[] = [];
+  cart: CartItem[] | undefined = undefined;
   _isMenuLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
     true
   );

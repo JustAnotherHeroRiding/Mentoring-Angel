@@ -12,7 +12,7 @@ Food ingredients will be randomly generated while users wait for their order to 
 
 #### Key Features
 
-1. **Food Menu and Ordering System**
+1. **Food Menu and Ordering System** #DONE 
 2. **Real-Time Order Tracking**
 3. **Chat Rooms for Waiting Customers**
 4. **User Account Management**
@@ -22,14 +22,14 @@ Food ingredients will be randomly generated while users wait for their order to 
 
 1. **Food Menu and Ordering System**
     
-    - **`HttpClient` with `switchMap`**: Fetch and display food items from a backend service. Use `switchMap` to cancel previous requests when a new one is made (e.g., changing menu categories).
+    - **`HttpClient` with `switchMap`**: Fetch and display food items from a backend service. Use `switchMap` to cancel previous requests when a new one is made (e.g., changing menu categories). #DONE 
     - **`BehaviorSubject`**: Hold the current state of the shopping cart, allowing various components (like cart summary, item count) to reactively update. #DONE 
     - **`tap`**: For side effects like logging, analytics tracking upon adding/removing items from the cart. #DONE 
 2. **Real-Time Order Tracking**
     
-    - **`WebSocketSubject` or similar**: Establish a WebSocket connection for real-time updates on order status.
-    - **`mergeMap` or `concatMap`**: Handle order status updates, ensuring the order of events is maintained (e.g., 'preparing' -> 'ready for pickup').
-    - **`ReplaySubject`**: Cache the latest status of an order for quick access when switching between app views.
+    - **`WebSocketSubject` or similar**: Establish a WebSocket connection for real-time updates on order status. #DONE 
+    - **`mergeMap` or `concatMap`**: Handle order status updates, ensuring the order of events is maintained (e.g., 'preparing' -> 'ready for pickup'). #DONE 
+    - **`ReplaySubject`**: Cache the latest status of an order for quick access when switching between app views. #DONE 
 3. **Chat Rooms for Waiting Customers**
     
     - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information.
