@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable, of } from 'rxjs';
 import { delay, switchMap, tap } from 'rxjs/operators';
 
 export interface MenuItem {
+  id: number;
   name: string;
   price: number;
   isOrdering: boolean;
@@ -23,16 +24,16 @@ export type ExtendedCategories = 'All' | Categories;
 export class MenuService {
   private menu: Record<Categories, MenuItem[]> = {
     Pizza: [
-      { name: 'Margherita', price: 10, isOrdering: false },
-      { name: 'Pepperoni', price: 12, isOrdering: false },
+      { id: 1, name: 'Margherita', price: 10, isOrdering: false },
+      { id: 2, name: 'Pepperoni', price: 12, isOrdering: false },
     ],
     Pasta: [
-      { name: 'Spaghetti Carbonara', price: 15, isOrdering: false },
-      { name: 'Penne Arrabiata', price: 14, isOrdering: false },
+      { id: 3, name: 'Spaghetti Carbonara', price: 15, isOrdering: false },
+      { id: 4, name: 'Penne Arrabiata', price: 14, isOrdering: false },
     ],
     Asian: [
-      { name: 'Rice', price: 8, isOrdering: false },
-      { name: 'Noodles', price: 9, isOrdering: false },
+      { id: 5, name: 'Rice', price: 8, isOrdering: false },
+      { id: 6, name: 'Noodles', price: 9, isOrdering: false },
     ],
   };
 
@@ -47,14 +48,12 @@ export class MenuService {
 
   getMenuItems(category: ExtendedCategories): Observable<MenuItem[]> {
     if (category === 'All' || category === undefined) {
-      // Flatten the menu items into a single array if 'All' or no category is specified
       let allItems = Object.values(this.menu).flat();
       return of(allItems).pipe(
         delay(1000),
         tap(() => console.log('Fetched all items.', allItems))
       );
     } else {
-      // Fetch items for the specified category
       return of(this.menu[category]).pipe(
         delay(1000),
         tap(() => console.log(`Fetched ${category} items`))

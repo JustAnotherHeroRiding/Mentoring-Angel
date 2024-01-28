@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, delay, tap } from 'rxjs';
+import { BehaviorSubject, delay, tap, Subject, of, switchMap } from 'rxjs';
 import {
   CartItem,
   Categories,
@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
     true
   );
 
+  private addToCartSubject = new Subject<MenuItem>();
+
   categories: ExtendedCategories[] = [];
 
   constructor(private menuService: MenuService) {}
@@ -34,13 +36,25 @@ export class HomeComponent implements OnInit {
       this.categories.push('All');
     });
 
-    this.menuService.cart$
+    this.menuService.cart$.pipe(delay(800)).subscribe((cart) => {
+      this.cart = cart;
+    });
+
+    this.addToCartSubject
       .pipe(
-        delay(800)
+        // Using switchMap to handle only the latest addToCart request
+        switchMap((item: MenuItem) => {
+          this.setOrderingStateForItem(item.id, true);
+          return of(item).pipe(
+            delay(800),
+            tap(() => {
+              this.menuService.addToCart(item);
+              this.setOrderingStateForItem(item.id, false);
+            })
+          );
+        })
       )
-      .subscribe((cart) => {
-        this.cart = cart;
-      });
+      .subscribe();
   }
 
   getCategory(category: ExtendedCategories) {
@@ -52,6 +66,15 @@ export class HomeComponent implements OnInit {
   }
 
   addToCart(item: MenuItem) {
-    this.menuService.addToCart(item);
+    this.addToCartSubject.next(item);
+  }
+
+  private setOrderingStateForItem(itemId: number, orderingState: boolean) {
+    this.menu = this.menu.map((menuItem) => {
+      if (menuItem.id === itemId) {
+        return { ...menuItem, isOrdering: orderingState };
+      }
+      return menuItem;
+    });
   }
 }
