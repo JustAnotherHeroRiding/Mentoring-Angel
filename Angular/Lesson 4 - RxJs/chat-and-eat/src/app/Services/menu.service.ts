@@ -104,13 +104,10 @@ export class MenuService {
     }
   }
 
-  addToCart(item: MenuItem): void {
+  addToCart(item: MenuItem, amount: number): void {
     let currentCart = this._cartSubject$.value;
-    let foundItem = currentCart.find(
-      (cartItem) => cartItem.item.name === item.name
-    );
 
-    currentCart.push({ item, quantity: 1, status: 'Order Placed' });
+    currentCart.push({ item, quantity: amount, status: 'Order Placed' });
     this.startStatusUpdate(currentCart.length - 1); // Start status update for the new item
 
     this._cartSubject$.next(currentCart);

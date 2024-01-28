@@ -25,7 +25,7 @@ Food ingredients will be randomly generated while users wait for their order to 
     - **`HttpClient` with `switchMap`**: Fetch and display food items from a backend service. Use `switchMap` to cancel previous requests when a new one is made (e.g., changing menu categories). #DONE 
     - **`BehaviorSubject`**: Hold the current state of the shopping cart, allowing various components (like cart summary, item count) to reactively update. #DONE 
     - **`tap`**: For side effects like logging, analytics tracking upon adding/removing items from the cart. #DONE 
-	- When trying to place orders for multiple items, if I click on one, then another switchMap will cancel the order but it will not set the loading state to false.
+	- When trying to place orders for multiple items, if I click on one, then another switchMap will cancel the order but it will not set the loading state to false. #DONE 
 1. **Real-Time Order Tracking**
     
     - **`WebSocketSubject` or similar**: Establish a WebSocket connection for real-time updates on order status. #DONE 

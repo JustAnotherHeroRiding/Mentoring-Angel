@@ -6,7 +6,7 @@
     <ng-container *ngFor="let item of cart">
       <div class="cart-item" *ngIf="item.status !== 'Delivered'">
         <p>{{ item.item.name }}</p>
-        <p>{{ item.item.price }}</p>
+        <p>{{ item.item.price }} $</p>
         <p>Amount: {{ item.quantity }}</p>
         <p>Status: {{ item.status }}</p>
       </div>
@@ -19,7 +19,7 @@
     <ng-container *ngFor="let item of cart">
       <div class="cart-item finished" *ngIf="item.status === 'Delivered'">
         <p>{{ item.item.name }}</p>
-        <p>{{ item.item.price }}</p>
+        <p>{{ item.item.price }} $</p>
         <p>Amount: {{ item.quantity }}</p>
         <div class="finished-tag">Done</div>
       </div>

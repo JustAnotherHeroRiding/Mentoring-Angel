@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     true
   );
 
+  orderAmounts: { [itemId: number]: number } = {};
   private categoryChangeSubject = new Subject<ExtendedCategories>();
 
   categories: ExtendedCategories[] = [];
@@ -31,6 +32,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.menuService.getMenuItems('All').subscribe((items) => {
       this.menu = items;
+      items.forEach((item) => {
+        this.orderAmounts[item.id] = 1;
+      });
       this._isMenuLoading$.next(false);
     });
     this.menuService.getCategories().subscribe((categories) => {
@@ -61,6 +65,7 @@ export class HomeComponent implements OnInit {
 
   addToCart(item: MenuItem): void {
     if (!this.itemSubjects.has(item.id)) {
+      const amount = this.orderAmounts[item.id] || 1; // Default to 1 if not specified
       const itemSubject = new Subject<MenuItem>();
       this.itemSubjects.set(item.id, itemSubject);
 
@@ -71,7 +76,7 @@ export class HomeComponent implements OnInit {
             return of(selectedItem).pipe(
               delay(800),
               tap(() => {
-                this.menuService.addToCart(selectedItem);
+                this.menuService.addToCart(selectedItem, amount);
                 this.setOrderingStateForItem(selectedItem.id, false);
               })
             );

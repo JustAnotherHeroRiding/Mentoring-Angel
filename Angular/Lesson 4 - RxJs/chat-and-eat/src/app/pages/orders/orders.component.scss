@@ -17,3 +17,9 @@
   border-radius: 5px;
   font-size: 0.9em;
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
