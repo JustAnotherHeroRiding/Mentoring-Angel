@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'chat', component: ChatComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

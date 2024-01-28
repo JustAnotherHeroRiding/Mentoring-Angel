@@ -10,7 +10,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { LoadingSpinnerComponent } from './uicomponents/loading-spinner/loading-spinner.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountComponent } from './pages/account/account.component';
+import { AvatarComponent } from './uicomponents/avatar/avatar.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,16 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     ChatComponent,
     LoadingSpinnerComponent,
+    AccountComponent,
+    AvatarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
