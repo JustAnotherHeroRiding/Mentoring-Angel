@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   );
 
   private addToCartSubject = new Subject<MenuItem>();
+  private categoryChangeSubject = new Subject<ExtendedCategories>();
 
   categories: ExtendedCategories[] = [];
 
@@ -42,7 +43,6 @@ export class HomeComponent implements OnInit {
 
     this.addToCartSubject
       .pipe(
-        // Using switchMap to handle only the latest addToCart request
         switchMap((item: MenuItem) => {
           this.setOrderingStateForItem(item.id, true);
           return of(item).pipe(
@@ -55,14 +55,22 @@ export class HomeComponent implements OnInit {
         })
       )
       .subscribe();
+
+    this.categoryChangeSubject
+      .pipe(
+        switchMap((category: ExtendedCategories) => {
+          this._isMenuLoading$.next(true);
+          return this.menuService.getMenuItems(category);
+        })
+      )
+      .subscribe((items) => {
+        this.menu = items;
+        this._isMenuLoading$.next(false);
+      });
   }
 
   getCategory(category: ExtendedCategories) {
-    this._isMenuLoading$.next(true);
-    this.menuService.getMenuItems(category).subscribe((items) => {
-      this.menu = items;
-      this._isMenuLoading$.next(false);
-    });
+    this.categoryChangeSubject.next(category);
   }
 
   addToCart(item: MenuItem) {

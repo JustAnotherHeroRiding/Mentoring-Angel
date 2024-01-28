@@ -2,7 +2,7 @@
 
 
 
-## SwitchMap use case- Wait for the add to cart to finish before firing off again
+## SwitchMap use case- Wait for the add to cart to finish before firing off again #DONE 
 
 #### Overview
 
@@ -23,8 +23,8 @@ Food ingredients will be randomly generated while users wait for their order to 
 1. **Food Menu and Ordering System**
     
     - **`HttpClient` with `switchMap`**: Fetch and display food items from a backend service. Use `switchMap` to cancel previous requests when a new one is made (e.g., changing menu categories).
-    - **`BehaviorSubject`**: Hold the current state of the shopping cart, allowing various components (like cart summary, item count) to reactively update.
-    - **`tap`**: For side effects like logging, analytics tracking upon adding/removing items from the cart.
+    - **`BehaviorSubject`**: Hold the current state of the shopping cart, allowing various components (like cart summary, item count) to reactively update. #DONE 
+    - **`tap`**: For side effects like logging, analytics tracking upon adding/removing items from the cart. #DONE 
 2. **Real-Time Order Tracking**
     
     - **`WebSocketSubject` or similar**: Establish a WebSocket connection for real-time updates on order status.
