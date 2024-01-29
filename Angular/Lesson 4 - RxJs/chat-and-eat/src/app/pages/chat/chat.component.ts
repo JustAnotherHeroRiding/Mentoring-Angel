@@ -26,6 +26,11 @@ export class ChatComponent implements OnInit {
       this.messages = messages;
     });
   }
+  onTextareaInput(event: Event): void {
+    const textarea: HTMLTextAreaElement = event.target as HTMLTextAreaElement;
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  }
 
   async updateProfile(user: User) {
     await this.authService.fetchAndUpdateProfile(user);
@@ -35,6 +40,16 @@ export class ChatComponent implements OnInit {
     if (this.newMessageContent.trim()) {
       this.chatService.sendMessage(this.newMessageContent.trim());
       this.newMessageContent = '';
+      this.resetTextareaHeight();
+    }
+  }
+
+  resetTextareaHeight(): void {
+    const textarea = document.querySelector(
+      '.new-message'
+    ) as HTMLTextAreaElement;
+    if (textarea) {
+      textarea.style.height = 'auto';
     }
   }
 

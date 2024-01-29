@@ -1,20 +1,30 @@
 <div class="flex flex-col">
-  <h2>Chat</h2>
-  <div class="flex">
-    <div class="flex flex-col gap-4">
-      <div class="messages">
+  <h1>Chat</h1>
+  <div class="flex flex-col gap-4 chat-container">
+    <div class="messages">
+      <ng-container *ngIf="messages.length > 0; else noMessages">
         <div class="message" *ngFor="let message of messages">
           <strong>{{ message.username }}:</strong> {{ message.content }}
         </div>
-      </div>
-      <input
-        type="text"
+      </ng-container>
+      <ng-template #noMessages>
+        <p class="description">Chat is empty :(</p>
+      </ng-template>
+    </div>
+    <div class="textarea-container">
+      <textarea
+        class="new-message"
         [(ngModel)]="newMessageContent"
         (keyup.enter)="sendMessage()"
+        (input)="onTextareaInput($event)"
         placeholder="Type a message..."
-      />
-      <button (click)="sendMessage()">Send</button>
-      <button (click)="clearMessages()">Clear Messages</button>
+        maxlength="280"
+      ></textarea>
+      <div class="character-counter">
+        {{ 280 - newMessageContent.length }} characters left
+      </div>
     </div>
+    <button (click)="sendMessage()">Send</button>
+    <button (click)="clearMessages()">Clear Messages</button>
   </div>
 </div>

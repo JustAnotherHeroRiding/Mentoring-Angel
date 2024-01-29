@@ -6,6 +6,7 @@ import { AuthSession, Session } from '@supabase/supabase-js';
 import { User } from '@supabase/supabase-js';
 
 export interface Message {
+  id: number;
   username: string;
   content: string;
 }
@@ -54,7 +55,11 @@ export class ChatService {
 
   sendMessage(content: string): void {
     if (this.profile) {
-      const newMessage: Message = { username: this.profile.username, content };
+      const newMessage: Message = {
+        username: this.profile.username,
+        content,
+        id: Date.now() + Math.random(),
+      };
       const currentMessages = this.messagesSubject.value;
       this.messagesSubject.next([...currentMessages, newMessage]);
       localStorage.setItem(
@@ -66,7 +71,16 @@ export class ChatService {
     }
   }
 
+  deleteMessage(id: number) {
+    const currentMessages = this.messagesSubject.value;
+    const newMessages = currentMessages.filter((message) => message.id !== id);
+    this.messagesSubject.next(newMessages);
+    localStorage.setItem('messages', JSON.stringify(newMessages));
+    return newMessages;
+  }
+
   clearMessages(): void {
     this.messagesSubject.next([]);
+    localStorage.removeItem('messages');
   }
 }

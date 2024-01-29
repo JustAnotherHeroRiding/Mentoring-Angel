@@ -38,7 +38,7 @@ Food ingredients will be randomly generated while users wait for their order to 
     - **`catchError` and `retry`**: Implement error handling for chat connectivity issues, with retry logic for re-establishing connections.
 4. **User Account Management**
     
-    - **`BehaviorSubject`**: Maintain the current user session state, updating reactively across the app (e.g., login/logout status).
+    - **`BehaviorSubject`**: Maintain the current user session state, updating reactively across the app (e.g., login/logout status). #DONE 
     - **`switchMap`**: Use for user authentication flows, where one asynchronous operation (like login) leads to another (fetching user profile).
 5. **Notifications and Alerts**
     
