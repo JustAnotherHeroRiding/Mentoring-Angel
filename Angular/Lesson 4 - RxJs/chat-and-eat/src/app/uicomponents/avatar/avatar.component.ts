@@ -14,7 +14,6 @@ export class AvatarComponent {
   @Input()
   set avatarUrl(url: string | null) {
     if (url) {
-      console.log(url)
       this.downloadImage(url);
     }
   }
@@ -35,6 +34,7 @@ export class AvatarComponent {
         );
       }
     } catch (error) {
+      console.log(error)
       if (error instanceof Error) {
         console.error('Error downloading image: ', error.message);
       }

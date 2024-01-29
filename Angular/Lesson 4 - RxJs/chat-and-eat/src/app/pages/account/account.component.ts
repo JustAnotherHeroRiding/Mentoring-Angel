@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { AuthSession } from '@supabase/supabase-js';
+import { AuthService } from 'src/app/Services/auth.service';
 import { Profile, SupabaseService } from 'src/app/Services/supabase.service';
 
 @Component({
@@ -24,7 +25,8 @@ export class AccountComponent implements OnInit {
 
   constructor(
     private readonly supabase: SupabaseService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private profileService: AuthService
   ) {}
   get avatarUrl() {
     return this.updateProfileForm.value.avatar_url as string;
@@ -37,41 +39,21 @@ export class AccountComponent implements OnInit {
     await this.updateProfile();
   }
   async ngOnInit(): Promise<void> {
-    await this.getProfile();
-
-    const { username, website, avatar_url, full_name } = this.profile;
-    this.updateProfileForm.patchValue({
-      username,
-      website,
-      avatar_url,
-      full_name,
-    });
-  }
-
-  async getProfile() {
-    try {
-      this.loading = true;
-      const { user } = this.session;
-      const {
-        data: profile,
-        error,
-        status,
-      } = await this.supabase.profile(user);
-
-      if (error && status !== 406) {
-        throw error;
-      }
-
+    this.loading = true;
+    await this.profileService.fetchAndUpdateProfile(this.session.user);
+    this.profileService.currentProfile.subscribe((profile) => {
       if (profile) {
-        this.profile = profile as Profile;
+        this.profile = profile;
+        const { username, website, avatar_url, full_name } = this.profile;
+        this.updateProfileForm.patchValue({
+          username,
+          website,
+          avatar_url,
+          full_name,
+        });
       }
-    } catch (error) {
-      if (error instanceof Error) {
-        alert(error.message);
-      }
-    } finally {
       this.loading = false;
-    }
+    });
   }
 
   async updateProfile(): Promise<void> {
@@ -83,15 +65,17 @@ export class AccountComponent implements OnInit {
       const website = this.updateProfileForm.value.website as string;
       const avatar_url = this.updateProfileForm.value.avatar_url as string;
       const full_name = this.updateProfileForm.value.full_name as string;
-
-      const { error } = await this.supabase.updateProfile({
+      const updatedProfile: Profile = {
         id: user.id,
         username,
         website,
         avatar_url,
         full_name,
-      });
+      };
+      const { error } = await this.supabase.updateProfile(updatedProfile);
       if (error) throw error;
+      this.profile = updatedProfile;
+      this.profileService.updateProfile(this.profile);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
