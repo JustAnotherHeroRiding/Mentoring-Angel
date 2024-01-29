@@ -26,7 +26,7 @@ export class AccountComponent implements OnInit {
   constructor(
     private readonly supabase: SupabaseService,
     private formBuilder: FormBuilder,
-    private profileService: AuthService
+    private authService: AuthService
   ) {}
   get avatarUrl() {
     return this.updateProfileForm.value.avatar_url as string;
@@ -40,8 +40,8 @@ export class AccountComponent implements OnInit {
   }
   async ngOnInit(): Promise<void> {
     this.loading = true;
-    await this.profileService.fetchAndUpdateProfile(this.session.user);
-    this.profileService.currentProfile.subscribe((profile) => {
+    await this.authService.fetchAndUpdateProfile(this.session.user);
+    this.authService.currentProfile.subscribe((profile) => {
       if (profile) {
         this.profile = profile;
         const { username, website, avatar_url, full_name } = this.profile;
@@ -75,7 +75,7 @@ export class AccountComponent implements OnInit {
       const { error } = await this.supabase.updateProfile(updatedProfile);
       if (error) throw error;
       this.profile = updatedProfile;
-      this.profileService.updateProfile(this.profile);
+      this.authService.updateProfile(this.profile);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);

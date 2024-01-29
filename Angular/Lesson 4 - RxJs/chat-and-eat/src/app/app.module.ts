@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './uicomponents/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OrdersComponent } from './pages/orders/orders.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+import { AuthComponent } from './pages/auth/auth.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { LoadingSpinnerComponent } from './uicomponents/loading-spinner/loading-spinner.component';
 import { CommonModule } from '@angular/common';
@@ -20,7 +20,7 @@ import { AvatarComponent } from './uicomponents/avatar/avatar.component';
     SidebarComponent,
     HomeComponent,
     OrdersComponent,
-    ProfileComponent,
+    AuthComponent,
     ChatComponent,
     LoadingSpinnerComponent,
     AccountComponent,

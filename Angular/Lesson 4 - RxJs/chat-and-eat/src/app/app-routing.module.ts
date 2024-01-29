@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { OrdersComponent } from './pages/orders/orders.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+import { AuthComponent } from './pages/auth/auth.component';
 import { ChatComponent } from './pages/chat/chat.component';
 
 const routes: Routes = [
@@ -11,10 +11,10 @@ const routes: Routes = [
     component: HomeComponent,
   },
   { path: 'orders', component: OrdersComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: AuthComponent },
   { path: 'chat', component: ChatComponent },
-  { path: 'auth', component: ProfileComponent },
-  { path: 'register', component: ProfileComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: 'register', component: AuthComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

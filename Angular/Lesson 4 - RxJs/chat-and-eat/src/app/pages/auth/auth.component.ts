@@ -5,11 +5,11 @@ import { Session } from '@supabase/supabase-js';
 import { SupabaseService } from 'src/app/Services/supabase.service';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.scss'],
 })
-export class ProfileComponent implements OnInit {
+export class AuthComponent implements OnInit {
   loading = false;
   session: Session | null = null;
   showPassword = false;
