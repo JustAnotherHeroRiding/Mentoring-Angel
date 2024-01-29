@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Session, User } from '@supabase/supabase-js';
-import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
-import { Profile, SupabaseService } from 'src/app/Services/supabase.service';
+import { SupabaseService } from 'src/app/Services/supabase.service';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss'],
 })
-export class ChatComponent {
+export class ChatComponent implements OnInit {
   messages: Message[] = [];
   newMessageContent: string = '';
   session: Session | undefined | null = undefined;
@@ -18,15 +17,16 @@ export class ChatComponent {
 
   constructor(
     private chatService: ChatService,
-    private supabase: SupabaseService,
     private authService: AuthService
-  ) {
+  ) {}
+
+  ngOnInit(): void {
+    this.chatService.getMessages();
     this.chatService.messages$.subscribe((messages) => {
       this.messages = messages;
     });
   }
 
-  ngOnInit() {}
   async updateProfile(user: User) {
     await this.authService.fetchAndUpdateProfile(user);
   }

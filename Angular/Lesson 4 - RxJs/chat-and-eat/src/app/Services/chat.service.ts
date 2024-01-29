@@ -47,13 +47,22 @@ export class ChatService {
     await this.authService.fetchAndUpdateProfile(user);
   }
 
+  getMessages(): void {
+    const allMessages = localStorage.getItem('messages');
+    this.messagesSubject.next(JSON.parse(allMessages || '[]'));
+  }
+
   sendMessage(content: string): void {
     if (this.profile) {
       const newMessage: Message = { username: this.profile.username, content };
       const currentMessages = this.messagesSubject.value;
       this.messagesSubject.next([...currentMessages, newMessage]);
+      localStorage.setItem(
+        'messages',
+        JSON.stringify(this.messagesSubject.value)
+      );
     } else {
-      console.error("Please log in")
+      console.error('Please log in');
     }
   }
 

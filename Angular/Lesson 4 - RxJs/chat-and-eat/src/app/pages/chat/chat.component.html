@@ -1,9 +1,9 @@
 <div class="flex flex-col">
   <h2>Chat</h2>
   <div class="flex">
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-4">
       <div class="messages">
-        <div *ngFor="let message of messages">
+        <div class="message" *ngFor="let message of messages">
           <strong>{{ message.username }}:</strong> {{ message.content }}
         </div>
       </div>
