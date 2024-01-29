@@ -7,12 +7,14 @@ import {
   SupabaseClient,
   User,
 } from '@supabase/supabase-js';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/env';
 export interface Profile {
   id?: string;
   username: string;
   website: string;
   avatar_url: string;
+  full_name: string;
 }
 
 @Injectable({
@@ -20,26 +22,30 @@ export interface Profile {
 })
 export class SupabaseService {
   private supabase: SupabaseClient;
-  _session: AuthSession | null = null;
-
+  private _session = new BehaviorSubject<AuthSession | undefined | null>(
+    undefined
+  );
   constructor() {
     this.supabase = createClient(
       environment.supabaseUrl,
       environment.supabaseAnonKey
     );
+    this.refreshSession();
   }
 
-  get session() {
+  private refreshSession() {
     this.supabase.auth.getSession().then(({ data }) => {
-      this._session = data.session;
+      this._session.next(data.session);
     });
-    return this._session;
+  }
+  get session$(): Observable<Session | null | undefined> {
+    return this._session.asObservable();
   }
 
   profile(user: User) {
     return this.supabase
       .from('profiles')
-      .select(`username, website, avatar_url`)
+      .select(`username, website, avatar_url, full_name`)
       .eq('id', user.id)
       .single();
   }
@@ -50,8 +56,14 @@ export class SupabaseService {
     return this.supabase.auth.onAuthStateChange(callback);
   }
 
-  signIn(email: string) {
-    return this.supabase.auth.signInWithOtp({ email });
+  signIn(email: string, password?: string) {
+    if (password) {
+      // Sign in with email and password
+      return this.supabase.auth.signInWithPassword({ email, password });
+    } else {
+      // Sign in with magic link
+      return this.supabase.auth.signInWithOtp({ email });
+    }
   }
 
   signOut() {
@@ -65,6 +77,31 @@ export class SupabaseService {
     };
 
     return this.supabase.from('profiles').upsert(update);
+  }
+  async signUp(email: string, password: string, name: string) {
+    // Attempt to sign up the user
+    const { data: user, error } = await this.supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    // Handle any errors during signup
+    if (error) throw error;
+
+    // If signup is successful, create or update the user's profile
+    if (user.user) {
+      const profile: Profile = {
+        id: user.user.id,
+        username: name,
+        website: '', // Default or empty value
+        avatar_url: '', // Default or empty value
+        full_name: name, // Default or empty value
+      };
+
+      await this.updateProfile(profile);
+    }
+
+    return { user, error };
   }
 
   downLoadImage(path: string) {

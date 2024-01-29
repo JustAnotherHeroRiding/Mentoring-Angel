@@ -5,7 +5,7 @@ import { SupabaseService } from 'src/app/Services/supabase.service';
 @Component({
   selector: 'app-avatar',
   templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.css'],
+  styleUrls: ['./avatar.component.scss'],
 })
 export class AvatarComponent {
   _avatarUrl: SafeResourceUrl | undefined;
@@ -14,6 +14,7 @@ export class AvatarComponent {
   @Input()
   set avatarUrl(url: string | null) {
     if (url) {
+      console.log(url)
       this.downloadImage(url);
     }
   }

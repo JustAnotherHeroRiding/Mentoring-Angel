@@ -6,7 +6,7 @@ import { Profile, SupabaseService } from 'src/app/Services/supabase.service';
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css'],
+  styleUrls: ['./account.component.scss'],
 })
 export class AccountComponent implements OnInit {
   loading = false;
@@ -19,6 +19,7 @@ export class AccountComponent implements OnInit {
     username: '',
     website: '',
     avatar_url: '',
+    full_name: '',
   });
 
   constructor(
@@ -38,11 +39,12 @@ export class AccountComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     await this.getProfile();
 
-    const { username, website, avatar_url } = this.profile;
+    const { username, website, avatar_url, full_name } = this.profile;
     this.updateProfileForm.patchValue({
       username,
       website,
       avatar_url,
+      full_name,
     });
   }
 
@@ -61,7 +63,7 @@ export class AccountComponent implements OnInit {
       }
 
       if (profile) {
-        this.profile = profile;
+        this.profile = profile as Profile;
       }
     } catch (error) {
       if (error instanceof Error) {
@@ -80,12 +82,14 @@ export class AccountComponent implements OnInit {
       const username = this.updateProfileForm.value.username as string;
       const website = this.updateProfileForm.value.website as string;
       const avatar_url = this.updateProfileForm.value.avatar_url as string;
+      const full_name = this.updateProfileForm.value.full_name as string;
 
       const { error } = await this.supabase.updateProfile({
         id: user.id,
         username,
         website,
         avatar_url,
+        full_name,
       });
       if (error) throw error;
     } catch (error) {
