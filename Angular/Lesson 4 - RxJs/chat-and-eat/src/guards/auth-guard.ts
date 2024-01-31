@@ -12,7 +12,7 @@ export const AuthGuardImpl: CanActivateChildFn = (route, state) => {
     map((session) => {
       const isLoggedIn = session !== null;
       if (!isLoggedIn) {
-        router.navigate(['/']);
+        router.navigate(['/auth'], { queryParams: { returnUrl: state.url } });
       }
       return isLoggedIn;
     })

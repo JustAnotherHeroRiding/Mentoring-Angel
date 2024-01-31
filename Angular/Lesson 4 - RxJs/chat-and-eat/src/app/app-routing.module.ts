@@ -5,7 +5,6 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { AuthGuardImpl } from 'src/guards/auth-guard';
-import { AppComponent } from './app.component';
 import { OutletComponent } from './pages/outlet/outlet.component';
 
 const routes: Routes = [
