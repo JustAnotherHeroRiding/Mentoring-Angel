@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6ff9ee043332af7c",
+            "id": "0859a127a1d052cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b86b82c3da480293",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md"
+                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md"
               }
             }
           }
@@ -146,8 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6ff9ee043332af7c",
+  "active": "b86b82c3da480293",
   "lastOpenFiles": [
+    "Angular/Lesson 4 - RxJs/Real time chat.md",
+    "Angular/RxJs - Convention.md",
+    "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
+    "Angular/Lesson 5 - Memory Leaks",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/version.js.map",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/version.js",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/version.d.ts.map",
@@ -157,8 +174,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/types.d.ts.map",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/types.d.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/polyfills.js.map",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/polyfills.js",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/supabase-js/node_modules/@supabase/gotrue-js/dist/module/lib/polyfills.d.ts.map",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",
@@ -178,8 +193,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/LICENSE.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/functions-js/README.md",
-    "Angular/RxJs - Convention.md",
-    "Angular/Lesson 4 - RxJs/Real time chat.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/side-channel/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/side-channel/CHANGELOG.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/psl/README.md",

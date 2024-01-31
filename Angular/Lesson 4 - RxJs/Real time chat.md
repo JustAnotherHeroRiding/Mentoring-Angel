@@ -13,7 +13,7 @@ Food ingredients will be randomly generated while users wait for their order to 
 #### Key Features
 
 1. **Food Menu and Ordering System** #DONE 
-2. **Real-Time Order Tracking**
+2. **Real-Time Order Tracking** #DONE 
 3. **Chat Rooms for Waiting Customers**
 4. **User Account Management**
 5. **Notifications and Alerts**
@@ -39,6 +39,7 @@ Food ingredients will be randomly generated while users wait for their order to 
 4. **User Account Management**
     
     - **`BehaviorSubject`**: Maintain the current user session state, updating reactively across the app (e.g., login/logout status). #DONE 
+    - `AuthGuard`: Implement a route auth guard using the modern method displayed in the previous lesson
     - **`switchMap`**: Use for user authentication flows, where one asynchronous operation (like login) leads to another (fetching user profile).
 5. **Notifications and Alerts**
     

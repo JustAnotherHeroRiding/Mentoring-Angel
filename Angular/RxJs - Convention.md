@@ -39,9 +39,9 @@
 - map and tap RxJs operators order - what will be displayed in which order
 - combineLatest - This will only take the latest emited various and does not care about the previous values. This can be useful when having a profile page where we only want the latest data and not all previous profile pictures
 - MergeMap inside of a delivery pipe
-- when clicking the button we start listening to the product creation
+- When clicking the button we start listening to the product creation
 - SwitchMap will destroy the first order when a new one is made
-- MergeMap will keep listening to all orders being 
+- MergeMap will keep listening to all orders being made
 
 
 SwitchMap It will only send the latest click to the server
@@ -69,7 +69,7 @@ MergeMap  It will send all requests
 - Referencing an ng-template from another ng-template with ngTemplateOutlet = 'templateName'
 - Or directly without the second ng-template
 - ngContext to pass data from the template outlet to the template being rendered
-- We can pass objects and then access them in the template is located somewhere else
+- We can pass objects and then access them in the template that is located somewhere else
 - Can be useful when we pass data to a container that has a required input
 - Using `ViewChild` to access one of the ng-templates using their `#contentId`
 - From here we can access the elementRef on the ngAfterViewInit lifecycle hook
