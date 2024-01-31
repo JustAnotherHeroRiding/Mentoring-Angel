@@ -101,6 +101,7 @@ export class ChatService {
       };
       const currentMessages = this.messagesSubject.value;
       this.messagesSubject.next([...currentMessages, newMessage]);
+      this.typing.next(null);
       localStorage.setItem(
         'messages',
         JSON.stringify(this.messagesSubject.value)
