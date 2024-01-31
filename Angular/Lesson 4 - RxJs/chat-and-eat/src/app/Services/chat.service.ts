@@ -69,7 +69,13 @@ export class ChatService {
 
   getMessages(): void {
     const allMessages = localStorage.getItem('messages');
-    this.messagesSubject.next(JSON.parse(allMessages || '[]'));
+    if (allMessages) {
+      const messagesArray = JSON.parse(allMessages);
+      const latestFiveMessages = messagesArray.slice(-5); // Get the last 5 messages
+      this.messagesSubject.next(latestFiveMessages);
+    } else {
+      this.messagesSubject.next([]);
+    }
   }
 
   initializeTypingObservable() {

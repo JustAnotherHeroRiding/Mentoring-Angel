@@ -34,7 +34,7 @@ Food ingredients will be randomly generated while users wait for their order to 
 3. **Chat Rooms for Waiting Customers**
     
     - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information.
-    - **`debounceTime` or `throttleTime`**: Manage user input for real-time features like 'typing...' indicators.
+    - **`debounceTime` or `throttleTime`**: Manage user input for real-time features like 'typing...' indicators. #DONE 
     - **`catchError` and `retry`**: Implement error handling for chat connectivity issues, with retry logic for re-establishing connections.
 4. **User Account Management**
     
