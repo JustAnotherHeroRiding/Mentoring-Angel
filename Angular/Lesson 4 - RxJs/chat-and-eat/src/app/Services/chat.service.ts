@@ -4,8 +4,10 @@ import {
   Subject,
   Subscription,
   debounceTime,
+  delay,
   distinctUntilChanged,
   mapTo,
+  of,
   switchMap,
   tap,
   timer,
@@ -30,6 +32,7 @@ export class ChatService {
   session: Session | undefined | null = undefined;
   typing = new Subject<string | null>();
   private typingSubject = new Subject<void>();
+  messagesLoading = new BehaviorSubject<boolean>(false);
 
   typingDebounced = this.typing.pipe(
     debounceTime(500), // Adjust time as needed
@@ -39,6 +42,7 @@ export class ChatService {
   private sessionSubscription?: Subscription;
   isLoadingSession = true;
   private profile?: Profile;
+  private messagesSkip = 0;
 
   constructor(
     private authService: AuthService,
@@ -71,10 +75,28 @@ export class ChatService {
     const allMessages = localStorage.getItem('messages');
     if (allMessages) {
       const messagesArray = JSON.parse(allMessages);
-      const latestFiveMessages = messagesArray.slice(-5); // Get the last 5 messages
-      this.messagesSubject.next(latestFiveMessages);
-    } else {
-      this.messagesSubject.next([]);
+      const totalMessages = messagesArray.length;
+      const start = Math.max(totalMessages - this.messagesSkip - 5, 0);
+      const end = totalMessages - this.messagesSkip;
+      console.log(this.messagesSkip, start, end);
+      if (end <= 0 && this.messagesSkip !== 0) {
+        return; // Stop loading more messages
+      }
+      this.messagesLoading.next(true);
+
+      const newMessages = messagesArray.slice(start, end);
+      this.messagesSkip += 5;
+
+      of(newMessages)
+        .pipe(
+          delay(1000),
+          tap(() => this.messagesLoading.next(false))
+        )
+        .subscribe((messages) => {
+          const currentMessages = this.messagesSubject.getValue();
+          const combinedMessages = [...messages, ...currentMessages];
+          this.messagesSubject.next(combinedMessages);
+        });
     }
   }
 

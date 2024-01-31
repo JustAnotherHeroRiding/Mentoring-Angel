@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Session, User } from '@supabase/supabase-js';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
 import { SupabaseService } from 'src/app/Services/supabase.service';
@@ -17,6 +17,7 @@ export class ChatComponent implements OnInit {
   isLoadingSession = true;
   isUserTyping = false;
   typingUser: string | null = null;
+  messagesLoading = false;
 
   constructor(
     private chatService: ChatService,
@@ -25,6 +26,10 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.chatService.getMessages();
+    this.chatService.messagesLoading.subscribe((loading) => {
+      this.messagesLoading = loading;
+    });
+
     this.chatService.messages$.subscribe((messages) => {
       this.messages = messages;
     });
@@ -51,6 +56,10 @@ export class ChatComponent implements OnInit {
       this.newMessageContent = '';
       this.resetTextareaHeight();
     }
+  }
+
+  loadMore() {
+    this.chatService.getMessages();
   }
 
   resetTextareaHeight(): void {
