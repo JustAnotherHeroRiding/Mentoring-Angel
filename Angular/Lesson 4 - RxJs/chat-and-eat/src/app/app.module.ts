@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './pages/account/account.component';
 import { AvatarComponent } from './uicomponents/avatar/avatar.component';
+import { OutletComponent } from './pages/outlet/outlet.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AvatarComponent } from './uicomponents/avatar/avatar.component';
     LoadingSpinnerComponent,
     AccountComponent,
     AvatarComponent,
+    OutletComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
+import { BehaviorSubject, delay, tap } from 'rxjs';
 import { CartItem, MenuService } from 'src/app/Services/menu.service';
 
 @Component({
@@ -9,11 +9,14 @@ import { CartItem, MenuService } from 'src/app/Services/menu.service';
 })
 export class OrdersComponent implements OnInit {
   cart: CartItem[] = [];
+  isLoadingCart = new BehaviorSubject<boolean>(false);
   constructor(private menuService: MenuService) {}
 
   ngOnInit() {
+    this.isLoadingCart.next(true);
     this.menuService.cart$.pipe(delay(800)).subscribe((cart) => {
       this.cart = cart;
+      this.isLoadingCart.next(false);
       this.menuService.initializeCart();
     });
   }

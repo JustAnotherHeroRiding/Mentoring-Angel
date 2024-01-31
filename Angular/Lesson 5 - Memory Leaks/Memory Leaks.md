@@ -59,3 +59,5 @@ Can be used to protect routes using our logic, making sure that the component re
 
 
 ## Practice with routes
+- Implement an auth guard using the new method with an implicit function #DONE 
+- Pass the session from the guard

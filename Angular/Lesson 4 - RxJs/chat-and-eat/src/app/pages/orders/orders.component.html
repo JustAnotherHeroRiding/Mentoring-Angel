@@ -1,28 +1,38 @@
 <div class="flex flex-col gap-4">
   <h2>Your Active Orders</h2>
   <button (click)="clearCart()">Clear cart</button>
-  <div class="flex gap-4">
+  <loading-spinner
+    *ngIf="isLoadingCart | async; else ActiveOrders"
+  ></loading-spinner>
+  <ng-template #ActiveOrders>
     <!-- Container for Active Orders -->
-    <ng-container *ngFor="let item of cart">
-      <div class="cart-item" *ngIf="item.status !== 'Delivered'">
-        <p>{{ item.item.name }}</p>
-        <p>{{ item.item.price }} $</p>
-        <p>Amount: {{ item.quantity }}</p>
-        <p>Status: {{ item.status }}</p>
-      </div>
-    </ng-container>
-  </div>
+    <div class="flex gap-4">
+      <ng-container *ngFor="let item of cart">
+        <div class="cart-item" *ngIf="item.status !== 'Delivered'">
+          <p>{{ item.item.name }}</p>
+          <p>{{ item.item.price }} $</p>
+          <p>Amount: {{ item.quantity }}</p>
+          <p>Status: {{ item.status }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </ng-template>
 
   <h2>Finished Orders</h2>
-  <div class="flex gap-4">
+  <loading-spinner
+    *ngIf="isLoadingCart | async; else FinishedOrders"
+  ></loading-spinner>
+  <ng-template #FinishedOrders>
     <!-- Container for Finished Orders -->
-    <ng-container *ngFor="let item of cart">
-      <div class="cart-item finished" *ngIf="item.status === 'Delivered'">
-        <p>{{ item.item.name }}</p>
-        <p>{{ item.item.price }} $</p>
-        <p>Amount: {{ item.quantity }}</p>
-        <div class="finished-tag">Done</div>
-      </div>
-    </ng-container>
-  </div>
+    <div class="flex gap-4">
+      <ng-container *ngFor="let item of cart">
+        <div class="cart-item finished" *ngIf="item.status === 'Delivered'">
+          <p>{{ item.item.name }}</p>
+          <p>{{ item.item.price }} $</p>
+          <p>Amount: {{ item.quantity }}</p>
+          <div class="finished-tag">Done</div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-template>
 </div>
