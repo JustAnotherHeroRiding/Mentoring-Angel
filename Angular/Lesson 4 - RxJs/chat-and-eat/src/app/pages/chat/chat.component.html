@@ -7,8 +7,13 @@
           <strong>{{ message.username }}:</strong> {{ message.content }}
         </div>
       </ng-container>
-      <div class="typing-indicator" *ngIf="!isUserTyping">
-        <p class="description">{{ typingUser }}Kristijan is typing...</p>
+      <div class="typing-indicator" *ngIf="isUserTyping">
+        <span class="description">{{ typingUser }} is typing</span>
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot" style="animation-delay: 0.1s"></div>
+          <div class="dot" style="animation-delay: 0.2s"></div>
+        </div>
       </div>
       <ng-template #noMessages>
         <p class="description">Chat is empty :(</p>
