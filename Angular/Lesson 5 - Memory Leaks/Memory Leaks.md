@@ -23,7 +23,7 @@ This can be used to monitor events only inside of the component, which will auto
 
 
 
-## Target elements
+## Targeting elements
 
 Sometimes we need to target specific elements inside of the view of a component, when more dynamic rendering is needed than a simple `*ngIf ` check
 

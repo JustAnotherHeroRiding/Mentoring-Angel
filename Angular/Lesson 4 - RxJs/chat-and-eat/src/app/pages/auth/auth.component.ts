@@ -30,8 +30,10 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
     // Fetch the initial session state
     this.supabase.session$.subscribe((session) => {
+      console.log(session);
       if (session) {
         this.session = session;
+        console.log(this.session);
       }
     });
 
@@ -40,9 +42,9 @@ export class AuthComponent implements OnInit {
       this.session = session;
       //console.log('Session updated:', session);
     });
-    this.location = this.router.url.split('/').pop() || '';
 
-    this.location = this.router.url.split('/').pop() || '';
+    const url = this.router.url.split('/');
+    this.location = url[1].split('?')[0];
   }
 
   togglePasswordVisibility(): void {
