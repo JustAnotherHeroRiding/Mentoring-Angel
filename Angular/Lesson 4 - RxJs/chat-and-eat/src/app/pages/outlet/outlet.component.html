@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<div *ngIf="(session | async) !== null; else WelcomeMessage">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #WelcomeMessage>
+  <h1>Welcome to Chat and Eat</h1>
+  <p class="description">
+    Order food and chat while you wait with everyone else that is hungry
+  </p>
+</ng-template>
