@@ -30,10 +30,8 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
     // Fetch the initial session state
     this.supabase.session$.subscribe((session) => {
-      console.log(session);
       if (session) {
         this.session = session;
-        console.log(this.session);
       }
     });
 

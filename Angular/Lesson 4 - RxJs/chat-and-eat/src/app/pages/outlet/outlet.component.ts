@@ -18,9 +18,9 @@ export class OutletComponent implements OnInit {
   ngOnInit(): void {
     this.supabase.session$.subscribe((session) => {
       this.session.next(session);
-      if (session) {
+     /*  if (session && this.route.snapshot.url.length === 0) {
         this.router.navigate(['/home']);
-      }
+      } */
     });
   }
 }

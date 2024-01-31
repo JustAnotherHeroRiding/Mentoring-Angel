@@ -1,5 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subscription } from 'rxjs';
+import {
+  BehaviorSubject,
+  Subject,
+  Subscription,
+  debounceTime,
+  distinctUntilChanged,
+  mapTo,
+  switchMap,
+  tap,
+  timer,
+} from 'rxjs';
 import { AuthService } from './auth.service';
 import { Profile, SupabaseService } from './supabase.service';
 import { AuthSession, Session } from '@supabase/supabase-js';
@@ -18,6 +28,13 @@ export class ChatService {
   private messagesSubject = new BehaviorSubject<Message[]>([]);
   public messages$ = this.messagesSubject.asObservable();
   session: Session | undefined | null = undefined;
+  typing = new Subject<string | null>();
+  private typingSubject = new Subject<void>();
+
+  typingDebounced = this.typing.pipe(
+    debounceTime(500), // Adjust time as needed
+    distinctUntilChanged()
+  );
 
   private sessionSubscription?: Subscription;
   isLoadingSession = true;
@@ -42,6 +59,8 @@ export class ChatService {
     this.authService.currentProfile.subscribe((prof) => {
       this.profile = prof as Profile;
     });
+
+    this.initializeTypingObservable();
   }
 
   async updateProfile(user: User) {
@@ -51,6 +70,26 @@ export class ChatService {
   getMessages(): void {
     const allMessages = localStorage.getItem('messages');
     this.messagesSubject.next(JSON.parse(allMessages || '[]'));
+  }
+
+  initializeTypingObservable() {
+    this.typingSubject
+      .pipe(
+        switchMap(() => {
+          this.typing.next(this.profile?.username || null); // User started typing
+          return timer(3000); // Wait for 500ms of inactivity
+        }),
+        mapTo(null) // After 500ms without typing, consider the user has stopped typing
+      )
+      .subscribe((value) => {
+        this.typing.next(value); // Emit null when the user stops typing
+      });
+  }
+
+  currentUserTyping() {
+    if (this.profile?.username) {
+      this.typingSubject.next();
+    }
   }
 
   sendMessage(content: string): void {
