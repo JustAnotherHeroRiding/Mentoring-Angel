@@ -2,26 +2,24 @@
   <h1>Chat</h1>
   <div class="flex flex-col gap-4 chat-container">
     <div class="messages">
-      <loading-spinner *ngIf="messagesLoading; else Messages"></loading-spinner>
-      <ng-template #Messages>
-        <button (click)="loadMore()">Load More</button>
+      <button (click)="loadMore()">Load More</button>
+      <loading-spinner *ngIf="messagesLoading"></loading-spinner>
 
-        <ng-container *ngIf="messages.length > 0; else noMessages">
-          <div class="message" *ngFor="let message of messages">
-            <strong>{{ message.username }}:</strong> {{ message.content }}
-          </div>
-        </ng-container>
-        <div class="typing-indicator" *ngIf="isUserTyping">
-          <span class="description">{{ typingUser }} is typing</span>
-          <div class="dots">
-            <div class="dot"></div>
-            <div class="dot" style="animation-delay: 0.1s"></div>
-            <div class="dot" style="animation-delay: 0.2s"></div>
-          </div>
+      <ng-container *ngIf="messages.length > 0; else noMessages">
+        <div class="message" *ngFor="let message of messages">
+          <strong>{{ message.username }}:</strong> {{ message.content }}
         </div>
-        <ng-template #noMessages>
-          <p class="description">Chat is empty :(</p>
-        </ng-template>
+      </ng-container>
+      <div class="typing-indicator" *ngIf="isUserTyping">
+        <span class="description">{{ typingUser }} is typing</span>
+        <div class="dots">
+          <div class="dot"></div>
+          <div class="dot" style="animation-delay: 0.1s"></div>
+          <div class="dot" style="animation-delay: 0.2s"></div>
+        </div>
+      </div>
+      <ng-template #noMessages>
+        <p class="description">Chat is empty :(</p>
       </ng-template>
     </div>
 

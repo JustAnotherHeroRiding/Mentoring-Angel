@@ -14,7 +14,7 @@ Food ingredients will be randomly generated while users wait for their order to 
 
 1. **Food Menu and Ordering System** #DONE 
 2. **Real-Time Order Tracking** #DONE 
-3. **Chat Rooms for Waiting Customers**
+3. **Chat Rooms for Waiting Customers** 
 4. **User Account Management**
 5. **Notifications and Alerts**
 
@@ -32,9 +32,10 @@ Food ingredients will be randomly generated while users wait for their order to 
     - **`mergeMap` or `concatMap`**: Handle order status updates, ensuring the order of events is maintained (e.g., 'preparing' -> 'ready for pickup'). #DONE 
     - **`ReplaySubject`**: Cache the latest status of an order for quick access when switching between app views. #DONE 
 3. **Chat Rooms for Waiting Customers**
-    
-    - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information.
+	## Fun - Let's get this done
+    - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information. I can implement a user status tracker to display whether the sender is online or not. We can track this by checking if the user has the page open, but websockets will most likely be required
     - **`debounceTime` or `throttleTime`**: Manage user input for real-time features like 'typing...' indicators. #DONE 
+    - Loading spinner should only display above the messages themselves and not hide the already fetched messages.
     - **`catchError` and `retry`**: Implement error handling for chat connectivity issues, with retry logic for re-establishing connections.
 4. **User Account Management**
     
@@ -45,6 +46,11 @@ Food ingredients will be randomly generated while users wait for their order to 
     
     - **`tap`**: Used for triggering alerts or notifications based on specific events like new chat messages, order status changes, or promotions.
     - **`filter`**: Filter notification streams to display relevant alerts to users (e.g., filter by user preferences or notification settings).
+
+##### Maybe the view container can be used for the notification themselves, including order status updates or when a user goes offline
+
+6. **View Container API**
+	- `createEmbededView` - Use this to create modals and toasts to display information, we can use this when no more chat messages can be fetched as we found all of them.
 
 #### Technical Considerations
 

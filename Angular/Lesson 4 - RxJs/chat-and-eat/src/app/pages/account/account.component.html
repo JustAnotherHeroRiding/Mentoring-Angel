@@ -1,35 +1,54 @@
 <form
   [formGroup]="updateProfileForm"
   (ngSubmit)="updateProfile()"
-  class="form-widget"
+  class="profile-form flex flex-col gap-4"
 >
   <app-avatar [avatarUrl]="this.avatarUrl" (upload)="updateAvatar($event)">
   </app-avatar>
 
-  <div>
+  <div class="flex flex-col form-item gap-4">
     <label for="email">Email</label>
-    <input id="email" type="text" [value]="session.user.email" disabled />
+    <input
+      class="form-input"
+      id="email"
+      type="text"
+      [value]="session.user.email"
+      disabled
+    />
   </div>
-  <div>
+  <div class="flex flex-col form-item gap-4">
     <label for="username">Username</label>
-    <input formControlName="username" id="username" type="text" />
+    <input
+      class="form-input"
+      formControlName="username"
+      id="username"
+      type="text"
+    />
   </div>
-  <div class="form-item">
+  <div class="flex flex-col form-item gap-4">
     <label for="full_name">Full Name</label>
-    <input formControlName="full_name" id="full_name" type="text" />
+    <input
+      class="form-input"
+      formControlName="full_name"
+      id="full_name"
+      type="text"
+    />
   </div>
-  <div>
+  <div class="flex flex-col form-item gap-4">
     <label for="website">Website</label>
-    <input formControlName="website" id="website" type="url" />
+    <input
+      class="form-input"
+      formControlName="website"
+      id="website"
+      type="url"
+    />
   </div>
 
-  <div>
+  <div class="flex gap-4">
     <button type="submit" class="button primary block" [disabled]="loading">
       {{ loading ? "Loading ..." : "Update" }}
     </button>
-  </div>
 
-  <div>
     <button class="button block" (click)="signOut()">Sign Out</button>
   </div>
 </form>

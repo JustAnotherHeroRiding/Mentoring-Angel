@@ -4,7 +4,6 @@
     [src]="_avatarUrl"
     alt="Avatar"
     class="avatar image"
-    style="height: 150px; width: 150px"
   />
 </div>
 <div
@@ -12,10 +11,10 @@
   class="avatar no-image"
   style="height: 150px; width: 150px; background-color: black"
 ></div>
-<div style="width: 150px">
-  <label class="button primary block" for="single">
+<div class="upload-form">
+  <button class="upload-btn" for="single">
     {{ uploading ? "Uploading ..." : "Upload" }}
-  </label>
+  </button>
   <input
     style="visibility: hidden; position: absolute"
     type="file"

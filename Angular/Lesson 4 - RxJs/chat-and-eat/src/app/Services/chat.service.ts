@@ -78,9 +78,8 @@ export class ChatService {
       const totalMessages = messagesArray.length;
       const start = Math.max(totalMessages - this.messagesSkip - 5, 0);
       const end = totalMessages - this.messagesSkip;
-      console.log(this.messagesSkip, start, end);
       if (end <= 0 && this.messagesSkip !== 0) {
-        return; // Stop loading more messages
+        return; // Stop loading more messages, maybe I should send a message to the component
       }
       this.messagesLoading.next(true);
 
