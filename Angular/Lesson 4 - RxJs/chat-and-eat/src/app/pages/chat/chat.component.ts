@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Session, User } from '@supabase/supabase-js';
-import { BehaviorSubject, Subject } from 'rxjs';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
-import { SupabaseService } from 'src/app/Services/supabase.service';
 
 @Component({
   selector: 'app-chat',

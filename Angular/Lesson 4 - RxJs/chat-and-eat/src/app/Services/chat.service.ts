@@ -6,7 +6,7 @@ import {
   debounceTime,
   delay,
   distinctUntilChanged,
-  mapTo,
+  map,
   of,
   switchMap,
   tap,
@@ -103,13 +103,13 @@ export class ChatService {
     this.typingSubject
       .pipe(
         switchMap(() => {
-          this.typing.next(this.profile?.username || null); // User started typing
-          return timer(3000); // Wait for 500ms of inactivity
+          this.typing.next(this.profile?.username || null);
+          return timer(500);
         }),
-        mapTo(null) // After 500ms without typing, consider the user has stopped typing
+        map(() => null)
       )
       .subscribe((value) => {
-        this.typing.next(value); // Emit null when the user stops typing
+        this.typing.next(value);
       });
   }
 

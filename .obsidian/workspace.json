@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0859a127a1d052cf",
+            "id": "5ed28e505bdfc63e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "file": "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
+                "file": "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "file": "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
+                "file": "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md"
+                "file": "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md"
               }
             }
           }
@@ -158,9 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0859a127a1d052cf",
+  "active": "b86b82c3da480293",
   "lastOpenFiles": [
     "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
+    "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
+    "Angular/Lesson 6 - Directives and Forms",
+    "Angular/RxJs - Convention.md",
     "Angular/Lesson 4 - RxJs/Real time chat.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/outlet/outlet.component.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/outlet/outlet.component.spec.ts",
@@ -171,8 +175,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.spec.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.scss",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.html",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet",
-    "Angular/RxJs - Convention.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",

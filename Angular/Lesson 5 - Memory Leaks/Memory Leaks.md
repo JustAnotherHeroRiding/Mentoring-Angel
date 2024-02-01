@@ -61,3 +61,15 @@ Can be used to protect routes using our logic, making sure that the component re
 ## Practice with routes
 - Implement an auth guard using the new method with an implicit function #DONE 
 - Pass the session from the guard
+
+
+
+## Can deactivate
+- passing a flag to mark a route as public that would otherwise be protected
+- this is done in the routing module
+- Use a shared interface for each component where we want to do the check on whether we deactivate
+- Make all component where the logic is needed implement it
+- We have to implement the function in the component where this is needed
+- We can check for unsaved changes for example to see if we should let the user navigate to another page or warn them to save before proceeding
+
+
