@@ -1,5 +1,9 @@
 <div *ngIf="(session | async) !== null; else WelcomeMessage">
   <router-outlet></router-outlet>
+  <div class="flex flex-col gap-4" *ngIf="isRootUrl">
+    <h1>Visit the Menu and stop being hungry.</h1>
+    <button routerLink="/home">Menu</button>
+  </div>
 </div>
 
 <ng-template #WelcomeMessage>

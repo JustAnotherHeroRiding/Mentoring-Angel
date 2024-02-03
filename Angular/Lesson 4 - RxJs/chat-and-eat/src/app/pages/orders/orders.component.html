@@ -27,9 +27,9 @@
     <div class="flex gap-4">
       <ng-container *ngFor="let item of cart">
         <div class="cart-item finished" *ngIf="item.status === 'Delivered'">
-          <p>{{ item.item.name }}</p>
-          <p>{{ item.item.price }} $</p>
-          <p>Amount: {{ item.quantity }}</p>
+          <p class="food-title">{{ item.item.name }}</p>
+          <p class="food-title">{{ item.item.price }} $</p>
+          <p class="food-title">Amount: {{ item.quantity }}</p>
           <div class="finished-tag">Done</div>
         </div>
       </ng-container>

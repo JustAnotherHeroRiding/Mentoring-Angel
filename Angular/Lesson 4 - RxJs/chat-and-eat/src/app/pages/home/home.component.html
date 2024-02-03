@@ -1,5 +1,5 @@
 <div class="flex flex-col flex-wrap">
-  <h2>Welcome</h2>
+  <h2 class="title">Welcome</h2>
   <p class="description">What are you craving?</p>
   <div class="flex flex-col">
     <div class="flex">
@@ -14,10 +14,11 @@
     <ng-template #MenuItems>
       <div class="flex">
         <div class="food-item" *ngFor="let item of menu">
-          <p>{{ item.name }}</p>
-          <p>{{ item.price }} $</p>
+          <p class="food-title">{{ item.name }}</p>
+          <p class="food-title">{{ item.price }} $</p>
           <div class="flex gap-4">
             <select
+            class="food-select"
               [(ngModel)]="orderAmounts[item.id]"
               [name]="'orderAmount' + item.id"
             >

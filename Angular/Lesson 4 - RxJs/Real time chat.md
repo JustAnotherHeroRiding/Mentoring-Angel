@@ -45,12 +45,16 @@ Food ingredients will be randomly generated while users wait for their order to 
 5. **Notifications and Alerts**
     
     - **`tap`**: Used for triggering alerts or notifications based on specific events like new chat messages, order status changes, or promotions.
+    - Send notification when a user goes offline
     - **`filter`**: Filter notification streams to display relevant alerts to users (e.g., filter by user preferences or notification settings).
 
 ##### Maybe the view container can be used for the notification themselves, including order status updates or when a user goes offline
 
 6. **View Container API**
 	- `createEmbededView` - Use this to create modals and toasts to display information, we can use this when no more chat messages can be fetched as we found all of them.
+7. **Can Deactivate Route**
+	- `CanDeactivateRoute` - Create a guard to stop users from leaving routes when they have unfinished input or changes. For example the profile or the chat pages
+
 
 #### Technical Considerations
 

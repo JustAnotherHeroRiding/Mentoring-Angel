@@ -5,7 +5,7 @@ These can be:
 - form control values
 - Active subscriptions required in that component
 
-### HostService
+### HostListener
 
 This can be used to monitor events only inside of the component, which will automatically stop listening once the component is destroyed.
 
@@ -19,7 +19,7 @@ This can be used to monitor events only inside of the component, which will auto
 
 
 - fromEvent will listen to all events on document #RxJs
-- HostService will be functional only within the component #Angular
+- HostListener will be functional only within the component #Angular
 
 
 

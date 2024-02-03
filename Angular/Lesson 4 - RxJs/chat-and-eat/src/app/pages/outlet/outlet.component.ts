@@ -15,12 +15,14 @@ export class OutletComponent implements OnInit {
   route = inject(ActivatedRoute);
   session = new BehaviorSubject<Session | null | undefined>(undefined);
 
+  isRootUrl = true;
+
   ngOnInit(): void {
     this.supabase.session$.subscribe((session) => {
       this.session.next(session);
-     /*  if (session && this.route.snapshot.url.length === 0) {
-        this.router.navigate(['/home']);
-      } */
+      this.router.events.subscribe(() => {
+        this.isRootUrl = this.router.url === '/' || this.router.url === '';
+      });
     });
   }
 }
