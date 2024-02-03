@@ -7,7 +7,18 @@
 
       <ng-container *ngIf="messages.length > 0; else noMessages">
         <div class="message" *ngFor="let message of messages">
-          <strong>{{ message.username }}:</strong> {{ message.content }}
+          <div class="flex">
+            <div class="flex gap-4">
+              <app-avatar
+                location="chat"
+                avatarUrl="{{ message.profile_pic }}"
+              ></app-avatar>
+              <strong>{{ message.username }}:</strong>
+            </div>
+            <p>
+              {{ message.content }}
+            </p>
+          </div>
         </div>
       </ng-container>
       <div class="typing-indicator" *ngIf="isUserTyping">

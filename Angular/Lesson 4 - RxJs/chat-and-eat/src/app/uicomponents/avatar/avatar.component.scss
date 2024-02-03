@@ -1,8 +1,15 @@
 .avatar {
   border-radius: 999px;
   border: 2px solid var(--slate-700);
-  width: 10em;
   height: auto;
+}
+
+.big-image {
+  width: 10em;
+}
+
+.small-image {
+  width: 2em;
 }
 
 .upload-form {

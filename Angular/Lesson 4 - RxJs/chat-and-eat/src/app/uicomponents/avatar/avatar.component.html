@@ -3,15 +3,18 @@
     *ngIf="_avatarUrl"
     [src]="_avatarUrl"
     alt="Avatar"
-    class="avatar image"
+    [ngClass]="{
+      'avatar big-image': location === 'profile',
+      'small-image avatar': location === 'chat' || 'sidebar'
+    }"
   />
 </div>
 <div
   *ngIf="!_avatarUrl"
   class="avatar no-image"
-  style="height: 150px; width: 150px; background-color: black"
+  style="avatar image background-color: black"
 ></div>
-<div class="upload-form">
+<div *ngIf="location === 'profile'" class="upload-form">
   <button class="upload-btn" for="single">
     {{ uploading ? "Uploading ..." : "Upload" }}
   </button>

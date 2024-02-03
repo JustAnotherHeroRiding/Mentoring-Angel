@@ -21,6 +21,7 @@ export interface Message {
   id: number;
   username: string;
   content: string;
+  profile_pic: string;
 }
 
 @Injectable({
@@ -127,6 +128,7 @@ export class ChatService {
         username: this.profile.username,
         content,
         id: Date.now() + Math.random(),
+        profile_pic: this.profile.avatar_url,
       };
       const currentMessages = this.messagesSubject.value;
       this.messagesSubject.next([...currentMessages, newMessage]);

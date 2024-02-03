@@ -10,6 +10,7 @@ import { SupabaseService } from 'src/app/Services/supabase.service';
 export class AvatarComponent {
   _avatarUrl: SafeResourceUrl | undefined;
   uploading = false;
+  @Input() location: 'profile' | 'chat' | 'sidebar' = 'profile';
 
   @Input()
   set avatarUrl(url: string | null) {
@@ -34,7 +35,7 @@ export class AvatarComponent {
         );
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       if (error instanceof Error) {
         console.error('Error downloading image: ', error.message);
       }
