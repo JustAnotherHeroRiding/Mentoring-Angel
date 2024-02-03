@@ -35,13 +35,11 @@
     />
   </div>
   <div class="flex flex-col form-item gap-4">
-    <label for="website">Website</label>
-    <input
-      class="form-input"
-      formControlName="website"
-      id="website"
-      type="url"
-    />
+    <label for="is_online">Online Status</label>
+    <select class="form-input" formControlName="is_online" id="is_online">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
   </div>
 
   <div class="flex gap-4">

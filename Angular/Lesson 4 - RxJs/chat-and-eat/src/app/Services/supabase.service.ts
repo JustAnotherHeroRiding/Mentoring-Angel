@@ -12,9 +12,9 @@ import { environment } from 'src/env';
 export interface Profile {
   id?: string;
   username: string;
-  website: string;
   avatar_url: string;
   full_name: string;
+  is_online?: boolean;
 }
 
 @Injectable({
@@ -31,6 +31,14 @@ export class SupabaseService {
       environment.supabaseAnonKey
     );
     this.refreshSession();
+
+    this.supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_IN' && session?.user) {
+        this.updateOnlineStatus(session.user.id, true).catch(console.error);
+      } else if (event === 'SIGNED_OUT' && session?.user) {
+        this.updateOnlineStatus(session.user.id, false).catch(console.error);
+      }
+    });
   }
 
   private refreshSession() {
@@ -45,7 +53,7 @@ export class SupabaseService {
   profile(user: User) {
     return this.supabase
       .from('profiles')
-      .select(`username, website, avatar_url, full_name`)
+      .select(`username, website, avatar_url, full_name, is_online`)
       .eq('id', user.id)
       .single();
   }
@@ -54,6 +62,14 @@ export class SupabaseService {
     callback: (event: AuthChangeEvent, session: Session | null) => void
   ) {
     return this.supabase.auth.onAuthStateChange(callback);
+  }
+  async updateOnlineStatus(userId: string, isOnline: boolean): Promise<void> {
+    const { error } = await this.supabase
+      .from('profiles')
+      .update({ is_online: isOnline })
+      .eq('id', userId);
+
+    if (error) throw error;
   }
 
   signIn(email: string, password?: string) {
@@ -66,7 +82,15 @@ export class SupabaseService {
     }
   }
 
-  signOut() {
+  async signOut() {
+    const userRes = await this.supabase.auth.getUser();
+    const user = userRes.data.user;
+
+    if (user) {
+      console.log('updating status to false');
+      await this.updateOnlineStatus(user.id, false).catch(console.error);
+    }
+
     return this.supabase.auth.signOut();
   }
 
@@ -93,9 +117,9 @@ export class SupabaseService {
       const profile: Profile = {
         id: user.user.id,
         username: name,
-        website: '', // Default or empty value
         avatar_url: '', // Default or empty value
         full_name: name, // Default or empty value
+        is_online: true, // Default or empty value
       };
 
       await this.updateProfile(profile);

@@ -41,6 +41,8 @@ Food ingredients will be randomly generated while users wait for their order to 
     
     - **`BehaviorSubject`**: Maintain the current user session state, updating reactively across the app (e.g., login/logout status). #DONE 
     - `AuthGuard`: Implement a route auth guard using the modern method displayed in the previous lesson #DONE 
+    - `is_online`: A bool field in the profiles table where we can table the user's online status #DONE 
+    - Let's set the status to false when logging out and true when logging in 
     - **`switchMap`**: Use for user authentication flows, where one asynchronous operation (like login) leads to another (fetching user profile).
 5. **Notifications and Alerts**
     

@@ -18,9 +18,9 @@ export class AccountComponent implements OnInit {
 
   updateProfileForm = this.formBuilder.group({
     username: '',
-    website: '',
     avatar_url: '',
     full_name: '',
+    is_online: false,
   });
 
   constructor(
@@ -44,12 +44,12 @@ export class AccountComponent implements OnInit {
     this.authService.currentProfile.subscribe((profile) => {
       if (profile) {
         this.profile = profile;
-        const { username, website, avatar_url, full_name } = this.profile;
+        const { username, avatar_url, full_name, is_online } = this.profile;
         this.updateProfileForm.patchValue({
           username,
-          website,
           avatar_url,
           full_name,
+          is_online,
         });
       }
       this.loading = false;
@@ -62,15 +62,15 @@ export class AccountComponent implements OnInit {
       const { user } = this.session;
 
       const username = this.updateProfileForm.value.username as string;
-      const website = this.updateProfileForm.value.website as string;
       const avatar_url = this.updateProfileForm.value.avatar_url as string;
       const full_name = this.updateProfileForm.value.full_name as string;
+      const is_online = this.updateProfileForm.value.is_online as boolean;
       const updatedProfile: Profile = {
         id: user.id,
         username,
-        website,
         avatar_url,
         full_name,
+        is_online,
       };
       const { error } = await this.supabase.updateProfile(updatedProfile);
       if (error) throw error;

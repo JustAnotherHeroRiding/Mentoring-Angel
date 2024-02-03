@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#DONE",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b86b82c3da480293",
+  "active": "9fcfa49ba0955293",
   "lastOpenFiles": [
     "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
     "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
