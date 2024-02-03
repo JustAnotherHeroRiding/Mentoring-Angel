@@ -1,19 +1,27 @@
-<div>
+<div class="avatar-wrapper">
   <img
     *ngIf="_avatarUrl"
     [src]="_avatarUrl"
     alt="Avatar"
     [ngClass]="{
-      'avatar big-image': location === 'profile',
-      'small-image avatar': location === 'chat' || 'sidebar'
+      'big-image': location === 'profile',
+      'small-image': location === 'chat' || location === 'sidebar'
     }"
+    class="avatar"
   />
+  <div
+    *ngIf="!_avatarUrl"
+    style="background-color: black"
+    [ngClass]="{
+      'big-image avatar': location === 'profile',
+      'small-image avatar': location === 'chat' || location === 'sidebar'
+    }"
+  ></div>
+  <span
+    class="status-indicator"
+    [ngClass]="{ online: is_online, offline: !is_online }"
+  ></span>
 </div>
-<div
-  *ngIf="!_avatarUrl"
-  class="avatar no-image"
-  style="avatar image background-color: black"
-></div>
 <div *ngIf="location === 'profile'" class="upload-form">
   <button class="upload-btn" for="single">
     {{ uploading ? "Uploading ..." : "Upload" }}

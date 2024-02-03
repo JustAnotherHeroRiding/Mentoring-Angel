@@ -44,7 +44,7 @@ Food ingredients will be randomly generated while users wait for their order to 
     - `is_online`: A bool field in the profiles table where we can table the user's online status #DONE 
     - Let's set the status to false when logging out and true when logging in  #DONE 
     - Profile pictures for images #DONE 
-    - Add variable styles for the avatar to use a small profile pic for chat messages
+    - Add variable styles for the avatar to use a small profile pic for chat messages #DONE 
     - Display a green/red circle in the messages to see if a user is online
     - **`switchMap`**: Use for user authentication flows, where one asynchronous operation (like login) leads to another (fetching user profile).
 5. **Notifications and Alerts**

@@ -11,10 +11,12 @@ export class AvatarComponent {
   _avatarUrl: SafeResourceUrl | undefined;
   uploading = false;
   @Input() location: 'profile' | 'chat' | 'sidebar' = 'profile';
+  @Input() is_online: boolean | undefined;
 
   @Input()
   set avatarUrl(url: string | null) {
     if (url) {
+      console.log(url);
       this.downloadImage(url);
     }
   }

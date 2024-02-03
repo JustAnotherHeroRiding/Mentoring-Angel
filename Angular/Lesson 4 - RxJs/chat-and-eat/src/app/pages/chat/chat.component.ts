@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Session, User } from '@supabase/supabase-js';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
+import { Profile } from 'src/app/Services/supabase.service';
 
 @Component({
   selector: 'app-chat',
@@ -11,11 +12,15 @@ import { Message, ChatService } from 'src/app/Services/chat.service';
 export class ChatComponent implements OnInit {
   messages: Message[] = [];
   newMessageContent: string = '';
+
   session: Session | undefined | null = undefined;
   isLoadingSession = true;
+
   isUserTyping = false;
   typingUser: string | null = null;
   messagesLoading = false;
+
+  profile: Profile | null = null;
 
   constructor(
     private chatService: ChatService,
@@ -36,16 +41,16 @@ export class ChatComponent implements OnInit {
       this.typingUser = username;
       this.isUserTyping = !!username;
     });
+
+    this.authService.currentProfile.subscribe((prof) => {
+      this.profile = prof as Profile;
+    });
   }
   onTextareaInput(event: Event): void {
     this.chatService.currentUserTyping();
     const textarea: HTMLTextAreaElement = event.target as HTMLTextAreaElement;
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
-  }
-
-  async updateProfile(user: User) {
-    await this.authService.fetchAndUpdateProfile(user);
   }
 
   sendMessage(): void {

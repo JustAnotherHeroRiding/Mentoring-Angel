@@ -11,7 +11,8 @@
             <div class="flex gap-4">
               <app-avatar
                 location="chat"
-                avatarUrl="{{ message.profile_pic }}"
+                [avatarUrl]="message.profile_pic"
+                [is_online]="profile?.is_online"
               ></app-avatar>
               <strong>{{ message.username }}:</strong>
             </div>

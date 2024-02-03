@@ -87,7 +87,6 @@ export class ChatService {
 
       const newMessages = messagesArray.slice(start, end);
       this.messagesSkip += 5;
-      console.log(messagesArray);
 
       of(newMessages)
         .pipe(

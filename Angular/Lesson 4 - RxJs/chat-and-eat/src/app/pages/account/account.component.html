@@ -3,7 +3,11 @@
   (ngSubmit)="updateProfile()"
   class="profile-form flex flex-col gap-4"
 >
-  <app-avatar [avatarUrl]="this.avatarUrl" (upload)="updateAvatar($event)">
+  <app-avatar
+    [location]="'profile'"
+    [avatarUrl]="this.avatarUrl"
+    (upload)="updateAvatar($event)"
+  >
   </app-avatar>
 
   <div class="flex flex-col form-item gap-4">

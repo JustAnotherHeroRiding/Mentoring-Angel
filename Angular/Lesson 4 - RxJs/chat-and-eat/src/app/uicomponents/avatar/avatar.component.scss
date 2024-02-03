@@ -17,3 +17,25 @@
   align-items: center;
   justify-content: center;
 }
+.avatar-wrapper {
+  position: relative;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white; /* To make it stand out against the avatar background */
+  z-index: 2;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
