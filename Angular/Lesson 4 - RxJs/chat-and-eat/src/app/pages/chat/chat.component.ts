@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Session, User } from '@supabase/supabase-js';
+import { Session } from '@supabase/supabase-js';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
 import { Profile } from 'src/app/Services/supabase.service';
+import { CanComponentDeactivate } from 'src/guards/unsaved-changes.guard';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss'],
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, CanComponentDeactivate {
   messages: Message[] = [];
   newMessageContent: string = '';
 
@@ -45,6 +46,13 @@ export class ChatComponent implements OnInit {
     this.authService.currentProfile.subscribe((prof) => {
       this.profile = prof as Profile;
     });
+  }
+
+  canDeactivate() {
+    return (
+      this.newMessageContent === '' ||
+      confirm('You have unsaved changes. Are you sure you want to leave?')
+    );
   }
   onTextareaInput(event: Event): void {
     this.chatService.currentUserTyping();

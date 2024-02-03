@@ -18,6 +18,7 @@
     }"
   ></div>
   <span
+    *ngIf="location === 'chat'"
     class="status-indicator"
     [ngClass]="{ online: is_online, offline: !is_online }"
   ></span>

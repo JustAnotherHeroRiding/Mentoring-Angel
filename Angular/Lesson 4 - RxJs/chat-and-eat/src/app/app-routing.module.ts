@@ -6,6 +6,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { AuthGuardImpl } from 'src/guards/auth-guard';
 import { OutletComponent } from './pages/outlet/outlet.component';
+import { UnsavedChangesGuard } from 'src/guards/unsaved-changes.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +16,11 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'orders', component: OrdersComponent },
       { path: 'profile', component: AuthComponent },
-      { path: 'chat', component: ChatComponent },
+      {
+        path: 'chat',
+        component: ChatComponent,
+        canDeactivate: [UnsavedChangesGuard],
+      },
     ],
     canActivateChild: [AuthGuardImpl],
   },

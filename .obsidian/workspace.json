@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#DONE",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -147,8 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9fcfa49ba0955293",
+  "active": "b86b82c3da480293",
   "lastOpenFiles": [
+    "Angular/Lesson 4 - RxJs/chat-and-eat/src/guards/unsaved-changes.guard.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/src/guards/unsaved-changes.service.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/unsaved-changes.service.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/unsaved-changes.service.spec.ts",
     "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
     "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
     "Angular/RxJs - Convention.md",
@@ -160,9 +163,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/outlet/outlet.component.html",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/outlet",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.spec.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/outlet/outlet.component.html",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",
@@ -184,7 +184,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/functions-js/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/side-channel/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/side-channel/CHANGELOG.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/psl/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/psl/browserstack-logo.svg",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/jasmine-core/images/jasmine-horizontal.png",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/jasmine-core/images/jasmine_favicon.png",
