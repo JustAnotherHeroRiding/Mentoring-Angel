@@ -1,15 +1,16 @@
 .avatar {
   border-radius: 999px;
   border: 2px solid var(--slate-700);
-  height: auto;
 }
 
 .big-image {
   width: 10em;
+  height: 10em;
 }
 
 .small-image {
   width: 2em;
+  height: 2em;
 }
 
 .upload-form {
@@ -38,4 +39,20 @@
 
 .offline {
   background-color: red;
+}
+
+.upload-btn {
+  padding: 0.2em 0.4em;
+  background-color: var(--lavender-web);
+  border-radius: 8px;
+  border: 1.5px solid var(--slate-900);
+  font-size: 1.4em;
+  font-weight: 700;
+  border: 2px solid var(--slate-700);
+}
+
+.upload-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid var(--slate-950);
 }

@@ -14,7 +14,6 @@ export class ChatComponent implements OnInit, CanComponentDeactivate {
   messages: Message[] = [];
   newMessageContent: string = '';
 
-  session: Session | undefined | null = undefined;
   isLoadingSession = true;
 
   isUserTyping = false;
@@ -51,9 +50,11 @@ export class ChatComponent implements OnInit, CanComponentDeactivate {
   canDeactivate() {
     return (
       this.newMessageContent === '' ||
+      !this.profile ||
       confirm('You have unsaved changes. Are you sure you want to leave?')
     );
   }
+
   onTextareaInput(event: Event): void {
     this.chatService.currentUserTyping();
     const textarea: HTMLTextAreaElement = event.target as HTMLTextAreaElement;

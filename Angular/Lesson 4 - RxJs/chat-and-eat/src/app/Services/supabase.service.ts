@@ -9,6 +9,7 @@ import {
 } from '@supabase/supabase-js';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/env';
+import { AuthChangesService } from './auth-changes.service';
 export interface Profile {
   id?: string;
   username: string;
@@ -25,7 +26,7 @@ export class SupabaseService {
   private _session = new BehaviorSubject<AuthSession | undefined | null>(
     undefined
   );
-  constructor() {
+  constructor(private authChangeService: AuthChangesService) {
     this.supabase = createClient(
       environment.supabaseUrl,
       environment.supabaseAnonKey
@@ -91,7 +92,11 @@ export class SupabaseService {
       await this.updateOnlineStatus(user.id, false).catch(console.error);
     }
 
-    return this.supabase.auth.signOut();
+    return this.supabase.auth.signOut().then((res) => {
+      if (res.error) throw res.error;
+      this._session.next(null);
+      this.authChangeService.signOutEvent.emit();
+    });
   }
 
   updateProfile(profile: Profile) {

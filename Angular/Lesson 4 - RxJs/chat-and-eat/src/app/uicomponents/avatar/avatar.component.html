@@ -24,9 +24,9 @@
   ></span>
 </div>
 <div *ngIf="location === 'profile'" class="upload-form">
-  <button class="upload-btn" for="single">
+  <label class="upload-btn" for="single">
     {{ uploading ? "Uploading ..." : "Upload" }}
-  </button>
+  </label>
   <input
     style="visibility: hidden; position: absolute"
     type="file"

@@ -14,8 +14,8 @@ Food ingredients will be randomly generated while users wait for their order to 
 
 1. **Food Menu and Ordering System** #DONE 
 2. **Real-Time Order Tracking** #DONE 
-3. **Chat Rooms for Waiting Customers** 
-4. **User Account Management**
+3. **Chat Rooms for Waiting Customers** #DONE 
+4. **User Account Management** #DONE 
 5. **Notifications and Alerts**
 
 #### RxJS Usage in Application Architecture
@@ -59,7 +59,8 @@ Food ingredients will be randomly generated while users wait for their order to 
 6. **View Container API**
 	- `createEmbededView` - Use this to create modals and toasts to display information, we can use this when no more chat messages can be fetched as we found all of them.
 7. **Can Deactivate Route**
-	- `CanDeactivateRoute` - Create a guard to stop users from leaving routes when they have unfinished input or changes. For example the profile or the chat pages
+	- `CanDeactivateRoute` - Create a guard to stop users from leaving routes when they have unfinished input or changes. For example the profile or the chat pages #DONE 
+	- Implement it for the profile
 
 
 #### Technical Considerations

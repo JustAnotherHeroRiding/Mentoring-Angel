@@ -86,8 +86,6 @@ export class AccountComponent implements OnInit {
   }
 
   async signOut() {
-    await this.supabase.signOut().then(() => {
-      window.location.reload();
-    });
+    await this.supabase.signOut();
   }
 }
