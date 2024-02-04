@@ -148,15 +148,15 @@ export class SupabaseService {
 
   subscribeToUserStatus() {
     this.supabase
-      .channel('schema-db-changes')
+      .channel('online_status_change')
       .on(
         'postgres_changes',
         {
           event: 'UPDATE',
           schema: 'public',
+          table: 'profiles',
         },
         (payload) => {
-          console.log(payload);
           const newProfile = payload.new as Profile;
 
           this.updateLocalUserStatus(

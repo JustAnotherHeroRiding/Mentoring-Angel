@@ -33,7 +33,7 @@ Food ingredients will be randomly generated while users wait for their order to 
     - **`ReplaySubject`**: Cache the latest status of an order for quick access when switching between app views. #DONE 
 3. **Chat Rooms for Waiting Customers**
 	## Fun - Let's get this done
-    - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information. I can implement a user status tracker to display whether the sender is online or not. We can track this by checking if the user has the page open, but websockets will most likely be required
+    - **`combineLatest`**: Combine chat messages stream with user data (like profiles) to display enriched message information. I can implement a user status tracker to display whether the sender is online or not. We can track this by checking if the user has the page open, but websockets will most likely be required #DONE 
     - **`debounceTime` or `throttleTime`**: Manage user input for real-time features like 'typing...' indicators. #DONE 
     - Loading spinner should only display above the messages themselves and not hide the already fetched messages.
     - **`catchError` and `retry`**: Implement error handling for chat connectivity issues, with retry logic for re-establishing connections.

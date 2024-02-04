@@ -55,10 +55,6 @@ export class ChatComponent implements OnInit, CanComponentDeactivate {
     });
   }
 
-  public hasUserStatuses(): boolean {
-    return Object.keys(this.userOnlineStatuses).length > 0;
-  }
-
   canDeactivate() {
     return (
       this.newMessageContent === '' ||

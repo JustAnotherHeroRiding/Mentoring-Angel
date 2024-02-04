@@ -107,7 +107,7 @@ export class ChatService {
       .pipe(
         switchMap(() => {
           this.typing.next(this.profile?.username || null);
-          return timer(500);
+          return timer(1500);
         }),
         map(() => null)
       )

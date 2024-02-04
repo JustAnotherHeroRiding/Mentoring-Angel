@@ -11,13 +11,11 @@
         <div class="message" *ngFor="let message of messages">
           <div class="flex">
             <div class="flex gap-4">
-              <ng-container *ngIf="hasUserStatuses()">
-                <app-avatar
-                  location="chat"
-                  [avatarUrl]="message.profile_pic"
-                  [is_online]="userOnlineStatuses[message.authorId]"
-                ></app-avatar>
-              </ng-container>
+              <app-avatar
+                location="chat"
+                [avatarUrl]="message.profile_pic"
+                [is_online]="userOnlineStatuses[message.authorId]"
+              ></app-avatar>
               <strong>{{ message.username }}:</strong>
             </div>
             <p>
