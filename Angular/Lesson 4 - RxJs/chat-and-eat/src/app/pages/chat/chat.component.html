@@ -54,3 +54,12 @@
     <button (click)="clearMessages()">Clear Messages</button>
   </div>
 </div>
+<ng-container #messageContainer></ng-container>
+
+<ng-template #messageTemplate let-message>
+  <div class="message-notification">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+</ng-template>

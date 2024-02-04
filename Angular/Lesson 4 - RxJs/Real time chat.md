@@ -57,10 +57,13 @@ Food ingredients will be randomly generated while users wait for their order to 
 ##### Maybe the view container can be used for the notification themselves, including order status updates or when a user goes offline
 
 6. **View Container API**
-	- `createEmbededView` - Use this to create modals and toasts to display information, we can use this when no more chat messages can be fetched as we found all of them.
+	- `createEmbededView` - Use this to create modals and toasts to display information, we can use this when a user goes online or offline when using the chat #DONE 
+	- Send notifications when an order is completed
 7. **Can Deactivate Route**
 	- `CanDeactivateRoute` - Create a guard to stop users from leaving routes when they have unfinished input or changes. For example the profile or the chat pages #DONE 
 	- Implement it for the profile
+8. **Destroy Subject and Clean**
+	- Handle component destruction and make sure all active subscriptions are cancelled. The chat component is using a lot so let's start there
 
 
 #### Technical Considerations

@@ -7,7 +7,7 @@ import {
   SupabaseClient,
   User,
 } from '@supabase/supabase-js';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from 'src/env';
 import { AuthChangesService } from './auth-changes.service';
 export interface Profile {
@@ -28,6 +28,9 @@ export class SupabaseService {
   );
 
   private userStatuses = new BehaviorSubject<Record<string, boolean>>({});
+
+  private userStatusChange = new Subject<Profile>();
+  userStatusChange$ = this.userStatusChange.asObservable();
 
   constructor(private authChangeService: AuthChangesService) {
     this.supabase = createClient(
@@ -163,6 +166,7 @@ export class SupabaseService {
             newProfile.id as string,
             newProfile.is_online
           );
+          this.userStatusChange.next(newProfile);
         }
       )
       .subscribe();

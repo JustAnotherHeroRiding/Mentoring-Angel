@@ -94,3 +94,34 @@
   font-size: 0.8em;
   color: #666;
 }
+
+.message-notification {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: var(--thistle);
+  border: 2px solid (var(--slate-900));
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  max-width: 250px;
+  text-align: center;
+  animation: fadeOut ease 4s;
+  -webkit-animation: fadeOut ease 4s;
+  -moz-animation: fadeOut ease 4s;
+  -o-animation: fadeOut ease 4s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
