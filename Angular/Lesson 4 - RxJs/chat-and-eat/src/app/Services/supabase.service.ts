@@ -15,7 +15,7 @@ export interface Profile {
   username: string;
   avatar_url: string;
   full_name: string;
-  is_online?: boolean;
+  is_online: boolean;
 }
 
 @Injectable({
@@ -26,6 +26,9 @@ export class SupabaseService {
   private _session = new BehaviorSubject<AuthSession | undefined | null>(
     undefined
   );
+
+  private userStatuses = new BehaviorSubject<Record<string, boolean>>({});
+
   constructor(private authChangeService: AuthChangesService) {
     this.supabase = createClient(
       environment.supabaseUrl,
@@ -39,6 +42,9 @@ export class SupabaseService {
       } else if (event === 'SIGNED_OUT' && session?.user) {
         this.updateOnlineStatus(session.user.id, false).catch(console.error);
       }
+    });
+    this.fetchAllOnlineStatuses().then(() => {
+      this.subscribeToUserStatus();
     });
   }
 
@@ -54,7 +60,7 @@ export class SupabaseService {
   profile(user: User) {
     return this.supabase
       .from('profiles')
-      .select(`username, website, avatar_url, full_name, is_online`)
+      .select(`id, username, avatar_url, full_name, is_online`)
       .eq('id', user.id)
       .single();
   }
@@ -139,5 +145,58 @@ export class SupabaseService {
 
   uploadAvatar(filePath: string, file: File) {
     return this.supabase.storage.from('avatars').upload(filePath, file);
+  }
+
+  subscribeToUserStatus(userId?: string) {
+    this.supabase
+      .channel('schema-db-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: 'UPDATE',
+          schema: 'public',
+        },
+        (payload) => {
+          const newProfile = payload.new as Profile;
+          if (newProfile.id === userId) {
+            this.updateLocalUserStatus(userId as string, newProfile.is_online);
+          }
+        }
+      )
+      .subscribe();
+  }
+
+  updateLocalUserStatus(userId: string, isOnline: boolean) {
+    const currentStatuses = this.userStatuses.value;
+    const updatedStatuses = { ...currentStatuses, [userId]: isOnline };
+    this.userStatuses.next(updatedStatuses);
+  }
+  async fetchAllOnlineStatuses() {
+    try {
+      const { data, error } = await this.supabase
+        .from('profiles')
+        .select('id, is_online');
+
+      if (error) throw new Error(error.message);
+      if (data) {
+        const statuses = data.reduce(
+          (
+            acc: Record<string, boolean>,
+            profile: { id: string; is_online: boolean }
+          ) => {
+            acc[profile.id] = profile.is_online;
+            return acc;
+          },
+          {}
+        );
+        this.userStatuses.next(statuses);
+      }
+    } catch (error) {
+      console.error('Failed to fetch online statuses:', error);
+    }
+  }
+
+  getUserStatuses() {
+    return this.userStatuses.asObservable();
   }
 }

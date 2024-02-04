@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Session } from '@supabase/supabase-js';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
-import { Profile } from 'src/app/Services/supabase.service';
+import { Profile, SupabaseService } from 'src/app/Services/supabase.service';
 import { CanComponentDeactivate } from 'src/guards/unsaved-changes.guard';
 
 @Component({
@@ -21,10 +21,12 @@ export class ChatComponent implements OnInit, CanComponentDeactivate {
   messagesLoading = false;
 
   profile: Profile | null = null;
+  userOnlineStatuses: Record<string, boolean> = {};
 
   constructor(
     private chatService: ChatService,
-    private authService: AuthService
+    private authService: AuthService,
+    private supabase: SupabaseService
   ) {}
 
   ngOnInit(): void {
@@ -45,6 +47,16 @@ export class ChatComponent implements OnInit, CanComponentDeactivate {
     this.authService.currentProfile.subscribe((prof) => {
       this.profile = prof as Profile;
     });
+
+    this.supabase.getUserStatuses().subscribe((statuses) => {
+      if (statuses) {
+        this.userOnlineStatuses = statuses;
+      }
+    });
+  }
+
+  public hasUserStatuses(): boolean {
+    return Object.keys(this.userOnlineStatuses).length > 0;
   }
 
   canDeactivate() {

@@ -19,6 +19,7 @@ import { User } from '@supabase/supabase-js';
 
 export interface Message {
   id: number;
+  authorId: string;
   username: string;
   content: string;
   profile_pic: string;
@@ -125,6 +126,7 @@ export class ChatService {
     if (this.profile) {
       const newMessage: Message = {
         username: this.profile.username,
+        authorId: this.profile.id ?? '',
         content,
         id: Date.now() + Math.random(),
         profile_pic: this.profile.avatar_url,

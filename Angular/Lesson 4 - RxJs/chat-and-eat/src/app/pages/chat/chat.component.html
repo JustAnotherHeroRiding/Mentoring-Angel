@@ -2,18 +2,22 @@
   <h1>Chat</h1>
   <div class="flex flex-col gap-4 chat-container">
     <div class="messages">
-      <button (click)="loadMore()">Load More</button>
+      <button *ngIf="messages.length > 0" (click)="loadMore()">
+        Load More
+      </button>
       <loading-spinner *ngIf="messagesLoading"></loading-spinner>
 
       <ng-container *ngIf="messages.length > 0; else noMessages">
         <div class="message" *ngFor="let message of messages">
           <div class="flex">
             <div class="flex gap-4">
-              <app-avatar
-                location="chat"
-                [avatarUrl]="message.profile_pic"
-                [is_online]="profile?.is_online"
-              ></app-avatar>
+              <ng-container *ngIf="hasUserStatuses()">
+                <app-avatar
+                  location="chat"
+                  [avatarUrl]="message.profile_pic"
+                  [is_online]="userOnlineStatuses[message.authorId]"
+                ></app-avatar>
+              </ng-container>
               <strong>{{ message.username }}:</strong>
             </div>
             <p>
