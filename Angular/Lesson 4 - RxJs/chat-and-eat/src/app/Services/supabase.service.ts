@@ -94,7 +94,6 @@ export class SupabaseService {
     const user = userRes.data.user;
 
     if (user) {
-      console.log('updating status to false');
       await this.updateOnlineStatus(user.id, false).catch(console.error);
     }
 
@@ -147,7 +146,7 @@ export class SupabaseService {
     return this.supabase.storage.from('avatars').upload(filePath, file);
   }
 
-  subscribeToUserStatus(userId?: string) {
+  subscribeToUserStatus() {
     this.supabase
       .channel('schema-db-changes')
       .on(
@@ -157,10 +156,13 @@ export class SupabaseService {
           schema: 'public',
         },
         (payload) => {
+          console.log(payload);
           const newProfile = payload.new as Profile;
-          if (newProfile.id === userId) {
-            this.updateLocalUserStatus(userId as string, newProfile.is_online);
-          }
+
+          this.updateLocalUserStatus(
+            newProfile.id as string,
+            newProfile.is_online
+          );
         }
       )
       .subscribe();
