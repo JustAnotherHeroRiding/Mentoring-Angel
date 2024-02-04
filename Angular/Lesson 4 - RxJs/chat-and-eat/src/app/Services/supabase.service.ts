@@ -161,12 +161,19 @@ export class SupabaseService {
         },
         (payload) => {
           const newProfile = payload.new as Profile;
-
-          this.updateLocalUserStatus(
-            newProfile.id as string,
-            newProfile.is_online
-          );
-          this.userStatusChange.next(newProfile);
+          // Todo check that there is really a difference
+          // as it sometimes triggers update when nothing has changed
+          if (
+            (newProfile.id as string) in this.userStatuses.value &&
+            newProfile.is_online !==
+              this.userStatuses.value[newProfile.id as string]
+          ) {
+            this.updateLocalUserStatus(
+              newProfile.id as string,
+              newProfile.is_online
+            );
+            this.userStatusChange.next(newProfile);
+          }
         }
       )
       .subscribe();
