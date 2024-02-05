@@ -132,7 +132,7 @@ export class MenuService {
       tap(() => {
         let item = this._cartSubject$.value[cartItemIndex];
 
-        if (currentStatusIndex < OrderStatuses.length - 1) {
+        if (currentStatusIndex < OrderStatuses.length - 1 && item.status) {
           item.status = OrderStatuses[++currentStatusIndex];
           this._cartSubject$.next(this._cartSubject$.value);
           localStorage.setItem(

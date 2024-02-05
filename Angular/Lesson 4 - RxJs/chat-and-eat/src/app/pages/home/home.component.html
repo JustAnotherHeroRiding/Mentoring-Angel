@@ -13,7 +13,7 @@
 
     <ng-template #MenuItems>
       <div class="flex">
-        <div class="food-item" *ngFor="let item of menu" highlightOnOrder>
+        <div class="food-item" *ngFor="let item of menu" highlightOnClick>
           <p class="food-title">{{ item.name }}</p>
           <p class="food-title">{{ item.price }} $</p>
           <div class="flex gap-4">
@@ -27,7 +27,7 @@
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
-            <button (click)="addToCart(item)">
+            <button class="order-btn" (click)="addToCart(item)">
               {{ item.isOrdering ? "Adding" : "Order" }}
             </button>
           </div>

@@ -15,8 +15,8 @@ import { AccountComponent } from './pages/account/account.component';
 import { AvatarComponent } from './uicomponents/avatar/avatar.component';
 import { OutletComponent } from './pages/outlet/outlet.component';
 import { NotificationComponent } from './uicomponents/notification/notification.component';
-import { HighlightOnOrderDirective } from './directives/non-structural/highlightOnOrder.directive';
 import { IfChatOpenDirective } from './directives/structural/ifChatOpen.directive';
+import { HighlightOnClickDirective } from './directives/non-structural/highlightOnClick.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { IfChatOpenDirective } from './directives/structural/ifChatOpen.directiv
     AvatarComponent,
     OutletComponent,
     NotificationComponent,
-    HighlightOnOrderDirective,
+    HighlightOnClickDirective,
     IfChatOpenDirective,
   ],
   imports: [

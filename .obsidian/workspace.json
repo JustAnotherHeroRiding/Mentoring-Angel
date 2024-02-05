@@ -161,6 +161,7 @@
   },
   "active": "1f8e2a699bc978a5",
   "lastOpenFiles": [
+    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/non-structural/highlightOnClick.directive.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/structural/ifChatOpen.directive.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/non-structural/highlightOnOrder.directive.ts",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/non-structural/highlightOnOrder.ts",
@@ -171,7 +172,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/structural/non-structural",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives/structural",
     "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/directives",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/utils/scrollTo.ts",
     "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
     "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
     "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",

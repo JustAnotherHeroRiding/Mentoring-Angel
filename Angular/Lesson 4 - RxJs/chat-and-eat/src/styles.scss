@@ -76,9 +76,9 @@ button:hover {
 @keyframes flash {
   0%,
   100% {
-    background-color: transparent !important;
+    background-color: transparent;
   }
   50% {
-    background-color: lightgreen !important;
+    background-color: #4ade80;
   }
 }
