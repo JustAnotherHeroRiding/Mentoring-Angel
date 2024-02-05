@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
   Component,
+  ElementRef,
   OnInit,
   TemplateRef,
   ViewChild,
@@ -12,6 +13,7 @@ import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
 import { NotificationService } from 'src/app/Services/notification.service';
 import { Profile, SupabaseService } from 'src/app/Services/supabase.service';
+import { scrollToBottom, scrollToTop } from 'src/app/utils/scrollTo';
 import { CanComponentDeactivate } from 'src/guards/unsaved-changes.guard';
 
 @Component({
@@ -24,6 +26,7 @@ export class ChatComponent
 {
   messages: Message[] = [];
   newMessageContent: string = '';
+  shouldScroll = false;
 
   isLoadingSession = true;
 
@@ -40,6 +43,8 @@ export class ChatComponent
   @ViewChild('messageContainer', { read: ViewContainerRef })
   messageContainer!: ViewContainerRef;
   @ViewChild('messageTemplate') messageTemplate!: TemplateRef<any>;
+
+  @ViewChild('messageHistory') private messageHistory!: ElementRef;
 
   private destroy$ = new Subject<void>();
 
@@ -62,6 +67,7 @@ export class ChatComponent
       .pipe(takeUntil(this.destroy$))
       .subscribe((messages) => {
         this.messages = messages;
+        this.shouldScroll && scrollToBottom(this.messageHistory);
       });
 
     this.chatService.typing
@@ -139,6 +145,8 @@ export class ChatComponent
       setTimeout(() => {
         this.notificationService.clearNotification();
       }, 4000);
+    } else {
+      this.shouldScroll = true;
     }
   }
 

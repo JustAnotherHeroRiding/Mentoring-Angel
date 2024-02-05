@@ -50,7 +50,7 @@ Food ingredients will be randomly generated while users wait for their order to 
     - **`switchMap`**: Use for user authentication flows, where one asynchronous operation (like login) leads to another (fetching user profile).
 5. **Notifications and Alerts**
     
-    - **`tap`**: Used for triggering alerts or notifications based on specific events like new chat messages, order status changes, or promotions.
+    - **`tap`**: Used for triggering alerts or notifications based on specific events like new chat messages, order status changes, or promotions. #DONE 
     - Send notification when a user goes offline #DONE 
     - **`filter`**: Filter notification streams to display relevant alerts to users (e.g., filter by user preferences or notification settings).
 
