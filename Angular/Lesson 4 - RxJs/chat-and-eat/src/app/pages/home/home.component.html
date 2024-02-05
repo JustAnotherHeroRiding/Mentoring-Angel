@@ -13,12 +13,12 @@
 
     <ng-template #MenuItems>
       <div class="flex">
-        <div class="food-item" *ngFor="let item of menu">
+        <div class="food-item" *ngFor="let item of menu" highlightOnOrder>
           <p class="food-title">{{ item.name }}</p>
           <p class="food-title">{{ item.price }} $</p>
           <div class="flex gap-4">
             <select
-            class="food-select"
+              class="food-select"
               [(ngModel)]="orderAmounts[item.id]"
               [name]="'orderAmount' + item.id"
             >

@@ -99,15 +99,14 @@ export class ChatComponent
       .pipe(takeUntil(this.destroy$))
       .subscribe((profile) => {
         if (this.initialStatusesLoaded && profile.id !== this.profile?.id) {
-          const notification = `${profile.username} is now ${
-            profile.is_online ? 'Online' : 'Offline'
-          }`;
-          const view = this.messageContainer.createEmbeddedView(
-            this.messageTemplate,
-            { $implicit: notification }
+          this.notificationService.showNotification(
+            `${profile.username} is now ${
+              profile.is_online ? 'Online' : 'Offline'
+            }`,
+            'info'
           );
           setTimeout(() => {
-            this.messageContainer.remove(this.messageContainer.indexOf(view));
+            this.notificationService.clearNotification();
           }, 4000);
         }
       });

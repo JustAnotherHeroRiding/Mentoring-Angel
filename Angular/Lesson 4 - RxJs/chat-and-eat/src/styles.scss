@@ -73,3 +73,12 @@ button:hover {
   opacity: 0.7;
   border: 2px solid var(--slate-950);
 }
+@keyframes flash {
+  0%,
+  100% {
+    background-color: transparent !important;
+  }
+  50% {
+    background-color: lightgreen !important;
+  }
+}
