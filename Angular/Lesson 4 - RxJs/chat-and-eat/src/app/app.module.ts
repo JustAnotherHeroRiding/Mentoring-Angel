@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './pages/account/account.component';
 import { AvatarComponent } from './uicomponents/avatar/avatar.component';
 import { OutletComponent } from './pages/outlet/outlet.component';
+import { NotificationComponent } from './uicomponents/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { OutletComponent } from './pages/outlet/outlet.component';
     AccountComponent,
     AvatarComponent,
     OutletComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,

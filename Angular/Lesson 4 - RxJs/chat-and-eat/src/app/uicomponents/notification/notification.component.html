@@ -1,0 +1,8 @@
+<!-- In your component template, e.g., app.component.html -->
+<div
+  *ngIf="notificationService.notification$ | async as notification"
+  class="notification"
+  [class]="notification.type"
+>
+  {{ notification.message }}
+</div>

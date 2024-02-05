@@ -73,7 +73,7 @@ export class ChatService {
     await this.authService.fetchAndUpdateProfile(user);
   }
 
-  getMessages(): void {
+  getMessages(): boolean | void {
     const allMessages = localStorage.getItem('messages');
     if (allMessages) {
       const messagesArray = JSON.parse(allMessages);
@@ -81,8 +81,7 @@ export class ChatService {
       const start = Math.max(totalMessages - this.messagesSkip - 5, 0);
       const end = totalMessages - this.messagesSkip;
       if (end <= 0 && this.messagesSkip !== 0) {
-        console.log('End reached');
-        return; // Stop loading more messages, maybe I should send a message to the component
+        return false;
       }
       this.messagesLoading.next(true);
 
