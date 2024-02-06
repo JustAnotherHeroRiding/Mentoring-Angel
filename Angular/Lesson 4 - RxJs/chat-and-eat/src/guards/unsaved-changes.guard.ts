@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { CanDeactivateFn } from '@angular/router';
 import { Observable } from 'rxjs';
 
 export interface CanComponentDeactivate {
-  canDeactivate: () => Observable<boolean> | Promise<boolean> | boolean;
+  canDeactivate: () => boolean;
 }
 
-@Injectable({
+/* @Injectable({
   providedIn: 'root',
 })
 export class UnsavedChangesGuard {
@@ -13,3 +14,14 @@ export class UnsavedChangesGuard {
     return component.canDeactivate ? component.canDeactivate() : true;
   }
 }
+
+ */
+
+export const UnsavedChangesGuard: CanDeactivateFn<CanComponentDeactivate> = (
+  component,
+  currentRoute,
+  currentState,
+  nextState
+) => {
+  return component.canDeactivate ? component.canDeactivate() : true;
+};

@@ -7,6 +7,7 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { AuthGuardImpl } from 'src/guards/auth-guard';
 import { OutletComponent } from './pages/outlet/outlet.component';
 import { UnsavedChangesGuard } from 'src/guards/unsaved-changes.guard';
+import { FormValidationComponent } from './pages/formvalidation/FormValidation.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
   },
   { path: 'auth', component: AuthComponent },
   { path: 'register', component: AuthComponent },
+  { path: 'forms', component: FormValidationComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

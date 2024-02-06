@@ -13,6 +13,7 @@ import {
 export class HighlightOnClickDirective {
   @Input() highlightOnOrder!: string;
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
+    console.log(event);
     this.animateAndShowSuccess();
   }
 

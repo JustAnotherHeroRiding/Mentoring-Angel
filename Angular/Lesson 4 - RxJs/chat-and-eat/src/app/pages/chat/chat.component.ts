@@ -113,6 +113,7 @@ export class ChatComponent
   }
 
   canDeactivate() {
+    console.log(this.newMessageContent)
     return (
       this.newMessageContent === '' ||
       !this.profile ||

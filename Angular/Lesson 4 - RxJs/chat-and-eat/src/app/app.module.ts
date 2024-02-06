@@ -17,6 +17,7 @@ import { OutletComponent } from './pages/outlet/outlet.component';
 import { NotificationComponent } from './uicomponents/notification/notification.component';
 import { IfChatOpenDirective } from './directives/structural/ifChatOpen.directive';
 import { HighlightOnClickDirective } from './directives/non-structural/highlightOnClick.directive';
+import { FormValidationComponent } from './pages/formvalidation/FormValidation.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HighlightOnClickDirective } from './directives/non-structural/highlight
     NotificationComponent,
     HighlightOnClickDirective,
     IfChatOpenDirective,
+    FormValidationComponent,
   ],
   imports: [
     BrowserModule,

@@ -63,9 +63,10 @@ Food ingredients will be randomly generated while users wait for their order to 
 7. **Can Deactivate Route**
 	- `CanDeactivateRoute` - Create a guard to stop users from leaving routes when they have unfinished input or changes. For example the profile or the chat pages #DONE 
 	- Implement it for the profile
-8. **Destroy Subject and Clean**
+	- Todo - change it to a const
+1. **Destroy Subject and Clean**
 	- Handle component destruction and make sure all active subscriptions are cancelled. The chat component is using a lot so let's start there #DONE 
-9. **Custom Directives**
+2. **Custom Directives**
 	- Create a custom directive that will be useful, similar to a custom react hook.
 
 
