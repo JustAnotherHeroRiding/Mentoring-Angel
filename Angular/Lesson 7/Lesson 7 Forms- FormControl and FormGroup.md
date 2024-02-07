@@ -47,9 +47,9 @@ async validators- depends on some external call- Could be used for checking if a
 - they need to be dynamically created #DONE 
 - a form array is added inside of the `formGroup`, that we can push or pop new controls into #DONE 
 - when we loop over the `TaskArray` controls- must cast them as `FormControl` by using a getter method #DONE 
+- Initially disabled #DONE 
 - When i change a task, it should save
 - Delete
 - Update
-- Initially disabled
 - when i click edit, it will be enabled, the user can change and and when i leave the control it should back in a disabled state and save the changes. This will be triggered on an outside click
 - every form control has a value `.touched`
