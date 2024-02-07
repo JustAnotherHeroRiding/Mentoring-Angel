@@ -18,6 +18,7 @@ import { NotificationComponent } from './uicomponents/notification/notification.
 import { IfChatOpenDirective } from './directives/structural/ifChatOpen.directive';
 import { HighlightOnClickDirective } from './directives/non-structural/highlightOnClick.directive';
 import { FormValidationComponent } from './pages/formvalidation/FormValidation.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormValidationComponent } from './pages/formvalidation/FormValidation.c
     HighlightOnClickDirective,
     IfChatOpenDirective,
     FormValidationComponent,
+    TasksComponent,
   ],
   imports: [
     BrowserModule,

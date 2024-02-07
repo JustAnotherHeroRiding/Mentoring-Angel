@@ -13,8 +13,9 @@
 - we can use regex to validate the input
 - custom validators using the `validatorFn` type, in the background using `abstractControl`
 
-dali imeto ima edna  brojka
-throw an error that it should have at least one number
+## Task
+Check if the username contain a number?
+Throw an error that it should have at least one number if it does not
 
 
 async validators- depends on some external call- Could be used for checking if a username is taken
@@ -41,11 +42,11 @@ async validators- depends on some external call- Could be used for checking if a
 - for loop over all controls of the group to add the new control when one is dynamically added, and render each of them automatically
 
 ## Todo list where we can add new tasks
-- Each task is a new form control
-- with the help of form array - this is a type
-- they need to be dynamically created
-- a form array is added inside of the formGroup, that we can push or pop new controls into
-- when we loop over the TaskArray controls- must cast them as FormControl
+- Each task is a new form control #DONE 
+- with the help of form array - this is a type #DONE 
+- they need to be dynamically created #DONE 
+- a form array is added inside of the `formGroup`, that we can push or pop new controls into #DONE 
+- when we loop over the `TaskArray` controls- must cast them as `FormControl` by using a getter method #DONE 
 - When i change a task, it should save
 - Delete
 - Update

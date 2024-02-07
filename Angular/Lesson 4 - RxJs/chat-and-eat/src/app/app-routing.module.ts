@@ -8,6 +8,7 @@ import { AuthGuardImpl } from 'src/guards/auth-guard';
 import { OutletComponent } from './pages/outlet/outlet.component';
 import { UnsavedChangesGuard } from 'src/guards/unsaved-changes.guard';
 import { FormValidationComponent } from './pages/formvalidation/FormValidation.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
       {
         path: 'chat',
         component: ChatComponent,
+        canDeactivate: [UnsavedChangesGuard],
+      },
+      {
+        path: 'tasks',
+        component: TasksComponent,
         canDeactivate: [UnsavedChangesGuard],
       },
     ],

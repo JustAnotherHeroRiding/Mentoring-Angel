@@ -15,7 +15,7 @@ export class OutletComponent implements OnInit {
   route = inject(ActivatedRoute);
   session = new BehaviorSubject<Session | null | undefined>(undefined);
 
-  isRootUrl = true;
+  isRootUrl = false;
 
   ngOnInit(): void {
     this.supabase.session$.subscribe((session) => {
