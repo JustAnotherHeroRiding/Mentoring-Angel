@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +21,10 @@ export class TasksComponent implements OnInit {
 
   private _isEditing = false;
   private originalTasks: string[] = [];
-  constructor() {}
+
+  @ViewChildren('taskInput') taskInputs?: QueryList<ElementRef>;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.loadTasks();
@@ -92,6 +102,29 @@ export class TasksComponent implements OnInit {
       this.storeOriginalTasks();
       this.isEditing = true;
     }
+  }
+
+  enableTask(index: number) {
+    const taskControl = (this.toDoListForm.get('tasks') as FormArray).at(
+      index
+    ) as FormControl;
+    taskControl.enable();
+
+    this.cdr.detectChanges();
+
+    const inputElements = this.taskInputs?.toArray();
+    if (inputElements && inputElements[index]) {
+      inputElements[index].nativeElement.focus();
+    }
+  }
+
+  saveAndDisable(index: number) {
+    console.log('Blur effect');
+    const taskControl = (this.toDoListForm.get('tasks') as FormArray).at(
+      index
+    ) as FormControl;
+    taskControl.disable();
+    this.saveChanges();
   }
 
   exitEdit() {

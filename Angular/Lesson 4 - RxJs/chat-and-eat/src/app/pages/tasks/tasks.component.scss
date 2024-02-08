@@ -9,10 +9,10 @@
   font-size: 1.2em;
 }
 #tasks {
-    width: 60%;
+  width: 60%;
 }
 #tasks .task-item {
-    width: 100%;
+  width: 100%;
 }
 
 .btn-container {
@@ -21,4 +21,17 @@
 
 .btn-container button {
   flex-grow: 1;
+}
+
+.task-item .index {
+  background-color: var(--slate-900);
+  color: var(--slate-100);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+
+.task-item .index:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

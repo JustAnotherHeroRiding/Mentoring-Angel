@@ -50,10 +50,12 @@ async validators- depends on some external call- Could be used for checking if a
 - Initially disabled #DONE 
 - When i change a task, it should save #DONE 
 - If i exit without saving, the field should revert #DONE 
-- Delete
-- Update
-- when i click edit, it will be enabled, the user can change and and when i leave the control it should back in a disabled state and save the changes. This will be triggered on an outside click
+- Delete #DONE 
+- When i click edit, it will be enabled, the user can change the tasks #DONE 
+
+#### Editing when leaving the field
+- When i click on a disabled field, it should be enabled #DONE 
+- When i leave the control it should be disabled again and save the changes This will be triggered on a click outside of the input
 - every form control has a value `.touched`
 
 
-sdk.dir=C:\\Users\\Admin\\AppData\\Local\\Android\\Sdk
