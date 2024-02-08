@@ -13,21 +13,11 @@ export class TasksComponent implements OnInit {
   });
 
   private _isEditing = false;
-
+  private originalTasks: string[] = [];
   constructor() {}
 
   ngOnInit(): void {
-    const storageTasks = localStorage.getItem('tasks');
-    if (storageTasks) {
-      const savedTasks = JSON.parse(storageTasks);
-      savedTasks.forEach((task: string) => {
-        const newTask = new FormControl(
-          { value: task, disabled: !this._isEditing },
-          Validators.required
-        );
-        (this.toDoListForm.get('tasks') as FormArray).push(newTask);
-      });
-    }
+    this.loadTasks();
   }
 
   get tasks(): FormControl[] {
@@ -53,6 +43,33 @@ export class TasksComponent implements OnInit {
     });
   }
 
+  private loadTasks() {
+    const storageTasks = localStorage.getItem('tasks');
+    if (storageTasks) {
+      const savedTasks = JSON.parse(storageTasks);
+      savedTasks.forEach((task: string) => {
+        const newTask = new FormControl(
+          { value: task, disabled: !this._isEditing },
+          Validators.required
+        );
+        (this.toDoListForm.get('tasks') as FormArray).push(newTask);
+      });
+    }
+  }
+
+  private storeOriginalTasks() {
+    this.originalTasks = this.tasks.map((control) => control.value);
+  }
+
+  private restoreOriginalTasks() {
+    const tasksArray = this.toDoListForm.get('tasks') as FormArray;
+    tasksArray.clear(); // Remove all existing task controls
+    console.log(this.originalTasks);
+    this.originalTasks.forEach((task) => {
+      tasksArray.push(new FormControl(task, Validators.required));
+    });
+  }
+
   onSubmit() {
     const taskValue = this.taskInput.value;
     if (this.taskInput.valid) {
@@ -72,12 +89,26 @@ export class TasksComponent implements OnInit {
   editTasks() {
     if (this.isEditing) this.saveChanges();
     else {
+      this.storeOriginalTasks();
       this.isEditing = true;
     }
   }
 
+  exitEdit() {
+    this.restoreOriginalTasks();
+    this.isEditing = false;
+  }
+
   saveChanges() {
     this.isEditing = false;
+    localStorage.setItem(
+      'tasks',
+      JSON.stringify(this.tasks.map((task) => task.value))
+    );
+  }
+
+  deleteTask(index: number) {
+    this.tasks.splice(index, 1);
     localStorage.setItem(
       'tasks',
       JSON.stringify(this.tasks.map((task) => task.value))
