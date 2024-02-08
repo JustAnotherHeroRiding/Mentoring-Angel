@@ -68,4 +68,19 @@ export class TasksComponent implements OnInit {
       this.taskInput.reset();
     }
   }
+
+  editTasks() {
+    if (this.isEditing) this.saveChanges();
+    else {
+      this.isEditing = true;
+    }
+  }
+
+  saveChanges() {
+    this.isEditing = false;
+    localStorage.setItem(
+      'tasks',
+      JSON.stringify(this.tasks.map((task) => task.value))
+    );
+  }
 }

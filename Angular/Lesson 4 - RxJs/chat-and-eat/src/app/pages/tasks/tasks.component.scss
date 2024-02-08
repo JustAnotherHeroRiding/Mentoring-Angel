@@ -1,15 +1,24 @@
 .form-container {
-  width: 50%;
-  margin-inline: auto;
+  width: 100%;
 }
 
 .form-input {
   padding: 0.2em 0.4em;
-  width: 100%;
+  width: 50%;
   border-radius: 4px;
   font-size: 1.2em;
 }
+#tasks {
+    width: 60%;
+}
+#tasks .task-item {
+    width: 100%;
+}
 
 .btn-container {
-    align-items: stretch;
+  align-items: stretch;
+}
+
+.btn-container button {
+  flex-grow: 1;
 }

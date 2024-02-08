@@ -11,14 +11,14 @@
   />
   <div class="flex gap-4 btn-container">
     <button [disabled]="taskInput.invalid" type="submit">Add Task</button>
-    <button type="button" (click)="isEditing = !isEditing">
+    <button type="button" (click)="editTasks()">
       {{ isEditing ? "Save" : "Edit Tasks" }}
     </button>
     <button type="button" (click)="isEditing = false" *ngIf="isEditing">
       Exit without saving
     </button>
   </div>
-  <div formArrayName="tasks" class="gap-4 flex flex-col">
+  <div formArrayName="tasks" id="tasks" class="gap-4 flex flex-col">
     <div *ngFor="let task of tasks; let i = index" class="task-item flex gap-4">
       <span> {{ i + 1 }}.</span>
       <input class="form-input" type="text" [formControlName]="i" />
