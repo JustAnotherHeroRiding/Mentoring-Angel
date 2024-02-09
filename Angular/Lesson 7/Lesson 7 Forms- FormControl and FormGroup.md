@@ -55,7 +55,8 @@ async validators- depends on some external call- Could be used for checking if a
 
 #### Editing when leaving the field
 - When i click on a disabled field, it should be enabled #DONE 
-- When i leave the control it should be disabled again and save the changes This will be triggered on a click outside of the input
-- every form control has a value `.touched`
+- When i leave the control it should be disabled again and save the changes This will be triggered on a click outside of the input #DONE 
+##### Let's make it work using the .touched property
+- every form control has a value `.touched` which says if a form control has been focused
 
 

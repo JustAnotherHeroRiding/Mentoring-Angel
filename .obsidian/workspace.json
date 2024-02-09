@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b86b82c3da480293",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1f8e2a699bc978a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Angular/Lesson 4 - RxJs/Real time chat.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d04ec076897817e9",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"

@@ -20,6 +20,7 @@ export class TasksComponent implements OnInit {
   });
 
   private _isEditing = false;
+  private globalEditing = false;
   private originalTasks: string[] = [];
 
   @ViewChildren('taskInput') taskInputs?: QueryList<ElementRef>;
@@ -73,8 +74,7 @@ export class TasksComponent implements OnInit {
 
   private restoreOriginalTasks() {
     const tasksArray = this.toDoListForm.get('tasks') as FormArray;
-    tasksArray.clear(); // Remove all existing task controls
-    console.log(this.originalTasks);
+    tasksArray.clear();
     this.originalTasks.forEach((task) => {
       tasksArray.push(new FormControl(task, Validators.required));
     });
@@ -101,6 +101,7 @@ export class TasksComponent implements OnInit {
     else {
       this.storeOriginalTasks();
       this.isEditing = true;
+      this.globalEditing = true;
     }
   }
 
@@ -119,21 +120,24 @@ export class TasksComponent implements OnInit {
   }
 
   saveAndDisable(index: number) {
-    console.log('Blur effect');
-    const taskControl = (this.toDoListForm.get('tasks') as FormArray).at(
-      index
-    ) as FormControl;
-    taskControl.disable();
-    this.saveChanges();
+    if (!this.globalEditing) {
+      const taskControl = (this.toDoListForm.get('tasks') as FormArray).at(
+        index
+      ) as FormControl;
+      taskControl.disable();
+      this.saveChanges();
+    }
   }
 
   exitEdit() {
     this.restoreOriginalTasks();
     this.isEditing = false;
+    this.globalEditing = false;
   }
 
   saveChanges() {
     this.isEditing = false;
+    this.globalEditing = false;
     localStorage.setItem(
       'tasks',
       JSON.stringify(this.tasks.map((task) => task.value))
