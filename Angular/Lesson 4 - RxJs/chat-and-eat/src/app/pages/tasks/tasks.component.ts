@@ -7,13 +7,14 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { CanComponentDeactivate } from 'src/guards/unsaved-changes.guard';
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.scss'],
 })
-export class TasksComponent implements OnInit {
+export class TasksComponent implements OnInit, CanComponentDeactivate {
   toDoListForm: FormGroup = new FormGroup<any>({
     taskInput: new FormControl('', Validators.required),
     tasks: new FormArray([]),
@@ -29,6 +30,13 @@ export class TasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadTasks();
+  }
+
+  canDeactivate() {
+    return (
+      !this.isEditing ||
+      confirm('There are unsaved changes, are you sure you want to leave?')
+    );
   }
 
   get tasks(): FormControl[] {

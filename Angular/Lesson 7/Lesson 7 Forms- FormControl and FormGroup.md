@@ -25,7 +25,7 @@ async validators- depends on some external call- Could be used for checking if a
 - default value, `rawValue` `patchValue`, `setValue`, reset()
 
 ## Reactive Forms
-- Previously we only have a current snapshot of the forms
+- Previously we only had a current snapshot of the forms
 - we use reactive forms to listen to all changes
 - we can use `formfield.valueChanges`
 - always use takeUntil when using `ValueChanges` to end the subscription

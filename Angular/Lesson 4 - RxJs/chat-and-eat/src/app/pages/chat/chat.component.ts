@@ -7,7 +7,6 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { Session } from '@supabase/supabase-js';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 import { AuthService } from 'src/app/Services/auth.service';
 import { Message, ChatService } from 'src/app/Services/chat.service';
