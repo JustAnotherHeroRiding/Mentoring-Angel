@@ -23,6 +23,7 @@ import { CustomFormExampleComponent } from './pages/custom forms/tutorial/custom
 import { ChooseQuantityComponent } from './pages/custom forms/tutorial/choose-quantity/choose-quantity.component';
 import { AddressFormComponent } from './pages/custom forms/tutorial/address-form/address-form.component';
 import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-custom.component';
+import { TaskComponent } from './pages/custom forms/single-task/single-task.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-cu
     CustomFormExampleComponent,
     ChooseQuantityComponent,
     AddressFormComponent,
+    TaskComponent,
     TasksCustomComponent,
   ],
   imports: [

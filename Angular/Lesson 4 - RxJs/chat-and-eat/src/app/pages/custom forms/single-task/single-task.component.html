@@ -1,1 +1,19 @@
-<p>single-task works!</p>
+<div [class.mark]="touched">
+  <form [formGroup]="taskGroup">
+    <div>
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div>
+      <input type="text" formControlName="description" />
+    </div>
+
+    <button (click)="edit()">edit</button>
+
+    <button [disabled]="!taskGroup.valid" (click)="notify()">notify</button>
+
+    <p *ngIf="taskGroup.errors && taskGroup.errors['error']">
+      {{ taskGroup.errors["error"] }}
+    </p>
+  </form>
+</div>
