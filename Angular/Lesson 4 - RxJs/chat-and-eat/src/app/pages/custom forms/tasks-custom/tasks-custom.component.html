@@ -14,7 +14,10 @@
       <textarea class="form-input" type="text" formControlName="description">
       </textarea>
     </div>
-    <button>add</button>
+    <div class="flex gap-4">
+      <button type="submit">Add</button>
+      <button type="button" (click)="clearTasks()">Clear</button>
+    </div>
   </form>
 
   <hr />

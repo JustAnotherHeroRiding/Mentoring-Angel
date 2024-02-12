@@ -90,11 +90,4 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
       };
     }
   }
-
-  get getError() {
-    if (!this.taskGroup?.valid) {
-      return 'your form control is not valid';
-    }
-    return '';
-  }
 }

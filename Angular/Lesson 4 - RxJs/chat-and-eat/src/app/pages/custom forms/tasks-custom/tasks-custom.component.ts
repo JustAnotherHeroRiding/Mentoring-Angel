@@ -1,5 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormBuilder,
+  FormControl,
+  Validators,
+} from '@angular/forms';
 
 export interface Task {
   id: number | null;
@@ -14,7 +19,7 @@ export interface Task {
 })
 export class TasksCustomComponent {
   newTask = this._initNewTask;
-  addedTasks = this._initAddedTasks;
+  addedTasks: FormArray<FormControl<Task>> = this._initAddedTasks;
 
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -28,26 +33,42 @@ export class TasksCustomComponent {
     });
   }
 
-  private get _initAddedTasks() {
-    return this._formBuilder.array([]);
+  private get _initAddedTasks(): FormArray {
+    const storedTasks: Task[] = JSON.parse(
+      localStorage.getItem('tasks') || '[]'
+    );
+    return this._formBuilder.array(
+      storedTasks.map((task) =>
+        this._formBuilder.control({
+          id: task.id,
+          name: task.name,
+          description: task.description,
+        })
+      )
+    );
   }
 
   addTask() {
     const task = this.newTask.getRawValue() as Task;
-    const control = new FormControl(
-      { id: Date.now(), name: task.name, description: task.description },
-      Validators.required
-    );
+    task.id = Date.now();
+    const control = new FormControl(task, Validators.required);
     control.disable();
-    this.addedTasks.push(control);
+    this.addedTasks.push(control as FormControl<Task>);
+    localStorage.setItem('tasks', JSON.stringify(this.addedTasks.value));
+    this.newTask.reset();
   }
 
   get myAddedTasks() {
-    return this.addedTasks.controls;
+    return this.addedTasks.controls as FormControl[];
   }
 
   addedTasksStateCheck() {
     console.log('added tasks state change');
     console.log(this.addedTasks.getRawValue());
+  }
+
+  clearTasks() {
+    this.addedTasks.clear();
+    localStorage.removeItem('tasks');
   }
 }
