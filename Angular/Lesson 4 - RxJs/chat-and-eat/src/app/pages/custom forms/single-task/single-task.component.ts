@@ -81,6 +81,11 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
     this.markAsTouched();
   }
 
+  saveChanges() {
+    this.taskGroup.disable();
+    this.notify();
+  }
+
   validate(control: AbstractControl): ValidationErrors | null {
     if (this.taskGroup.valid) {
       return null;

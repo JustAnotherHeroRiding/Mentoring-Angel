@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.tasks-container {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .form-field {
   width: 80%;
 }
@@ -19,7 +24,4 @@ textarea.form-input {
 }
 #tasks {
   width: 60%;
-}
-#tasks .task-item {
-  width: 100%;
 }

@@ -1,16 +1,21 @@
-<div [class.mark]="touched">
-  <form [formGroup]="taskGroup">
-    <div>
+<div [class.mark]="touched" class="flex flex-col">
+  <form class="flex flex-col form-container gap-4" [formGroup]="taskGroup">
+    <div class="flex flex-col">
+      <label for="name">Name:</label>
       <input type="text" formControlName="name" />
     </div>
 
-    <div>
+    <div class="flex flex-col">
+      <label for="description">Description:</label>
       <input type="text" formControlName="description" />
     </div>
+    <div class="flex gap-4">
+      <button (click)="!taskGroup.enabled ? edit() : saveChanges()">
+        {{ !taskGroup.enabled ? "Edit" : "Save" }}
+      </button>
 
-    <button (click)="edit()">edit</button>
-
-    <button [disabled]="!taskGroup.valid" (click)="notify()">notify</button>
+      <button [disabled]="!taskGroup.valid" (click)="notify()">notify</button>
+    </div>
 
     <p *ngIf="taskGroup.errors && taskGroup.errors['error']">
       {{ taskGroup.errors["error"] }}

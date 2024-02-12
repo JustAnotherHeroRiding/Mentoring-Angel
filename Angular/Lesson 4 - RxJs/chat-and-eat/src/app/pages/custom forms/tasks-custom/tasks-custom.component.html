@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col gap-4">
   <h2>My tasks</h2>
   <form
     class="flex flex-col form-container gap-4"
@@ -21,8 +21,8 @@
   </form>
 
   <hr />
-  <div class="flex flex-col" id="tasks">
-    <h2>Added Tasks</h2>
+  <h2>Added Tasks</h2>
+  <div class="flex tasks-container gap-4" id="tasks">
     <div class="task-item" *ngFor="let task of myAddedTasks">
       <single-task [formControl]="task"></single-task>
     </div>

@@ -23,7 +23,11 @@ export class TasksCustomComponent {
 
   constructor(private _formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.addedTasks.valueChanges.subscribe((values) => {
+      console.log('Tasks updated:', values);
+    });
+  }
 
   private get _initNewTask() {
     return this._formBuilder.group({
@@ -37,6 +41,7 @@ export class TasksCustomComponent {
     const storedTasks: Task[] = JSON.parse(
       localStorage.getItem('tasks') || '[]'
     );
+
     return this._formBuilder.array(
       storedTasks.map((task) =>
         this._formBuilder.control({
@@ -54,7 +59,10 @@ export class TasksCustomComponent {
     const control = new FormControl(task, Validators.required);
     control.disable();
     this.addedTasks.push(control as FormControl<Task>);
-    localStorage.setItem('tasks', JSON.stringify(this.addedTasks.value));
+    localStorage.setItem(
+      'tasks',
+      JSON.stringify(this.addedTasks.controls.map((control) => control.value))
+    );
     this.newTask.reset();
   }
 
