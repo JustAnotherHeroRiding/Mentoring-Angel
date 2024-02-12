@@ -17,10 +17,12 @@ import { OutletComponent } from './pages/outlet/outlet.component';
 import { NotificationComponent } from './uicomponents/notification/notification.component';
 import { IfChatOpenDirective } from './directives/structural/ifChatOpen.directive';
 import { HighlightOnClickDirective } from './directives/non-structural/highlightOnClick.directive';
-import { FormValidationComponent } from './pages/custom forms/formvalidation/FormValidation.component';
+import { FormValidationComponent } from './pages/custom forms/tutorial/formvalidation/FormValidation.component';
 import { TasksComponent } from './pages/auth-pages/tasks/tasks.component';
-import { CustomFormExampleComponent } from './pages/custom forms/custom-form-example/custom-form-example.component';
-import { ChooseQuantityComponent } from './pages/custom forms/choose-quantity/choose-quantity.component';
+import { CustomFormExampleComponent } from './pages/custom forms/tutorial/custom-form-example/custom-form-example.component';
+import { ChooseQuantityComponent } from './pages/custom forms/tutorial/choose-quantity/choose-quantity.component';
+import { AddressFormComponent } from './pages/custom forms/tutorial/address-form/address-form.component';
+import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-custom.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { ChooseQuantityComponent } from './pages/custom forms/choose-quantity/ch
     TasksComponent,
     CustomFormExampleComponent,
     ChooseQuantityComponent,
+    AddressFormComponent,
+    TasksCustomComponent,
   ],
   imports: [
     BrowserModule,

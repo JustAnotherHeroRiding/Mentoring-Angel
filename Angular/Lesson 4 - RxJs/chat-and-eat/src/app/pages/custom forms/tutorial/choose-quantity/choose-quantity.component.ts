@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Injector, Input, Optional, Self } from '@angular/core';
 import {
   NG_VALUE_ACCESSOR,
   ControlValueAccessor,
   AbstractControl,
   ValidationErrors,
   NG_VALIDATORS,
+  NgControl,
 } from '@angular/forms';
 
 @Component({
@@ -36,6 +37,16 @@ export class ChooseQuantityComponent implements ControlValueAccessor {
 
   touched = false;
   disabled = false;
+  private _ngControl: NgControl | null = null;
+
+  constructor(private injector: Injector) {}
+
+  ngOnInit() {
+    // Lazily load NgControl to avoid circular dependency
+    Promise.resolve().then(
+      () => (this._ngControl = this.injector.get(NgControl, null))
+    );
+  }
 
   onAdd() {
     this.markAsTouched();
@@ -88,5 +99,13 @@ export class ChooseQuantityComponent implements ControlValueAccessor {
       errors['maxQuantityExceeded'] = { max: this.max };
     }
     return Object.keys(errors).length ? errors : null;
+  }
+
+  get controlErrors(): ValidationErrors | null {
+    return this._ngControl?.errors || null;
+  }
+
+  public getErrorDetail(errorKey: string, detailKey: string): any {
+    return this._ngControl?.errors?.[errorKey]?.[detailKey] || null;
   }
 }

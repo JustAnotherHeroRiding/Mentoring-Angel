@@ -1,0 +1,30 @@
+<div>
+  <div
+    style="display: flex; gap: 1em; font-size: 2em"
+    class="choose-quantity"
+    role="group"
+    aria-labelledby="quantity-label"
+  >
+    <button
+      type="button"
+      (click)="onRemove()"
+      [disabled]="disabled"
+      aria-label="Decrease quantity"
+    >
+      -
+    </button>
+    <div id="quantity-label" class="quantity">{{ quantity }}</div>
+    <button
+      type="button"
+      (click)="onAdd()"
+      [disabled]="disabled"
+      aria-label="Increase quantity"
+    >
+      +
+    </button>
+  </div>
+  <p *ngIf="controlErrors?.['mustBePositive']">Quantity must be positive.</p>
+  <p *ngIf="controlErrors?.['maxQuantityExceeded']">
+    Quantity cannot exceed {{ getErrorDetail("maxQuantityExceeded", "max") }}.
+  </p>
+</div>

@@ -7,9 +7,9 @@ import { ChatComponent } from './pages/auth-pages/chat/chat.component';
 import { AuthGuardImpl } from 'src/guards/auth-guard';
 import { OutletComponent } from './pages/outlet/outlet.component';
 import { UnsavedChangesGuard } from 'src/guards/unsaved-changes.guard';
-import { FormValidationComponent } from './pages/custom forms/formvalidation/FormValidation.component';
-import { TasksComponent } from './pages/auth-pages/tasks/tasks.component';
-import { CustomFormExampleComponent } from './pages/custom forms/custom-form-example/custom-form-example.component';
+import { FormValidationComponent } from './pages/custom forms/tutorial/formvalidation/FormValidation.component';
+import { CustomFormExampleComponent } from './pages/custom forms/tutorial/custom-form-example/custom-form-example.component';
+import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-custom.component';
 
 const routes: Routes = [
   {
@@ -26,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'tasks',
-        component: TasksComponent,
+        component: TasksCustomComponent,
         canDeactivate: [UnsavedChangesGuard],
       },
       { path: 'customform', component: CustomFormExampleComponent },
