@@ -1,4 +1,120 @@
-@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@use "@angular/material" as mat;
+@include mat.core();
+//@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+$slate-palette: (
+  50: #f8fafc,
+  100: #f1f5f9,
+  200: #e2e8f0,
+  300: #cbd5e1,
+  400: #94a3b8,
+  500: #64748b,
+  600: #475569,
+  700: #334155,
+  800: #1e293b,
+  900: #0f172a,
+  950: #020617,
+  A100: #fdf4b6,
+  A200: #faec8c,
+  A400: #f6e03d,
+  A700: #f2b100,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$misty-rose-palette: (
+  50: #efd3d7,
+  100: #d4939e,
+  200: #b14d60,
+  300: #8d002b,
+  400: #740007,
+  500: #5d0000,
+  600: #540000,
+  700: #480000,
+  800: #440000,
+  900: #3d0000,
+  A100: #9cd5cb,
+  A200: #62b8a9,
+  A400: #008771,
+  A700: #005943,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$tw-red-palette: (
+  50: #fef2f2,
+  100: #fee2e2,
+  200: #fecaca,
+  300: #fca5a5,
+  400: #f87171,
+  500: #ef4444,
+  600: #dc2626,
+  700: #b91c1c,
+  800: #991b1b,
+  900: #7f1d1d,
+  A100: #aef0ed,
+  A200: #76e7e4,
+  A400: #00d4d7,
+  A700: #00a5a7,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$lavender-primary: mat.define-palette($slate-palette, 700, 300, 900);
+$lavender-accent: mat.define-palette($misty-rose-palette, 300, 100, 500);
+$lavender-warn: mat.define-palette($tw-red-palette, 700);
+$lavender-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $lavender-primary,
+      accent: $lavender-accent,
+      warn: $lavender-warn,
+    ),
+  )
+);
+@include mat.all-component-themes($lavender-theme);
 
 * {
   padding: 0;
@@ -61,19 +177,18 @@ body {
 }
 
 button {
-  padding: 0.2em 0.4em;
-  background-color: var(--lavender-web);
-  border-radius: 8px;
-  border: 1.5px solid var(--slate-900);
-  font-size: 1.4em;
-  font-weight: 700;
-  border: 2px solid var(--slate-700);
+  padding: 0.2em 0.4em !important;
+  background-color: var(--lavender-web) !important;
+  border-radius: 8px !important;
+  font-size: 1.3em !important;
+  font-weight: 700 !important;
+  border: 2px solid var(--slate-700) !important;
 }
 
 button:hover {
   cursor: pointer;
   opacity: 0.7;
-  border: 2px solid var(--slate-950);
+  border: 2px solid var(--slate-950) !important;
 }
 @keyframes flash {
   0%,
