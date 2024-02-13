@@ -26,6 +26,10 @@ export class TasksCustomComponent {
   ngOnInit(): void {
     this.addedTasks.valueChanges.subscribe((values) => {
       console.log('Tasks updated:', values);
+      localStorage.setItem(
+        'tasks',
+        JSON.stringify(this.addedTasks.controls.map((control) => control.value))
+      );
     });
   }
 

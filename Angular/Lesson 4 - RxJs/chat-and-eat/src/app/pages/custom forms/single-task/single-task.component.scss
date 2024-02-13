@@ -1,26 +1,22 @@
 .form-container {
-    width: 100%;
-  }
-  
-  .form-field {
-    width: 80%;
-  }
-  
-  .form-input {
-    padding: 0.2em 0.4em;
-    width: 50%;
-    border-radius: 4px;
-    font-size: 1.2em;
-  }
-  
-  textarea.form-input {
-    resize: none;
-    min-height: 100px;
-  }
-  #tasks {
-    width: 60%;
-  }
-  #tasks .task-item {
-    width: 100%;
-  }
-  
+  width: 100%;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-input {
+  padding: 0.2em 0.4em;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+
+textarea.form-input {
+  resize: none;
+  min-height: 100px;
+}
+.edit-btn {
+  margin-left: auto;
+}

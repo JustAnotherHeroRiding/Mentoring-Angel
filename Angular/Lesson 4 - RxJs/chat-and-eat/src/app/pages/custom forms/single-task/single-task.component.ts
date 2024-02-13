@@ -52,9 +52,8 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
     this.taskGroup.patchValue(obj);
   }
 
-  notify() {
-    console.log(this.taskGroup);
-    // this.onChange(this.taskGroup.getRawValue() as Task);
+  notifyParent() {
+    this.onChange(this.taskGroup.getRawValue());
   }
 
   markAsTouched() {
@@ -83,7 +82,7 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
 
   saveChanges() {
     this.taskGroup.disable();
-    this.notify();
+    this.notifyParent();
   }
 
   validate(control: AbstractControl): ValidationErrors | null {
@@ -91,7 +90,7 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
       return null;
     } else {
       return {
-        error: 'error',
+        error: 'Some fields are empty',
       };
     }
   }
