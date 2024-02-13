@@ -102,20 +102,25 @@ $tw-red-palette: (
   ),
 );
 
-$lavender-primary: mat.define-palette($slate-palette, 700, 300, 900);
-$lavender-accent: mat.define-palette($misty-rose-palette, 300, 100, 500);
-$lavender-warn: mat.define-palette($tw-red-palette, 700);
-$lavender-theme: mat.define-light-theme(
+$slate-primary: mat.define-palette($slate-palette, 700, 300, 900);
+$slate-accent: mat.define-palette($misty-rose-palette, 300, 100, 500);
+$slate-warn: mat.define-palette($tw-red-palette, 700);
+$slate-theme: mat.define-light-theme(
   (
     color: (
-      primary: $lavender-primary,
-      accent: $lavender-accent,
-      warn: $lavender-warn,
+      primary: $slate-primary,
+      accent: $slate-accent,
+      warn: $slate-warn,
     ),
   )
 );
-@include mat.all-component-themes($lavender-theme);
+@include mat.all-component-themes($slate-theme);
 
+// Use to style the background of textarea/inputs
+/* mat-form-field.mat-focused .mdc-text-field {
+  background-color: var(--slate-50) !important;
+}
+ */
 * {
   padding: 0;
   margin: 0;
