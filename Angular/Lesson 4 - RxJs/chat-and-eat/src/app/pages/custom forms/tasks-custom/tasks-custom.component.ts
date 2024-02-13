@@ -35,7 +35,7 @@ export class TasksCustomComponent {
 
   private get _initNewTask() {
     return this._formBuilder.group({
-      id: new FormControl(null, [Validators.required]),
+      id: new FormControl(null),
       name: new FormControl(null, [Validators.required]),
       description: new FormControl(null, [Validators.required]),
     });
@@ -58,16 +58,24 @@ export class TasksCustomComponent {
   }
 
   addTask() {
-    const task = this.newTask.getRawValue() as Task;
-    task.id = Date.now();
-    const control = new FormControl(task, Validators.required);
-    control.disable();
-    this.addedTasks.push(control as FormControl<Task>);
-    localStorage.setItem(
-      'tasks',
-      JSON.stringify(this.addedTasks.controls.map((control) => control.value))
-    );
-    this.newTask.reset();
+    console.log(this.newTask);
+    if (this.newTask.valid) {
+      const task = this.newTask.getRawValue() as Task;
+      task.id = Date.now();
+      const control = new FormControl(task, Validators.required);
+      control.disable();
+      this.addedTasks.push(control as FormControl<Task>);
+      localStorage.setItem(
+        'tasks',
+        JSON.stringify(this.addedTasks.controls.map((control) => control.value))
+      );
+      this.newTask.reset();
+    } else {
+      Object.keys(this.newTask.controls).forEach((field) => {
+        const control = this.newTask.get(field);
+        control?.markAsTouched();
+      });
+    }
   }
 
   get myAddedTasks() {

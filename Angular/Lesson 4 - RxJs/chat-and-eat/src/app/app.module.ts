@@ -24,6 +24,8 @@ import { ChooseQuantityComponent } from './pages/custom forms/tutorial/choose-qu
 import { AddressFormComponent } from './pages/custom forms/tutorial/address-form/address-form.component';
 import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-custom.component';
 import { TaskComponent } from './pages/custom forms/single-task/single-task.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { TaskComponent } from './pages/custom forms/single-task/single-task.comp
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AppMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

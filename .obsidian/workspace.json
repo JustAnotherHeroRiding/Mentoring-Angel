@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "56fd9505df0a676c",
+            "id": "696bc1165dff8a95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
+                "file": "Angular/Lesson 9 - Material/Angular Material.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
+                "file": "Angular/Lesson 9 - Material/Angular Material.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
+                "file": "Angular/Lesson 9 - Material/Angular Material.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md"
+                "file": "Angular/Lesson 9 - Material/Angular Material.md"
               }
             }
           }
@@ -146,30 +146,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "56fd9505df0a676c",
+  "active": "696bc1165dff8a95",
   "lastOpenFiles": [
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/single-task/single-task.component.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/single-task/single-task.component.spec.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/single-task/single-task.component.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/single-task/single-task.component.html",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/single-task",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/formvalidation/FormValidation.component.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/formvalidation/formvalidation.component.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/formvalidation/formvalidation.component.html",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/formvalidation",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/custom-form-example/custom-form-example.component.ts",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/src/app/pages/custom forms/tutorial/custom-form-example/custom-form-example.component.scss",
-    "Angular/Lesson 7/Lesson 7 Forms- FormControl and FormGroup.md",
-    "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
-    "Angular/Lesson 4 - RxJs/Real time chat.md",
-    "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
-    "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
-    "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/stepper/index.d.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/stepper",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/portal/index.d.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/portal",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/menu/index.d.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/menu",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/overlay/_index.scss",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/overlay/_index.import.scss",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/overlay/_index-deprecated.scss",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/overlay/index.d.ts",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/overlay",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/card/images/card-elevated.png",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/card/images/card-outlined.png",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/material/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/textfield/helper-text/README.md",
+    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/safevalues/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/CHANGELOG.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-gyp-build/README.md",
+    "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
+    "Angular/Lesson 9 - Material/Angular Material.md",
+    "Angular/Lesson 7/Lesson 7 Forms- FormControl and FormGroup.md",
+    "Angular/Lesson 4 - RxJs/Real time chat.md",
+    "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
+    "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
+    "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/phoenix/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/realtime-js/node_modules/ws/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/node_modules/whatwg-url/README.md",
@@ -180,10 +186,6 @@
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/realtime-js/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/realtime-js/LICENSE.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/postgrest-js/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/gotrue-js/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/LICENSE.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/functions-js/README.md",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/psl/browserstack-logo.svg",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/jasmine-core/images/jasmine-horizontal.png",
     "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/jasmine-core/images/jasmine_favicon.png",
@@ -191,8 +193,6 @@
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_world.png",
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_word.png",
     "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_zip.png",
-    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_world.png",
-    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_word.png",
-    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_width.png"
+    "Angular/Lesson 4 - RxJs/angular-tour-of-heroes/node_modules/serve-index/public/icons/page_white_world.png"
   ]
 }
