@@ -34,6 +34,7 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
   task?: Task;
   taskGroup = this._initTaskGroup;
   touched: boolean = false;
+  originalTask?: Task;
 
   onChange = (task: Task) => {};
   onTouched = () => {};
@@ -69,15 +70,23 @@ export class TaskComponent implements ControlValueAccessor, OnInit, Validator {
 
   private get _initTaskGroup() {
     return this._formBuilder.group({
-      id: new FormControl(null),
-      name: new FormControl(null, Validators.required),
-      description: new FormControl(null, Validators.required),
+      id: new FormControl<number | null>(null),
+      name: new FormControl<string | null>(null, Validators.required),
+      description: new FormControl<string | null>(null, Validators.required),
     });
   }
 
   edit() {
     this.taskGroup.enable();
     this.markAsTouched();
+    this.originalTask = this.taskGroup.getRawValue();
+  }
+
+  exit() {
+    this.taskGroup.disable();
+    if (this.originalTask) {
+      this.taskGroup.patchValue(this.originalTask as Partial<Task>);
+    }
   }
 
   saveChanges() {

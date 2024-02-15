@@ -9,15 +9,15 @@ theme needs to be imported in styled.css
 we can also use icons
 and icon buttons
 the custom checkbox is a custom form control itself and we can bind to its element
-we must use ngModel to change the data in both ways when using the components
-we can use the formBuilder to build a form using the material components
+we must use `ngModel` to change the data in both ways when using the components
+we can use the `formBuilder` to build a form using the material components
 we can bind the form control's (change) listener to access the entire component
-or use a form group to create all subtasks as form controls with a formcontrolname
+or use a form group to create all subtasks as form controls with a `formControlName`
 
 
 ## Todo - Material
-- Use material components for the todo app
-- 
+- Use material components for the todo app #DONE 
+- exit without saving changes
 
 ## Registration form
 - Name, surname, username
