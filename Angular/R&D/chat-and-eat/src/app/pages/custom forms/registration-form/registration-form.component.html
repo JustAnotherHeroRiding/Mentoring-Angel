@@ -1,0 +1,65 @@
+<mat-card class="flex flex-col form-card">
+  <mat-card-header>
+    <h2>Register</h2>
+  </mat-card-header>
+  <form [formGroup]="registrationForm" class="flex flex-col">
+    <mat-card-content class="flex flex-col gap-4">
+      <div class="flex gap-4">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput />
+        </mat-form-field>
+        <mat-form-field
+          ><mat-label>Last Name</mat-label>
+          <input formControlName="lastName" matInput
+        /></mat-form-field>
+      </div>
+      <div class="flex gap-4">
+        <mat-form-field class="flex flex-col"
+          ><mat-label>Username</mat-label>
+          <input formControlName="username" matInput />
+          <mat-error *ngIf="registrationForm.controls['username'].invalid">{{
+            getError("username")
+          }}</mat-error>
+        </mat-form-field>
+        <mat-form-field
+          ><mat-label>Email</mat-label> <input formControlName="email" matInput
+        /></mat-form-field>
+      </div>
+      <div class="flex gap-4">
+        <mat-form-field
+          ><mat-label>Confirm Email</mat-label>
+          <input formControlName="confirmEmail" matInput />
+          <mat-error *ngIf="registrationForm.controls['username'].invalid">{{
+            getError("confirmEmail")
+          }}</mat-error></mat-form-field
+        >
+        <mat-form-field
+          ><mat-label>Password</mat-label>
+          <input formControlName="password" matInput />
+          <mat-error *ngIf="registrationForm.controls['username'].invalid">{{
+            getError("password")
+          }}</mat-error></mat-form-field
+        >
+      </div>
+      <!-- Where should i put the form control? -->
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="basic">Basic</mat-radio-button>
+        <mat-radio-button value="standard">Standard</mat-radio-button>
+        <mat-radio-button value="premium">Premium</mat-radio-button>
+      </mat-radio-group>
+      <mat-checkbox class="flex" formControlName="acceptedTerms">
+        I have read and I accept the terms and conditions
+      </mat-checkbox>
+    </mat-card-content>
+    <mat-card-actions class="flex gap-4">
+      <button type="button">Clear</button>
+      <button type="button" (click)="logForm()">Log</button>
+      <button [disabled]="registrationForm.invalid">Submit</button>
+    </mat-card-actions>
+  </form>
+  <mat-card-footer
+    ><p class="description">Already have an account?</p>
+    <button mat-raised-button>Sign in</button>
+  </mat-card-footer>
+</mat-card>

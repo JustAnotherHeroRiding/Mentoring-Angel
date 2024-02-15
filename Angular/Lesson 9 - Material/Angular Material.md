@@ -17,20 +17,23 @@ or use a form group to create all subtasks as form controls with a `formControlN
 
 ## Todo - Material
 - Use material components for the todo app #DONE 
-- exit without saving changes
+- exit without saving changes #DONE 
 
 ## Registration form
-- Name, surname, username
-- username must be only lowercase
-- no symbols
-- mail - must be valid
-- confirm email - check if the other mail is the same
-- password - 8 characters, symbol, one uppercase
-- checkbox - accept the rules before submit
-- radio button group - 3 options: basic, standard or premium
-- create an interface mapped with correct values ready to be passed to an api
+- Name, surname, username #DONE 
+- checkbox - accept the rules before submit #DONE 
+- radio button group - 3 options: basic, standard or premium #DONE 
+- angular material for all components #DONE 
+- create an interface mapped with correct values ready to be passed to an api #DONE 
+- username must be only lowercase and no symbols #DONE 
+- mail - must be valid #DONE 
+- confirm email - check if the other mail is the same #DONE 
+- password - 8 characters, symbol, one uppercase and number #DONE 
+- switched confirm email validator to the field itself #DONE 
+- Figure out how to bind the values of the 3 radio buttons for the payment tier
+
 - submit button that will show the values from the form before submitting
-- angular material for all components
+
 
 
 ## Custom form control

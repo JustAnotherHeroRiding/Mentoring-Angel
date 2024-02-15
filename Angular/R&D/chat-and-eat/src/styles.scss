@@ -164,21 +164,21 @@ body {
 }
 
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .gap-4 {
-  gap: 0.4em;
+  gap: 0.4em !important;
 }
 
 .flex-col {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .description {
-  color: var(--slate-700);
+  color: var(--slate-700) !important;
 }
 
 button {
@@ -191,8 +191,8 @@ button {
 }
 
 button:hover {
-  cursor: pointer;
-  opacity: 0.7;
+  cursor: pointer !important;
+  opacity: 0.7 !important;
   border: 2px solid var(--slate-950) !important;
 }
 @keyframes flash {

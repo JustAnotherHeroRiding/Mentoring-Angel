@@ -26,6 +26,7 @@ import { TasksCustomComponent } from './pages/custom forms/tasks-custom/tasks-cu
 import { TaskComponent } from './pages/custom forms/single-task/single-task.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
+import { RegistrationFormComponent } from './pages/custom forms/registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { AppMaterialModule } from './app-material.module';
     AddressFormComponent,
     TaskComponent,
     TasksCustomComponent,
+    RegistrationFormComponent,
   ],
   imports: [
     BrowserModule,

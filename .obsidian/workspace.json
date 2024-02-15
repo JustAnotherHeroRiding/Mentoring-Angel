@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "d0673b658c98d51f",
+    "id": "4d720bcd8826b177",
     "type": "split",
     "children": [
       {
-        "id": "48e34a2b9a7b9a02",
+        "id": "b66f0206d98dedd5",
         "type": "tabs",
         "children": [
           {
-            "id": "696bc1165dff8a95",
+            "id": "fe7516db3f69451c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "c1469f275a860d67",
+    "id": "8345e9f5bd82907c",
     "type": "split",
     "children": [
       {
-        "id": "00536b146b260039",
+        "id": "cede1fb878818670",
         "type": "tabs",
         "children": [
           {
-            "id": "334fbe39f4dc74fa",
+            "id": "907042304f5fd16f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "9fcfa49ba0955293",
+            "id": "d22eb9b24f2e8649",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "f967c29d9795cbca",
+            "id": "75c3a7016319d234",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,15 +72,15 @@
     "width": 300
   },
   "right": {
-    "id": "589ab5b21042e1f9",
+    "id": "2615d488a03e570e",
     "type": "split",
     "children": [
       {
-        "id": "8d37da7d8b6fdc2c",
+        "id": "e01734b8384ca5eb",
         "type": "tabs",
         "children": [
           {
-            "id": "b0de26a2449058aa",
+            "id": "bf66eff3e0f894d1",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +97,7 @@
             }
           },
           {
-            "id": "f44b4cbea4158198",
+            "id": "2c8e704aa07401fc",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -109,7 +109,7 @@
             }
           },
           {
-            "id": "7e6d06b956164567",
+            "id": "744e5fa80509a83d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,7 +120,7 @@
             }
           },
           {
-            "id": "111157d75d8c9d3b",
+            "id": "a68690e3ecc5a74e",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -146,53 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "696bc1165dff8a95",
+  "active": "fe7516db3f69451c",
   "lastOpenFiles": [
-    "Angular/R&D",
-    "Angular/New folder",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/cdk/_index.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/snackbar/_snackbar-theme.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/snackbar/package.json",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/tab/_tab-theme.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/tab/package.json",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/tab-indicator/_tab-indicator-theme.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/tab-indicator/package.json",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/list/_list-theme.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/list/_evolution-variables.scss",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/textfield/icon/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/textfield/character-counter/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/slider/images/discrete-slider.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/slider/images/discrete-slider-tick-marks.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/slider/images/continuous-slider.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/slider/images/continuous-range-slider.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/chips/chip-set/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/chips/chip/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/chips/action/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/checkbox/images/checkbox-states.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/checkbox/images/checkbox-hero.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/button/images/toggle-bar.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/button/images/text-icon-button.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/button/images/text-button.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/button/images/outlined-icon-button.png",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@angular/material/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@material/textfield/helper-text/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/safevalues/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/tools/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/LICENSE.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-addon-api/CHANGELOG.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/node-gyp-build/README.md",
-    "Angular/Lesson 8 - Forms deeper and Material/Lesson 8 Custom Form Controls.md",
-    "Angular/Lesson 9 - Material/Angular Material.md",
-    "Angular/Lesson 7/Lesson 7 Forms- FormControl and FormGroup.md",
-    "Angular/Lesson 4 - RxJs/Real time chat.md",
-    "Angular/Lesson 6 - Directives and Forms/Directives and Forms.md",
-    "Angular/Lesson 5 - Memory Leaks/Memory Leaks.md",
-    "Angular/Lesson 4 - RxJs/RxJs - Convention.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@types/phoenix/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/realtime-js/node_modules/ws/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/node_modules/whatwg-url/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/node_modules/webidl-conversions/README.md",
-    "Angular/Lesson 4 - RxJs/chat-and-eat/node_modules/@supabase/node-fetch/node_modules/webidl-conversions/LICENSE.md"
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.spec.ts",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.html",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form",
+    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.html",
+    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.spec.ts",
+    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/registration-form"
   ]
 }
