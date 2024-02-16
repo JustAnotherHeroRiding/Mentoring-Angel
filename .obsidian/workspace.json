@@ -148,16 +148,16 @@
   },
   "active": "fe7516db3f69451c",
   "lastOpenFiles": [
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.html",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog",
-    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.spec.ts",
-    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.html",
-    "Angular/R&D/chat-and-eat/src/app/dialog",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.spec.ts"
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.spec.ts",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.html",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating",
+    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.spec.ts",
+    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.html",
+    "Angular/R&D/chat-and-eat/src/app/rating",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.scss"
   ]
 }

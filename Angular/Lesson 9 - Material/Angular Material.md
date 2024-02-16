@@ -38,11 +38,11 @@ or use a form group to create all subtasks as form controls with a `formControlN
 
 ## Custom form control
 - Giving a rating from one to five in stars
-- nice ui that is intutitive
-- when i click on the 3rd stars, the starts should be color
+- nice UI that is intuitive
+- when i click on the 3rd star, the first 3 stars should be colored and etc
 - it should be configurable from one form control
 - key is rating, value is 1-5
 
 #### Bonus
 - Dynamic value, before defining we can set the max number of stars
-- Can be shown after the registration
+- Can be shown after the registration with a successful submission

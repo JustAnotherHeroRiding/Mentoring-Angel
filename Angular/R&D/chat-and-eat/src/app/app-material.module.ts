@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 const imports = [
   MatInputModule,
@@ -15,6 +16,7 @@ const imports = [
   MatCheckboxModule,
   MatRadioModule,
   MatDialogModule,
+  MatIconModule,
 ];
 @NgModule({
   imports: [...imports],

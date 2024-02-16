@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { RegistrationFormComponent } from './pages/custom forms/registration-form/registration-form.component';
 import { DialogComponent } from './pages/custom forms/dialog/dialog.component';
+import { RatingComponent } from './pages/custom forms/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { DialogComponent } from './pages/custom forms/dialog/dialog.component';
     TasksCustomComponent,
     RegistrationFormComponent,
     DialogComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,

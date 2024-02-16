@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   AbstractControl,
+  FormArray,
   FormBuilder,
   FormControl,
   ValidatorFn,
@@ -75,6 +76,23 @@ export class RegistrationFormComponent {
     ]),
     acceptedTerms: new FormControl(false, [Validators.required]),
   });
+
+  ratingsForm = this._form.array([]);
+
+  ngOnInit() {
+    this.setMaxRating(5);
+  }
+
+  setMaxRating(limit: number) {
+    this.ratingsForm.clear();
+    for (let i = 1; i <= limit; i++) {
+      this.ratingsForm.push(new FormControl(i));
+    }
+  }
+
+  get possibleRatings() {
+    return this.ratingsForm.controls as FormControl[];
+  }
 
   logForm() {
     console.log(this.registrationForm);
