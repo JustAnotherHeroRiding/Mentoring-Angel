@@ -6,7 +6,8 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 type PaymentTiers = 'basic' | 'standard' | 'premium';
 
@@ -39,15 +40,15 @@ const confirmEmail: ValidatorFn = (control: AbstractControl) => {
 };
 
 const validPassword: ValidatorFn = (control: AbstractControl) => {
-  const password = control.value;
-  // check if the password contains 8 characters, 1 digit, and 1 symbol
+  const password: string = control.value;
+  // Check if the password contains at least 8 characters, 1 digit, and 1 symbol
   const regex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return regex.test(password)
     ? null
     : {
         error:
-          'Password must contain at least 8 characters, 1 digit, 1 number and 1 symbol',
+          'Passwords must contain atleast 8 characters, 1 digit, 1 symbol, 1 lowercase and 1 uppercase character.',
       };
 };
 
@@ -57,9 +58,7 @@ const validPassword: ValidatorFn = (control: AbstractControl) => {
   styleUrls: ['./registration-form.component.scss'],
 })
 export class RegistrationFormComponent {
-  showModal = new BehaviorSubject<boolean>(false);
-
-  constructor(private _form: FormBuilder) {}
+  constructor(private _form: FormBuilder, private dialog: MatDialog) {}
 
   registrationForm = this._form.group({
     firstName: new FormControl('', [Validators.required]),
@@ -87,11 +86,18 @@ export class RegistrationFormComponent {
   }
 
   openDialog() {
-    this.showModal.next(true);
-    console.log(this.showModal.value);
-  }
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: this.registrationForm.getRawValue(),
+    });
 
-  closeDialog() {
-    this.showModal.next(false);
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+      if (result === 'save') {
+        console.log('Form submitted');
+        this.registrationForm.reset();
+      } else {
+        console.log('Form submit cancelled');
+      }
+    });
   }
 }

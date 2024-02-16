@@ -31,7 +31,8 @@ or use a form group to create all subtasks as form controls with a `formControlN
 - password - 8 characters, symbol, one uppercase and number #DONE 
 - switched confirm email validator to the field itself #DONE 
 - Figure out how to bind the values of the 3 radio buttons for the payment tier #DONE 
-- submit button that will show the values from the form before submitting
+- corrected the password validator #DONE 
+- submit button that will show the values from the form before submitting #DONE 
 
 
 

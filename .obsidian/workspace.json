@@ -148,15 +148,16 @@
   },
   "active": "fe7516db3f69451c",
   "lastOpenFiles": [
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.html",
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog",
+    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.ts",
+    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.spec.ts",
+    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.scss",
+    "Angular/R&D/chat-and-eat/src/app/dialog/dialog.component.html",
+    "Angular/R&D/chat-and-eat/src/app/dialog",
     "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.spec.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.html",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form",
-    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.html",
-    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.spec.ts",
-    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/registration-form/registration-form.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/registration-form"
+    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/registration-form/registration-form.component.spec.ts"
   ]
 }

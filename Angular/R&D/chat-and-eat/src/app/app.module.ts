@@ -27,6 +27,7 @@ import { TaskComponent } from './pages/custom forms/single-task/single-task.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { RegistrationFormComponent } from './pages/custom forms/registration-form/registration-form.component';
+import { DialogComponent } from './pages/custom forms/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { RegistrationFormComponent } from './pages/custom forms/registration-for
     TaskComponent,
     TasksCustomComponent,
     RegistrationFormComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,

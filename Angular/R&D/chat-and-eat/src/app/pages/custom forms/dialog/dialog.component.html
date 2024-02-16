@@ -1,0 +1,11 @@
+<div class="flex flex-col">
+  <h1 mat-dialog-title>One last check</h1>
+  <div mat-dialog-content>
+    <p class="description">Is everything correct?</p>
+    <pre>{{ data | json }}</pre>
+    <mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close="close">Close</button>
+      <button mat-raised-button mat-dialog-close="save">Save</button>
+    </mat-dialog-actions>
+  </div>
+</div>
