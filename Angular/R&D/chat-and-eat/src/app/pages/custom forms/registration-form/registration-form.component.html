@@ -43,7 +43,10 @@
         >
       </div>
       <!-- Where should i put the form control? -->
-      <mat-radio-group aria-label="Select an option">
+      <mat-radio-group
+        formControlName="paymentTier"
+        aria-label="Select an option"
+      >
         <mat-radio-button value="basic">Basic</mat-radio-button>
         <mat-radio-button value="standard">Standard</mat-radio-button>
         <mat-radio-button value="premium">Premium</mat-radio-button>
@@ -55,7 +58,14 @@
     <mat-card-actions class="flex gap-4">
       <button type="button">Clear</button>
       <button type="button" (click)="logForm()">Log</button>
-      <button [disabled]="registrationForm.invalid">Submit</button>
+      <button type="button" (click)="openDialog()">Test</button>
+      <button
+        type="button"
+        [disabled]="registrationForm.invalid"
+        (click)="openDialog()"
+      >
+        Submit
+      </button>
     </mat-card-actions>
   </form>
   <mat-card-footer
@@ -63,3 +73,12 @@
     <button mat-raised-button>Sign in</button>
   </mat-card-footer>
 </mat-card>
+<mat-dialog-container *ngIf="showModal | async">
+  <p>dialog</p>
+  <h2 mat-dialog-title>Almost there</h2>
+  <mat-dialog-content>
+    <p>Are you sure that you want to submit?</p>
+    <button type="button">Close</button>
+    <button>Submit</button>
+  </mat-dialog-content>
+</mat-dialog-container>

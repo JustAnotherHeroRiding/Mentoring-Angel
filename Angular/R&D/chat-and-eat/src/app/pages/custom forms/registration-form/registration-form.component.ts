@@ -6,6 +6,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 
 type PaymentTiers = 'basic' | 'standard' | 'premium';
 
@@ -39,7 +40,7 @@ const confirmEmail: ValidatorFn = (control: AbstractControl) => {
 
 const validPassword: ValidatorFn = (control: AbstractControl) => {
   const password = control.value;
-  // check if the password contains 8 characters, 1 digit, 1 number and 1 symbol
+  // check if the password contains 8 characters, 1 digit, and 1 symbol
   const regex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/;
   return regex.test(password)
@@ -56,6 +57,8 @@ const validPassword: ValidatorFn = (control: AbstractControl) => {
   styleUrls: ['./registration-form.component.scss'],
 })
 export class RegistrationFormComponent {
+  showModal = new BehaviorSubject<boolean>(false);
+
   constructor(private _form: FormBuilder) {}
 
   registrationForm = this._form.group({
@@ -68,7 +71,9 @@ export class RegistrationFormComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     confirmEmail: new FormControl('', [Validators.required, confirmEmail]),
     password: new FormControl('', [Validators.required, validPassword]),
-    paymentTier: new FormControl<PaymentTiers | null>(null),
+    paymentTier: new FormControl<PaymentTiers | null>(null, [
+      Validators.required,
+    ]),
     acceptedTerms: new FormControl(false, [Validators.required]),
   });
 
@@ -79,5 +84,14 @@ export class RegistrationFormComponent {
   getError(controlName: string) {
     const control = this.registrationForm.get(controlName);
     return control?.errors?.['error'] || 'Unknown Error';
+  }
+
+  openDialog() {
+    this.showModal.next(true);
+    console.log(this.showModal.value);
+  }
+
+  closeDialog() {
+    this.showModal.next(false);
   }
 }
