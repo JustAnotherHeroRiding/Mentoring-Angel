@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import {
   ControlValueAccessor,
   FormBuilder,
@@ -19,10 +19,16 @@ import {
   ],
 })
 export class RatingComponent implements ControlValueAccessor {
-  constructor(private _forms: FormBuilder) {}
+  constructor(
+    private _forms: FormBuilder,
+    private renderer: Renderer2,
+    private element: ElementRef
+  ) {}
 
   starControl = this._initStar();
   touched: boolean = false;
+  isHovered: boolean = false;
+  isClicked: boolean = false;
 
   ngOnInit() {
     //console.log(this.starControl);
@@ -60,5 +66,39 @@ export class RatingComponent implements ControlValueAccessor {
 
   private _initStar(): FormControl<number | null> {
     return this._forms.control(null);
+  }
+
+  onHover(index: number, event: MouseEvent): void {
+    const isHovered = event.type === 'mouseover';
+    if (isHovered && !this.isClicked) {
+      this.renderer.setProperty(
+        this.element.nativeElement.querySelector('.star-icon'),
+        'innerHTML',
+        'star_half'
+      );
+    }
+  }
+
+  onLeave(index: number, event: MouseEvent) {
+    const isLeaving = event.type === 'mouseleave';
+    if (isLeaving && !this.isClicked) {
+      this.renderer.setProperty(
+        this.element.nativeElement.querySelector('.star-icon'),
+        'innerHTML',
+        'star_border'
+      );
+    }
+  }
+
+  onStarClick(index: number): void {
+    this.isClicked = !this.isClicked;
+    this.renderer.setProperty(
+      this.element.nativeElement.querySelector('.star-icon'),
+      'innerHTML',
+      'star'
+    );
+    //this.starControl.setValue(index);
+    this.notifyParent();
+    this.markAsTouched();
   }
 }
