@@ -22,6 +22,11 @@ export interface Registration {
   acceptedTerms: boolean;
 }
 
+export interface RatingControl {
+  possibleValues: number[];
+  selected: number;
+}
+
 const onlyLowercaseNoSymbols: ValidatorFn = (control: AbstractControl) => {
   const value = control.value;
   const regex = /^[a-z]+$/;
@@ -77,7 +82,16 @@ export class RegistrationFormComponent {
     acceptedTerms: new FormControl(false, [Validators.required]),
   });
 
-  ratingsControl = this._form.control<number[]>([], [Validators.required]);
+  ratingsControl = this._form.control<RatingControl>(
+    { possibleValues: [], selected: 0 },
+    [Validators.required]
+  );
+
+  max = 15;
+  min = 5;
+  step = 1;
+  thumbLabel = false;
+  sliderValue = 5;
 
   ngOnInit() {
     this.setMaxRating(5);
@@ -87,10 +101,17 @@ export class RegistrationFormComponent {
     });
   }
 
+  onSliderChange(newMaximumRating: number) {
+    this.setMaxRating(newMaximumRating);
+  }
+
   setMaxRating(limit: number) {
-    this.ratingsControl.setValue([]);
+    this.ratingsControl.reset({
+      possibleValues: [],
+      selected: this.ratingsControl.value?.selected as number,
+    });
     for (let i = 1; i <= limit; i++) {
-      this.ratingsControl.value?.push(i);
+      this.ratingsControl.value?.possibleValues.push(i);
     }
   }
 
@@ -103,9 +124,12 @@ export class RegistrationFormComponent {
     return control?.errors?.['error'] || 'Unknown Error';
   }
 
-  openDialog() {
+  openDialog(source: 'registration' | 'review') {
     const dialogRef = this.dialog.open(DialogComponent, {
-      data: this.registrationForm.getRawValue(),
+      data:
+        source === 'registration'
+          ? this.registrationForm.getRawValue()
+          : this.ratingsControl.getRawValue(),
     });
 
     dialogRef.afterClosed().subscribe((result) => {

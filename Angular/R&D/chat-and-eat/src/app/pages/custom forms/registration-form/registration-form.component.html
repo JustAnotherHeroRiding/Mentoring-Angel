@@ -5,11 +5,33 @@
         <h1>How would you rate this form?</h1>
       </mat-card-title>
     </mat-card-header>
-    <mat-card-content class="flex gap-4">
+    <mat-card-content class="flex gap-4 flex-col">
+      <h2>Choose your scale</h2>
+
+      <div class="flex gap-4">
+        <label id="example-name-label" class="example-name-label"
+          >{{ ratingsControl.value?.selected }} out of</label
+        >
+        <label class="example-value-label">{{ slider.value }}</label>
+      </div>
+      <mat-slider
+        class="review-slider"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [discrete]="thumbLabel"
+        (slideend)="onSliderChange(+slider.value)"
+        (pointerup)="onSliderChange(+slider.value)"
+      >
+        <input matSliderThumb [(ngModel)]="sliderValue" #slider />
+      </mat-slider>
+
       <app-rating [formControl]="ratingsControl"></app-rating>
     </mat-card-content>
     <mat-card-actions>
-      <button>Submit</button>
+      <button class="review-submit" (click)="openDialog('review')">
+        Submit
+      </button>
     </mat-card-actions>
   </mat-card>
 
@@ -51,7 +73,7 @@
           <mat-form-field
             ><mat-label>Password</mat-label>
             <input formControlName="password" matInput />
-            <mat-error *ngIf="registrationForm.controls['username'].invalid">{{
+            <mat-error *ngIf="registrationForm.controls['password'].invalid">{{
               getError("password")
             }}</mat-error></mat-form-field
           >
@@ -72,11 +94,10 @@
       <mat-card-actions class="flex gap-4">
         <button type="button">Clear</button>
         <button type="button" (click)="logForm()">Log</button>
-        <button type="button" (click)="openDialog()">Test</button>
         <button
           type="button"
           [disabled]="registrationForm.invalid"
-          (click)="openDialog()"
+          (click)="openDialog('registration')"
         >
           Submit
         </button>

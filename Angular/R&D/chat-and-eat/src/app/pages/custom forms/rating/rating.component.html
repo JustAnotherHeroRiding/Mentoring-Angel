@@ -1,19 +1,31 @@
-<!-- <mat-icon>star</mat-icon>
--->
-<div class="flex">
+<div class="flex star-container">
   <ng-container *ngFor="let rating of possibleRatings">
     <div class="flex flex-col">
       <p>{{ rating }}</p>
       <mat-icon
-        #starIcon
-        class="star-icon"
         (click)="onStarClick(rating)"
         (mouseover)="onHover(rating, $event)"
         (mouseleave)="onLeave(rating, $event)"
-        >{{ iconName }}</mat-icon
+        class="star-icon"
       >
+        <!-- This got wild. The first check will return a full star if the current star 
+        has an index lower or equals to the star we clicked on which is the selectedIndex -->
+        <!-- After we check if the hoveredIndex is -1 which means we are not hovering and should return an border star since we have not
+        selected that star -->
+        <!-- If we are hovering, we check if the current star is the same or lower than the hovered index -->
+        <!-- This will return a half star if it is below or equal to the hovered index  -->
+        {{
+          rating <= selectedIndex
+            ? "star"
+            : hoveredIndex === -1
+            ? "star_border"
+            : rating < hoveredIndex
+            ? "star"
+            : rating === hoveredIndex
+            ? "star_half"
+            : "star_border"
+        }}
+      </mat-icon>
     </div>
   </ng-container>
 </div>
-
-<!-- <mat-icon>star_half</mat-icon>  -->

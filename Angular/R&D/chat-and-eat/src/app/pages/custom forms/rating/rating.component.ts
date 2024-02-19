@@ -5,6 +5,7 @@ import {
   FormControl,
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
+import { RatingControl } from '../registration-form/registration-form.component';
 
 @Component({
   selector: 'app-rating',
@@ -23,17 +24,15 @@ export class RatingComponent implements ControlValueAccessor {
 
   starControl = this._initStar();
   touched: boolean = false;
-  isHovered: boolean = false;
-  isClicked: boolean = false;
 
-  @ViewChild('starIcon', { static: true }) starIcon!: ElementRef;
-  iconName: string = 'star_border';
+  hoveredIndex: number = 0;
+  selectedIndex: number = 0;
 
   ngOnInit() {
     // console.log(this.starControl);
   }
 
-  onChange = (star: any) => {};
+  onChange = (star: RatingControl | null) => {};
   onTouched = () => {};
 
   registerOnChange(fn: any): void {
@@ -64,31 +63,30 @@ export class RatingComponent implements ControlValueAccessor {
   }
 
   private _initStar() {
-    return this._forms.control<number[]>([]);
+    return this._forms.control<RatingControl>({
+      possibleValues: [],
+      selected: 0,
+    });
   }
 
   get possibleRatings(): number[] {
-    return this.starControl.value as number[];
+    return this.starControl.value?.possibleValues as number[];
   }
 
   onHover(index: number, event: MouseEvent): void {
-    const isHovered = event.type === 'mouseover';
-    if (isHovered && !this.isClicked) {
-      this.iconName = 'star_half';
-    }
+    this.hoveredIndex = index;
   }
 
-  onLeave(index: number, event: MouseEvent) {
-    const isLeaving = event.type === 'mouseleave';
-    if (isLeaving && !this.isClicked) {
-      this.iconName = 'star_border';
-    }
+  onLeave(index: number, event: MouseEvent): void {
+    this.hoveredIndex = -1;
   }
 
   onStarClick(index: number): void {
-    this.isClicked = !this.isClicked;
-    this.iconName = 'star';
-    //this.starControl.setValue(index);
+    this.selectedIndex = index;
+    this.starControl.patchValue({
+      selected: index,
+      possibleValues: this.starControl.value?.possibleValues as number[],
+    });
     this.notifyParent();
     this.markAsTouched();
   }

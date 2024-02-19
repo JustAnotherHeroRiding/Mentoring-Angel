@@ -1,9 +1,11 @@
-.star-rating {
-    display: inline-flex;
-    font-size: 24px;
-  }
-  
-  mat-icon {
-    cursor: pointer;
-  }
-  
+.star-icon {
+  transform: scale(2);
+}
+
+.star-container {
+  gap: 20px;
+}
+
+mat-icon {
+  cursor: pointer;
+}
