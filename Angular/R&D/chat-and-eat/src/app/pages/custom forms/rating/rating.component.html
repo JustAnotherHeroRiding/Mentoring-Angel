@@ -1,14 +1,19 @@
 <!-- <mat-icon>star</mat-icon>
 -->
-<div class="flex flex-col">
-  <p>{{ starControl.value }}</p>
-  <mat-icon
-    class="star-icon"
-    (click)="onStarClick(starControl.value!)"
-    (mouseover)="onHover(starControl.value!, $event)"
-    (mouseleave)="onLeave(starControl.value!, $event)"
-    >star_border</mat-icon
-  >
+<div class="flex">
+  <ng-container *ngFor="let rating of possibleRatings">
+    <div class="flex flex-col">
+      <p>{{ rating }}</p>
+      <mat-icon
+        #starIcon
+        class="star-icon"
+        (click)="onStarClick(rating)"
+        (mouseover)="onHover(rating, $event)"
+        (mouseleave)="onLeave(rating, $event)"
+        >{{ iconName }}</mat-icon
+      >
+    </div>
+  </ng-container>
 </div>
 
 <!-- <mat-icon>star_half</mat-icon>  -->

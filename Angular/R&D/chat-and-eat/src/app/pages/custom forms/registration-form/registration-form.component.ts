@@ -77,21 +77,21 @@ export class RegistrationFormComponent {
     acceptedTerms: new FormControl(false, [Validators.required]),
   });
 
-  ratingsForm = this._form.array([]);
+  ratingsControl = this._form.control<number[]>([], [Validators.required]);
 
   ngOnInit() {
     this.setMaxRating(5);
+
+    this.ratingsControl.valueChanges.subscribe((changes) => {
+      console.log(changes);
+    });
   }
 
   setMaxRating(limit: number) {
-    this.ratingsForm.clear();
+    this.ratingsControl.setValue([]);
     for (let i = 1; i <= limit; i++) {
-      this.ratingsForm.push(new FormControl(i));
+      this.ratingsControl.value?.push(i);
     }
-  }
-
-  get possibleRatings() {
-    return this.ratingsForm.controls as FormControl[];
   }
 
   logForm() {

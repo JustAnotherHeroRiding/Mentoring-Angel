@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import {
   ControlValueAccessor,
   FormBuilder,
@@ -19,22 +19,21 @@ import {
   ],
 })
 export class RatingComponent implements ControlValueAccessor {
-  constructor(
-    private _forms: FormBuilder,
-    private renderer: Renderer2,
-    private element: ElementRef
-  ) {}
+  constructor(private _forms: FormBuilder) {}
 
   starControl = this._initStar();
   touched: boolean = false;
   isHovered: boolean = false;
   isClicked: boolean = false;
 
+  @ViewChild('starIcon', { static: true }) starIcon!: ElementRef;
+  iconName: string = 'star_border';
+
   ngOnInit() {
-    //console.log(this.starControl);
+    // console.log(this.starControl);
   }
 
-  onChange = (star: number) => {};
+  onChange = (star: any) => {};
   onTouched = () => {};
 
   registerOnChange(fn: any): void {
@@ -50,7 +49,7 @@ export class RatingComponent implements ControlValueAccessor {
   }
 
   notifyParent() {
-    this.onChange(this.starControl.getRawValue() as number);
+    this.onChange(this.starControl.getRawValue());
   }
 
   markAsTouched() {
@@ -64,39 +63,31 @@ export class RatingComponent implements ControlValueAccessor {
     this.starControl.disable();
   }
 
-  private _initStar(): FormControl<number | null> {
-    return this._forms.control(null);
+  private _initStar() {
+    return this._forms.control<number[]>([]);
+  }
+
+  get possibleRatings(): number[] {
+    return this.starControl.value as number[];
   }
 
   onHover(index: number, event: MouseEvent): void {
     const isHovered = event.type === 'mouseover';
     if (isHovered && !this.isClicked) {
-      this.renderer.setProperty(
-        this.element.nativeElement.querySelector('.star-icon'),
-        'innerHTML',
-        'star_half'
-      );
+      this.iconName = 'star_half';
     }
   }
 
   onLeave(index: number, event: MouseEvent) {
     const isLeaving = event.type === 'mouseleave';
     if (isLeaving && !this.isClicked) {
-      this.renderer.setProperty(
-        this.element.nativeElement.querySelector('.star-icon'),
-        'innerHTML',
-        'star_border'
-      );
+      this.iconName = 'star_border';
     }
   }
 
   onStarClick(index: number): void {
     this.isClicked = !this.isClicked;
-    this.renderer.setProperty(
-      this.element.nativeElement.querySelector('.star-icon'),
-      'innerHTML',
-      'star'
-    );
+    this.iconName = 'star';
     //this.starControl.setValue(index);
     this.notifyParent();
     this.markAsTouched();

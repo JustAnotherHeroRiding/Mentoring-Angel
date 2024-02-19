@@ -39,6 +39,8 @@ or use a form group to create all subtasks as form controls with a `formControlN
 ## Custom form control
 - Giving a rating from one to five in stars #DONE 
 - key is rating, value is 1-5 #DONE 
+##### Let's think about how we will handle the star clicks. I can send an update to the parent to show which star was clicked, and then with some sort of variable we can color all stars behind it.
+###### The form control should be rendered just once, and then we loop over the input amount for the star amount. The only value we need to track is the selected star, so we do not need multiple form controls.
 - nice UI that is intuitive
 - when i click on the 3rd star, the first 3 stars should be colored and etc
 - it should be configurable from one form control

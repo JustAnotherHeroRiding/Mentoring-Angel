@@ -6,9 +6,7 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content class="flex gap-4">
-      <div class="task-item" *ngFor="let rating of possibleRatings">
-        <app-rating [formControl]="rating"></app-rating>
-      </div>
+      <app-rating [formControl]="ratingsControl"></app-rating>
     </mat-card-content>
     <mat-card-actions>
       <button>Submit</button>
