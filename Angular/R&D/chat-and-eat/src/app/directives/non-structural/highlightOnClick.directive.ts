@@ -26,7 +26,7 @@ export class HighlightOnClickDirective {
       'flash 0.5s ease-out'
     );
     const successSign = this.renderer.createElement('span');
-    const text = this.renderer.createText(' ✔️');
+    const text = this.renderer.createText('✔️');
     this.renderer.appendChild(successSign, text);
     this.renderer.appendChild(this.element.nativeElement, successSign);
 

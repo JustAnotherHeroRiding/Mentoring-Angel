@@ -1,0 +1,13 @@
+- Standalone components - no need for a module and the component does not live in a module
+- to import it into a different module we import it in the modules array
+- we have to import all modules separately
+- Think about the requirements and how we should create the context drop down
+- We need to listen for right clicks
+- On each click, the menu will open
+- top left is 0,0 cords for the browser
+- the x axis is moving right
+- y axis is moving down
+- difference between component and view 
+- if a component is not standalone, it must be imported in a module
+- Shared module for all common dependencies
+- views array for all defined views

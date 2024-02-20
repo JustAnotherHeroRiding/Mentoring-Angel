@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fe7516db3f69451c",
+            "id": "198898273389957f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 9 - Material/Angular Material.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 9 - Material/Angular Material.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 9 - Material/Angular Material.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 9 - Material/Angular Material.md"
+                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md"
               }
             }
           }
@@ -146,18 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fe7516db3f69451c",
+  "active": "198898273389957f",
   "lastOpenFiles": [
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.spec.ts",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating/rating.component.html",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/rating",
-    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.ts",
-    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.spec.ts",
-    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.scss",
-    "Angular/R&D/chat-and-eat/src/app/rating/rating.component.html",
-    "Angular/R&D/chat-and-eat/src/app/rating",
-    "Angular/R&D/chat-and-eat/src/app/pages/custom forms/dialog/dialog.component.scss"
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/iu-mappings.js",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/character-class-escape-sets.js",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/rewrite-pattern.js",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/package.json",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/README.md",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/LICENSE-MIT.txt",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core/data",
+    "Angular/R&D/context-dropdown/node_modules/regexpu-core",
+    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm5/internal/scheduler/Action.js",
+    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm/internal/scheduler/Action.js",
+    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/cjs/internal/scheduler/Action.js",
+    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm5/internal/scheduler",
+    "Angular/Lesson 9 - Material/Angular Material.md",
+    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md"
   ]
 }

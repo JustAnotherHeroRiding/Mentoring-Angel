@@ -46,5 +46,5 @@ or use a form group to create all subtasks as form controls with a `formControlN
 - it should be configurable from one form control #DONE 
 
 #### Bonus
-- Dynamic value, before defining we can set the max number of stars
-- Can be shown after the registration with a successful submission
+- Dynamic value, before defining we can set the max number of stars #DONE 
+- Can be shown after the registration with a successful submission #DONE 
