@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "198898273389957f",
+            "id": "7765b769d5026fa6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md"
+                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md"
               }
             }
           }
@@ -146,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "198898273389957f",
+  "active": "907042304f5fd16f",
   "lastOpenFiles": [
+    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/iu-mappings.js",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/character-class-escape-sets.js",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/rewrite-pattern.js",
@@ -159,8 +161,6 @@
     "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm5/internal/scheduler/Action.js",
     "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm/internal/scheduler/Action.js",
     "Angular/R&D/context-dropdown/node_modules/rxjs/dist/cjs/internal/scheduler/Action.js",
-    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm5/internal/scheduler",
-    "Angular/Lesson 9 - Material/Angular Material.md",
-    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md"
+    "Angular/Lesson 9 - Material/Angular Material.md"
   ]
 }
