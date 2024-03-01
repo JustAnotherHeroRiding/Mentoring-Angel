@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "363cdac6f70d1b1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
+                "file": "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md"
+                "file": "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md"
               }
             }
           }
@@ -146,9 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "907042304f5fd16f",
+  "active": "363cdac6f70d1b1f",
   "lastOpenFiles": [
     "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
+    "Angular/R&D/context-dropdown/src/app/context-dropdown/model/option.ts",
+    "Angular/R&D/context-dropdown/src/app/context-dropdown/model",
     "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/iu-mappings.js",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/data/character-class-escape-sets.js",
@@ -159,8 +175,6 @@
     "Angular/R&D/context-dropdown/node_modules/regexpu-core/data",
     "Angular/R&D/context-dropdown/node_modules/regexpu-core",
     "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm5/internal/scheduler/Action.js",
-    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/esm/internal/scheduler/Action.js",
-    "Angular/R&D/context-dropdown/node_modules/rxjs/dist/cjs/internal/scheduler/Action.js",
     "Angular/Lesson 9 - Material/Angular Material.md"
   ]
 }
