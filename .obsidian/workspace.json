@@ -148,9 +148,16 @@
   },
   "active": "7765b769d5026fa6",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Angular/Lesson 10 - Context Drop-Down/setTimeout vs detectChanges.md",
     "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
     "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+=======
+    "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
+    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/R&D/context-dropdown/src/app/context-dropdown/model/option.ts",
+    "Angular/R&D/context-dropdown/src/app/context-dropdown/model",
+>>>>>>> 7893fd9a7f4c0ed6b26d3793ae244f2bd4c2c49f
     "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/prebuilt-themes/purple-green.css",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
