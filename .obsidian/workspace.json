@@ -148,6 +148,10 @@
   },
   "active": "7765b769d5026fa6",
   "lastOpenFiles": [
+    "Angular/Lesson 10 - Context Drop-Down/setTimeout vs detectChanges.md",
+    "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
+    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/Lesson 10 - Context Drop-Down/Change Detection Event.md",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/prebuilt-themes/purple-green.css",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -158,7 +162,6 @@
     "Angular/R&D/context-dropdown/node_modules/@angular/material/core/tokens/m2/mdc/_snack-bar.scss",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/core/tokens/m2/mdc/_tab.scss",
     "Angular/R&D/context-dropdown/node_modules/@angular/material/core/tokens/m2/mdc/_slider.scss",
-    "Angular/R&D/context-dropdown/node_modules/@angular/material/core/tokens/m2/mdc/_tab-indicator.scss",
     "Angular/R&D/context-dropdown/node_modules/@angular/cdk/README.md",
     "Angular/R&D/context-dropdown/node_modules/@material/chips/deprecated/trailingaction/README.md",
     "Angular/R&D/context-dropdown/node_modules/@material/slider/images/discrete-slider-tick-marks.png",
@@ -190,9 +193,6 @@
     "Angular/R&D/context-dropdown/node_modules/@material/typography/CHANGELOG.md",
     "Angular/R&D/context-dropdown/node_modules/@material/touch-target/README.md",
     "Angular/R&D/context-dropdown/node_modules/@material/touch-target/CHANGELOG.md",
-    "Angular/R&D/context-dropdown/node_modules/@material/top-app-bar/README.md",
-    "Angular/R&D/context-dropdown/node_modules/@material/top-app-bar/CHANGELOG.md",
-    "Angular/R&D/context-dropdown/node_modules/@material/tooltip/README.md",
-    "Angular/R&D/context-dropdown/node_modules/@material/tooltip/CHANGELOG.md"
+    "Angular/R&D/context-dropdown/node_modules/@material/top-app-bar/README.md"
   ]
 }
