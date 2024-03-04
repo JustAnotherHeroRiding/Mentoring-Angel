@@ -41,5 +41,16 @@
 - Refactor the code where we calculate x and y as we have too much repetition(2 if else loops) #DONE 
 
 ##### Bonus
-- Use angular material
-- angular animations on the view - add an animation to the opening of the menu - these can be defined in the animations property of the components
+- Use angular material #DONE 
+##### Using `mat-menu` or `overlay DI` has proved to be very problematic and requiring an entire rewrite of the application. The menu is designed to work with left clicks, and if I want to use it as a right click, it will not be a directive anymore as the custom component is not needed and the user will have to define the `mat-menu` himself somewhere in the app. A directive that renders a custom components seems to be the best way to do it if we want it to be completely isolated.
+###### I ended up adding a new example in the app component.
+- Make the menu close when an option is clicked and set the image #DONE 
+- Set the data for the options correctly on the menu options #DONE 
+[Mat menu context menu tutorial](https://marco.dev/angular-right-click-menu)
+
+
+
+###### The menu was double rendering on the first right click. I set the opacity to be 0 initially and then the animation will transition it to 1. Using a state we keep track of the visibility
+- angular animations on the view - add an animation to the opening of the menu - these can be defined in the animations property of the components #DONE 
+- `AnimationBuilder` DI to closing the menu() #Removed
+#### This proved to be more trouble that it is worth. Double clicks were closing the second menu together with the first.
