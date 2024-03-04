@@ -31,12 +31,14 @@
 
 ### Todo
 
-- Refactor the code where we calculate x and y as we have too much repetition(2 if else loops)
-- improve naming of variables(x and y)
-- When we click on an option(for example spaghetti), we can find out the clicked option somewhere in the template
-- show an image depending on the clicked option, render an image for the chosen option(create event interface where we create a structure which kind of click was selected i.e. the value)
-- do not access the `offsetHeigth` and Width of the child element, find another way. Allow direct access to the div of the component instance without using `nativeElement.ChildNodes[0]`
-- find another alternative to `detectChanges()` to get the height without using the `changeDetectorRef` to get the updated height
+- improve naming of variables(x and y) #DONE 
+- When we click on an option(for example spaghetti), we can find out the clicked option somewhere in the template #DONE 
+- show an image depending on the clicked option, render an image for the chosen option(create event interface where we create a structure which kind of click was selected i.e. the value) #DONE 
+- do not access the `offsetHeigth` and Width of the child element, find another way. Allow direct access to the div of the component instance without using `nativeElement.ChildNodes[0]` #DONE 
+##### Trying to set the the coordinates in `ngAfterViewInit` does not seem to work.
+``ExpressionChangedAfterItHasBeenCheckedError``
+- find another alternative to `detectChanges()` to get the height without using the `changeDetectorRef` to get the updated height #DONE 
+- Refactor the code where we calculate x and y as we have too much repetition(2 if else loops) #DONE 
 
 ##### Bonus
 - Use angular material
