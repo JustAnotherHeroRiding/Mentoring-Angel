@@ -54,3 +54,59 @@
 - angular animations on the view - add an animation to the opening of the menu - these can be defined in the animations property of the components #DONE 
 - `AnimationBuilder` DI to closing the menu() #Removed
 #### This proved to be more trouble that it is worth. Double clicks were closing the second menu together with the first.
+
+
+
+
+## Review
+- alternative way of triggering change 
+- creating the `viewChild` `static: true` so that we can get the dropdown
+- isolate and logic and function of the component
+- central logic - container presentation pattern Smart component and dumb component
+- Our context menu is the dumb component
+- closing the subscription 
+- For standalone use different arrays when importing modules from different sources
+- create new folder for the `imagePath` and similar constants
+- or an object with all required constants
+- separate variables and `ViewChild`
+- Either add a return or don't for all functions - don't be selective
+- add a return type for the getter for the options and when getting any sort of data
+- Always add spaces between different types of properties, decorators etc
+- typescript types good pattern to use- related and x and y 
+- `ngOnChanges` simple changes 
+- What will trigger changes and will not - **interview question**
+- DetectChanges vs `MarkForCheck` - mark will set the status of the `LView`
+- detectChanges for instant changes, `markForCheck` when it is not so important and we want to catch the next cycle
+- practice with input setters
+- refresh property to trigger the change in the context dropdown class
+- we set a timer inside the angular zone after leaving it where we set refresh to true, which will change the options
+- `simpleChanges` vs setters
+- When we have multiple dependencies on state, it is better to use state to keep track of all the values
+- otherwise we have to check all previous values with the setters
+
+
+## Class order
+1. variables  
+2. @Inputs  
+3. @Outputs
+4. @ViewChild  
+5. constructor  
+6. ngOnInit  
+7. getters  
+8. public functions  
+9. private functions  
+10. onDestroy
+
+
+## Expansions
+- keep the directive
+- create a new directive to handle multi select to allow selecting options
+- make them 2 independent directives
+- option to track multiple options 
+- nested options 
+- hosted view
+
+## Analog
+`ngrx` - Read about it
+angular meta framework analog
+global state in an app
