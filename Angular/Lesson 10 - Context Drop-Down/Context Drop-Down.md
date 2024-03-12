@@ -97,14 +97,26 @@
 9. private functions  
 10. onDestroy
 
+## Smart vs Dumb Components
+- Read up more on this split [Angular University](https://blog.angular-university.io/angular-2-smart-components-vs-presentation-components-whats-the-difference-when-to-use-each-and-why/)
 
 ## Expansions
 - keep the directive
-- create a new directive to handle multi select to allow selecting options
+- create a new directive to handle multi select to allow selecting multiple options
 - make them 2 independent directives
 - option to track multiple options 
-- nested options 
 - hosted view
+##### Continue here
+- **Nested options**
+- hovering on an option should trigger the second menu #DONE 
+- event listener for hover on each option #do 
+- when the mouse leaves the original option or the new nested menu, it should close #DONE
+- Get the position correct so that it is on the exact same row as the initial option #DONE 
+- If we hover over two menus real quick, there the first menu will remain open
+- another check will be needed to see if we are out of bounds
+- animation for the second menu that will open - use windows for inspiration
+- clicking on a nested option will close the entire menu
+
 
 ## Analog
 `ngrx` - Read about it

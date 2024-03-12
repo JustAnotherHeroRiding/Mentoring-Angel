@@ -148,8 +148,15 @@
   },
   "active": "eb84c5b0f954a167",
   "lastOpenFiles": [
+    "Angular/R&D/context-dropdown/src/app/lib/options-data.ts",
+    "Angular/R&D/context-dropdown/src/app/lib/options.ts",
+    "Angular/R&D/context-dropdown/src/app/context-dropdown/directives/nested-dropdown-directive.ts",
+    "Angular/R&D/context-dropdown/src/assets/spaghetti.webp",
     "Angular/R&D/context-dropdown/src/app/lib/image-path.ts",
     "Angular/R&D/context-dropdown/src/app/lib",
+    "Angular/R&D/context-dropdown/src/assets/placeholder.webp",
+    "Angular/R&D/context-dropdown/src/assets/pizza.webp",
+    "Angular/R&D/context-dropdown/src/assets/macaroni.webp",
     "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
     "Angular/Lesson 10 - Context Drop-Down/setTimeout vs detectChanges.md"
   ]
