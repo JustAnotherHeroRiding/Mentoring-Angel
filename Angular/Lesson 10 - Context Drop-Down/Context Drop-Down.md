@@ -106,16 +106,6 @@
 - make them 2 independent directives
 - option to track multiple options 
 - hosted view
-##### Continue here
-- **Nested options**
-- hovering on an option should trigger the second menu #DONE 
-- event listener for hover on each option #do 
-- when the mouse leaves the original option or the new nested menu, it should close #DONE
-- Get the position correct so that it is on the exact same row as the initial option #DONE 
-- If we hover over two menus real quick, there the first menu will remain open
-- another check will be needed to see if we are out of bounds
-- animation for the second menu that will open - use windows for inspiration
-- clicking on a nested option will close the entire menu
 
 
 ## Analog
