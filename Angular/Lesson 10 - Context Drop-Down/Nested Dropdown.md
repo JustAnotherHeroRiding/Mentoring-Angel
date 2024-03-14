@@ -19,12 +19,22 @@ Knowing which option has an option or not
 ## Improving the closeRef method nested dropdown
 - If an option has no children, it should still close the other opened menu - for example salads does not close the opened menus #DONE 
 - Improve selected option, stop clicks on options with children from closing the menu #DONE 
-- The image and name should only be set in the main component when an option has no suboptions
-- Add some delay between menu opening
-- Pizza-pepperoni-3rd option - all of them should have a marker that they are opened
+- The image and name should only be set in the main component when an option has no sub options #DONE 
+- Added a type to each Option so that we know the type of food of each option, even if it is deeply nested #DONE 
+- Add selected option to add an image and text for the selected option #DONE  
+- Pizza-pepperoni-3rd option - all of them should have a marker that they are opened #DONE 
+- Add some delay between menu opening #DONE 
+- Make sure that only the last hovered element gets opened #DONE 
+- Handle out of bounds options and correctly positioning #DONE 
+##### We have a working version not all new menus are positioned the same as some are wider than others
+- Provide a constant reposition with 4 pixels of space between the parent and child menus #DONE Ended up using a constant width for all options but this currently only works for the first level
+- Add a depth level tracker to position the second level to the left as well #DONE 
+- First first a real working calculation for going out of bounds on the right, as the x we get from the parent position is relative #DONE
+##### This seems to be handled after using the absolute x position
+- Handle cases where the nested menu goes out of bounds on the left #DONE 
+- Handle cases where it goes out of bounds on the y axis
+- Bring back dynamic width for the context menus
 - Config options for the menu where users can decide color, icons 
-- Handle out of bounds options
-- Add selected option to add an image and text for the selected option
 - Improve width and general look
 - Think of how the UX can be improved - look at existing examples
 - Truncate text if it is too long
