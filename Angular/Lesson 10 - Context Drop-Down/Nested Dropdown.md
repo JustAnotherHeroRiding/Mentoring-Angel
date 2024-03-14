@@ -32,8 +32,9 @@ Knowing which option has an option or not
 - First first a real working calculation for going out of bounds on the right, as the x we get from the parent position is relative #DONE
 ##### This seems to be handled after using the absolute x position
 - Handle cases where the nested menu goes out of bounds on the left #DONE 
+- Bring back dynamic width for the context menus #DONE 
+#### The dynamic width of the elements is making it inconsistent. Let's leave this for later and handle the y axis
 - Handle cases where it goes out of bounds on the y axis
-- Bring back dynamic width for the context menus
 - Config options for the menu where users can decide color, icons 
 - Improve width and general look
 - Think of how the UX can be improved - look at existing examples
