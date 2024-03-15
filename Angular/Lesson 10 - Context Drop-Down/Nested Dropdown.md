@@ -36,9 +36,10 @@ Knowing which option has an option or not
 #### The dynamic width of the elements is making it inconsistent. Let's leave this for later and handle the y axis
 - Handle cases where it goes out of bounds on the y axis #DONE 
 - A nested option should display the entire tree of choices when selected #DONE 
+- Round border top/bottom if the option is the first/last when hovered on #DONE 
+- Add icons for each option #DONE 
 - Truncate text if it is too long
 - Config options for the menu where users can decide color, icons 
 - Improve width and general look
 - Think of how the UX can be improved - look at existing examples
-- Add icons
-- Round border top/bottom if the option is the first/last when hovered on
+
