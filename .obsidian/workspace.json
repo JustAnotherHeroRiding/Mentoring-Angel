@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -149,6 +148,8 @@
   },
   "active": "0556d097cabb93b7",
   "lastOpenFiles": [
+    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
     "Angular/R&D/context-dropdown/src/assets/salad.webp",
     "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option/option.component.ts",
     "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option/option.component.css",
@@ -166,12 +167,9 @@
     "Angular/R&D/CONTEX~1/src/assets/pizza.webp",
     "Angular/R&D/CONTEX~1/src/assets/macaroni.webp",
     "Angular/R&D/context-dropdown/src/assets/DALL·E 2024-03-13 17.20.42 - A vibrant, colorful salad served in a bowl, featuring a variety of fresh vegetables like lettuce, tomatoes, cucumbers, and carrots, with some crumbled.webp",
-    "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
-    "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
     "Angular/R&D/context-dropdown/src/assets/spaghetti.webp",
     "Angular/R&D/context-dropdown/src/assets/placeholder.webp",
     "Angular/R&D/context-dropdown/src/assets/pizza.webp",
-    "Angular/R&D/context-dropdown/src/assets/macaroni.webp",
     "Angular/Lesson 10 - Context Drop-Down/PointerEvent Coordinates.md",
     "Angular/Lesson 10 - Context Drop-Down/setTimeout vs detectChanges.md"
   ]

@@ -34,10 +34,11 @@ Knowing which option has an option or not
 - Handle cases where the nested menu goes out of bounds on the left #DONE 
 - Bring back dynamic width for the context menus #DONE 
 #### The dynamic width of the elements is making it inconsistent. Let's leave this for later and handle the y axis
-- Handle cases where it goes out of bounds on the y axis
+- Handle cases where it goes out of bounds on the y axis #DONE 
+- A nested option should display the entire tree of choices when selected #DONE 
+- Truncate text if it is too long
 - Config options for the menu where users can decide color, icons 
 - Improve width and general look
 - Think of how the UX can be improved - look at existing examples
-- Truncate text if it is too long
 - Add icons
 - Round border top/bottom if the option is the first/last when hovered on
