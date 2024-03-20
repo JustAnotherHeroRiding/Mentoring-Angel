@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0556d097cabb93b7",
+            "id": "b22a4c10b7882fae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
+                "file": "Angular/Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
+                "file": "Angular/Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
+                "file": "Angular/Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md"
+                "file": "Angular/Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md"
               }
             }
           }
@@ -146,21 +146,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0556d097cabb93b7",
+  "active": "b22a4c10b7882fae",
   "lastOpenFiles": [
+    "Angular/R&D/context-dropdown/src/app/logger/logger.ts",
+    "Angular/R&D/context-dropdown/src/app/logger/logger.service.ts",
+    "Angular/R&D/context-dropdown/src/app/logger/legacy.logger.ts",
+    "Angular/R&D/context-dropdown/src/app/logger",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-child-a/item-child-a.component.ts",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-child-a/item-child-a.component.html",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-child-a/item-child-a.component.css",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-child-a",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-a.component.ts",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-a.component.html",
+    "Angular/R&D/context-dropdown/src/app/item-a/item-a.component.css",
     "Angular/Lesson 10 - Context Drop-Down/Context Drop-Down.md",
+    "Angular/Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
     "Angular/Lesson 10 - Context Drop-Down/Nested Dropdown.md",
     "Angular/R&D/context-dropdown/src/assets/salad.webp",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option/option.component.ts",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option/option.component.css",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option/option.component.html",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/view/context-dropdown.view.html",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/view/context-dropdown.view.ts",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/view/context-dropdown.view.css",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/directives/nested-dropdown-directive.ts",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/model/option.ts",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/directives/context-dropdown.directive.ts",
-    "Angular/R&D/CONTEX~1/src/app/context-dropdown/components/option",
     "Angular/R&D/CONTEX~1/src/assets/spaghetti.webp",
     "Angular/R&D/CONTEX~1/src/assets/placeholder.webp",
     "Angular/R&D/CONTEX~1/src/assets/salad.webp",

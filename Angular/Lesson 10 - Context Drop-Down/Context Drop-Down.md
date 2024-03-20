@@ -112,3 +112,8 @@
 `ngrx` - Read about it
 angular meta framework analog
 global state in an app
+
+
+
+## Spotify right click bug
+- When clicking on an album image in the middle to open the context menu, it goes crazy
