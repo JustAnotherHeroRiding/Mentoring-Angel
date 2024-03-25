@@ -1,7 +1,7 @@
-provided in root always mean app component
-angular checks if the component has already been created when injecting
-if it has, it just returns it
-otherwise it creates and returns the component to maintain the single instance
+- Provided in root always means app component
+- Angular checks if the component has already been created when injecting
+- If it has, it just returns it
+- Otherwise it creates and returns the component to maintain the single instance
 if we do not instance the service somewhere, it will not initialized even if it is provided - this is done for optimization
 angular checks from child to parent for an instance of the service
 `NullInjectionError` 
