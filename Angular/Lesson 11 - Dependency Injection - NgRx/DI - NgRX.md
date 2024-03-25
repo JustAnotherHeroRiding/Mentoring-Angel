@@ -2,18 +2,18 @@
 - Angular checks if the component has already been created when injecting
 - If it has, it just returns it
 - Otherwise it creates and returns the component to maintain the single instance
-if we do not instance the service somewhere, it will not initialized even if it is provided - this is done for optimization
-angular checks from child to parent for an instance of the service
-`NullInjectionError` 
-instance of element injector is created for each component
-module for each lazy loaded module and root module by default
-ways of resolving the error
-importing in providers array in root module
-providers array of all imported modules(eagerly loaded modules)
-services with `providedIn 'root'`
-starts with element injector but goes to root
-always starts from the bottom and goes upwards when checking for the dependency
-be careful when creating services as two instances can be created
+- If we do not instance the service somewhere, it will not initialized even if it is provided - this is done for optimization
+- Angular checks from child to parent for an instance of the  service
+- `NullInjectionError` 
+- Instance of element injector is created for each component
+- Module for each lazy loaded module and root module by default
+- Ways of resolving the error
+- Importing in providers array in root module
+- Providers array of all imported modules(eagerly loaded modules)
+- Services with `providedIn 'root'`
+- Starts with element injector but goes to root
+- Always starts from the bottom and goes upwards when checking for the dependency
+- Be careful when creating services as two instances can be created
 
 ## Resolution Modifiers
 
@@ -24,23 +24,28 @@ be careful when creating services as two instances can be created
 
 
 ## Injecting objects
-- injecting our own legacy logger
-- in the app module, for providers we create an object that is what is actually running in the background when importing a service
-- Replacing a depedency in runtime by setting the class we want to use for the injection
+- Injecting our own legacy logger
+- In the app module, for providers we create an object that is what is actually running in the background when importing a service
+- Replacing a dependency in runtime by setting the class we want to use for the injection
 - We can set the `useClass` value to the class and it does not need to be created beforehand
 - We can use `useValue` to use an already created instance(object), which we can create by importing it beforehand in the providers array
 - `Useexisting` - looks for an existing value 
 - Creating an injection token for the app config
 - using factory function of the injection token to give it a default value
 - Can be used with material components such as material tabs
-- we can provide a different config in the app module when importing 
+- We can provide a different config in the app module when importing 
 - `useFavtory` takes a function that will create an object
-- adding the Injector as a dependency when using services inside of the provider creating
-- using injector.get to get the service
-- very important to understand injection token
+- Adding the Injector as a dependency when using services inside of the provider creating
+- Using `injector.get` to get the service
+- Very important to understand injection token
 
+
+
+
+[Configuring an Injection Token](https://medium.com/ngconf/configure-your-angular-apps-with-an-injection-token-be16eee59c40)
+[DI in action](https://angular.io/guide/dependency-injection-in-action)
 ## Injection token exercise
-- Two modules in one project
+- Two modules in one project #DONE 
 - allow the first module to have toast on the right
 - the second should be on the left
 - third module should have the toast config for the notification

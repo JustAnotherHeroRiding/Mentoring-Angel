@@ -11,8 +11,12 @@
             "id": "b7c088c7739bc17e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects History.md"
+                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md"
               }
             }
           }
@@ -140,8 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8c8bc9a064b5d212",
+  "active": "b7c088c7739bc17e",
   "lastOpenFiles": [
+    "R&D/InjectionToken/src/app/services/notification.service.ts",
+    "R&D/InjectionToken/src/app/services",
+    "R&D/InjectionToken/src/app/notification.service.ts",
+    "R&D/InjectionToken/src/app/notification.service.spec.ts",
+    "R&D/InjectionToken/src/app/toast-config/toast-config.ts",
     "Projects History.md"
   ]
 }
