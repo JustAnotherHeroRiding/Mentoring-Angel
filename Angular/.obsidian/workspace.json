@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
+                "file": "Lesson 10 - Context Drop-Down/Nested Dropdown.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
+                "file": "Lesson 10 - Context Drop-Down/Nested Dropdown.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
+                "file": "Lesson 10 - Context Drop-Down/Nested Dropdown.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md"
+                "file": "Lesson 10 - Context Drop-Down/Nested Dropdown.md"
               }
             }
           }
@@ -148,17 +148,20 @@
   },
   "active": "b7c088c7739bc17e",
   "lastOpenFiles": [
+    "R&D/context-dropdown/src/app/context-dropdown/directives/nested-dropdown-directive.ts",
+    "R&D/context-dropdown/src/app/context-dropdown-constants.ts",
+    "Lesson 10 - Context Drop-Down/setTimeout vs detectChanges.md",
+    "Lesson 11 - Dependency Injection - NgRx/DI - NgRX.md",
+    "R&D/context-dropdown/src/app/context-dropdown/components/option/option.component.ts",
+    "R&D/context-dropdown/src/app/context-dropdown/components/option/option.component.html",
+    "R&D/context-dropdown/src/app/context-dropdown/components/option/option.component.css",
+    "R&D/context-dropdown/src/app/context-dropdown/components/option",
+    "R&D/context-dropdown/src/app/context-dropdown/components",
+    "R&D/context-dropdown/src/assets/salad.webp",
+    "R&D/context-dropdown/src/app/lib/options-data.ts",
     "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.ts",
     "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.scss",
     "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.html",
-    "R&D/InjectionToken/src/app/components/center-toast",
-    "R&D/InjectionToken/src/app/center-toast/center-toast.component.ts",
-    "R&D/InjectionToken/src/app/center-toast/center-toast.component.spec.ts",
-    "R&D/InjectionToken/src/app/center-toast/center-toast.component.scss",
-    "R&D/InjectionToken/src/app/center-toast/center-toast.component.html",
-    "R&D/InjectionToken/src/app/center-toast",
-    "R&D/InjectionToken/src/app/toast-config/shared-toaster/shared-toaster.module.ts",
-    "R&D/InjectionToken/src/app/toast-config/shared-toaster",
     "Projects History.md"
   ]
 }

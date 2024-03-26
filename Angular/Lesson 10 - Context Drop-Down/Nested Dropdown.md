@@ -5,11 +5,11 @@ The goal is for the context dropdown menu to have the option to display a submen
 - event listener for hover on each option #do 
 - when the mouse leaves the original option or the new nested menu, it should close #DONE
 - Get the position correct so that it is on the exact same row as the initial option #DONE 
-- If we hover over two menus real quick, there the first menu will remain open
-- Add a delay on the hover
-- another check will be needed to see if we are out of bounds
-- animation for the second menu that will open - use windows for inspiration
-- clicking on a nested option will close the entire menu
+- If we hover over two menus real quick, there the first menu will remain open #DONE 
+- Add a delay on the hover #DONE 
+- another check will be needed to see if we are out of bounds #DONE 
+- animation for the second menu that will open - use windows for inspiration #DONE 
+- clicking on a nested option will close the entire menu #DONE 
 
 
 
@@ -38,8 +38,9 @@ Knowing which option has an option or not
 - A nested option should display the entire tree of choices when selected #DONE 
 - Round border top/bottom if the option is the first/last when hovered on #DONE 
 - Add icons for each option #DONE 
-- Truncate text if it is too long
-- Config options for the menu where users can decide color, icons 
+- Maintain a consistent look with the icon and arrow always being on the edges #DONE 
+- Remove max width crutch #DONE 
+- Config options for the menu where users can decide color, icons  #do
 - Improve width and general look
 - Think of how the UX can be improved - look at existing examples
 
