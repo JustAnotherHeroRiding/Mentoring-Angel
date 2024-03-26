@@ -148,17 +148,17 @@
   },
   "active": "b7c088c7739bc17e",
   "lastOpenFiles": [
+    "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.ts",
+    "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.scss",
+    "R&D/InjectionToken/src/app/components/center-toast/center-toast.component.html",
+    "R&D/InjectionToken/src/app/components/center-toast",
+    "R&D/InjectionToken/src/app/center-toast/center-toast.component.ts",
+    "R&D/InjectionToken/src/app/center-toast/center-toast.component.spec.ts",
+    "R&D/InjectionToken/src/app/center-toast/center-toast.component.scss",
+    "R&D/InjectionToken/src/app/center-toast/center-toast.component.html",
+    "R&D/InjectionToken/src/app/center-toast",
     "R&D/InjectionToken/src/app/toast-config/shared-toaster/shared-toaster.module.ts",
     "R&D/InjectionToken/src/app/toast-config/shared-toaster",
-    "R&D/InjectionToken/src/app/shared-toaster/shared-toaster.module.ts",
-    "R&D/InjectionToken/src/app/shared-toaster",
-    "R&D/InjectionToken/src/app/right-toast/right-page/right-page.component.spec.ts",
-    "R&D/InjectionToken/src/app/right-toast/right-page/right-page.component.scss",
-    "R&D/InjectionToken/src/app/right-toast/right-page/right-page.component.ts",
-    "R&D/InjectionToken/src/app/right-toast/right-page/right-page.component.html",
-    "R&D/InjectionToken/src/app/right-toast/right-page",
-    "R&D/InjectionToken/src/app/left-toast/left-page/left-page.component.ts",
-    "R&D/InjectionToken/src/app/left-toast/left-page/left-page.component.spec.ts",
     "Projects History.md"
   ]
 }

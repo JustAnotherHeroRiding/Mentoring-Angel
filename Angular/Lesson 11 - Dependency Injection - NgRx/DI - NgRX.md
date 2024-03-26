@@ -46,8 +46,8 @@
 [DI in action](https://angular.io/guide/dependency-injection-in-action)
 ## Injection token exercise
 - Two modules in one project #DONE 
-- allow the first module to have toast on the right
-- the second should be on the left
-- third module should have the toast config for the notification
-- from this third module we export the config that can be changed by the first and second module
-- `@Inject(TOKEN)` will be needed when importing these custom token configs in the component
+- allow the first module to have toast on the right #DONE 
+- the second should be on the left #DONE 
+- third module should have the toast config for the notification #DONE 
+- from this third module we export the config that can be changed by the first and second module #DONE 
+- `@Inject(TOKEN)` will be needed when importing these custom token configs in the component #DONE 

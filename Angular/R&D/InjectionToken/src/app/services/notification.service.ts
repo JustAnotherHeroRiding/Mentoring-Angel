@@ -4,7 +4,8 @@ import { TOAST_CONFIG_TOKEN, ToastConfig } from '../toast-config/toast-config';
 
 @Injectable()
 export class NotificationService {
-  id = Math.random();
+  private id = Math.random();
+
   constructor(
     @Inject(TOAST_CONFIG_TOKEN) private config: ToastConfig,
     private _snackBar: MatSnackBar

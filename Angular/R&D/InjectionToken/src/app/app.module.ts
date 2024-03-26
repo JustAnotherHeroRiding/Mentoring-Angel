@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { LeftToastModule } from './left-toast/left-toast.module';
 import { RightToastModule } from './right-toast/right-toast.module';
+import { CenterToastComponent } from './components/center-toast/center-toast.component';
+import { SharedToasterModule } from './toast-config/shared-toaster/shared-toaster.module';
 
 const modules = [
   CommonModule,
@@ -15,10 +17,13 @@ const modules = [
   BrowserAnimationsModule,
   LeftToastModule,
   RightToastModule,
+  SharedToasterModule,
 ];
 
+const components = [AppComponent];
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [...components, CenterToastComponent],
   imports: [...modules],
   bootstrap: [AppComponent],
 })
