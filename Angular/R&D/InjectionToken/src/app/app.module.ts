@@ -5,28 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LeftToastModule } from './left-toast/left-toast.module';
+import { RightToastModule } from './right-toast/right-toast.module';
 
-const materialComponents = [
-  MatButtonModule,
-  MatFormFieldModule,
-  MatSelectModule,
-  MatSnackBarModule,
-];
 const modules = [
   CommonModule,
   BrowserModule,
   AppRoutingModule,
   BrowserAnimationsModule,
+  LeftToastModule,
+  RightToastModule,
 ];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [...materialComponents, ...modules],
-  providers: [],
+  imports: [...modules],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,23 +1,20 @@
-import { Injectable } from '@angular/core';
-import {
-  MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarVerticalPosition,
-} from '@angular/material/snack-bar';
+import { Inject, Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { TOAST_CONFIG_TOKEN, ToastConfig } from '../toast-config/toast-config';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class NotificationService {
-  constructor(private _snackBar: MatSnackBar) {}
+  id = Math.random();
+  constructor(
+    @Inject(TOAST_CONFIG_TOKEN) private config: ToastConfig,
+    private _snackBar: MatSnackBar
+  ) {}
 
-  openSnackBar(
-    horizontalPos: MatSnackBarHorizontalPosition = 'center',
-    verticalPos: MatSnackBarVerticalPosition = 'bottom'
-  ) {
+  openSnackBar() {
+    console.log(this.config, this.id);
     this._snackBar.open('Cannonball!!', 'Splash', {
-      horizontalPosition: horizontalPos,
-      verticalPosition: verticalPos,
+      horizontalPosition: this.config.horizontalPosition,
+      verticalPosition: this.config.verticalPosition,
     });
   }
 }
