@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ToasterComponent } from 'src/app/components/toaster/toaster.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,7 +14,7 @@ const materialComponents = [
 
 @NgModule({
   declarations: [ToasterComponent],
-  imports: [CommonModule, ...materialComponents],
+  imports: [...materialComponents],
   exports: [ToasterComponent],
 })
 export class SharedToasterModule {}

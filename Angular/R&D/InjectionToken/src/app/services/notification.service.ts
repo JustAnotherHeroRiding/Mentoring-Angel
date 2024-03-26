@@ -13,9 +13,15 @@ export class NotificationService {
 
   openSnackBar() {
     console.log(this.config, this.id);
-    this._snackBar.open('Cannonball!!', 'Splash', {
-      horizontalPosition: this.config.horizontalPosition,
-      verticalPosition: this.config.verticalPosition,
-    });
+    this._snackBar.open(
+      `Toast ${this.config.horizontalPosition === 'center' ? 'in' : 'on'} the ${
+        this.config.horizontalPosition
+      }!`,
+      'Close',
+      {
+        horizontalPosition: this.config.horizontalPosition,
+        verticalPosition: this.config.verticalPosition,
+      }
+    );
   }
 }

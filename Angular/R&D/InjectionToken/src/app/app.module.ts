@@ -20,10 +20,10 @@ const modules = [
   SharedToasterModule,
 ];
 
-const components = [AppComponent];
+const components = [AppComponent, CenterToastComponent];
 
 @NgModule({
-  declarations: [...components, CenterToastComponent],
+  declarations: [...components],
   imports: [...modules],
   bootstrap: [AppComponent],
 })
