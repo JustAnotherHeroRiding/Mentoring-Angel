@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b5cce3c260525c8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx.md",
+                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx.md",
+                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx.md"
+                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md"
               }
             }
           }
@@ -146,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5563da0aae4c1bc1",
+  "active": "8c8bc9a064b5d212",
   "lastOpenFiles": [
+    "Lesson 12 - NgRx/NgRx.md",
+    "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/interface.js",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/interface.d.ts",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/default.d.ts",
@@ -158,7 +173,6 @@
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/serializer/index.d.ts",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tokenizer/index.js",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/serializer/index.js",
-    "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/parser/open-element-stack.js",
     "R&D/NgRxExample/node_modules/@angular/material/README.md",
     "R&D/NgRxExample/node_modules/safevalues/README.md",
     "R&D/NgRxExample/node_modules/pacote/README.md",
@@ -183,7 +197,6 @@
     "R&D/NgRxExample/node_modules/abab/LICENSE.md",
     "R&D/NgRxExample/node_modules/@babel/helper-string-parser/README.md",
     "R&D/NgRxExample/node_modules/@babel/helper-validator-identifier/README.md",
-    "R&D/NgRxExample/node_modules/@angular/platform-browser/README.md",
     "R&D/NgRxExample/node_modules/serve-index/public/icons/page_world.png",
     "R&D/NgRxExample/node_modules/serve-index/public/icons/page_word.png",
     "R&D/NgRxExample/node_modules/serve-index/public/icons/page_white_zip.png",
