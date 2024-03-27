@@ -28,10 +28,3 @@ NgRx Store is mainly for managing global state across an entire application. In 
 
 **Note:** All `[Actions](https://ngrx.io/api/effects/Actions)` that are dispatched within an application state are always first processed by the `Reducers` before being handled by the `Effects` of the application state.
 
-
-
-What is spring boot
-what is gradle and what is maven
-JVM
-java tutorial - amigoscode from 42nd min creating variables until the end
-after we begin together

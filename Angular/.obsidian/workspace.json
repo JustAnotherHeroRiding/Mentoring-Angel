@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
+                "file": "Lesson 12 - NgRx/NgRx.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
+                "file": "Lesson 12 - NgRx/NgRx.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
+                "file": "Lesson 12 - NgRx/NgRx.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 12 - NgRx/NgRx vs Services in Angular.md"
+                "file": "Lesson 12 - NgRx/NgRx.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8c8bc9a064b5d212",
+  "active": "b5cce3c260525c8c",
   "lastOpenFiles": [
-    "Lesson 12 - NgRx/NgRx.md",
     "Lesson 12 - NgRx/NgRx vs Services in Angular.md",
+    "Lesson 12 - NgRx/NgRx.md",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/interface.js",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/interface.d.ts",
     "R&D/NgRxExample/node_modules/@angular/cdk/node_modules/parse5/dist/cjs/tree-adapters/default.d.ts",
