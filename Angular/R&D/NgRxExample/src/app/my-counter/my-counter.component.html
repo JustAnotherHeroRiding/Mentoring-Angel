@@ -1,0 +1,9 @@
+<div class="flex flex-col gap-4">
+  <div>Current Count: {{ count$ | async }}</div>
+
+  <div class="flex gap-4">
+    <button id="increment" (click)="increment()">Increment</button>
+    <button id="decrement" (click)="decrement()">Decrement</button>
+  </div>
+  <button id="reset" (click)="reset()">Reset Counter</button>
+</div>

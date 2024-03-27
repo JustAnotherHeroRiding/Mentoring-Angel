@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-4">
+  <div class="book-item flex-col items-center" *ngFor="let book of books">
+    <p class="text-center">{{ book.volumeInfo.title }}</p>
+    <div class="flex">
+      <span> by {{ book.volumeInfo.authors }}</span>
+      <button
+        (click)="add.emit(book.id)"
+        style="margin-left: auto"
+        data-test="add-button"
+      >
+        Add to Collection
+      </button>
+    </div>
+  </div>
+</div>
