@@ -26,15 +26,6 @@ The `Date` type can be import from `java.util.Date`
 - **char**: The `char` data type is a single 16-bit Unicode character. It has a minimum value of `'\u0000'` (or 0) and a maximum value of `'\uffff'` (or 65,535 inclusive).
 
 
-#### Reference Types - [Docs](https://www.javatpoint.com/reference-data-types-in-java)
-- These are custom types that we can create or use from the various java libraries, either standard or imported
-- String is such a type as it is not a primitive type
-- Reference types can have methods
-- Always start with uppercase
-- Used for more complex forms of data
-
-#### Primitive Vs Reference Types
-
 
 
 ## What is spring boot [Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U)
