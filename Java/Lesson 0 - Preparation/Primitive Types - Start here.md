@@ -1,7 +1,7 @@
 
 ## Syntax Basics
 [Tutorial with timestamp](https://youtu.be/Qgl81fPcLc8?t=4244)
-java tutorial - `amigoscode` from 42nd min creating variables until the end
+java tutorial - `amigoscode` from 42nd min creating variables until the end #Done
 
 In java all variables must be typed before being created, much like C
 A semicolon is required when ending a line `;`
@@ -29,6 +29,9 @@ The `Date` type can be import from `java.util.Date`
 
 
 ## What is spring boot [Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U)
+Read about Spring first and then spring boot
+[Docs](https://docs.spring.io/spring-framework/reference/)
+
 ## What are Gradle and Maven
 
 ## What is the JVM

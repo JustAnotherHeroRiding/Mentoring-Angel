@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "468cd23d2d65e024",
+            "id": "48d7905db8cf165c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 0 - Preparation/Packages and Imports Reserved Keywords.md",
+                "file": "Lesson 0 - Preparation/Primitive Types - Start here.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 0 - Preparation/Packages and Imports Reserved Keywords.md",
+                "file": "Lesson 0 - Preparation/Primitive Types - Start here.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 0 - Preparation/Packages and Imports Reserved Keywords.md",
+                "file": "Lesson 0 - Preparation/Primitive Types - Start here.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 0 - Preparation/Packages and Imports Reserved Keywords.md"
+                "file": "Lesson 0 - Preparation/Primitive Types - Start here.md"
               }
             }
           }
@@ -146,21 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "468cd23d2d65e024",
+  "active": "48d7905db8cf165c",
   "lastOpenFiles": [
-    "Lesson 0 - Preparation/Scanner.java",
-    "Lesson 0 - Preparation/Basic Logic and Syntax/BreakAndContinue.class",
-    "Lesson 0 - Preparation/Basic Logic and Syntax/BreakAndContinue.java",
-    "Lesson 0 - Preparation/Basic Logic and Syntax/BreakContinue",
-    "Lesson 0 - Preparation/Basic Logic and Syntax/Loops.class",
-    "Lesson 0 - Preparation/Basic Logic and Syntax/Loops.java",
-    "Lesson 0 - Preparation/Data Structures/ArrayIndexes.class",
-    "Lesson 0 - Preparation/Data Structures/ArrayIndexes.java",
-    "Lesson 0 - Preparation/Data Structures/ArrayBasics.java",
-    "Lesson 0 - Preparation/Data Structures/ArrayBasics.class",
-    "Lesson 0 - Preparation/Data Structures",
     "Lesson 0 - Preparation/Reference Types vs Primitive and Strings.md",
+    "Lesson 0 - Preparation/Primitive Types - Start here.md",
     "Lesson 0 - Preparation/Packages and Imports Reserved Keywords.md",
-    "Lesson 0 - Preparation/Primitive Types - Start here.md"
+    "Lesson 0 - Preparation/Scanner and Methods.md",
+    "Lesson 0 - Preparation/PassportClassExample.java",
+    "Lesson 0 - Preparation/CreatingClasses.class",
+    "Lesson 0 - Preparation/CreatingClasses$Lens.class",
+    "Lesson 0 - Preparation/CreatingClasses.java",
+    "Lesson 0 - Preparation/Classes/CreatingClasses.class",
+    "Lesson 0 - Preparation/Classes/CreatingClasses.java",
+    "Lesson 0 - Preparation/Classes/ScannerExample.java",
+    "Lesson 0 - Preparation/Classes/ScannerExample.class",
+    "Lesson 0 - Preparation/Classes/MethodsExample.class",
+    "Lesson 0 - Preparation/Classes/MethodsExample.java"
   ]
 }
