@@ -1,5 +1,6 @@
 
 ## Syntax Basics
+
 [Tutorial with timestamp](https://youtu.be/Qgl81fPcLc8?t=4244)
 java tutorial - `amigoscode` from 42nd min creating variables until the end #Done
 
@@ -27,12 +28,12 @@ The `Date` type can be import from `java.util.Date`
 
 
 
-
-## What is spring boot [Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U)
+## What is spring and spring boot spring boot [Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U)
+Download the Udemy Course
 Read about Spring first and then spring boot
 [Docs](https://docs.spring.io/spring-framework/reference/)
 
-## What are Gradle and Maven
 
-## What is the JVM
+
+
 
