@@ -1,12 +1,23 @@
+public interface CustomList<E> {
 
-public interface CustomList {
+    void addSingle(int index, E obj);
 
-    void add(Object obj);
+    E removeSingle(int index);
 
-    void remove(Object obj);
+    E get(int index);
+
+    void set(int index, E obj);
+
+    int size();
+
+    boolean isEmpty();
+
+    boolean contains(E obj);
+
+    int indexOf(E obj);
+
+    void clear();
 
     void grow();
-
-    void printGarden();
 
 }

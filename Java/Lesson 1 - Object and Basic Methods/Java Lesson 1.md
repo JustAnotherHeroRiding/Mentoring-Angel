@@ -105,13 +105,13 @@ at the end the builder needs to use toString()
 - This list should be called Garden #Done 
 - Should store a List #Done 
 - Create my own List data structure #Done 
-- It should not inherit from List but I should implement some of them
-- The user should be able to manipulate the list
-- Add elements, remove elements
-- Add or remove multiple elements
-- Create structure when printing a garden - `printGarden()`
-- It should have a specific structure - look at the project
-- This structure should be printed for each element
+- It should not inherit from List but I should implement some of them #Done 
+- The user should be able to manipulate the list #Done 
+- Add elements, remove elements #Done 
+- Add or remove multiple elements #Done 
+- Create structure when printing a garden - `printGarden()` #Done 
+- It should have a specific structure - look at the project #Done 
+- This structure should be printed for each element #Done 
 - If i try to add the same animal with the same name and race throw and exception using `hashCode` and equals
 
 [Repo](https://github.com/Angel-dev14/java-basics)
