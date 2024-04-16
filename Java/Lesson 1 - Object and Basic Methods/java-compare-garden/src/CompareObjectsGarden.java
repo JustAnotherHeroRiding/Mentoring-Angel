@@ -182,6 +182,7 @@ public class CompareObjectsGarden {
         // garden.list.addSingle(6, new Cat("Tom", "White"));
         garden.list.addSingle(7, new Cat("Tom", "White"));
         garden.printGarden();
+        System.out.println(garden.size());
 
     }
 
