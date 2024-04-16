@@ -1,4 +1,7 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.TimeZone;
 
 class User {
     private String name;
@@ -182,8 +185,15 @@ public class CompareObjectsGarden {
         // garden.list.addSingle(6, new Cat("Tom", "White"));
         garden.list.addSingle(7, new Cat("Tom", "White"));
         garden.printGarden();
-        System.out.println(garden.size());
+        System.out.println(garden.list.size());
 
+        LocalDate date = LocalDate.now();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        
+        // GMT-5
+        df.setTimeZone(TimeZone.getTimeZone("GMT-5:00"));
+        String strDate = df.format(date);
+        System.out.println("Date and time in GMT-5: " + strDate);
     }
 
     public static boolean comparePeople(Object obj1, Object obj2) {

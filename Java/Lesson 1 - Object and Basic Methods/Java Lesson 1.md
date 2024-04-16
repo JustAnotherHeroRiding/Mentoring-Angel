@@ -112,7 +112,7 @@ at the end the builder needs to use toString()
 - Create structure when printing a garden - `printGarden()` #Done 
 - It should have a specific structure - look at the project #Done 
 - This structure should be printed for each element #Done 
-- If i try to add the same animal with the same name and race throw and exception using `hashCode` and equals
+- If i try to add the same animal with the same name and race throw and exception using `hashCode` and equals #Done 
 
 [Repo](https://github.com/Angel-dev14/java-basics)
 
